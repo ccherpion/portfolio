@@ -6,6 +6,7 @@ function toggleTheme() {
     document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
 }
+// Appliquer le thème stocké immédiatement
 if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
 
 async function init() {
@@ -50,6 +51,7 @@ function runScramble(id, speed = 25, delay = 0) {
 function render() {
     const d = content;
     const ids = ['status','status_mobile','name','role','sidebar_bio','sidebar_skills_title','sidebar_hobbies_title','btn_contact','btn_cv','hero_title','work_title','path_title','bio','work_sub','path_sub','impact_val','impact_label','max_budget_val','max_budget_label','widget_title_stats','widget_title_focus','current_focus','loc_nav','lang-btn'];
+    
     ids.forEach(id => {
         const el = document.getElementById(id);
         const key = id.replace('_mobile', '').replace('-btn', '_btn').replace('loc_nav', 'loc_val');
@@ -59,20 +61,22 @@ function render() {
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-100 dark:bg-zinc-800 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue">${h}</span>`).join('');
     
+    // STACK AVEC LOGOS (FIX)
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
             <div class="bento-card">
                 <h4 class="text-sm font-bold uppercase mb-4 text-blue-600 font-tech">${s.category}</h4>
                 <div class="grid grid-cols-2 gap-4">
-                    ${s.items.map(item => `<div class="flex items-center gap-2"><img src="${item.logo}" class="stack-logo"><span class="text-[11px] font-bold uppercase font-tech">${item.name}</span></div>`).join('')}
+                    ${s.items.map(item => `<div class="flex items-center gap-2"><img src="${item.logo}" class="w-5 h-5 dark:invert grayscale opacity-70"><span class="text-[11px] font-bold uppercase font-tech">${item.name}</span></div>`).join('')}
                 </div>
             </div>`).join('');
     }
 
+    // PROJECTS (4 PROJETS RESTAURÉS)
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
             <div class="bento-card group relative overflow-hidden aspect-[4/3] p-0">
-                <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                <img src="${p.img}" class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0">
                 <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-8 text-white">
                     <h3 class="text-3xl font-black uppercase mb-1">${p.name}</h3>
                     <p class="text-[11px] opacity-0 group-hover:opacity-100 transition-opacity mb-4">${p.desc}</p>
@@ -81,9 +85,10 @@ function render() {
             </div>`).join('');
     }
 
+    // PATH (EXPÉRIENCES + ÉTUDES)
     if (d.experiences) {
         document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
-            <div class="bento-card min-h-[220px]">
+            <div class="bento-card min-h-[200px]">
                 <div class="flex justify-between items-start mb-4">
                     <div class="badge-blue"><i class="${exp.icon}"></i></div>
                     <span class="text-[9px] font-bold text-gray-400 uppercase">${exp.date}</span>
@@ -103,30 +108,26 @@ function handleRouting() {
 
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
     const target = document.getElementById(pageMap[hash]);
+    
     if(target) {
         target.classList.add('active');
         runScramble(titleMap[hash], 20, 0);
         runScramble(subMap[hash], 10, 400);
         
-        const activeView = document.querySelector('.page-view.active');
-        activeView.querySelectorAll('.bento-card').forEach((c, i) => {
-            setTimeout(() => c.classList.add('reveal-active'), 300 + (index * 100)); // Correction syntaxe index
+        // FIX : i au lieu de index
+        target.querySelectorAll('.bento-card').forEach((c, i) => {
+            c.classList.remove('reveal-active');
+            setTimeout(() => c.classList.add('reveal-active'), 300 + (i * 100));
         });
     }
     document.querySelectorAll(`.nav-link`).forEach(l => l.classList.toggle('active', l.getAttribute('href') === hash));
-    window.scrollTo(0, 0);
 }
 
-// Correction mineure pour le trigger des cartes
-function triggerReveal() {
-    const activeView = document.querySelector('.page-view.active');
-    if(!activeView) return;
-    activeView.querySelectorAll('.bento-card').forEach((c, i) => {
-        c.classList.remove('reveal-active');
-        setTimeout(() => c.classList.add('reveal-active'), 300 + (i * 80));
-    });
+async function toggleLang() { 
+    currentLang = (currentLang === 'fr') ? 'en' : 'fr'; 
+    localStorage.setItem('lang', currentLang); 
+    await init(); 
 }
 
-async function toggleLang() { currentLang = (currentLang === 'fr') ? 'en' : 'fr'; localStorage.setItem('lang', currentLang); init(); }
-window.addEventListener('hashchange', () => { handleRouting(); triggerReveal(); });
+window.addEventListener('hashchange', handleRouting);
 init();
