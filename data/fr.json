@@ -1,16 +1,23 @@
 {
-  "name": "Cyril Cherpion",
-  "role": "CONSULTANT AV & ARCHITECTE IA",
-  "sidebar_bio": "Expert en systèmes audiovisuels intelligents et automatisation.",
-  "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
-  "work_title": "RÉALISATIONS",
-  "path_title": "PARCOURS",
-  "lang_btn": "EN",
+  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
+  "status": "OUVERT AUX OPPORTUNITÉS", "name": "Cyril Cherpion", "role": "CONSULTANT SYSTÈMES AV & ARCHITECTE IA",
+  "sidebar_bio": "Consultant Systèmes AV & Architecte IA. Je conçois des systèmes intelligents et transforme des contraintes complexes en réalités techniques fluides.",
+  "btn_contact": "Travaillons ensemble !", "btn_cv": "Télécharger le CV",
+  "sidebar_skills_title": "SAVOIR-ÊTRE", "sidebar_skills": ["⚡ Autonome", "🔥 Dynamique", "👥 Gestion d'équipe", "🤝 Relation Client", "🧠 Autodidacte"],
+  "sidebar_hobbies_title": "INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
+  "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT", "work_title": "MON SHOWCASE CRÉATIF", "path_title": "PARCOURS PROFESSIONNEL",
+  "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\".",
+  "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie et de précision.",
+  "path_sub": "15 ans d'évolution technique sans machine à remonter le temps.",
+  "impact_label": "VOLUME TOTAL", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
+  "loc_val": "Bordeaux, FR & Int.", "lang_btn": "EN",
+  "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL", "current_focus": "IA & AUTOMATISATION AV",
   "projects": [
-    { "name": "Airbus Safety Center", "tag": "Intégration", "val": "550k€", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
-    { "name": "Casino Barrière", "tag": "Contrôle", "val": "450k€", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" }
+    { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
+    { "name": "Casino Barrière", "desc": "Redesign du contrôle et signal architecture.", "val": "450k€", "tag": "Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" }
   ],
   "experiences": [
-    { "date": "2024 - Présent", "role": "Application Engineer", "company": "AROCOM", "desc": "Expert AMX MUSE et SVSI.", "icon": "fas fa-laptop-code" }
+    { "date": "2024 - Présent", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "Expertise AMX MUSE et SVSI. Support technique et formation." },
+    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique et supervision des études." }
   ]
 }
