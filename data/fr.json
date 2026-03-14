@@ -1,0 +1,6 @@
+{
+  "name": "Cyril Cherpion", "role": "CONSULTANT AV & IA", "sidebar_bio": "Expert Systèmes.",
+  "hero_title": "INGÉNIERIE", "work_title": "PROJETS", "path_title": "PARCOURS",
+  "projects": [{ "name": "Airbus Safety", "tag": "Intégration" }],
+  "experiences": [{ "role": "Application Engineer", "company": "AROCOM" }]
+}

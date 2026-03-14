@@ -1,0 +1,6 @@
+.badge-blue { background: #eff6ff; color: #1d4ed8; border: 1px solid #dbeafe; padding: 4px 12px; border-radius: 99px; font-weight: 700; font-size: 10px; text-transform: uppercase; }
+.dark .badge-blue { background: rgba(30,58,138,0.4); color: #93c5fd; border: 1px solid rgba(30,58,138,0.5); }
+.bento-card { background: white; border-radius: 1.5rem; border: 1px solid rgba(0,0,0,0.08); padding: 1.5rem; display: flex; flex-direction: column; }
+.dark .bento-card { background: #1f1f22; border: 1px solid #3f3f46; }
+.page-view { display: none; }
+.page-view.active { display: block; }
