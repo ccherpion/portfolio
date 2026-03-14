@@ -1,0 +1,16 @@
+{
+  "name": "Cyril Cherpion",
+  "role": "AV CONSULTANT & AI ARCHITECT",
+  "sidebar_bio": "Expert in intelligent audiovisual systems and automation.",
+  "hero_title": "AUDIOVISUAL & IT ENGINEERING",
+  "work_title": "PROJECTS",
+  "path_title": "EXPERIENCE",
+  "lang_btn": "FR",
+  "projects": [
+    { "name": "Airbus Safety Center", "tag": "Integration", "val": "€550k", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
+    { "name": "Casino Barrière", "tag": "Control", "val": "€450k", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" }
+  ],
+  "experiences": [
+    { "date": "2024 - Present", "role": "Application Engineer", "company": "AROCOM", "desc": "AMX MUSE and SVSI Expert.", "icon": "fas fa-laptop-code" }
+  ]
+}

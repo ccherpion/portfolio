@@ -1,6 +1,16 @@
 {
-  "name": "Cyril Cherpion", "role": "CONSULTANT AV & IA", "sidebar_bio": "Expert Systèmes.",
-  "hero_title": "INGÉNIERIE", "work_title": "PROJETS", "path_title": "PARCOURS",
-  "projects": [{ "name": "Airbus Safety", "tag": "Intégration" }],
-  "experiences": [{ "role": "Application Engineer", "company": "AROCOM" }]
+  "name": "Cyril Cherpion",
+  "role": "CONSULTANT AV & ARCHITECTE IA",
+  "sidebar_bio": "Expert en systèmes audiovisuels intelligents et automatisation.",
+  "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
+  "work_title": "RÉALISATIONS",
+  "path_title": "PARCOURS",
+  "lang_btn": "EN",
+  "projects": [
+    { "name": "Airbus Safety Center", "tag": "Intégration", "val": "550k€", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
+    { "name": "Casino Barrière", "tag": "Contrôle", "val": "450k€", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" }
+  ],
+  "experiences": [
+    { "date": "2024 - Présent", "role": "Application Engineer", "company": "AROCOM", "desc": "Expert AMX MUSE et SVSI.", "icon": "fas fa-laptop-code" }
+  ]
 }
