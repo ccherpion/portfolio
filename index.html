@@ -30,7 +30,7 @@
             .nav-link { @apply flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300; }
             .nav-link.active { @apply bg-white dark:bg-white/10 text-blue-600 dark:text-blue-400 shadow-sm; }
             .nav-link:not(.active) { @apply text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5; }
-            .bento-card { @apply bg-white dark:bg-darkCard border border-gray-100 dark:border-darkBorder rounded-3xl p-6 transition-all duration-500; }
+            .bento-card { @apply bg-white dark:bg-darkCard border border-gray-100 dark:border-darkBorder rounded-3xl p-6 transition-all duration-500 relative; }
             .badge-blue { @apply bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-800/30 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest; }
             .reveal-block { @apply opacity-0 translate-y-8 transition-all duration-700 ease-out; }
             .reveal-block.active { @apply opacity-100 translate-y-0; }
@@ -46,7 +46,7 @@
         <div class="flex justify-between items-center mb-2 px-1">
             <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-400"><i class="fas fa-circle-half-stroke"></i></button>
             <div class="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-3 py-1.5 rounded-full border border-green-100 dark:border-green-800/30">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]"></span>
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 <span id="status_mobile" class="text-[9px] font-black uppercase tracking-widest font-tech text-green-700 dark:text-green-400">...</span>
             </div>
         </div>
@@ -59,21 +59,17 @@
 
     <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-darkNav border-r border-gray-200 dark:border-darkBorder p-8 flex flex-col z-40 order-last lg:order-first">
         <div class="flex flex-col items-center text-center">
-            <div class="relative group mb-8">
+            <a href="#home" class="relative group mb-8">
                 <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <a href="#home" class="relative block">
-                    <img src="https://github.com/ccherpion.png" class="w-28 h-28 rounded-full border-2 border-white dark:border-darkBorder shadow-2xl object-cover transform transition-transform duration-500 group-hover:scale-105">
-                </a>
-            </div>
-            
+                <img src="https://github.com/ccherpion.png" class="relative w-28 h-28 rounded-full border-2 border-white dark:border-darkBorder shadow-2xl object-cover transform transition-transform duration-500 group-hover:scale-105">
+            </a>
             <h1 id="name" class="text-2xl font-black mb-1 uppercase tracking-tighter text-gray-900 dark:text-white">...</h1>
             <h2 id="role" class="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-[0.2em] mb-6 font-tech">...</h2>
             <p id="sidebar_bio" class="text-sm text-gray-500 dark:text-gray-400 mb-8 leading-relaxed font-medium">...</p>
             
             <div class="w-full space-y-3 mb-8">
-                <a href="mailto:ccherpion@outlook.com" class="w-full group flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-widest shadow-xl transform transition-all hover:-translate-y-1">
-                    <i class="fas fa-paper-plane text-[10px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-                    <span id="btn_contact">...</span>
+                <a href="mailto:ccherpion@outlook.com" class="w-full group flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-widest shadow-xl">
+                    <i class="fas fa-paper-plane text-[10px]"></i> <span id="btn_contact">...</span>
                 </a>
                 <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
                     <i class="fas fa-file-pdf text-red-500"></i> <span id="btn_cv">...</span>
@@ -89,23 +85,21 @@
 
     <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-20 bg-white/90 dark:bg-darkNav/90 backdrop-blur-xl border-b border-gray-200 dark:border-darkBorder z-50 items-center justify-between px-10">
         <div class="flex items-center gap-4 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full border border-green-100 dark:border-green-800/30">
-            <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]"></span>
+            <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
             <span id="status" class="text-[10px] font-black uppercase tracking-[0.2em] font-tech text-green-700 dark:text-green-400">...</span>
         </div>
-        
         <div class="flex gap-4 p-1.5 bg-gray-100/50 dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/5">
             <a href="#home" class="nav-link">cyril.info</a>
             <a href="#projects" class="nav-link">work.done</a>
             <a href="#experience" class="nav-link">my.path</a>
         </div>
-
         <div class="flex items-center gap-6">
             <div class="flex items-center gap-2 px-4 py-2 bg-blue-50/50 dark:bg-blue-900/10 rounded-xl border border-blue-100 dark:border-blue-800/20">
                 <i class="fas fa-location-dot text-blue-600 dark:text-blue-400 text-xs"></i>
                 <span id="loc_nav" class="text-[10px] font-black uppercase tracking-widest font-tech text-blue-700 dark:text-blue-300">...</span>
             </div>
             <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"><i class="fas fa-circle-half-stroke"></i></button>
-            <button onclick="toggleLang()" id="lang-btn" class="text-[10px] font-black uppercase tracking-widest font-tech bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-xl hover:scale-105 transition-transform">EN</button>
+            <button onclick="toggleLang()" id="lang-btn" class="text-[10px] font-black uppercase tracking-widest font-tech bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-xl">EN</button>
         </div>
     </nav>
 
@@ -146,28 +140,24 @@
         </div>
 
         <aside id="sidebar-right" class="w-full xl:w-80 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-32 xl:ml-auto">
-            <div class="bento-card border-none bg-blue-600 dark:bg-blue-600 text-white p-8 overflow-hidden relative">
-                <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="bento-card border-none bg-blue-600 text-white p-8 overflow-hidden relative">
                 <h3 id="widget_title_stats" class="text-[10px] font-black text-white/60 uppercase tracking-[0.2em] mb-8 font-tech text-center">...</h3>
                 <div class="space-y-6">
-                    <div class="text-center group p-6 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md">
+                    <div class="text-center p-6 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md">
                         <p id="impact_val" class="text-4xl font-black font-tech mb-1">...</p>
                         <p id="impact_label" class="text-[9px] font-black text-white/50 uppercase tracking-widest font-tech">...</p>
                     </div>
-                    <div class="text-center group p-6 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md">
+                    <div class="text-center p-6 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md">
                         <p id="max_budget_val" class="text-4xl font-black font-tech mb-1">...</p>
                         <p id="max_budget_label" class="text-[9px] font-black text-white/50 uppercase tracking-widest font-tech">...</p>
                     </div>
                 </div>
             </div>
-
             <div class="bento-card p-8">
                 <h3 id="widget_title_focus" class="text-[10px] font-black text-gray-400 dark:text-white/30 uppercase tracking-[0.2em] mb-6 font-tech">...</h3>
                 <div class="flex gap-4 items-start">
-                    <div class="w-10 h-10 rounded-2xl badge-blue flex items-center justify-center shrink-0">
-                        <i class="fas fa-bolt text-sm"></i>
-                    </div>
-                    <p id="current_focus" class="text-xs font-bold leading-relaxed text-gray-600 dark:text-gray-400 uppercase tracking-tight"></p>
+                    <div class="w-10 h-10 rounded-2xl badge-blue flex items-center justify-center shrink-0"><i class="fas fa-bolt text-sm"></i></div>
+                    <p id="current_focus" class="text-xs font-bold leading-relaxed text-gray-600 dark:text-gray-400 uppercase tracking-tight font-tech"></p>
                 </div>
             </div>
         </aside>
@@ -192,9 +182,7 @@
             try {
                 const res = await fetch(`data/${currentLang}.json?v=${Date.now()}`);
                 content = await res.json();
-                if (content.seo) {
-                    document.title = content.seo.title;
-                }
+                if (content.seo) document.title = content.seo.title;
                 render();
                 handleRouting();
             } catch (e) { console.error("Init Error:", e); }
@@ -238,16 +226,13 @@
         function render() {
             const d = content;
             const ids = ['status','status_mobile','name','role','sidebar_bio','sidebar_skills_title','sidebar_hobbies_title','btn_contact','btn_cv','hero_title','work_title','path_title','bio','work_sub','path_sub','impact_val','impact_label','max_budget_val','max_budget_label','widget_title_stats','widget_title_focus','current_focus','loc_nav','exp_title','edu_title'];
-            
             ids.forEach(id => {
                 let key = id.replace('_mobile', ''); if (id === 'loc_nav') key = 'loc_val';
                 const el = document.getElementById(id);
                 if(el && d[key]) { el.innerText = d[key]; el.setAttribute('data-text', d[key]); }
             });
-
             if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-darkBorder text-[9px] font-black px-3 py-1.5 rounded-xl border border-gray-100 dark:border-darkBorder font-tech uppercase tracking-widest text-gray-500 dark:text-gray-400">${s}</span>`).join('');
             if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue">${h}</span>`).join('');
-            
             if (d.stack) {
                 document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
                     <div class="bento-card framer-card reveal-block">
@@ -261,7 +246,6 @@
                     </div>
                 `).join('');
             }
-
             if (d.projects) {
                 document.getElementById('projects-container').innerHTML = d.projects.map(p => `
                     <div class="bento-card group p-0 overflow-hidden aspect-[1.4/1] reveal-block">
@@ -277,34 +261,19 @@
                     </div>
                 `).join('');
             }
-
             if (d.experiences) {
                 document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
                     <div class="bento-card framer-card reveal-block flex flex-col justify-between min-h-[250px]">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <div class="w-14 h-14 rounded-2xl badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-2xl"></i></div>
-                                <span class="text-[10px] font-black text-gray-400 font-tech uppercase tracking-widest">${exp.date}</span>
-                            </div>
-                            <h4 class="text-xl font-black uppercase leading-tight mb-2 tracking-tighter text-gray-900 dark:text-white">${exp.role}</h4>
-                            <p class="text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6 opacity-80">${exp.company || ''}</p>
-                        </div>
-                        <p class="text-gray-500 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>
+                        <div><div class="flex justify-between items-start mb-6"><div class="w-14 h-14 rounded-2xl badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-2xl"></i></div><span class="text-[10px] font-black text-gray-400 font-tech uppercase tracking-widest">${exp.date}</span></div>
+                        <h4 class="text-xl font-black uppercase leading-tight mb-2 tracking-tighter text-gray-900 dark:text-white">${exp.role}</h4><p class="text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-6 opacity-80">${exp.company || ''}</p></div><p class="text-gray-500 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>
                     </div>
                 `).join('');
             }
-
             if (d.education) {
                 document.getElementById('education-grid').innerHTML = d.education.map(edu => `
                     <div class="bento-card framer-card reveal-block flex flex-col justify-between min-h-[180px]">
-                        <div>
-                            <div class="flex justify-between items-start mb-5">
-                                <div class="w-12 h-12 rounded-2xl badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div>
-                                <span class="text-[10px] font-black text-gray-400 font-tech uppercase tracking-widest">${edu.date}</span>
-                            </div>
-                            <h4 class="text-base font-black uppercase mb-1 text-gray-900 dark:text-white leading-tight">${edu.degree}</h4>
-                            <p class="text-gray-400 dark:text-gray-500 text-[10px] font-black uppercase tracking-widest font-tech">${edu.school}</p>
-                        </div>
+                        <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-2xl badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div><span class="text-[10px] font-black text-gray-400 font-tech uppercase tracking-widest">${edu.date}</span></div>
+                        <h4 class="text-base font-black uppercase mb-1 text-gray-900 dark:text-white leading-tight">${edu.degree}</h4><p class="text-gray-400 dark:text-gray-500 text-[10px] font-black uppercase tracking-widest font-tech">${edu.school}</p></div>
                     </div>
                 `).join('');
             }
@@ -315,10 +284,8 @@
             const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
             const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title' };
             const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub' };
-
             document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            
             const target = document.getElementById(pageMap[hash]);
             if(target) {
                 target.classList.add('active');
@@ -329,13 +296,7 @@
             document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
             window.scrollTo(0, 0);
         }
-
-        async function toggleLang() { 
-            currentLang = currentLang === 'fr' ? 'en' : 'fr'; 
-            localStorage.setItem('lang', currentLang); 
-            await init(); 
-        }
-
+        async function toggleLang() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; localStorage.setItem('lang', currentLang); await init(); }
         window.addEventListener('hashchange', handleRouting);
         init();
     </script>
