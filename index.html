@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyril Cherpion | AV Architect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyril Cherpion | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: "class" }</script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#f7f7f8] dark:bg-[#18181b] text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row min-h-screen">
-    <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-[#27272a]/95 border-b z-50 p-3 flex justify-between">
-        <button onclick="toggleTheme()"><i class="fas fa-circle-half-stroke"></i></button>
-        <div class="flex gap-4 uppercase font-tech text-[10px] font-bold">
-            <a href="#home">info</a><a href="#projects">work</a><a href="#experience">path</a>
+<body class="bg-[#f7f7f8] dark:bg-[#0d0d0f] text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row min-h-screen transition-colors duration-300">
+
+    <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-[#151517]/95 backdrop-blur-md border-b border-gray-200 z-50 p-3">
+        <div class="flex justify-between items-center mb-2 px-1">
+            <button onclick="toggleTheme()"><i class="fas fa-circle-half-stroke"></i></button>
+            <div class="bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full border border-green-100 flex items-center gap-1.5 uppercase font-tech text-[8px] font-bold"><span class="status-dot"></span><span id="status_mobile">...</span></div>
+        </div>
+        <div class="flex justify-around py-2 border-t border-gray-100">
+            <a href="#home" class="nav-link text-[10px] font-bold uppercase">info</a><a href="#projects" class="nav-link text-[10px] font-bold uppercase">work</a><a href="#experience" class="nav-link text-[10px] font-bold uppercase">path</a>
         </div>
     </nav>
-    <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-[#27272a] border-r p-8 flex flex-col z-40 order-last lg:order-first">
+
+    <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-[#151517] border-r border-gray-200 p-8 flex flex-col z-40 order-last lg:order-first">
         <div class="flex flex-col items-center text-center">
-            <a href="#home" class="relative z-50 block mb-6 hover:scale-105 transition-transform cursor-pointer">
-                <img src="https://github.com/ccherpion.png" class="w-24 h-24 rounded-full border shadow-md object-cover">
+            <a href="#home" class="relative z-50 block mb-6 transition-transform hover:scale-105 cursor-pointer">
+                <img src="https://github.com/ccherpion.png" class="w-24 h-24 rounded-full border border-gray-100 shadow-md object-cover">
             </a>
             <h1 id="name" class="text-2xl font-black mb-1 uppercase tracking-tighter">...</h1>
             <h2 id="role" class="text-[9px] font-bold text-blue-600 uppercase tracking-widest mb-4 font-tech">...</h2>
@@ -33,46 +39,35 @@
                 <div><h3 id="sidebar_hobbies_title" class="text-[9px] font-bold text-gray-400 mb-3 font-tech uppercase">...</h3><div id="sidebar-hobbies" class="flex flex-wrap gap-2"></div></div>
             </div>
         </div>
+        <div class="mt-auto text-center text-gray-400 text-[9px] font-tech uppercase">CYRIL CHERPION • 2026</div>
     </aside>
-    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-[#27272a]/90 backdrop-blur-md border-b z-50 items-center justify-between px-8">
-        <div class="flex items-center gap-3 bg-green-50 dark:bg-green-900/20 px-3 py-1.5 rounded-full border border-green-100 font-tech uppercase font-bold text-[10px]">
-            <span class="status-dot"></span><span id="status">...</span>
-        </div>
+
+    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-[#151517]/90 backdrop-blur-md border-b border-gray-200 z-50 items-center justify-between px-8">
+        <div class="bg-green-50 dark:bg-green-900/20 px-3 py-1.5 rounded-full border border-green-100 font-tech uppercase font-bold text-[10px]"><span class="status-dot"></span><span id="status">...</span></div>
         <div class="flex gap-10 absolute left-1/2 -translate-x-1/2 font-tech font-bold uppercase text-[11px]">
-            <a href="#home" class="nav-link text-gray-400">cyril.info</a><a href="#projects" class="nav-link text-gray-400">work.done</a><a href="#experience" class="nav-link text-gray-400">my.path</a>
+            <a href="#home" class="nav-link text-gray-400 hover:text-gray-900 transition">cyril.info</a><a href="#projects" class="nav-link text-gray-400 hover:text-gray-900 transition">work.done</a><a href="#experience" class="nav-link text-gray-400 hover:text-gray-900 transition">my.path</a>
         </div>
         <div class="flex items-center gap-5 text-[10px] font-bold text-gray-500 font-tech uppercase">
             <div class="flex items-center gap-1.5"><i class="fas fa-location-dot text-blue-600"></i> <span id="loc_nav">...</span></div>
             <span id="live-time" class="text-blue-700 dark:text-blue-400 font-mono">--:--:--</span>
             <button onclick="toggleTheme()"><i class="fas fa-circle-half-stroke text-base"></i></button>
-            <button onclick="toggleLang()" id="lang-btn" class="text-sm">EN</button>
+            <button onclick="toggleLang()" id="lang-btn">EN</button>
         </div>
     </nav>
-    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 flex flex-col xl:flex-row items-start justify-between gap-12 flex-grow">
-        <div class="flex-grow w-full xl:max-w-4xl min-h-[70vh]">
-            <div id="page-home" class="page-view active space-y-12">
-                <div class="mb-12"><h2 id="hero_title" class="text-4xl lg:text-7xl font-black uppercase tracking-tighter mb-8">...</h2><p id="bio" class="text-2xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">...</p></div>
-                <div id="stack-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            </div>
-            <div id="page-projects" class="page-view space-y-12">
-                <div class="mb-12"><h2 id="work_title" class="text-4xl lg:text-7xl font-black uppercase tracking-tighter mb-8">...</h2><p id="work_sub" class="text-2xl text-gray-600 dark:text-gray-400 font-medium">...</p></div>
-                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            </div>
-            <div id="page-experience" class="page-view space-y-12">
-                <div class="mb-12"><h2 id="path_title" class="text-4xl lg:text-7xl font-black uppercase tracking-tighter mb-8">...</h2><p id="path_sub" class="text-2xl text-gray-600 dark:text-gray-400 font-medium">...</p></div>
-                <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            </div>
+
+    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 flex-grow">
+        <div id="page-home" class="page-view active space-y-12">
+            <div class="mb-12"><h2 id="hero_title" class="text-4xl lg:text-7xl font-black uppercase mb-8">...</h2><p id="bio" class="text-2xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl font-medium">...</p></div>
+            <div id="stack-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         </div>
-        <aside id="sidebar-right" class="w-full xl:w-72 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-28 xl:ml-auto">
-            <div class="bg-white dark:bg-[#27272a] border p-6 rounded-3xl">
-                <h3 id="widget_title_stats" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 text-center">...</h3>
-                <div class="space-y-4">
-                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#1f1f22]"><p id="impact_val" class="text-3xl font-black text-blue-700 font-tech">...</p><p id="impact_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1">...</p></div>
-                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#1f1f22]"><p id="max_budget_val" class="text-3xl font-black text-blue-700 font-tech">...</p><p id="max_budget_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1">...</p></div>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-[#27272a] border p-6 rounded-3xl"><h3 id="widget_title_focus" class="text-[10px] font-bold text-gray-400 uppercase mb-4">...</h3><div class="flex gap-3 items-start"><div class="badge-blue"><i class="fas fa-bolt"></i></div><p id="current_focus" class="text-[10px] font-bold text-gray-600 dark:text-gray-400 uppercase"></p></div></div>
-        </aside>
+        <div id="page-projects" class="page-view space-y-12">
+            <div class="mb-12"><h2 id="work_title" class="text-4xl lg:text-7xl font-black uppercase mb-4 tracking-tighter">...</h2><p id="work_sub" class="text-2xl text-gray-600 dark:text-gray-400 font-medium">...</p></div>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+        </div>
+        <div id="page-experience" class="page-view space-y-12">
+            <div class="mb-12"><h2 id="path_title" class="text-4xl lg:text-7xl font-black uppercase mb-4 tracking-tighter">...</h2><p id="path_sub" class="text-2xl text-gray-600 dark:text-gray-400 font-medium">...</p></div>
+            <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

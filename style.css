@@ -1,37 +1,30 @@
-:root { --bg: #f8f8f9; --card: #ffffff; --text: #111827; --border: rgba(0,0,0,0.06); --sub: #6b7280; }
-.dark { --bg: #0d0d0f; --card: #151517; --text: #f3f4f6; --border: rgba(255,255,255,0.06); --sub: #9ca3af; }
-
-body { background-color: var(--bg); color: var(--text); font-family: 'Manrope', sans-serif; transition: background 0.4s ease; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
 .font-tech { font-family: 'JetBrains Mono', monospace; }
 
-/* CARTES BENTO AVEC EFFET DE RÉVÉLATION */
+/* ANIMATIONS DES BLOCS */
 .bento-card { 
-    background-color: var(--card); border: 1px solid var(--border);
-    border-radius: 1.5rem; padding: 1.5rem; opacity: 0; transform: translateY(25px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0; transform: translateY(30px); 
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); 
 }
 .reveal-active { opacity: 1 !important; transform: translateY(0) !important; }
 
-/* LOGOS STACK */
-.stack-logo { width: 20px; height: 20px; object-fit: contain; filter: grayscale(1); opacity: 0.6; transition: 0.3s; }
-.dark .stack-logo { filter: grayscale(1) invert(1); }
-.bento-card:hover .stack-logo { filter: grayscale(0) invert(0); opacity: 1; }
-
-/* ANIMATIONS TEXTE */
-.word { display: inline-block; margin-right: 0.3em; white-space: nowrap; }
-.char { display: inline-block; opacity: 0; transform: translateY(4px); transition: all 0.2s ease; }
+/* SCRAMBLE TEXT */
+.word { display: inline-block; white-space: nowrap; margin-right: 0.35em; }
+.char { display: inline-block; opacity: 0; transform: translateY(4px); transition: all 0.3s ease; }
 .char.visible { opacity: 1; transform: translateY(0); }
 
 /* BADGES BLEUS */
 .badge-blue {
     background-color: #eff6ff; color: #1d4ed8; border: 1px solid #dbeafe;
-    padding: 4px 12px; border-radius: 99px; font-weight: 700; font-size: 10px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: 10px; text-transform: uppercase;
 }
 .dark .badge-blue { background-color: rgba(30, 58, 138, 0.4); color: #93c5fd; border: 1px solid rgba(255,255,255,0.1); }
 
+/* NAVIGATION */
 .page-view { display: none; }
 .page-view.active { display: block; }
-.nav-link.active { color: #3b82f6 !important; font-weight: 900; border-bottom: 2px solid #3b82f6; }
+.nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }
+.dark .nav-link.active { color: white !important; }
 
 .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: glow 2s infinite; }
 @keyframes glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
