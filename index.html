@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     
     <script>
         tailwind.config = {
@@ -20,53 +21,16 @@
                 } 
             }
         }
-    </script>
-
-    <script>
+        // Prévention du flash blanc
         (function() {
             let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             if (theme === 'dark') document.documentElement.classList.add('dark');
         })();
     </script>
-
-    <style>
-        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
-        .font-tech { font-family: 'JetBrains Mono', monospace; }
-        
-        /* 1. ANTI-GLITCH : CACHER TOTALEMENT LE TEXTE AVANT SCRAMBLE */
-        .scramble-target { visibility: hidden; opacity: 0; }
-
-        /* 2. ANIMATION LETTRES */
-        .char { display: inline-block; opacity: 0; transform: translateY(10px); transition: all 0.3s ease; }
-        .word { display: inline-block; white-space: nowrap; margin-right: 0.25em; }
-
-        /* 3. ANIMATION BLOCS */
-        @keyframes blockUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .reveal-block { opacity: 0; }
-        .active .reveal-block { animation: blockUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-
-        .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: status-glow 2s infinite; }
-        @keyframes status-glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
-
-        .framer-card { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .framer-card:hover { transform: translateY(-4px); }
-        .page-view { display: none; }
-        .page-view.active { display: block; }
-        .nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }
-        .dark .nav-link.active { color: white !important; }
-
-        .project-gradient { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
-        .badge-blue { background-color: rgba(239, 246, 255, 1); color: rgba(29, 78, 216, 1); border: 1px solid rgba(219, 234, 254, 1); }
-        .dark .badge-blue { background-color: rgba(30, 58, 138, 0.2); color: rgba(147, 197, 253, 1); border: 1px solid rgba(30, 58, 138, 0.5); }
-        
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-    </style>
 </head>
 <body class="transition-colors duration-300 bg-[#f7f7f8] dark:bg-darkBg text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row">
 
-    <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-darkNav/95 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50 transition-colors duration-300">
+    <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-darkNav/95 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50">
         <div class="p-3 flex flex-col gap-2">
             <div class="flex justify-between items-center px-1">
                 <div class="flex gap-4 items-center">
@@ -109,7 +73,7 @@
         <div class="mt-12 pt-10 text-center text-gray-400 text-[10px] font-tech uppercase">CYRIL CHERPION • 2026</div>
     </aside>
 
-    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-darkNav/90 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50 items-center justify-between px-6 transition-colors duration-300">
+    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-darkNav/90 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50 items-center justify-between px-6">
         <div class="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border border-green-200 px-2.5 py-1.5 rounded-full text-[10px] font-bold flex items-center gap-2 font-tech "><span class="status-dot"></span><span id="status">...</span></div>
         <div class="flex gap-8 absolute left-1/2 -translate-x-1/2 font-mono">
             <a href="#home" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_home">...</a>
@@ -124,7 +88,7 @@
         </div>
     </nav>
 
-    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 max-w-[1600px] mx-auto flex flex-col xl:flex-row gap-12 items-start flex-grow">
+    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 max-w-[1600px] mx-auto flex flex-col xl:flex-row gap-12 items-start">
         
         <div class="flex-grow w-full xl:max-w-4xl min-h-[70vh]">
             <div id="page-home" class="page-view active space-y-12">
@@ -154,7 +118,7 @@
         <aside class="w-full xl:w-72 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-28">
             <div class="framer-card bg-white dark:bg-darkCard border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
                 <h3 id="widget_title_stats" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 font-tech text-center">...</h3>
-                <div class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
                     <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#1f1f22] border border-gray-100 dark:border-darkBorder">
                         <p id="impact_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p>
                         <p id="impact_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p>
@@ -175,155 +139,6 @@
         </aside>
     </main>
 
-    <script>
-        let currentLang = localStorage.getItem('lang') || 'en';
-        let content = {};
-        const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
-
-        function toggleTheme() {
-            const html = document.documentElement;
-            const isDark = html.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        }
-
-        // SCRAMBLE FUNCTION (ANTI-GLITCH)
-        function runScramble(id, speed = 25) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            const text = el.getAttribute('data-text') || el.innerText;
-            el.setAttribute('data-text', text);
-            el.innerHTML = '';
-            
-            // RENDRE VISIBLE APRÈS PRÉPARATION
-            el.style.visibility = 'visible';
-            el.style.opacity = '1';
-            
-            const words = text.split(' ');
-            let cTotal = 0;
-            words.forEach(w => {
-                const wSpan = document.createElement('span');
-                wSpan.className = 'word';
-                [...w].forEach(c => {
-                    const s = document.createElement('span');
-                    s.className = 'char';
-                    s.innerText = c;
-                    wSpan.appendChild(s);
-                    let count = 0;
-                    const max = 3 + Math.floor(Math.random() * 4);
-                    setTimeout(() => {
-                        const itv = setInterval(() => {
-                            s.innerText = scChars[Math.floor(Math.random() * scChars.length)];
-                            s.style.opacity = '1';
-                            if (count >= max) { s.innerText = c; clearInterval(itv); }
-                            count++;
-                        }, 40);
-                    }, cTotal * speed);
-                    cTotal++;
-                });
-                el.appendChild(wSpan);
-                cTotal++;
-            });
-        }
-
-        function handleRouting() {
-            const hash = window.location.hash || '#home';
-            const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
-            const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title' };
-            const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub' };
-
-            document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            
-            const targetView = document.getElementById(pageMap[hash]);
-            if(targetView) {
-                targetView.classList.add('active');
-                
-                // Hide before scramble
-                const targets = [titleMap[hash], subMap[hash]];
-                targets.forEach(t => { 
-                    const e = document.getElementById(t);
-                    if(e) { e.style.visibility = 'hidden'; e.style.opacity = '0'; }
-                });
-
-                setTimeout(() => {
-                    runScramble(titleMap[hash], 20);
-                    setTimeout(() => runScramble(subMap[hash], 5), 100);
-                }, 50);
-
-                const blocks = targetView.querySelectorAll('.reveal-block');
-                blocks.forEach((b, i) => { b.style.animationDelay = `${400 + (i * 100)}ms`; });
-            }
-            document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
-            window.scrollTo(0, 0);
-        }
-
-        window.addEventListener('hashchange', handleRouting);
-
-        async function init() {
-            try {
-                const res = await fetch(`data/${currentLang}.json?v=${new Date().getTime()}`);
-                content = await res.json();
-                render();
-                handleRouting();
-                setInterval(() => {
-                    const el = document.getElementById('live-time');
-                    if(el) el.innerText = new Date().toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' CET';
-                }, 1000);
-            } catch (e) { console.error(e); }
-        }
-
-        function render() {
-            const d = content;
-            // LISTE COMPLÈTE DES IDS INCLUANT SIDEBAR DROITE
-            const ids = ['nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 'path_sub', 'loc_nav', 'stack_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus'];
-            
-            ids.forEach(id => {
-                let key = id.replace('_mobile', '');
-                if (id === 'loc_nav') key = 'loc_val';
-                const el = document.getElementById(id);
-                if(el && d[key]) { 
-                    el.innerText = d[key]; 
-                    el.setAttribute('data-text', d[key]); 
-                }
-            });
-
-            document.getElementById('lang-btn').innerText = d.lang_btn;
-            if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#1f1f22] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
-            if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
-            
-            if (d.stack) {
-                document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
-                    <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6">
-                        <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100 dark:border-darkBorder"><div class="w-10 h-10 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${s.icon} text-lg"></i></div><h4 class="text-sm font-bold uppercase font-tech text-gray-900 dark:text-white">${s.category}</h4></div>
-                        <div class="grid grid-cols-2 gap-4">${s.items.map(item => `<div class="flex items-center gap-2"><div class="w-8 h-8 rounded-md bg-gray-50 dark:bg-darkNav flex items-center justify-center p-1.5"><img src="${item.logo}" class="w-full h-full object-contain filter grayscale dark:invert"></div><span class="text-[11px] font-bold font-tech uppercase text-gray-600 dark:text-gray-400">${item.name}</span></div>`).join('')}</div>
-                    </div>
-                `).join('');
-            }
-            if (d.projects) {
-                document.getElementById('projects-container').innerHTML = d.projects.map(p => `
-                    <div class="reveal-block framer-card group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-darkBorder">
-                        <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                        <div class="project-gradient absolute inset-0 flex flex-col justify-end p-8 text-white"><div class="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"><h3 class="text-3xl font-black font-tech uppercase mb-3">${p.name}</h3><p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2 mb-4">${p.desc}</p><div class="flex justify-between items-center"><span class="badge-blue !bg-white/10 !text-white !border-white/20 text-[10px] font-bold px-4 py-2 rounded-full font-tech uppercase shadow-lg">${p.tag}</span><span class="text-2xl font-black font-tech">${p.val}</span></div></div></div>
-                    </div>
-                `).join('');
-            }
-            if (d.experiences) {
-                document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
-                    <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px]">
-                        <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span></div><h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${exp.role}</h4><p class="text-blue-700 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p></div><p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>
-                    </div>
-                `).join('');
-            }
-            if (d.education) {
-                document.getElementById('education-grid').innerHTML = d.education.map(edu => `
-                    <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[180px]">
-                        <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 uppercase font-tech">${edu.date}</span></div><h4 class="text-base font-bold uppercase mb-1 text-gray-900 dark:text-white">${edu.degree}</h4><p class="text-gray-500 text-[11px] uppercase font-tech">${edu.school}</p></div>
-                    </div>
-                `).join('');
-            }
-        }
-        async function toggleLang() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; localStorage.setItem('lang', currentLang); init(); }
-        init();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
