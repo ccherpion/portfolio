@@ -1,26 +1,23 @@
 body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
 .font-tech { font-family: 'JetBrains Mono', monospace; }
 
-/* ANIMATIONS DES BLOCS */
 .bento-card { 
-    opacity: 0; transform: translateY(30px); 
+    opacity: 0; 
+    transform: translateY(30px); 
     transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); 
 }
 .reveal-active { opacity: 1 !important; transform: translateY(0) !important; }
 
-/* SCRAMBLE TEXT */
 .word { display: inline-block; white-space: nowrap; margin-right: 0.35em; }
 .char { display: inline-block; opacity: 0; transform: translateY(4px); transition: all 0.3s ease; }
 .char.visible { opacity: 1; transform: translateY(0); }
 
-/* BADGES BLEUS */
 .badge-blue {
     background-color: #eff6ff; color: #1d4ed8; border: 1px solid #dbeafe;
     padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: 10px; text-transform: uppercase;
 }
 .dark .badge-blue { background-color: rgba(30, 58, 138, 0.4); color: #93c5fd; border: 1px solid rgba(255,255,255,0.1); }
 
-/* NAVIGATION */
 .page-view { display: none; }
 .page-view.active { display: block; }
 .nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }
