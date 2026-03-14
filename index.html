@@ -1,209 +1,107 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyril Cherpion | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --dark-bg: #0a0a0c;
-            --dark-card: #141417;
-            --dark-border: #1f1f23;
-            --dark-nav: #0d0d0f;
-        }
-
-        body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        .dark { --bg: #0d0d0f; --card: #151517; --border: #1f1f23; }
+        body { font-family: 'Manrope', sans-serif; transition: all 0.3s ease; }
         .font-tech { font-family: 'JetBrains Mono', monospace; }
-
-        .bento-card { 
-            opacity: 0; 
-            transform: translateY(30px); 
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); 
-        }
+        .bento-card { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal-active { opacity: 1 !important; transform: translateY(0) !important; }
-
         .word { display: inline-block; white-space: nowrap; margin-right: 0.35em; }
         .char { display: inline-block; opacity: 0; transform: translateY(4px); transition: all 0.3s ease; }
         .char.visible { opacity: 1; transform: translateY(0); }
-
-        .badge-blue {
-            background-color: #eff6ff;
-            color: #1d4ed8;
-            border: 1px solid #dbeafe;
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 10px;
-            text-transform: uppercase;
-        }
-        .dark .badge-blue {
-            background-color: rgba(30, 58, 138, 0.4);
-            color: #93c5fd;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
+        .badge-blue { background-color: #eff6ff; color: #1d4ed8; border: 1px solid #dbeafe; padding: 4px 12px; border-radius: 99px; font-weight: 700; font-size: 10px; text-transform: uppercase; }
+        .dark .badge-blue { background-color: rgba(30, 58, 138, 0.4); color: #93c5fd; border: 1px solid rgba(255, 255, 255, 0.1); }
         .page-view { display: none; }
         .page-view.active { display: block; }
-        .nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }
-        .dark .nav-link.active { color: white !important; }
-
         .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: glow 2s infinite; }
         @keyframes glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
-
-        .framer-card {
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .framer-card:hover {
-            transform: translateY(-5px);
-        }
     </style>
 </head>
-<body class="bg-[#f7f7f8] dark:bg-darkBg text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row min-h-screen transition-colors duration-300">
-
-    <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-darkNav/95 backdrop-blur-md border-b border-gray-200 z-50 p-3">
-        <div class="flex justify-between items-center mb-2 px-1">
+<body class="bg-[#f7f7f8] dark:bg-[#0d0d0f] text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row min-h-screen">
+    <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-[#151517]/95 backdrop-blur-md border-b border-gray-200 z-50 p-3">
+        <div class="flex justify-between items-center px-1">
             <button onclick="toggleTheme()"><i class="fas fa-circle-half-stroke"></i></button>
-            <div class="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full border border-green-100">
-                <span class="status-dot"></span><span id="status_mobile" class="text-[8px] font-bold uppercase font-tech">...</span>
-            </div>
+            <div class="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full border border-green-100"><span class="status-dot"></span><span id="status_mobile" class="text-[8px] font-bold uppercase font-tech">...</span></div>
         </div>
-        <div class="flex justify-around py-2 border-t border-gray-100">
-            <a href="#home" class="nav-link text-[10px] font-bold uppercase font-tech">info</a>
-            <a href="#projects" class="nav-link text-[10px] font-bold uppercase font-tech">work</a>
-            <a href="#experience" class="nav-link text-[10px] font-bold uppercase font-tech">path</a>
-        </div>
+        <div class="flex justify-around py-2 border-t mt-2"><a href="#home" class="nav-link text-[10px] font-bold uppercase">info</a><a href="#projects" class="nav-link text-[10px] font-bold uppercase">work</a><a href="#experience" class="nav-link text-[10px] font-bold uppercase">path</a></div>
     </nav>
-
-    <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-darkNav border-r border-gray-200 p-8 flex flex-col z-40 order-last lg:order-first">
+    <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-[#151517] border-r border-gray-200 p-8 flex flex-col z-40 order-last lg:order-first">
         <div class="flex flex-col items-center text-center">
-            <a href="#home" class="relative z-50 block mb-6 transition-transform hover:scale-110">
-                <img src="https://github.com/ccherpion.png" class="w-24 h-24 rounded-full border border-gray-100 shadow-md object-cover">
-            </a>
+            <a href="#home" class="relative z-50 block mb-6 transition-transform hover:scale-110"><img src="https://github.com/ccherpion.png" class="w-24 h-24 rounded-full border shadow-md object-cover"></a>
             <h1 id="name" class="text-2xl font-black mb-1 uppercase tracking-tighter">...</h1>
             <h2 id="role" class="text-[9px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-4 font-tech">...</h2>
             <p id="sidebar_bio" class="text-sm text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">...</p>
             <div class="w-full space-y-3 mb-8">
-                <a href="mailto:ccherpion@outlook.com" class="w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-[11px] font-tech shadow-md">
-                    <i class="fas fa-paper-plane"></i> <span id="btn_contact">...</span>
-                </a>
-                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#1f1f22] border border-gray-200 text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-[10px] uppercase shadow-sm">
-                    <i class="fas fa-file-pdf text-red-500"></i> <span id="btn_cv">...</span>
-                </a>
+                <a href="mailto:ccherpion@outlook.com" class="w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-[11px] font-tech shadow-md"><i class="fas fa-paper-plane"></i> <span id="btn_contact">...</span></a>
+                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#1f1f22] border border-gray-200 text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-[10px] uppercase shadow-sm"><i class="fas fa-file-pdf text-red-500"></i> <span id="btn_cv">...</span></a>
             </div>
-            <div class="w-full space-y-6 text-left">
-                <div><h3 id="sidebar_skills_title" class="text-[9px] font-bold text-gray-400 mb-3 font-tech uppercase">...</h3><div id="sidebar-skills" class="flex flex-wrap gap-2"></div></div>
-                <div><h3 id="sidebar_hobbies_title" class="text-[9px] font-bold text-gray-400 mb-3 font-tech uppercase">...</h3><div id="sidebar-hobbies" class="flex flex-wrap gap-2"></div></div>
-            </div>
+            <div id="sidebar-skills" class="flex flex-wrap gap-2 mb-6"></div>
         </div>
     </aside>
-
-    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-darkNav/90 backdrop-blur-md border-b border-gray-200 z-50 items-center justify-between px-8">
-        <div class="flex items-center gap-3 bg-green-50 dark:bg-green-900/20 px-3 py-1.5 rounded-full border border-green-100 font-tech uppercase font-bold text-[10px]">
-            <span class="status-dot"></span><span id="status">...</span>
-        </div>
-        <div class="flex gap-10 absolute left-1/2 -translate-x-1/2 font-tech font-bold uppercase text-[11px]">
-            <a href="#home" class="nav-link text-gray-400 hover:text-gray-900 transition">cyril.info</a>
-            <a href="#projects" class="nav-link text-gray-400 hover:text-gray-900 transition">work.done</a>
-            <a href="#experience" class="nav-link text-gray-400 hover:text-gray-900 transition">my.path</a>
-        </div>
-        <div class="flex items-center gap-5 text-[10px] font-bold text-gray-500 font-tech uppercase">
+    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-[#151517]/90 backdrop-blur-md border-b z-50 items-center justify-between px-8">
+        <div class="flex items-center gap-3 bg-green-50 dark:bg-green-900/20 px-3 py-1.5 rounded-full border border-green-100 font-tech uppercase font-bold text-[10px]"><span class="status-dot"></span><span id="status">...</span></div>
+        <div class="flex gap-10 font-tech font-bold uppercase text-[11px]"><a href="#home" class="nav-link">cyril.info</a><a href="#projects" class="nav-link">work.done</a><a href="#experience" class="nav-link">my.path</a></div>
+        <div class="flex items-center gap-5 font-tech uppercase text-[10px]">
             <div class="flex items-center gap-1.5"><i class="fas fa-location-dot text-blue-600"></i> <span id="loc_nav">...</span></div>
-            <span id="live-time" class="text-blue-700 dark:text-blue-400 font-mono">--:--:--</span>
             <button onclick="toggleTheme()"><i class="fas fa-circle-half-stroke text-base"></i></button>
-            <button onclick="toggleLang()" id="lang-btn" class="text-sm">EN</button>
+            <button onclick="toggleLang()" id="lang-btn" class="font-bold">EN</button>
         </div>
     </nav>
-
-    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 flex flex-col xl:flex-row items-start justify-between gap-12 flex-grow">
-        <div class="flex-grow w-full xl:max-w-4xl min-h-[70vh]">
-            <div id="page-home" class="page-view active space-y-12">
-                <div class="mb-12">
-                    <h2 id="hero_title" class="text-4xl lg:text-7xl font-black uppercase mb-8">...</h2>
-                    <p id="bio" class="text-2xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">...</p>
-                </div>
-                <div id="stack-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            </div>
-            <div id="page-projects" class="page-view space-y-12">
-                <div class="mb-12">
-                    <h2 id="work_title" class="text-4xl lg:text-7xl font-black uppercase mb-8 tracking-tighter">...</h2>
-                    <p id="work_sub" class="text-2xl text-gray-600 dark:text-gray-400 font-medium">...</p>
-                </div>
-                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            </div>
-            <div id="page-experience" class="page-view space-y-12">
-                <div class="mb-12">
-                    <h2 id="path_title" class="text-4xl lg:text-7xl font-black uppercase mb-8 tracking-tighter">...</h2>
-                    <p id="path_sub" class="text-2xl text-gray-600 dark:text-gray-400 font-medium">...</p>
-                </div>
-                <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            </div>
+    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 flex-grow">
+        <div id="page-home" class="page-view active">
+            <h2 id="hero_title" class="text-4xl lg:text-7xl font-black uppercase mb-8">...</h2>
+            <p id="bio" class="text-2xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium mb-12">...</p>
+            <div id="stack-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         </div>
-
-        <aside id="sidebar-right" class="w-full xl:w-72 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-28 xl:ml-auto">
-            <div class="bg-white dark:bg-darkCard border border-gray-200 p-6 rounded-3xl">
-                <h3 id="widget_title_stats" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 font-tech text-center">...</h3>
-                <div class="space-y-4">
-                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#1f1f22] border border-gray-100">
-                        <p id="impact_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p>
-                        <p id="impact_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p>
-                    </div>
-                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#1f1f22] border border-gray-100">
-                        <p id="max_budget_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p>
-                        <p id="max_budget_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-darkCard border border-gray-200 p-6 rounded-3xl">
-                <h3 id="widget_title_focus" class="text-[10px] font-bold text-gray-400 uppercase mb-4 font-tech">...</h3>
-                <div class="flex gap-3 items-start">
-                    <div class="w-8 h-8 rounded-full badge-blue flex items-center justify-center shrink-0"><i class="fas fa-bolt text-xs"></i></div>
-                    <p id="current_focus" class="text-[10px] font-bold leading-tight text-gray-600 dark:text-gray-400 uppercase font-tech"></p>
-                </div>
-            </div>
-        </aside>
+        <div id="page-projects" class="page-view">
+            <h2 id="work_title" class="text-4xl lg:text-7xl font-black uppercase mb-8">...</h2>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+        </div>
+        <div id="page-experience" class="page-view">
+            <h2 id="path_title" class="text-4xl lg:text-7xl font-black uppercase mb-8">...</h2>
+            <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
     </main>
-
     <script>
         let currentLang = localStorage.getItem('lang') || 'fr';
         let content = {};
-        const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789#%*+";
+        const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789";
 
-        function toggleTheme() { document.documentElement.classList.toggle('dark'); }
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
 
         async function init() {
-            try {
-                const res = await fetch(`data/${currentLang}.json?v=${Date.now()}`);
-                content = await res.json();
-                render();
-                handleRouting();
-                setInterval(() => {
-                    const el = document.getElementById('live-time');
-                    if(el) el.innerText = new Date().toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' CET';
-                }, 1000);
-            } catch (e) { console.error("Init Error:", e); }
+            const res = await fetch(`data/${currentLang}.json?v=${Date.now()}`);
+            content = await res.json();
+            render();
+            handleRouting();
         }
 
         function runScramble(id, speed = 25) {
             const el = document.getElementById(id); if (!el) return;
             const text = el.getAttribute('data-text') || el.innerText;
-            if (!text || text === "...") return;
-            el.innerHTML = ''; el.style.opacity = '1';
-            let charIdx = 0;
+            el.innerHTML = ''; let charIdx = 0;
             text.split(' ').forEach(w => {
                 const wSpan = document.createElement('span'); wSpan.className = 'word';
                 [...w].forEach(c => {
                     const s = document.createElement('span'); s.className = 'char'; s.innerText = c;
                     wSpan.appendChild(s);
-                    const currentIdx = charIdx;
                     setTimeout(() => {
                         let cnt = 0; const itv = setInterval(() => {
                             s.innerText = scChars[Math.floor(Math.random() * scChars.length)]; s.classList.add('visible');
                             if (cnt >= 5) { s.innerText = c; clearInterval(itv); } cnt++;
                         }, 30);
-                    }, currentIdx * speed);
+                    }, charIdx * speed);
                     charIdx++;
                 });
                 el.appendChild(wSpan); charIdx++;
@@ -223,51 +121,23 @@
 
         function render() {
             const d = content;
-            const ids = ['status','status_mobile','name','role','sidebar_bio','sidebar_skills_title','sidebar_hobbies_title','btn_contact','btn_cv','hero_title','work_title','path_title','bio','work_sub','path_sub','impact_val','impact_label','max_budget_val','max_budget_label','widget_title_stats','widget_title_focus','current_focus','loc_nav'];
-            
+            const ids = ['name','role','sidebar_bio','hero_title','work_title','path_title','bio','btn_contact','btn_cv','loc_nav','lang-btn','status','status_mobile'];
             ids.forEach(id => {
-                let key = id.replace('_mobile', ''); if (id === 'loc_nav') key = 'loc_val';
                 const el = document.getElementById(id);
+                let key = id.replace('_mobile', '').replace('-btn', '_btn').replace('loc_nav', 'loc_val');
                 if(el && d[key]) { el.innerText = d[key]; el.setAttribute('data-text', d[key]); }
             });
-
-            if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-darkBorder text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 font-tech uppercase">${s}</span>`).join('');
-            if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue">${h}</span>`).join('');
-            
-            if (d.stack) {
-                document.getElementById('stack-grid').innerHTML = d.stack.map(s => `<div class="bento-card framer-card bg-white dark:bg-[#1f1f22] border border-gray-100 p-6 rounded-2xl">
-                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100 dark:border-darkBorder"><div class="w-10 h-10 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${s.icon} text-lg"></i></div><h4 class="text-sm font-bold uppercase font-tech">${s.category}</h4></div>
-                <div class="grid grid-cols-2 gap-4">${s.items.map(item => `<div class="flex items-center gap-2"><img src="${item.logo}" class="w-6 h-6 grayscale opacity-40"><span class="text-[11px] font-bold font-tech uppercase text-gray-500">${item.name}</span></div>`).join('')}</div></div>`).join('');
-            }
-            if (d.projects) {
-                document.getElementById('projects-container').innerHTML = d.projects.map(p => `<div class="bento-card group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-100">
-                <img src="${p.img}" class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105">
-                <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8 text-white"><h3 class="text-3xl font-black uppercase mb-2 tracking-tighter">${p.name}</h3><p class="text-[11px] opacity-0 group-hover:opacity-100 transition-opacity mb-4">${p.desc}</p><div class="flex justify-between items-center"><span class="badge-blue !bg-white/10 !text-white !border-transparent">${p.tag}</span><span class="text-2xl font-black font-tech">${p.val}</span></div></div></div>`).join('');
-            }
-            if (d.experiences) {
-                document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `<div class="bento-card bg-white dark:bg-[#1f1f22] border border-gray-100 p-6 rounded-2xl flex flex-col justify-between min-h-[250px]">
-                <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center"><i class="${exp.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span></div><h4 class="text-lg font-bold uppercase leading-tight mb-2 tracking-tighter">${exp.role}</h4><p class="text-blue-700 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p></div><p class="text-gray-500 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p></div>`).join('');
-            }
+            if(d.stack) document.getElementById('stack-grid').innerHTML = d.stack.map(s => `<div class="bento-card bg-white dark:bg-[#151517] p-6 rounded-2xl border border-gray-100 dark:border-zinc-800"><div class="flex items-center gap-3 mb-6 border-b pb-4"><div class="badge-blue"><i class="${s.icon}"></i></div><h4 class="text-sm font-bold uppercase">${s.category}</h4></div><div class="grid grid-cols-2 gap-4">${s.items.map(item => `<div class="flex items-center gap-2"><img src="${item.logo}" class="w-5 h-5 dark:invert opacity-70"><span class="text-[11px] font-bold uppercase text-gray-500">${item.name}</span></div>`).join('')}</div></div>`).join('');
+            if(d.projects) document.getElementById('projects-container').innerHTML = d.projects.map(p => `<div class="bento-card group relative overflow-hidden aspect-[4/3] rounded-3xl"><img src="${p.img}" class="w-full h-full object-cover transition-all grayscale group-hover:grayscale-0 group-hover:scale-105"><div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-8 text-white"><h3 class="text-3xl font-black uppercase mb-2">${p.name}</h3><div class="flex justify-between items-center"><span class="badge-blue !bg-white/20 !text-white !border-transparent">${p.tag}</span><span class="text-xl font-bold font-tech">${p.val}</span></div></div></div>`).join('');
+            if(d.experiences) document.getElementById('experience-grid').innerHTML = d.experiences.map(e => `<div class="bento-card bg-white dark:bg-[#151517] p-6 rounded-2xl border border-gray-100 dark:border-zinc-800 flex flex-col justify-between min-h-[250px]"><div><div class="flex justify-between mb-5"><div class="badge-blue"><i class="${e.icon}"></i></div><span class="text-[9px] font-bold text-gray-400 uppercase">${e.date}</span></div><h4 class="text-lg font-bold uppercase mb-1">${e.role}</h4><p class="text-blue-600 text-[10px] font-black uppercase">${e.company}</p></div><p class="text-gray-500 text-[13px] mt-4">${e.desc}</p></div>`).join('');
         }
 
         function handleRouting() {
             const hash = window.location.hash || '#home';
             const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
-            const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title' };
-            const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub' };
-
             document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            
             const target = document.getElementById(pageMap[hash]);
-            if(target) {
-                target.classList.add('active');
-                if(titleMap[hash]) runScramble(titleMap[hash], 20);
-                if(subMap[hash]) setTimeout(() => runScramble(subMap[hash], 5), 100);
-                triggerBento();
-            }
-            document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
-            window.scrollTo(0, 0);
+            if(target) { target.classList.add('active'); runScramble(hash === '#home' ? 'hero_title' : (hash === '#projects' ? 'work_title' : 'path_title'), 20); triggerBento(); }
         }
 
         async function toggleLang() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; localStorage.setItem('lang', currentLang); init(); }
