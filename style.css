@@ -1,15 +1,33 @@
-body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; letter-spacing: 0.01em; }
 .font-tech { font-family: 'JetBrains Mono', monospace; }
 
 /* ANTI-GLITCH */
 .scramble-target { visibility: hidden; opacity: 0; }
 
-/* ANIMATIONS */
+/* CORRECTION LETTRES ATTACHÉES */
+.char { 
+    display: inline-block; 
+    opacity: 0; 
+    transform: translateY(10px); 
+    transition: all 0.3s ease; 
+    letter-spacing: normal; /* Force l'espacement standard par lettre */
+}
+
+.word { 
+    display: inline-block; 
+    white-space: nowrap; 
+    margin-right: 0.35em !important; /* Force l'espace entre les mots spans */
+}
+
+/* ANIMATION BLOCS */
 @keyframes blockUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .reveal-block { opacity: 0; }
 .active .reveal-block { animation: blockUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
-/* STYLE DES CARTES TECH (BENTO) */
+.status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: status-glow 2s infinite; }
+@keyframes status-glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
+
+/* STYLE COMPACT DES CARTES TECH */
 .tech-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -18,37 +36,14 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    min-height: 100px;
 }
 
-.dark .tech-card {
-    background: #1c1c1f;
-    border-color: #2d2d30;
-}
+.dark .tech-card { background: #1c1c1f; border-color: #2d2d30; }
+.tech-card:hover { transform: translateY(-4px); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
 
-.tech-card:hover {
-    transform: translateY(-5px);
-    border-color: #3b82f6;
-    background: rgba(59, 130, 246, 0.05);
-}
-
-.tech-logo {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.tech-card:hover .tech-logo {
-    transform: scale(1.1);
-}
-
-/* AUTRES STYLES */
-.status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: status-glow 2s infinite; }
-@keyframes status-glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
-
-.framer-card { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-.framer-card:hover { transform: translateY(-4px); }
+.tech-logo { width: 34px; height: 34px; object-fit: contain; }
 
 .page-view { display: none; }
 .page-view.active { display: block; }
@@ -56,9 +51,8 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
 .nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }
 .dark .nav-link.active { color: white !important; }
 
-.project-gradient { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
-.badge-blue { background-color: rgba(239, 246, 255, 1); color: rgba(29, 78, 216, 1); border: 1px solid rgba(219, 234, 254, 1); }
-.dark .badge-blue { background-color: rgba(30, 58, 138, 0.2); color: rgba(147, 197, 253, 1); border: 1px solid rgba(30, 58, 138, 0.5); }
+.dark img.filter-logo { filter: grayscale(1) invert(1) brightness(1.5); }
+img.filter-logo { filter: grayscale(1); transition: all 0.3s ease; }
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }

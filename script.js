@@ -19,7 +19,7 @@ function runScramble(id, speed = 25) {
     
     const words = text.split(' ');
     let cTotal = 0;
-    words.forEach(w => {
+    words.forEach((w, wordIndex) => {
         const wSpan = document.createElement('span');
         wSpan.className = 'word';
         [...w].forEach(c => {
@@ -40,6 +40,11 @@ function runScramble(id, speed = 25) {
             cTotal++;
         });
         el.appendChild(wSpan);
+        
+        // CORRECTION : Ajouter un espace texte réel entre les spans de mots
+        if (wordIndex < words.length - 1) {
+            el.appendChild(document.createTextNode(' '));
+        }
         cTotal++;
     });
 }
@@ -107,20 +112,18 @@ function render() {
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#252529] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
     
-    // NOUVEAU RENDU TECH STACK (STYLE BENTO)
+    // RENDU STACK PLUS COMPACT & LISIBLE
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(category => `
-            <div class="reveal-block space-y-6">
-                <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 font-tech px-2">
-                    // ${category.category}
-                </h4>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div class="reveal-block space-y-4">
+                <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 font-tech px-2">// ${category.category}</h4>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3">
                     ${category.items.map(item => `
-                        <div class="tech-card rounded-2xl p-8 transition-all">
-                            <span class="text-[9px] font-bold text-gray-400 dark:text-gray-500 uppercase font-tech mb-2">
+                        <div class="tech-card rounded-xl p-4 transition-all">
+                            <span class="text-[10px] font-black text-gray-600 dark:text-gray-400 uppercase font-tech text-center leading-none mb-2">
                                 ${item.name}
                             </span>
-                            <img src="${item.logo}" class="tech-logo" alt="${item.name}">
+                            <img src="${item.logo}" class="tech-logo filter-logo" alt="${item.name}">
                         </div>
                     `).join('')}
                 </div>
