@@ -2,21 +2,18 @@ let currentLang = localStorage.getItem('lang') || 'en';
 let content = {};
 const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
 
-// FONCTION MODE SOMBRE CORRIGÉE
 function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-// SCRAMBLE FUNCTION (ANIMATION TEXTE)
 function runScramble(id, speed = 25) {
     const el = document.getElementById(id);
     if (!el) return;
     const text = el.getAttribute('data-text') || el.innerText;
     el.setAttribute('data-text', text);
     el.innerHTML = '';
-    
     el.style.visibility = 'visible';
     el.style.opacity = '1';
     
@@ -47,7 +44,6 @@ function runScramble(id, speed = 25) {
     });
 }
 
-// ROUTING DES PAGES
 function handleRouting() {
     const hash = window.location.hash || '#home';
     const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
@@ -60,7 +56,6 @@ function handleRouting() {
     const targetView = document.getElementById(pageMap[hash]);
     if(targetView) {
         targetView.classList.add('active');
-        
         const targets = [titleMap[hash], subMap[hash]];
         targets.forEach(t => { 
             const e = document.getElementById(t);
@@ -81,35 +76,22 @@ function handleRouting() {
 
 window.addEventListener('hashchange', handleRouting);
 
-// INITIALISATION ET CHARGEMENT JSON
 async function init() {
     try {
         const res = await fetch(`data/${currentLang}.json?v=${new Date().getTime()}`);
         content = await res.json();
         render();
         handleRouting();
-        
-        // Mise à jour de l'heure
         setInterval(() => {
             const el = document.getElementById('live-time');
             if(el) el.innerText = new Date().toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' CET';
         }, 1000);
-    } catch (e) { console.error("Erreur chargement JSON:", e); }
+    } catch (e) { console.error(e); }
 }
 
-// RENDU DU CONTENU DYNAMIQUE
 function render() {
     const d = content;
-    
-    // Liste exhaustive des IDs à remplir, incluant les boutons manquants (btn_contact, btn_cv)
-    const ids = [
-        'nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 
-        'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 
-        'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 
-        'path_sub', 'loc_nav', 'stack_title', 'edu_title', 'widget_title_stats', 'impact_val', 
-        'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus',
-        'btn_contact', 'btn_cv'
-    ];
+    const ids = ['nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 'path_sub', 'loc_nav', 'stack_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
     
     ids.forEach(id => {
         let key = id.replace('_mobile', '');
@@ -122,22 +104,18 @@ function render() {
     });
 
     document.getElementById('lang-btn').innerText = d.lang_btn;
-    
-    // Skills & Hobbies Sidebar
-    if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#1f1f22] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
+    if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#252529] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
     
-    // Stack Grid
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
-            <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6">
+            <div class="reveal-block framer-card bg-white dark:bg-[#1c1c1f] border border-gray-200 dark:border-darkBorder rounded-2xl p-6">
                 <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100 dark:border-darkBorder"><div class="w-10 h-10 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${s.icon} text-lg"></i></div><h4 class="text-sm font-bold uppercase font-tech text-gray-900 dark:text-white">${s.category}</h4></div>
-                <div class="grid grid-cols-2 gap-4">${s.items.map(item => `<div class="flex items-center gap-2"><div class="w-8 h-8 rounded-md bg-gray-50 dark:bg-darkNav flex items-center justify-center p-1.5"><img src="${item.logo}" class="w-full h-full object-contain filter grayscale dark:invert"></div><span class="text-[11px] font-bold font-tech uppercase text-gray-600 dark:text-gray-400">${item.name}</span></div>`).join('')}</div>
+                <div class="grid grid-cols-2 gap-4">${s.items.map(item => `<div class="flex items-center gap-2"><div class="w-8 h-8 rounded-md bg-gray-50 dark:bg-darkNav flex items-center justify-center p-1.5"><img src="${item.logo}" class="w-full h-full object-contain filter-logo"></div><span class="text-[11px] font-bold font-tech uppercase text-gray-600 dark:text-gray-400">${item.name}</span></div>`).join('')}</div>
             </div>
         `).join('');
     }
 
-    // Projects Container
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
             <div class="reveal-block framer-card group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-darkBorder">
@@ -147,29 +125,22 @@ function render() {
         `).join('');
     }
 
-    // Experience Grid
     if (d.experiences) {
         document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
-            <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px]">
+            <div class="reveal-block framer-card bg-white dark:bg-[#1c1c1f] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px]">
                 <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span></div><h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${exp.role}</h4><p class="text-blue-700 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p></div><p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>
             </div>
         `).join('');
     }
 
-    // Education Grid
     if (d.education) {
         document.getElementById('education-grid').innerHTML = d.education.map(edu => `
-            <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[180px]">
+            <div class="reveal-block framer-card bg-white dark:bg-[#1c1c1f] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[180px]">
                 <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 uppercase font-tech">${edu.date}</span></div><h4 class="text-base font-bold uppercase mb-1 text-gray-900 dark:text-white">${edu.degree}</h4><p class="text-gray-500 text-[11px] uppercase font-tech">${edu.school}</p></div>
             </div>
         `).join('');
     }
 }
 
-async function toggleLang() { 
-    currentLang = currentLang === 'fr' ? 'en' : 'fr'; 
-    localStorage.setItem('lang', currentLang); 
-    init(); 
-}
-
+async function toggleLang() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; localStorage.setItem('lang', currentLang); init(); }
 init();

@@ -1,7 +1,7 @@
 body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
 .font-tech { font-family: 'JetBrains Mono', monospace; }
 
-/* ANTI-GLITCH : CACHER TOTALEMENT LE TEXTE AVANT SCRAMBLE */
+/* ANTI-GLITCH */
 .scramble-target { visibility: hidden; opacity: 0; }
 
 /* ANIMATION LETTRES */
@@ -24,6 +24,11 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
 
 .nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }
 .dark .nav-link.active { color: white !important; }
+
+/* INVERSION DES LOGOS EN DARK MODE */
+.dark img.filter-logo { filter: grayscale(1) invert(1) brightness(2); }
+img.filter-logo { filter: grayscale(1); transition: all 0.3s ease; }
+.framer-card:hover img.filter-logo { filter: none; }
 
 .project-gradient { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
 

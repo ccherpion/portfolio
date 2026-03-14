@@ -6,23 +6,32 @@
     <title>Cyril Cherpion | AV Systems Consultant & AI Architect</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎛️</text></svg>">
     
+    <script>
+        window.tailwindConfig = {
+            darkMode: 'class',
+            theme: { 
+                extend: { 
+                    fontFamily: { sans: ['Manrope', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: { 
+                        darkBg: '#111113', 
+                        darkNav: '#1c1c1f', 
+                        darkCard: '#1c1c1f', 
+                        darkBorder: '#2d2d30' 
+                    } 
+                } 
+            }
+        };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = window.tailwindConfig;
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <script>
-        // Configuration Tailwind pour activer le mode sombre via la classe 'dark'
-        tailwind.config = {
-            darkMode: 'class',
-            theme: { 
-                extend: { 
-                    fontFamily: { sans: ['Manrope', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
-                    colors: { darkBg: '#18181b', darkNav: '#27272a', darkCard: '#27272a', darkBorder: '#3f3f46' } 
-                } 
-            }
-        }
-        // Script immédiat pour appliquer le thème stocké sans clignotement
         (function() {
             const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             if (theme === 'dark') document.documentElement.classList.add('dark');
@@ -30,7 +39,7 @@
         })();
     </script>
 </head>
-<body class="transition-colors duration-300 bg-[#f7f7f8] dark:bg-darkBg text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row">
+<body class="transition-colors duration-500 bg-[#f7f7f8] dark:bg-darkBg text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row min-h-screen">
 
     <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-darkNav/95 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50">
         <div class="p-3 flex flex-col gap-2">
@@ -51,7 +60,7 @@
         </div>
     </nav>
 
-    <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-darkNav border-r border-gray-200 dark:border-darkBorder p-8 flex flex-col z-40 order-last lg:order-first">
+    <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-darkNav border-r border-gray-200 dark:border-darkBorder p-8 flex flex-col z-40 order-last lg:order-first transition-colors duration-500">
         <div class="flex flex-col items-center text-center">
             <img src="https://github.com/ccherpion.png" alt="Cyril" class="w-32 h-32 rounded-full border border-gray-200 dark:border-darkBorder shadow-sm mb-6 object-cover">
             <h1 id="name" class="text-3xl font-black tracking-tight mb-2 text-gray-900 dark:text-white font-tech uppercase leading-none">...</h1>
@@ -62,7 +71,7 @@
                 <a href="mailto:ccherpion@outlook.com" class="w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-sm font-tech">
                     <i class="fas fa-paper-plane text-xs"></i> <span id="btn_contact">...</span>
                 </a>
-                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-xs font-tech uppercase">
+                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#252529] border border-gray-200 dark:border-darkBorder text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-xs font-tech uppercase">
                     <i class="fas fa-file-pdf text-red-500 text-xs"></i> <span id="btn_cv">...</span>
                 </a>
             </div>
@@ -75,8 +84,8 @@
         <div class="mt-12 pt-10 text-center text-gray-400 text-[10px] font-tech uppercase">CYRIL CHERPION • 2026</div>
     </aside>
 
-    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-darkNav/90 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50 items-center justify-between px-6">
-        <div class="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border border-green-200 px-2.5 py-1.5 rounded-full text-[10px] font-bold flex items-center gap-2 font-tech "><span class="status-dot"></span><span id="status">...</span></div>
+    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-darkNav/90 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50 items-center justify-between px-6 transition-colors duration-500">
+        <div class="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800/50 px-2.5 py-1.5 rounded-full text-[10px] font-bold flex items-center gap-2 font-tech "><span class="status-dot"></span><span id="status">...</span></div>
         <div class="flex gap-8 absolute left-1/2 -translate-x-1/2 font-mono">
             <a href="#home" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_home">...</a>
             <a href="#projects" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_work">...</a>
@@ -85,7 +94,7 @@
         <div class="flex items-center gap-4 text-[10px] font-bold text-gray-500 font-tech uppercase">
             <i class="fas fa-location-dot text-blue-600"></i> <span id="loc_nav">...</span>
             <span id="live-time" class="text-blue-700 dark:text-blue-400">--:--:--</span>
-            <button onclick="toggleTheme()" class="hover:text-blue-600 transition"><i class="fas fa-circle-half-stroke text-base"></i></button>
+            <button onclick="toggleTheme()" class="hover:text-blue-600 transition p-2"><i class="fas fa-circle-half-stroke text-base"></i></button>
             <button onclick="toggleLang()" id="lang-btn" class="hover:text-blue-600 transition text-sm">EN</button>
         </div>
     </nav>
@@ -111,21 +120,21 @@
             </div>
         </div>
 
-        <aside class="w-full xl:w-72 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-28">
-            <div class="framer-card bg-white dark:bg-darkCard border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
+        <aside class="w-full xl:w-80 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-28">
+            <div class="framer-card bg-white dark:bg-darkCard border border-gray-200 dark:border-darkBorder rounded-3xl p-6 transition-colors duration-500">
                 <h3 id="widget_title_stats" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 font-tech text-center">...</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
-                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#1f1f22] border border-gray-100 dark:border-darkBorder">
+                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#252529] border border-gray-100 dark:border-darkBorder">
                         <p id="impact_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p>
                         <p id="impact_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p>
                     </div>
-                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#1f1f22] border border-gray-100 dark:border-darkBorder">
+                    <div class="text-center p-5 rounded-2xl bg-gray-50 dark:bg-[#252529] border border-gray-100 dark:border-darkBorder">
                         <p id="max_budget_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p>
                         <p id="max_budget_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p>
                     </div>
                 </div>
             </div>
-            <div class="framer-card bg-white dark:bg-darkCard border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
+            <div class="framer-card bg-white dark:bg-darkCard border border-gray-200 dark:border-darkBorder rounded-3xl p-6 transition-colors duration-500">
                 <h3 id="widget_title_focus" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 font-tech">...</h3>
                 <div class="flex gap-3 items-start">
                     <div class="w-8 h-8 rounded-full badge-blue flex items-center justify-center shrink-0"><i class="fas fa-bolt text-xs"></i></div>
