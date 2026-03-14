@@ -1,13 +1,19 @@
 let currentLang = localStorage.getItem('lang') || 'fr';
 let content = {};
-const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789#%*+";
+const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789";
 
+// Fonction Thème corrigée
 function toggleTheme() {
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    console.log("Thème switché :", isDark ? "Sombre" : "Clair");
 }
-// Appliquer le thème stocké immédiatement
-if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+// Appliquer le thème au chargement
+if (localStorage.getItem('theme') === 'dark' || 
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+}
 
 async function init() {
     try {
@@ -15,42 +21,13 @@ async function init() {
         content = await res.json();
         render();
         handleRouting();
-        setInterval(() => {
-            const el = document.getElementById('live-time');
-            if(el) el.innerText = new Date().toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' CET';
-        }, 1000);
-    } catch (e) { console.error("Init Error:", e); }
-}
-
-function runScramble(id, speed = 25, delay = 0) {
-    const el = document.getElementById(id); if (!el) return;
-    const text = el.getAttribute('data-text') || el.innerText;
-    if (!text || text === "...") return;
-    setTimeout(() => {
-        el.innerHTML = ''; el.style.opacity = '1';
-        let charIdx = 0;
-        text.split(' ').forEach(w => {
-            const wSpan = document.createElement('span'); wSpan.className = 'word';
-            [...w].forEach(c => {
-                const s = document.createElement('span'); s.className = 'char'; s.innerText = c;
-                wSpan.appendChild(s);
-                const currentIdx = charIdx;
-                setTimeout(() => {
-                    let cnt = 0; const itv = setInterval(() => {
-                        s.innerText = scChars[Math.floor(Math.random() * scChars.length)]; s.classList.add('visible');
-                        if (cnt >= 5) { s.innerText = c; clearInterval(itv); } cnt++;
-                    }, 30);
-                }, currentIdx * speed);
-                charIdx++;
-            });
-            el.appendChild(wSpan); charIdx++;
-        });
-    }, delay);
+    } catch (e) { console.error("Erreur Init:", e); }
 }
 
 function render() {
     const d = content;
-    const ids = ['status','status_mobile','name','role','sidebar_bio','sidebar_skills_title','sidebar_hobbies_title','btn_contact','btn_cv','hero_title','work_title','path_title','bio','work_sub','path_sub','impact_val','impact_label','max_budget_val','max_budget_label','widget_title_stats','widget_title_focus','current_focus','loc_nav','lang-btn'];
+    // Mapping des IDs
+    const ids = ['name','role','status','status_mobile','sidebar_bio','btn_contact','btn_cv','hero_title','work_title','path_title','bio','work_sub','path_sub','impact_val','impact_label','max_budget_val','max_budget_label','current_focus','loc_nav','lang-btn'];
     
     ids.forEach(id => {
         const el = document.getElementById(id);
@@ -61,7 +38,6 @@ function render() {
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-100 dark:bg-zinc-800 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue">${h}</span>`).join('');
     
-    // STACK AVEC LOGOS (FIX)
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
             <div class="bento-card">
@@ -72,20 +48,17 @@ function render() {
             </div>`).join('');
     }
 
-    // PROJECTS (4 PROJETS RESTAURÉS)
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
             <div class="bento-card group relative overflow-hidden aspect-[4/3] p-0">
                 <img src="${p.img}" class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0">
                 <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-8 text-white">
-                    <h3 class="text-3xl font-black uppercase mb-1">${p.name}</h3>
-                    <p class="text-[11px] opacity-0 group-hover:opacity-100 transition-opacity mb-4">${p.desc}</p>
+                    <h3 class="text-3xl font-black uppercase mb-2">${p.name}</h3>
                     <div class="flex justify-between items-center"><span class="badge-blue !bg-white/10 !text-white !border-transparent">${p.tag}</span><span class="text-2xl font-black font-tech">${p.val}</span></div>
                 </div>
             </div>`).join('');
     }
 
-    // PATH (EXPÉRIENCES + ÉTUDES)
     if (d.experiences) {
         document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
             <div class="bento-card min-h-[200px]">
@@ -103,24 +76,19 @@ function render() {
 function handleRouting() {
     const hash = window.location.hash || '#home';
     const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
-    const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title' };
-    const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub' };
-
+    
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
     const target = document.getElementById(pageMap[hash]);
     
     if(target) {
         target.classList.add('active');
-        runScramble(titleMap[hash], 20, 0);
-        runScramble(subMap[hash], 10, 400);
-        
-        // FIX : i au lieu de index
+        // Révélation des cartes avec l'index 'i' corrigé
         target.querySelectorAll('.bento-card').forEach((c, i) => {
             c.classList.remove('reveal-active');
-            setTimeout(() => c.classList.add('reveal-active'), 300 + (i * 100));
+            setTimeout(() => c.classList.add('reveal-active'), 100 + (i * 100));
         });
     }
-    document.querySelectorAll(`.nav-link`).forEach(l => l.classList.toggle('active', l.getAttribute('href') === hash));
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.getAttribute('href') === hash));
 }
 
 async function toggleLang() { 
