@@ -6,18 +6,26 @@
   "sidebar_skills_title": "SAVOIR-ÊTRE", "sidebar_skills": ["⚡ Autonome", "🔥 Dynamique", "👥 Gestion d'équipe", "🤝 Relation Client", "🧠 Autodidacte"],
   "sidebar_hobbies_title": "INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
   "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT", "work_title": "MON SHOWCASE CRÉATIF", "path_title": "PARCOURS PROFESSIONNEL",
-  "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\".",
-  "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie et de précision.",
-  "path_sub": "15 ans d'évolution technique sans machine à remonter le temps.",
+  "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\". Je parle couramment le \"tech-to-human\", je jongle avec les budgets et je garde une longueur d'avance.",
+  "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie, de précision et de moments 'on va trouver comment faire'.",
+  "path_sub": "15 ans d'évolution technique sans machine à remonter le temps. Des studios de New York aux infrastructures critiques.",
   "impact_label": "VOLUME TOTAL", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
   "loc_val": "Bordeaux, FR & Int.", "lang_btn": "EN",
-  "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL", "current_focus": "IA & AUTOMATISATION AV",
+  "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL", "current_focus": "SYSTÈMES DE PILOTAGE AV VIA IA & AUTOMATISATION",
+  "stack": [
+    { "category": "Code & Control", "items": [{"name": "AMX MUSE"},{"name": "Node-RED"},{"name": "Python"},{"name": "JavaScript"}] },
+    { "category": "AV Network", "items": [{"name": "Dante / AES67"},{"name": "SVSI / NDI"},{"name": "SDVoE"},{"name": "Crestron NVX"}] },
+    { "category": "3D & Media", "items": [{"name": "Unreal Engine"},{"name": "TouchDesigner"},{"name": "Notch"},{"name": "Blender"}] },
+    { "category": "AI & Prod", "items": [{"name": "Stable Diffusion"},{"name": "Claude / GPT API"},{"name": "Make / Zapier"},{"name": "Docker"}] }
+  ],
   "projects": [
-    { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
-    { "name": "Casino Barrière", "desc": "Redesign du contrôle et signal architecture.", "val": "450k€", "tag": "Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" }
+    { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité pour infrastructures critiques.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
+    { "name": "Casino Barrière", "desc": "Redesign complet du contrôle et de l'architecture de signal en milieu de jeu.", "val": "450k€", "tag": "Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" },
+    { "name": "Infrastructures IT", "desc": "Déploiement de solutions collaboratives hybrides pour grands comptes.", "val": "300k€", "tag": "IT/AV", "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=800" }
   ],
   "experiences": [
-    { "date": "2024 - Présent", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "Expertise AMX MUSE et SVSI. Support technique et formation." },
-    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique et supervision des études." }
+    { "date": "2024 - Présent", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "Expertise AMX MUSE et SVSI. Support technique niveau 3 et formation des intégrateurs." },
+    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique, supervision des études et gestion des projets stratégiques." },
+    { "date": "2015 - 2019", "icon": "fas fa-broadcast-tower", "role": "Ingénieur Systèmes AV", "company": "FREELANCE", "desc": "Conception et mise en service de studios broadcast et salles de conférence complexes." }
   ]
 }

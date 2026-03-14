@@ -58,21 +58,39 @@ function render() {
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-100 dark:bg-zinc-800 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue">${h}</span>`).join('');
     
+    // RENDU STACK
+    if (d.stack) {
+        document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
+            <div class="bento-card">
+                <h4 class="text-sm font-bold uppercase mb-4 text-blue-600 dark:text-blue-400 font-tech">${s.category}</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    ${s.items.map(item => `
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-microchip text-[10px] opacity-30"></i>
+                            <span class="text-[11px] font-bold uppercase font-tech">${item.name}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`).join('');
+    }
+
+    // RENDU PROJETS
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
             <div class="bento-card group relative overflow-hidden aspect-[4/3] p-0">
-                <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                <img src="${p.img}" class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0">
                 <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-8 text-white">
                     <h3 class="text-3xl font-black uppercase mb-2">${p.name}</h3>
                     <p class="text-[11px] opacity-0 group-hover:opacity-100 transition-opacity mb-4">${p.desc}</p>
                     <div class="flex justify-between items-center">
                         <span class="badge-blue !bg-white/10 !text-white !border-transparent">${p.tag}</span>
-                        <span class="text-2xl font-black">${p.val}</span>
+                        <span class="text-2xl font-black font-tech">${p.val}</span>
                     </div>
                 </div>
             </div>`).join('');
     }
 
+    // RENDU EXPÉRIENCES
     if (d.experiences) {
         document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
             <div class="bento-card min-h-[220px]">

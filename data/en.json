@@ -2,21 +2,27 @@
   "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
   "status": "OPEN TO OPPORTUNITIES", "name": "Cyril Cherpion", "role": "AV SYSTEMS CONSULTANT & AI ARCHITECT",
   "sidebar_bio": "AV Systems Consultant & AI Architect. I design intelligent systems and transform complex constraints into technical realities.",
-  "btn_contact": "Let's work together !", "btn_cv": "Download Resume",
-  "sidebar_skills_title": "SOFT SKILLS", "sidebar_skills": ["⚡ Autonomous", "🔥 Dynamic", "👥 Leadership", "🤝 Client Facing", "🧠 Self-taught"],
+  "btn_contact": "Let's work together !", "btn_cv": "Download CV",
+  "sidebar_skills_title": "SOFT SKILLS", "sidebar_skills": ["⚡ Autonomous", "🔥 Dynamic", "👥 Team Leadership", "🤝 Client Facing", "🧠 Self-taught"],
   "sidebar_hobbies_title": "INTERESTS", "sidebar_hobbies": ["🎛️ Music Production", "🏃‍♂️ Sports", "🚀 Emerging Tech", "🌱 Growth"],
   "hero_title": "AUDIOVISUAL & IT ENGINEERING", "work_title": "MY CREATIVE SHOWCASE", "path_title": "PROFESSIONAL TIMELINE",
-  "bio": "15 years of experience making technology behave. Turning \"that'll never work\" into reality.",
-  "work_sub": "A showcase of challenges solved. Mixing high tech and precision.",
-  "path_sub": "15 years of technical evolution.",
+  "bio": "15 years of experience making technology behave. Turning \"that'll never work\" into reality. I speak fluent tech-to-human, juggle budgets, and stay ahead of the curve.",
+  "work_sub": "A showcase of challenges solved. Mixing high tech, precision, and 'we'll find a way' moments.",
+  "path_sub": "15 years of technical evolution without a time machine.",
   "impact_label": "TOTAL VOLUME", "impact_val": "€1.8M+", "max_budget_label": "MAX BUDGET", "max_budget_val": "€1.5M+",
   "loc_val": "Bordeaux, FR & Int.", "lang_btn": "FR",
-  "widget_title_stats": "KEY FIGURES", "widget_title_focus": "CURRENT FOCUS", "current_focus": "AI & AV AUTOMATION",
+  "widget_title_stats": "KEY FIGURES", "widget_title_focus": "CURRENT FOCUS", "current_focus": "AI-DRIVEN AV CONTROL & AUTOMATION",
+  "stack": [
+    { "category": "Code & Control", "items": [{"name": "AMX MUSE"},{"name": "Node-RED"},{"name": "Python"},{"name": "JavaScript"}] },
+    { "category": "AV Network", "items": [{"name": "Dante / AES67"},{"name": "SVSI / NDI"},{"name": "SDVoE"},{"name": "Crestron NVX"}] },
+    { "category": "3D & Media", "items": [{"name": "Unreal Engine"},{"name": "TouchDesigner"},{"name": "Notch"},{"name": "Blender"}] },
+    { "category": "AI & Prod", "items": [{"name": "Stable Diffusion"},{"name": "Claude / GPT API"},{"name": "Make / Zapier"},{"name": "Docker"}] }
+  ],
   "projects": [
-    { "name": "Airbus Safety Center", "desc": "High security AV engineering.", "val": "€550k", "tag": "Integration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
-    { "name": "Casino Barrière", "desc": "Control & signal redesign.", "val": "€450k", "tag": "Control", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" }
+    { "name": "Airbus Safety Center", "desc": "High-security AV engineering for critical infrastructures.", "val": "€550k", "tag": "Integration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
+    { "name": "Casino Barrière", "desc": "Complete redesign of control and signal architecture in gaming environments.", "val": "€450k", "tag": "Control", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" }
   ],
   "experiences": [
-    { "date": "2024 - Present", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "AMX MUSE & SVSI Expert." }
+    { "date": "2024 - Present", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "AMX MUSE and SVSI specialist. Level 3 support and integrator training." }
   ]
 }
