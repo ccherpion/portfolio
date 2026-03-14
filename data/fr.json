@@ -1,31 +1,26 @@
 {
-  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
-  "status": "OUVERT AUX OPPORTUNITÉS", "name": "Cyril Cherpion", "role": "CONSULTANT SYSTÈMES AV & ARCHITECTE IA",
-  "sidebar_bio": "Consultant Systèmes AV & Architecte IA. Je conçois des systèmes intelligents et transforme des contraintes complexes en réalités techniques fluides.",
-  "btn_contact": "Travaillons ensemble !", "btn_cv": "Télécharger le CV",
-  "sidebar_skills_title": "SAVOIR-ÊTRE", "sidebar_skills": ["⚡ Autonome", "🔥 Dynamique", "👥 Gestion d'équipe", "🤝 Relation Client", "🧠 Autodidacte"],
-  "sidebar_hobbies_title": "INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
-  "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT", "work_title": "MON SHOWCASE CRÉATIF", "path_title": "PARCOURS PROFESSIONNEL",
-  "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\". Je parle couramment le \"tech-to-human\", je jongle avec les budgets et je garde une longueur d'avance.",
-  "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie, de précision et de moments 'on va trouver comment faire'.",
-  "path_sub": "15 ans d'évolution technique sans machine à remonter le temps. Des studios de New York aux infrastructures critiques.",
-  "impact_label": "VOLUME TOTAL", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
-  "loc_val": "Bordeaux, FR & Int.", "lang_btn": "EN",
-  "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL", "current_focus": "SYSTÈMES DE PILOTAGE AV VIA IA & AUTOMATISATION",
+  "name": "Cyril Cherpion", "role": "CONSULTANT AV & ARCHITECTE IA",
+  "status": "DISPONIBLE POUR PROJETS", "loc_val": "Bordeaux, FR & Int.",
+  "sidebar_bio": "Architecte de solutions audiovisuelles et IT. Je fusionne l'intelligence artificielle avec les infrastructures critiques.",
+  "btn_contact": "Collaborer", "btn_cv": "Mon CV (PDF)", "lang_btn": "EN",
+  "hero_title": "ENGINEERING & INNOVATION", "bio": "15 ans d'expertise technique à transformer des visions complexes en systèmes opérationnels fluides.",
+  "work_title": "SHOWCASE TECHNIQUE", "work_sub": "Sélection de projets à fort impact.",
+  "path_title": "EXPÉRIENCES & FORMATION", "path_sub": "Un parcours dédié à l'excellence technique.",
+  "impact_val": "1.8M€+", "impact_label": "VOLUME GÉRÉ", "max_budget_val": "1.5M€+", "max_budget_label": "PROJET MAX",
+  "current_focus": "PILOTAGE AV VIA IA GÉNÉRATIVE",
   "stack": [
-    { "category": "Code & Control", "items": [{"name": "AMX MUSE"},{"name": "Node-RED"},{"name": "Python"},{"name": "JavaScript"}] },
-    { "category": "AV Network", "items": [{"name": "Dante / AES67"},{"name": "SVSI / NDI"},{"name": "SDVoE"},{"name": "Crestron NVX"}] },
-    { "category": "3D & Media", "items": [{"name": "Unreal Engine"},{"name": "TouchDesigner"},{"name": "Notch"},{"name": "Blender"}] },
-    { "category": "AI & Prod", "items": [{"name": "Stable Diffusion"},{"name": "Claude / GPT API"},{"name": "Make / Zapier"},{"name": "Docker"}] }
+    { "category": "Code & Control", "items": [{"name": "AMX MUSE", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "Python", "logo": "https://img.icons8.com/color/48/python.png"}] },
+    { "category": "AV Network", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/workflow.png"},{"name": "SVSI", "logo": "https://img.icons8.com/color/48/video-conference.png"}] }
   ],
   "projects": [
-    { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité pour infrastructures critiques.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
-    { "name": "Casino Barrière", "desc": "Redesign complet du contrôle et de l'architecture de signal en milieu de jeu.", "val": "450k€", "tag": "Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" },
-    { "name": "Infrastructures IT", "desc": "Déploiement de solutions collaboratives hybrides pour grands comptes.", "val": "300k€", "tag": "IT/AV", "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=800" }
+    { "name": "Airbus Safety Center", "tag": "Intégration", "val": "550k€", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
+    { "name": "Casino Barrière", "tag": "Contrôle", "val": "450k€", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" },
+    { "name": "Broadcast Studio NYC", "tag": "Production", "val": "300k€", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800" },
+    { "name": "Smart HQ Paris", "tag": "IT/AV", "val": "250k€", "img": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" }
   ],
   "experiences": [
-    { "date": "2024 - Présent", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "Expertise AMX MUSE et SVSI. Support technique niveau 3 et formation des intégrateurs." },
-    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique, supervision des études et gestion des projets stratégiques." },
-    { "date": "2015 - 2019", "icon": "fas fa-broadcast-tower", "role": "Ingénieur Systèmes AV", "company": "FREELANCE", "desc": "Conception et mise en service de studios broadcast et salles de conférence complexes." }
+    { "date": "2024 - Présent", "role": "Application Engineer", "company": "AROCOM", "icon": "fas fa-laptop-code", "desc": "Support technique N3 et déploiement MUSE." },
+    { "date": "2020 - 2023", "role": "Responsable BE", "company": "ABAQUES", "icon": "fas fa-project-diagram", "desc": "Gestion de l'ingénierie et des études." },
+    { "date": "2008 - 2010", "role": "Diplôme Ingénierie", "company": "Université/École", "icon": "fas fa-graduation-cap", "desc": "Spécialisation Systèmes Électroniques." }
   ]
 }
