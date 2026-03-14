@@ -1,23 +1,34 @@
 body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
 .font-tech { font-family: 'JetBrains Mono', monospace; }
 
-/* BADGES ET COMPÉTENCES */
+/* ANIMATION DES BLOCS (Bento Reveal) */
+.bento-card { 
+    opacity: 0; 
+    transform: translateY(20px); 
+    background: white; 
+    border-radius: 1.5rem; 
+    border: 1px solid rgba(0,0,0,0.08); 
+    padding: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dark .bento-card { background: #1f1f22; border: 1px solid #3f3f46; }
+
+/* Classe déclenchée par JS */
+.reveal-active { opacity: 1 !important; transform: translateY(0) !important; }
+
+/* SCRAMBLE TEXT UTILS */
+.word { display: inline-block; white-space: nowrap; margin-right: 0.35em; }
+.char { display: inline-block; opacity: 0; transform: translateY(4px); transition: all 0.3s ease; }
+.char.visible { opacity: 1; transform: translateY(0); }
+
+/* BADGES */
 .badge-blue {
     background-color: #eff6ff !important; color: #1d4ed8 !important; border: 1px solid #dbeafe !important;
-    padding: 4px 12px; border-radius: 999px; font-weight: 700; font-size: 10px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 99px; font-weight: 700; font-size: 10px; text-transform: uppercase;
     display: inline-block;
 }
 .dark .badge-blue { background-color: rgba(30, 58, 138, 0.4) !important; color: #93c5fd !important; border: 1px solid rgba(30, 58, 138, 0.5) !important; }
 
-/* CARTES BENTO */
-.bento-card { 
-    display: flex !important; opacity: 1 !important; background: white; 
-    border-radius: 1.5rem; border: 1px solid rgba(0,0,0,0.08); 
-    padding: 1.5rem; flex-direction: column; transition: transform 0.3s ease;
-}
-.dark .bento-card { background: #1f1f22; border: 1px solid #3f3f46; }
-
-/* NAVIGATION */
 .page-view { display: none; }
 .page-view.active { display: block; }
 .nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }

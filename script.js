@@ -1,6 +1,6 @@
 let currentLang = localStorage.getItem('lang') || 'fr';
 let content = {};
-const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789#%*?+";
 
 function toggleTheme() { document.documentElement.classList.toggle('dark'); }
 
@@ -17,30 +17,58 @@ async function init() {
     } catch (e) { console.error("Init Error:", e); }
 }
 
-function runScramble(id) {
+// FONCTION SCRAMBLE AMÉLIORÉE (SÉCURISÉE)
+function runScramble(id, speed = 25, delay = 0) {
     const el = document.getElementById(id); if (!el) return;
     const text = el.getAttribute('data-text') || el.innerText;
-    el.innerHTML = '';
-    const words = text.split(' ');
-    let tCount = 0;
-    words.forEach(w => {
-        const wSpan = document.createElement('span'); wSpan.className = 'word inline-block mr-2';
-        [...w].forEach(c => {
-            const s = document.createElement('span'); s.innerText = c; s.className = 'opacity-0 inline-block';
-            wSpan.appendChild(s);
-            setTimeout(() => {
-                let count = 0;
-                const itv = setInterval(() => {
-                    s.innerText = scChars[Math.floor(Math.random() * scChars.length)];
-                    s.classList.replace('opacity-0', 'opacity-100');
-                    if (count >= 5) { s.innerText = c; clearInterval(itv); }
-                    count++;
-                }, 40);
-            }, tCount * 25);
-            tCount++;
+    if (!text || text === "...") return;
+    
+    setTimeout(() => {
+        el.innerHTML = '';
+        el.style.opacity = '1';
+        const words = text.split(' ');
+        let charIndex = 0;
+
+        words.forEach(w => {
+            const wSpan = document.createElement('span');
+            wSpan.className = 'word';
+            [...w].forEach(c => {
+                const s = document.createElement('span');
+                s.className = 'char';
+                s.innerText = c;
+                wSpan.appendChild(s);
+                
+                const currentIdx = charIndex;
+                setTimeout(() => {
+                    let count = 0;
+                    const itv = setInterval(() => {
+                        s.innerText = scChars[Math.floor(Math.random() * scChars.length)];
+                        s.classList.add('visible');
+                        if (count >= 5) {
+                            s.innerText = c;
+                            clearInterval(itv);
+                        }
+                        count++;
+                    }, 30);
+                }, currentIdx * speed);
+                charIndex++;
+            });
+            el.appendChild(wSpan);
+            charIndex++; // Espace virtuel
         });
-        el.appendChild(wSpan);
-        tCount++;
+    }, delay);
+}
+
+// RÉVÉLATION CASCADE DES BLOCS
+function triggerReveal() {
+    const activeView = document.querySelector('.page-view.active');
+    if (!activeView) return;
+    const cards = activeView.querySelectorAll('.bento-card');
+    cards.forEach((card, index) => {
+        card.classList.remove('reveal-active');
+        setTimeout(() => {
+            card.classList.add('reveal-active');
+        }, 300 + (index * 100));
     });
 }
 
@@ -52,45 +80,39 @@ function render() {
         const el = document.getElementById(id);
         let key = id.replace('_mobile', '').replace('-btn', '_btn');
         if (id === 'loc_nav') key = 'loc_val';
-        if(el && d[key]) { el.innerText = d[key]; el.setAttribute('data-text', d[key]); }
+        if(el && d[key]) { 
+            el.innerText = d[key]; 
+            el.setAttribute('data-text', d[key]); 
+        }
     });
 
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-100 dark:bg-zinc-800 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue">${h}</span>`).join('');
     
-    // RENDU STACK
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
             <div class="bento-card">
-                <h4 class="text-sm font-bold uppercase mb-4 text-blue-600 dark:text-blue-400 font-tech">${s.category}</h4>
+                <h4 class="text-sm font-bold uppercase mb-4 text-blue-600 font-tech">${s.category}</h4>
                 <div class="grid grid-cols-2 gap-4">
-                    ${s.items.map(item => `
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-microchip text-[10px] opacity-30"></i>
-                            <span class="text-[11px] font-bold uppercase font-tech">${item.name}</span>
-                        </div>
-                    `).join('')}
+                    ${s.items.map(item => `<div class="flex items-center gap-2"><i class="fas fa-check text-[10px] opacity-30"></i><span class="text-[11px] font-bold uppercase font-tech">${item.name}</span></div>`).join('')}
                 </div>
             </div>`).join('');
     }
 
-    // RENDU PROJETS
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
             <div class="bento-card group relative overflow-hidden aspect-[4/3] p-0">
                 <img src="${p.img}" class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0">
                 <div class="absolute inset-0 bg-black/60 flex flex-col justify-end p-8 text-white">
-                    <h3 class="text-3xl font-black uppercase mb-2">${p.name}</h3>
-                    <p class="text-[11px] opacity-0 group-hover:opacity-100 transition-opacity mb-4">${p.desc}</p>
+                    <h3 class="text-2xl font-black uppercase mb-1">${p.name}</h3>
                     <div class="flex justify-between items-center">
-                        <span class="badge-blue !bg-white/10 !text-white !border-transparent">${p.tag}</span>
-                        <span class="text-2xl font-black font-tech">${p.val}</span>
+                        <span class="badge-blue !text-white !border-transparent !bg-white/20">${p.tag}</span>
+                        <span class="text-xl font-black">${p.val}</span>
                     </div>
                 </div>
             </div>`).join('');
     }
 
-    // RENDU EXPÉRIENCES
     if (d.experiences) {
         document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
             <div class="bento-card min-h-[220px]">
@@ -108,14 +130,30 @@ function render() {
 function handleRouting() {
     const hash = window.location.hash || '#home';
     const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
-    const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title' };
+    
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
     const target = document.getElementById(pageMap[hash]);
+    
     if(target) {
         target.classList.add('active');
-        if(titleMap[hash]) runScramble(titleMap[hash]);
+        
+        // Orchestration des animations
+        if (hash === '#home') {
+            runScramble('hero_title', 20, 0);
+            runScramble('bio', 10, 400);
+        } else if (hash === '#projects') {
+            runScramble('work_title', 20, 0);
+            runScramble('work_sub', 10, 400);
+        } else if (hash === '#experience') {
+            runScramble('path_title', 20, 0);
+            runScramble('path_sub', 10, 400);
+        }
+        
+        triggerReveal();
     }
+    
     document.querySelectorAll(`.nav-link`).forEach(l => l.classList.toggle('active', l.getAttribute('href') === hash));
+    window.scrollTo(0, 0);
 }
 
 async function toggleLang() { 
@@ -125,4 +163,4 @@ async function toggleLang() {
 }
 
 window.addEventListener('hashchange', handleRouting);
-window.onload = init;
+init();
