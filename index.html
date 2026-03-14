@@ -23,9 +23,7 @@
         };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = window.tailwindConfig;
-    </script>
+    <script>tailwind.config = window.tailwindConfig;</script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -62,7 +60,10 @@
 
     <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-darkNav border-r border-gray-200 dark:border-darkBorder p-8 flex flex-col z-40 order-last lg:order-first transition-colors duration-500">
         <div class="flex flex-col items-center text-center">
-            <img src="https://github.com/ccherpion.png" alt="Cyril" class="w-32 h-32 rounded-full border border-gray-200 dark:border-darkBorder shadow-sm mb-6 object-cover">
+            <a href="#home" class="group block mb-6 transition-transform hover:scale-105 active:scale-95">
+                <img src="https://github.com/ccherpion.png" alt="Cyril" class="w-32 h-32 rounded-full border-2 border-gray-200 dark:border-darkBorder shadow-sm object-cover group-hover:border-blue-500 transition-colors">
+            </a>
+            
             <h1 id="name" class="text-3xl font-black tracking-tight mb-2 text-gray-900 dark:text-white font-tech uppercase leading-none">...</h1>
             <h2 id="role" class="text-[10px] font-black text-blue-700 dark:text-blue-400 uppercase tracking-widest mb-4 font-tech">...</h2>
             <p id="sidebar_bio" class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-8">...</p>
