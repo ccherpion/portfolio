@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     
     <script>
+        // Configuration Tailwind pour activer le mode sombre via la classe 'dark'
         tailwind.config = {
             darkMode: 'class',
             theme: { 
@@ -21,10 +22,11 @@
                 } 
             }
         }
-        // Prévention du flash blanc
+        // Script immédiat pour appliquer le thème stocké sans clignotement
         (function() {
-            let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             if (theme === 'dark') document.documentElement.classList.add('dark');
+            else document.documentElement.classList.remove('dark');
         })();
     </script>
 </head>
@@ -88,7 +90,7 @@
         </div>
     </nav>
 
-    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 max-w-[1600px] mx-auto flex flex-col xl:flex-row gap-12 items-start">
+    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 max-w-[1600px] mx-auto flex flex-col xl:flex-row gap-12 items-start flex-grow">
         
         <div class="flex-grow w-full xl:max-w-4xl min-h-[70vh]">
             <div id="page-home" class="page-view active space-y-12">
@@ -98,18 +100,12 @@
             </div>
 
             <div id="page-projects" class="page-view space-y-12">
-                <div>
-                    <h2 id="work_title" class="scramble-target text-4xl lg:text-7xl font-black tracking-tighter uppercase mb-4">...</h2>
-                    <p id="work_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p>
-                </div>
+                <div><h2 id="work_title" class="scramble-target text-4xl lg:text-7xl font-black tracking-tighter uppercase mb-4">...</h2><p id="work_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p></div>
                 <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             </div>
 
             <div id="page-experience" class="page-view space-y-12">
-                <div>
-                    <h2 id="path_title" class="scramble-target text-4xl lg:text-7xl font-black tracking-tighter uppercase mb-4">...</h2>
-                    <p id="path_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p>
-                </div>
+                <div><h2 id="path_title" class="scramble-target text-4xl lg:text-7xl font-black tracking-tighter uppercase mb-4">...</h2><p id="path_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p></div>
                 <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                 <div class="mt-16"><h3 id="edu_title" class="reveal-block text-[11px] font-bold text-gray-400 uppercase mb-8 text-center font-tech">...</h3><div id="education-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div></div>
             </div>

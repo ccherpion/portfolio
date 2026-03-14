@@ -2,12 +2,14 @@ let currentLang = localStorage.getItem('lang') || 'en';
 let content = {};
 const scChars = "ABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
 
+// FONCTION MODE SOMBRE CORRIGÉE
 function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
+// SCRAMBLE FUNCTION (ANIMATION TEXTE)
 function runScramble(id, speed = 25) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -45,6 +47,7 @@ function runScramble(id, speed = 25) {
     });
 }
 
+// ROUTING DES PAGES
 function handleRouting() {
     const hash = window.location.hash || '#home';
     const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
@@ -78,32 +81,34 @@ function handleRouting() {
 
 window.addEventListener('hashchange', handleRouting);
 
+// INITIALISATION ET CHARGEMENT JSON
 async function init() {
     try {
-        // Charge le JSON depuis le dossier data/
         const res = await fetch(`data/${currentLang}.json?v=${new Date().getTime()}`);
         content = await res.json();
         render();
         handleRouting();
         
-        // Timer Live
+        // Mise à jour de l'heure
         setInterval(() => {
             const el = document.getElementById('live-time');
             if(el) el.innerText = new Date().toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' CET';
         }, 1000);
-    } catch (e) { console.error("Erreur de chargement JSON:", e); }
+    } catch (e) { console.error("Erreur chargement JSON:", e); }
 }
 
+// RENDU DU CONTENU DYNAMIQUE
 function render() {
     const d = content;
-    // AJOUT DE btn_contact ET btn_cv ICI POUR FIXER LE "..."
+    
+    // Liste exhaustive des IDs à remplir, incluant les boutons manquants (btn_contact, btn_cv)
     const ids = [
         'nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 
         'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 
         'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 
         'path_sub', 'loc_nav', 'stack_title', 'edu_title', 'widget_title_stats', 'impact_val', 
         'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus',
-        'btn_contact', 'btn_cv' // <--- CORRECTIF : Boutons ajoutés
+        'btn_contact', 'btn_cv'
     ];
     
     ids.forEach(id => {
@@ -118,11 +123,11 @@ function render() {
 
     document.getElementById('lang-btn').innerText = d.lang_btn;
     
-    // Sidebar Skills & Hobbies
+    // Skills & Hobbies Sidebar
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#1f1f22] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
     
-    // Grille Stack
+    // Stack Grid
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(s => `
             <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6">
@@ -132,7 +137,7 @@ function render() {
         `).join('');
     }
 
-    // Projets
+    // Projects Container
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
             <div class="reveal-block framer-card group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-darkBorder">
@@ -142,7 +147,7 @@ function render() {
         `).join('');
     }
 
-    // Expériences
+    // Experience Grid
     if (d.experiences) {
         document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
             <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px]">
@@ -151,7 +156,7 @@ function render() {
         `).join('');
     }
 
-    // Éducation
+    // Education Grid
     if (d.education) {
         document.getElementById('education-grid').innerHTML = d.education.map(edu => `
             <div class="reveal-block framer-card bg-white dark:bg-[#1f1f22] border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[180px]">
