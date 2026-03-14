@@ -1,42 +1,40 @@
 {
-  "seo": {
-    "title": "Cyril Cherpion | AI Architect & AV Consultant",
-    "description": "Expert in AI-assisted audiovisual systems design. 15 years of expertise."
-  },
+  "seo": { "title": "Cyril Cherpion | Architecte IA & Consultant AV", "description": "Expert en conception de systèmes audiovisuels assistés par IA." },
   "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
-  "status": "OPEN TO NEW WORK", "name": "Cyril Cherpion", "role": "AV SYSTEMS CONSULTANT & AI ARCHITECT",
-  "sidebar_bio": "AV Systems Consultant & AI Architect. I design AI-assisted systems and transform complex budgets into seamless technical realities.",
+  "status": "OPEN TO NEW WORK", "name": "Cyril Cherpion", "role": "CONSULTANT SYSTÈMES AV & ARCHITECTE IA",
+  "sidebar_bio": "Consultant Systèmes AV & Architecte IA. Je conçois des systèmes intelligents et transforme des contraintes complexes en réalités techniques fluides.",
   "btn_contact": "Let's work together !",
   "btn_cv": "Download Resume",
-  "sidebar_skills_title": "SOFT SKILLS", "sidebar_skills": ["⚡ Autonomous", "🔥 Dynamic", "👥 Team Management", "🤝 Client Relations", "🧠 Self-educated"],
-  "sidebar_hobbies_title": "INTERESTS", "sidebar_hobbies": ["🎛️ Music Production", "🏃‍♂️ Sports", "🚀 Emerging Tech", "🌱 Personal Dev."],
-  "sidebar_lang_title": "LANGUES", "sidebar_lang": ["🇫🇷 French (Native)", "🇬🇧 English (Fluent)"],
-  "hero_title": "AUDIOVISUAL & IT ENGINEERING",
-  "work_title": "MY CREATIVE SHOWCASE",
-  "path_title": "PROFESSIONAL TIMELINE",
-  "bio": "15 years of making technology behave. My gig? Turning \"that'll never work\" into \"how did we ever live without this?\" I speak fluent tech-to-human, juggle budgets, and stay ahead of the curve.",
-  "work_sub": "A look at my challenges solved. A mix of high technology, precision, and 'let's figure this out' moments.",
-  "path_sub": "15 years of technical evolution without a time machine. From New York studios to critical infrastructures.",
-  "impact_label": "TOTAL VOLUME", "impact_val": "€1.8M+", "max_budget_label": "MAX PROJECT BUDGET", "max_budget_val": "€1.5M+",
-  "loc_val": "Bordeaux, FR & Int.", "stack_title": "TECHNICAL ECOSYSTEM", "exp_title": "WORK EXPERIENCE", "edu_title": "EDUCATION & CERTIFICATIONS",
-  "widget_title_stats": "KEY FIGURES", "widget_title_focus": "CURRENT FOCUS",
-  "current_focus": "AI-DRIVEN AV CONTROL & AUTOMATION SYSTEMS",
+  "sidebar_skills_title": "SAVOIR-ÊTRE", "sidebar_skills": ["⚡ Autonome", "🔥 Dynamique", "👥 Gestion d'équipe", "🤝 Relation Client", "🧠 Autodidacte"],
+  "sidebar_hobbies_title": "INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
+  "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
+  "work_title": "MON SHOWCASE CRÉATIF",
+  "path_title": "PARCOURS PROFESSIONNEL",
+  "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\".",
+  "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie et de précision.",
+  "path_sub": "15 ans d'évolution technique sans machine à remonter le temps.",
+  "impact_label": "VOLUME TOTAL", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
+  "loc_val": "Bordeaux, FR & Int.", "stack_title": "ÉCOSYSTÈME TECHNIQUE", "exp_title": "PARCOURS PROFESSIONNEL", "edu_title": "FORMATION & CERTIFICATIONS",
+  "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL", "current_focus": "SYSTÈMES DE PILOTAGE AV VIA IA & AUTOMATISATION",
   "lang_btn": "FR",
   "stack": [
-    { "category": "Control & Code", "icon": "fas fa-code", "items": [{"name": "AMX MUSE", "logo": "https://cdn.simpleicons.org/harman"},{"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},{"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},{"name": "Python / Bash", "logo": "https://cdn.simpleicons.org/python"}] },
-    { "category": "AV Network", "icon": "fas fa-network-wired", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "SDVOE / NDI", "logo": "https://cdn.simpleicons.org/newtek"},{"name": "VLAN / QoS", "logo": "https://cdn.simpleicons.org/cisco"},{"name": "API REST", "logo": "https://cdn.simpleicons.org/postman"}] },
-    { "category": "3D & Media", "icon": "fas fa-cube", "items": [{"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},{"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},{"name": "Unreal Engine", "logo": "https://cdn.simpleicons.org/unrealengine"},{"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"}] },
-    { "category": "AI & Production", "icon": "fas fa-microchip", "items": [{"name": "Claude / GPT", "logo": "https://cdn.simpleicons.org/anthropic"},{"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},{"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},{"name": "Adobe Pack", "logo": "https://cdn.simpleicons.org/adobe"}] }
+    { "category": "Contrôle & Code", "icon": "fas fa-code", "items": [{"name": "AMX MUSE", "logo": "https://cdn.simpleicons.org/harman"},{"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},{"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},{"name": "Python / Bash", "logo": "https://cdn.simpleicons.org/python"}] },
+    { "category": "Réseau AV", "icon": "fas fa-network-wired", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "SDVOE / NDI", "logo": "https://cdn.simpleicons.org/newtek"},{"name": "VLAN / QoS", "logo": "https://cdn.simpleicons.org/cisco"},{"name": "API REST", "logo": "https://cdn.simpleicons.org/postman"}] },
+    { "category": "3D & Médias", "icon": "fas fa-cube", "items": [{"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},{"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},{"name": "Unreal Engine", "logo": "https://cdn.simpleicons.org/unrealengine"},{"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"}] },
+    { "category": "IA & Production", "icon": "fas fa-microchip", "items": [{"name": "Claude / GPT", "logo": "https://cdn.simpleicons.org/anthropic"},{"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},{"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},{"name": "Pack Adobe", "logo": "https://cdn.simpleicons.org/adobe"}] }
   ],
   "projects": [
-    { "name": "Airbus Safety Center", "desc": "High-security AV engineering and integration for critical infrastructures.", "val": "€550k", "tag": "Integration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
-    { "name": "Casino Barrière", "desc": "Full redesign of control and signal architecture in a gaming environment.", "val": "€450k", "tag": "Control Systems", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80" }
+    { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité et intégration.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" },
+    { "name": "Casino Barrière", "desc": "Redesign du contrôle et architecture de signal.", "val": "450k€", "tag": "Systèmes de Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=800" },
+    { "name": "Showroom ATR", "desc": "Design immersif 3D pour accueil VIP.", "val": "300k€", "tag": "Immersif 3D", "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800" },
+    { "name": "FRAC Limoges", "desc": "Design et ingénierie AV complexe.", "val": "550k€", "tag": "Design AV", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800" }
   ],
   "experiences": [
-    { "date": "2024 - Present", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "AMX Specialist (MUSE, SVSI). Technical proposals, scripting (Node-RED, REST API)." }
+    { "date": "2024 - Présent", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "Spécialiste gamme AMX (MUSE, SVSI). Propositions techniques, scripting." },
+    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique d'études. Supervision d'équipe." },
+    { "date": "Avant 2012", "icon": "fas fa-sliders-h", "role": "Ingénieur du Son", "company": "RAVAYANA / QUAD NY", "desc": "Ingénierie sonore studio et live (New York)." }
   ],
   "education": [
-    { "date": "Ongoing", "icon": "fas fa-certificate", "degree": "Technical Certifications", "school": "Industry Standard", "desc": "AMX-MUSE, Crestron, Dante (Levels 1-3), Q-SYS, Poly, Shure." },
-    { "date": "2010 - 2011", "icon": "fas fa-graduation-cap", "degree": "Sound Engineering", "school": "ISTS ESRA New York", "desc": "Advanced studio operations and high-end audio production." }
+    { "date": "2010 - 2011", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA New York", "desc": "Opérations studio avancées." }
   ]
 }
