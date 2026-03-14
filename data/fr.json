@@ -1,0 +1,51 @@
+{
+  "seo": {
+    "title": "Cyril Cherpion | Architecte IA & Consultant AV",
+    "description": "Expert en conception de systèmes audiovisuels assistés par IA. 15 ans d'expertise."
+  },
+  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
+  "status": "OUVERT AUX OPPORTUNITÉS", "name": "Cyril Cherpion", "role": "CONSULTANT SYSTÈMES AV & ARCHITECTE IA",
+  "sidebar_bio": "Consultant Systèmes AV & Architecte IA. Je conçois des systèmes intelligents et transforme des contraintes complexes en réalités techniques fluides.",
+  "btn_contact": "Travaillons ensemble", "btn_cv": "Télécharger mon CV",
+  "sidebar_skills_title": "SAVOIR-ÊTRE", "sidebar_skills": ["⚡ Autonome", "🔥 Dynamique", "👥 Gestion d'équipe", "🤝 Relation Client", "🧠 Autodidacte"],
+  "sidebar_hobbies_title": "INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
+  "sidebar_lang_title": "LANGUES", "sidebar_lang": ["🇫🇷 Français (Natif)", "🇬🇧 Anglais (Courant)"],
+  "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
+  "work_title": "MON SHOWCASE CRÉATIF",
+  "path_title": "PARCOURS PROFESSIONNEL",
+  "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\". Je parle couramment le \"tech-to-human\", je jongle avec les budgets et je garde une longueur d'avance.",
+  "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie, de précision et de moments 'on va trouver comment faire'.",
+  "path_sub": "15 ans d'évolution technique sans machine à remonter le temps. Des studios de New York aux infrastructures critiques.",
+  "impact_label": "VOLUME TOTAL", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
+  "loc_val": "Bordeaux, FR & Int.", "stack_title": "ÉCOSYSTÈME TECHNIQUE", "exp_title": "PARCOURS PROFESSIONNEL", "edu_title": "FORMATION & CERTIFICATIONS",
+  "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL",
+  "current_focus": "SYSTÈMES DE PILOTAGE AV VIA IA & AUTOMATISATION",
+  "lang_btn": "EN",
+  "stack": [
+    { "category": "Contrôle & Code", "icon": "fas fa-code", "items": [{"name": "AMX MUSE", "logo": "https://cdn.simpleicons.org/harman"},{"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},{"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},{"name": "Python / Bash", "logo": "https://cdn.simpleicons.org/python"}] },
+    { "category": "Réseau AV", "icon": "fas fa-network-wired", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "SDVOE / NDI", "logo": "https://cdn.simpleicons.org/newtek"},{"name": "VLAN / QoS", "logo": "https://cdn.simpleicons.org/cisco"},{"name": "API REST", "logo": "https://cdn.simpleicons.org/postman"}] },
+    { "category": "3D & Médias", "icon": "fas fa-cube", "items": [{"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},{"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},{"name": "Unreal Engine", "logo": "https://cdn.simpleicons.org/unrealengine"},{"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"}] },
+    { "category": "IA & Production", "icon": "fas fa-microchip", "items": [{"name": "Claude / GPT", "logo": "https://cdn.simpleicons.org/anthropic"},{"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},{"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},{"name": "Pack Adobe", "logo": "https://cdn.simpleicons.org/adobe"}] }
+  ],
+  "projects": [
+    { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité et intégration pour infrastructures critiques.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Casino Barrière", "desc": "Redesign complet du contrôle et architecture de signal en milieu de jeu.", "val": "450k€", "tag": "Systèmes de Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Showroom ATR", "desc": "Design immersif 3D pour accueil VIP et démonstrations interactives.", "val": "300k€", "tag": "Immersif 3D", "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" },
+    { "name": "FRAC Limoges", "desc": "Design et ingénierie AV pour espace culturel avec contraintes acoustiques complexes.", "val": "550k€", "tag": "Design AV", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" }
+  ],
+  "experiences": [
+    { "date": "2024 - Présent", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "Spécialiste gamme AMX (MUSE, SVSI). Propositions techniques, scripting (Node-RED, REST API)." },
+    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique d'études. Supervision d'équipe, programmation AMX/Crestron/QSC." },
+    { "date": "2019 - 2020", "icon": "fas fa-drafting-compass", "role": "AV Designer", "company": "ABAQUES", "desc": "Études techniques détaillées : Acoustique RT60, isolation STC, éclairage DALI/DMX." },
+    { "date": "2018 - 2019", "icon": "fas fa-tasks", "role": "Chef de Projet AV", "company": "VIDELIO IEC", "desc": "Gestion de projets corporate et éducation. Coordination des intervenants et mise en service." },
+    { "date": "2017 - 2018", "icon": "fas fa-user-tie", "role": "Consultant AV Freelance / OWENTIS", "desc": "Études de faisabilité pour intégrateurs et projets gouvernement/finance sensibles." },
+    { "date": "2012 - 2017", "icon": "fas fa-calendar-check", "role": "Régisseur Général AV", "company": "FACILITESS", "desc": "Logistique technique d'événements et encadrement d'équipes techniques." },
+    { "date": "Avant 2012", "icon": "fas fa-sliders-h", "role": "Ingénieur du Son", "company": "RAVAYANA / QUAD NY", "desc": "Ingénierie sonore studio et live. Opérations à New York et en France." }
+  ],
+  "education": [
+    { "date": "Continu", "icon": "fas fa-certificate", "degree": "Certifications Techniques", "school": "Standards Industrie", "desc": "AMX-MUSE, Crestron, Dante (Niveaux 1-3), Q-SYS, Poly, Shure." },
+    { "date": "Autodidacte", "icon": "fas fa-laptop-code", "degree": "Dév. Web FullStack", "school": "Udemy", "desc": "Technologies web modernes : HTML5, CSS3, JavaScript, Node.js." },
+    { "date": "2010 - 2011", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA New York", "desc": "Opérations studio avancées et production audio haut de gamme." },
+    { "date": "2007 - 2010", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA Nice", "desc": "Bases de l'acoustique, théorie du signal et audio professionnel." }
+  ]
+}

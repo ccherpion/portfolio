@@ -1,0 +1,51 @@
+{
+  "seo": {
+    "title": "Cyril Cherpion | AV Systems Consultant & AI Architect",
+    "description": "Expert in AI-assisted audiovisual systems design. 15 years of expertise."
+  },
+  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
+  "status": "OPEN TO NEW WORK", "name": "Cyril Cherpion", "role": "AV SYSTEMS CONSULTANT & AI ARCHITECT",
+  "sidebar_bio": "AV Systems Consultant & AI Architect. I design AI-assisted systems and transform complex budgets into seamless technical realities.",
+  "btn_contact": "Let's work together", "btn_cv": "Download Resume",
+  "sidebar_skills_title": "SOFT SKILLS", "sidebar_skills": ["⚡ Autonomous", "🔥 Dynamic", "👥 Team Management", "🤝 Client Relations", "🧠 Self-educated"],
+  "sidebar_hobbies_title": "INTERESTS", "sidebar_hobbies": ["🎛️ Music Production", "🏃‍♂️ Sports", "🚀 Emerging Tech", "🌱 Personal Dev."],
+  "sidebar_lang_title": "LANGUAGES", "sidebar_lang": ["🇫🇷 French (Native)", "🇬🇧 English (Fluent)"],
+  "hero_title": "AUDIOVISUAL & IT ENGINEERING",
+  "work_title": "MY CREATIVE SHOWCASE",
+  "path_title": "PROFESSIONAL TIMELINE",
+  "bio": "15 years of making technology behave. My gig? Turning \"that'll never work\" into \"how did we ever live without this?\" I speak fluent tech-to-human, juggle budgets like a pro, and keep clients smiling.",
+  "work_sub": "A curated collection of challenges solved. Mostly high-tech, occasionally magic, always budget-compliant.",
+  "path_sub": "The scenic route through 15 years of pixels and decibels. From NYC studios to critical infrastructures. No time machines used.",
+  "impact_label": "TOTAL VOLUME", "impact_val": "€1.8M+", "max_budget_label": "MAX SINGLE PROJECT", "max_budget_val": "€1.5M+",
+  "loc_val": "Bordeaux, FR & Int.", "stack_title": "TECHNOLOGICAL STACK", "edu_title": "EDUCATION & CERTIFICATIONS",
+  "widget_title_stats": "KEY FIGURES", "widget_title_focus": "CURRENT FOCUS",
+  "current_focus": "AI-DRIVEN AV CONTROL SYSTEMS & AUTOMATION",
+  "lang_btn": "FR",
+  "stack": [
+    { "category": "Control & Code", "icon": "fas fa-code", "items": [{"name": "AMX MUSE", "logo": "https://cdn.simpleicons.org/harman"},{"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},{"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},{"name": "Python / Bash", "logo": "https://cdn.simpleicons.org/python"}] },
+    { "category": "AV Network", "icon": "fas fa-network-wired", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "SDVOE / NDI", "logo": "https://cdn.simpleicons.org/newtek"},{"name": "VLAN / QoS", "logo": "https://cdn.simpleicons.org/cisco"},{"name": "REST API", "logo": "https://cdn.simpleicons.org/postman"}] },
+    { "category": "3D & Media", "icon": "fas fa-cube", "items": [{"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},{"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},{"name": "Unreal Engine", "logo": "https://cdn.simpleicons.org/unrealengine"},{"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"}] },
+    { "category": "AI & Prod", "icon": "fas fa-microchip", "items": [{"name": "Claude / GPT", "logo": "https://cdn.simpleicons.org/anthropic"},{"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},{"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},{"name": "Adobe Pack", "logo": "https://cdn.simpleicons.org/adobe"}] }
+  ],
+  "projects": [
+    { "name": "Airbus Safety Center", "desc": "High-security AV engineering and integration for critical infrastructure.", "val": "€550k", "tag": "Integration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Casino Barrière", "desc": "Full control redesign & signal architecture for gaming environment.", "val": "€450k", "tag": "Control System", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80" },
+    { "name": "ATR Showroom", "desc": "Immersive 3D design for VIP reception and interactive demonstrations.", "val": "€300k", "tag": "Immersive 3D", "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" },
+    { "name": "FRAC Limoges", "desc": "Cultural space AV design & implementation with complex acoustic constraints.", "val": "€550k", "tag": "AV Design", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" }
+  ],
+  "experiences": [
+    { "date": "2024 - Present", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "AMX (MUSE, SVSI) specialist & certified trainer. Complex technical proposals, scripting (Node-RED, REST API)." },
+    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Head of AV Design", "company": "ABAQUES", "desc": "Led technical design for major critical projects. Supervised design team, programmed AMX/Crestron/QSC." },
+    { "date": "2019 - 2020", "icon": "fas fa-drafting-compass", "role": "AV Designer", "company": "ABAQUES", "desc": "Produced technical studies: Acoustics RT60, isolation STC, lighting DALI/DMX." },
+    { "date": "2018 - 2019", "icon": "fas fa-tasks", "role": "AV Project Manager", "company": "VIDELIO IEC", "desc": "Managed corporate and education projects. Stakeholder coordination and site progress monitoring." },
+    { "date": "2017 - 2018", "icon": "fas fa-user-tie", "role": "Freelance AV Consultant / OWENTIS", "desc": "Feasibility studies for integrators and sensitive government/finance projects." },
+    { "date": "2012 - 2017", "icon": "fas fa-calendar-check", "role": "AV & Event Manager", "company": "FACILITESS", "desc": "Managed technical logistics for events and led technical teams (2-6 members)." },
+    { "date": "Before 2012", "icon": "fas fa-sliders-h", "role": "Sound Engineer", "company": "RAVAYANA / QUAD NY", "desc": "Live and studio engineering. Technical operations in New York and France." }
+  ],
+  "education": [
+    { "date": "Ongoing", "icon": "fas fa-certificate", "degree": "Technical Certifications", "school": "Industry Standard", "desc": "AMX-MUSE, Crestron, Dante (Levels 1-3), Q-SYS, Poly, Shure." },
+    { "date": "Self-Taught", "icon": "fas fa-laptop-code", "degree": "FullStack Web Dev", "school": "Udemy", "desc": "Modern web technologies: HTML5, CSS3, JavaScript, Node.js." },
+    { "date": "2010 - 2011", "icon": "fas fa-graduation-cap", "degree": "Sound Engineering", "school": "ISTS ESRA New York", "desc": "Advanced studio operations and audio production." },
+    { "date": "2007 - 2010", "icon": "fas fa-graduation-cap", "degree": "Sound Engineering", "school": "ISTS ESRA Nice", "desc": "Acoustics, signal theory, and professional audio." }
+  ]
+}
