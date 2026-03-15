@@ -1,5 +1,8 @@
 {
-  "seo": { "title": "Cyril Cherpion | Architecte IA & Consultant AV", "description": "Expert en conception de systèmes audiovisuels assistés par IA. 15 ans d'expertise." },
+  "seo": {
+    "title": "Cyril Cherpion | Architecte IA & Consultant AV",
+    "description": "Expert en conception de systèmes audiovisuels assistés par IA. 15 ans d'expertise."
+  },
   "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
   "status": "Ouvert aux nouveaux projets", "name": "Cyril Cherpion", "role": "CONSULTANT SYSTÈMES AV & ARCHITECTE IA",
   "sidebar_bio": "Consultant Systèmes AV & Architecte IA. Je conçois des systèmes intelligents et transforme des contraintes complexes en réalités techniques fluides.",
@@ -8,31 +11,66 @@
   "sidebar_hobbies_title": "INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
   "sidebar_lang_title": "LANGUES", "sidebar_lang": ["🇫🇷 Français (Natif)", "🇬🇧 Anglais (Courant)"],
   "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
-  "work_title": "MON SHOWCASE CRÉATIF", "path_title": "PARCOURS PROFESSIONNEL",
+  "work_title": "MON SHOWCASE CRÉATIF",
+  "path_title": "PARCOURS PROFESSIONNEL",
   "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\". Je parle couramment le \"tech-to-human\", je jongle avec les budgets et je garde une longueur d'avance.",
   "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie, de précision et de moments 'on va trouver comment faire'.",
   "path_sub": "15 ans d'évolution technique sans machine à remonter le temps. Des studios de New York aux infrastructures critiques.",
   "impact_label": "VOLUME TOTAL", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
-  "loc_val": "Bordeaux, FR & Int.", 
-  "expertise_title": "// DOMAINES D'EXPERTISE", "stack_title": "// ÉCOSYSTÈME TECHNIQUE", 
-  "edu_title": "FORMATION & CERTIFICATIONS", "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL",
+  "loc_val": "Bordeaux, FR & Int.", "stack_title": "ÉCOSYSTÈME TECHNIQUE", "exp_title": "PARCOURS PROFESSIONNEL", "edu_title": "FORMATION & CERTIFICATIONS",
+  "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL",
   "current_focus": "SYSTÈMES DE PILOTAGE AV VIA IA & AUTOMATISATION",
   "lang_btn": "EN",
-  "expertise": [
-    { "name": "Ingénierie & Design AV", "desc": "Études acoustiques, architecture de flux critiques (Dante, SDVoE) et éclairage technique.", "icon": "fas fa-drafting-compass" },
-    { "name": "Contrôle & Automatisation", "desc": "Programmation de systèmes de pilotage (AMX MUSE, Crestron) et gestion IoT via Node-RED.", "icon": "fas fa-sliders-h" },
-    { "name": "Architecture IA", "desc": "Intégration de modèles de langage (Claude, Gemini) pour l'assistance aux systèmes techniques.", "icon": "fas fa-brain" },
-    { "name": "Gestion de Projet IT", "desc": "Coordination d'intervenants, gestion de budgets (1.5M€+) et mise en service.", "icon": "fas fa-project-diagram" }
-  ],
   "stack": [
-    { "category": "Contrôle & Code", "items": [{"name": "AMX MUSE", "logo": "https://cdn.simpleicons.org/harman"},{"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},{"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},{"name": "Python", "logo": "https://cdn.simpleicons.org/python"}] },
-    { "category": "Réseau AV", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "SDVOE", "logo": "https://cdn.simpleicons.org/newtek"},{"name": "Cisco", "logo": "https://cdn.simpleicons.org/cisco"},{"name": "API REST", "logo": "https://cdn.simpleicons.org/postman"}] },
-    { "category": "3D & Médias", "items": [{"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},{"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},{"name": "Unreal", "logo": "https://cdn.simpleicons.org/unrealengine"},{"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"}] },
-    { "category": "IA & Prod", "items": [{"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},{"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},{"name": "ChatGPT", "logo": "https://cdn.simpleicons.org/openai"},{"name": "Adobe", "logo": "https://cdn.simpleicons.org/adobe"}] }
+    { "category": "Hardware & Contrôle", "icon": "fas fa-sliders-h", "items": [
+        {"name": "AMX", "logo": "https://cdn.simpleicons.org/harman"},
+        {"name": "Crestron", "logo": "https://logo.clearbit.com/crestron.com"},
+        {"name": "Extron", "logo": "https://logo.clearbit.com/extron.com"},
+        {"name": "Kramer", "logo": "https://logo.clearbit.com/kramerav.com"},
+        {"name": "QSC", "logo": "https://logo.clearbit.com/qsc.com"}
+    ]},
+    { "category": "Audio, Vidéo & Réseau", "icon": "fas fa-network-wired", "items": [
+        {"name": "Shure", "logo": "https://logo.clearbit.com/shure.com"},
+        {"name": "Dante", "logo": "https://logo.clearbit.com/audinate.com"},
+        {"name": "Poly", "logo": "https://logo.clearbit.com/poly.com"},
+        {"name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung"},
+        {"name": "Leyard", "logo": "https://logo.clearbit.com/leyard.com"},
+        {"name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic"},
+        {"name": "SDVoE", "logo": "https://logo.clearbit.com/sdvoe.org"},
+        {"name": "NDI", "logo": "https://logo.clearbit.com/ndi.video"}
+    ]},
+    { "category": "Conception & 3D", "icon": "fas fa-cube", "items": [
+        {"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},
+        {"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},
+        {"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"},
+        {"name": "Visio", "logo": "https://cdn.simpleicons.org/microsoftvisio"}
+    ]},
+    { "category": "Développement", "icon": "fas fa-code", "items": [
+        {"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},
+        {"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},
+        {"name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs"},
+        {"name": "HTML5", "logo": "https://cdn.simpleicons.org/html5"},
+        {"name": "CSS3", "logo": "https://cdn.simpleicons.org/css3"},
+        {"name": "VBA", "logo": "https://cdn.simpleicons.org/microsoftexcel"}
+    ]},
+    { "category": "Création Média", "icon": "fas fa-photo-video", "items": [
+        {"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},
+        {"name": "Pro Tools", "logo": "https://logo.clearbit.com/avid.com"},
+        {"name": "Ableton", "logo": "https://cdn.simpleicons.org/abletonlive"},
+        {"name": "Premiere", "logo": "https://cdn.simpleicons.org/adobepremierepro"},
+        {"name": "Photoshop", "logo": "https://cdn.simpleicons.org/adobephotoshop"},
+        {"name": "Illustrator", "logo": "https://cdn.simpleicons.org/adobeillustrator"}
+    ]},
+    { "category": "IA & Collab", "icon": "fas fa-brain", "items": [
+        {"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},
+        {"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},
+        {"name": "Teams", "logo": "https://cdn.simpleicons.org/microsoftteams"},
+        {"name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom"}
+    ]}
   ],
   "projects": [
     { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité et intégration pour infrastructures critiques.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
-    { "name": "Casino Barrière", "desc": "Redesign complet du contrôle et architecture de signal en milieu de jeu.", "val": "450k€", "tag": "Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80" },
+    { "name": "Casino Barrière", "desc": "Redesign complet du contrôle et architecture de signal en milieu de jeu.", "val": "450k€", "tag": "Systèmes de Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80" },
     { "name": "Showroom ATR", "desc": "Design immersif 3D pour accueil VIP et démonstrations interactives.", "val": "300k€", "tag": "Immersif 3D", "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" },
     { "name": "FRAC Limoges", "desc": "Design et ingénierie AV pour espace culturel avec contraintes acoustiques complexes.", "val": "550k€", "tag": "Design AV", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" }
   ],
