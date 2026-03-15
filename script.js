@@ -117,7 +117,6 @@ function render() {
         `).join('');
     }
 
-    // Projets avec hover-levitate ajouté
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
             <div class="reveal-block hover-levitate group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-darkBorder">
