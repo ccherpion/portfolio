@@ -25,57 +25,19 @@
     { "name": "IT Project Management", "desc": "Stakeholder coordination, budget management (€1.5M+), and commissioning.", "icon": "fas fa-project-diagram" }
   ],
   "stack": [
-    { "category": "Hardware & Control", "items": [
-        {"name": "AMX", "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128"},
-        {"name": "Crestron", "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"},
-        {"name": "Extron", "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"},
-        {"name": "Kramer", "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"},
-        {"name": "QSC", "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"}
-    ]},
-    { "category": "Audio, Video & Network", "items": [
-        {"name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"},
-        {"name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"},
-        {"name": "Poly", "logo": "https://img.icons8.com/color/48/video-call--v1.png"},
-        {"name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung"},
-        {"name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128"},
-        {"name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic"},
-        {"name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"},
-        {"name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"}
-    ]},
-    { "category": "Design & 3D", "items": [
-        {"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},
-        {"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},
-        {"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"},
-        {"name": "Visio", "logo": "https://img.icons8.com/color/48/microsoft-visio.png"}
-    ]},
-    { "category": "Development", "items": [
-        {"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},
-        {"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},
-        {"name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs"},
-        {"name": "HTML5", "logo": "https://cdn.simpleicons.org/html5"},
-        {"name": "CSS3", "logo": "https://img.icons8.com/color/48/css3.png"},
-        {"name": "VBA", "logo": "https://img.icons8.com/color/48/ms-excel.png"}
-    ]},
-    { "category": "Media Creation", "items": [
-        {"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},
-        {"name": "Pro Tools", "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"},
-        {"name": "Ableton", "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"},
-        {"name": "Premiere", "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"},
-        {"name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"},
-        {"name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"}
-    ]},
-    { "category": "AI & Collab", "items": [
-        {"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},
-        {"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},
-        {"name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png"},
-        {"name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom"}
-    ]}
+    { "category": "Control & Code", "items": [{"name": "AMX MUSE", "logo": "https://cdn.simpleicons.org/harman"},{"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},{"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},{"name": "Python", "logo": "https://cdn.simpleicons.org/python"}] },
+    { "category": "AV Network", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "SDVOE", "logo": "https://cdn.simpleicons.org/newtek"},{"name": "Cisco", "logo": "https://cdn.simpleicons.org/cisco"},{"name": "API REST", "logo": "https://cdn.simpleicons.org/postman"}] },
+    { "category": "3D & Media", "items": [{"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},{"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},{"name": "Unreal", "logo": "https://cdn.simpleicons.org/unrealengine"},{"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"}] },
+    { "category": "AI & Prod", "items": [{"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},{"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},{"name": "ChatGPT", "logo": "https://cdn.simpleicons.org/openai"},{"name": "Adobe", "logo": "https://cdn.simpleicons.org/adobe"}] }
   ],
   "projects": [
+    { "name": "Versailles Convention Center", "desc": "Pre-Sales and AV Design for comprehensive venue integration.", "val": "€1.2M", "tag": "AV Design", "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" },
     { "name": "Airbus Safety Center", "desc": "High-security AV engineering and integration for critical infrastructure.", "val": "€550k", "tag": "Integration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
+    { "name": "CD 31", "desc": "Conference room equipped with NDI, LED Wall, and Live Streaming setup.", "val": "€650k", "tag": "Pre-Sales", "img": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80" },
     { "name": "Casino Barrière", "desc": "Full control redesign & signal architecture for gaming environment.", "val": "€450k", "tag": "Control System", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80" },
     { "name": "ATR Showroom", "desc": "Immersive 3D design for VIP reception and interactive demonstrations.", "val": "€300k", "tag": "Immersive 3D", "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" },
-    { "name": "FRAC Limoges", "desc": "Cultural space AV design & implementation with complex acoustic constraints.", "val": "€550k", "tag": "AV Design", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" }
+    { "name": "FRAC Limoges", "desc": "Cultural space AV design & implementation with complex acoustic constraints.", "val": "€550k", "tag": "AV Design", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" },
+    { "name": "SABOM", "desc": "LED Wall integration for the operations center.", "val": "€250k", "tag": "Sales", "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" }
   ],
   "experiences": [
     { "date": "2024 - Present", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "AMX (MUSE, SVSI) specialist & certified trainer. Complex technical proposals, scripting (Node-RED, REST API)." },
