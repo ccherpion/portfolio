@@ -21,7 +21,7 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
 @keyframes status-glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
 
 /* ==========================================================
-   CLASSE UNIQUE DE LÉVITATION (Pour TOUS les blocs)
+   CLASSE UNIQUE DE LÉVITATION ET D'AGRANDISSEMENT (Pour TOUS les blocs)
 ========================================================== */
 .hover-levitate {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -46,7 +46,8 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
     min-height: 80px;
     border-radius: 0.75rem;
 }
-/* Animation spécifique du logo à l'intérieur de la carte */
+
+/* Animation spécifique du logo à l'intérieur de la carte tech */
 .tech-logo { width: 30px; height: 30px; object-fit: contain; transition: all 0.4s ease; }
 .tech-card:hover .tech-logo { transform: scale(1.15); }
 
