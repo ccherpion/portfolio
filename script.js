@@ -57,11 +57,9 @@ function handleRouting() {
             if(e) { e.style.visibility = 'hidden'; e.style.opacity = '0'; }
         });
         setTimeout(() => {
-            /* VITESSE DU SCRAMBLE RALENTIE (30 et 10 au lieu de 20 et 5) */
             runScramble(titleMap[hash], 30); setTimeout(() => runScramble(subMap[hash], 10), 100);
         }, 50);
         
-        /* INTERVALLE DU STAGGER AUGMENTÉ (120ms au lieu de 100ms) POUR UN EFFET CASCADE VISIBLE */
         targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${350 + (i * 120)}ms`; });
     }
     document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
@@ -117,11 +115,16 @@ function render() {
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#333333] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
     
+    /* =====================================================================
+       SÉPARATION DE .reveal-block ET .hover-levitate POUR ÉVITER LE CONFLIT
+       ===================================================================== */
     if (d.expertise) {
         document.getElementById('expertise-grid').innerHTML = d.expertise.map(exp => `
-            <div class="reveal-block hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg badge-blue flex items-center justify-center shrink-0"><i class="${exp.icon} text-lg"></i></div>
-                <div><h4 class="text-sm font-bold uppercase font-tech text-gray-900 dark:text-white mb-1">${exp.name}</h4><p class="text-[11px] text-gray-600 dark:text-gray-400 leading-relaxed">${exp.desc}</p></div>
+            <div class="reveal-block h-full">
+                <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex items-start gap-4 h-full">
+                    <div class="w-10 h-10 rounded-lg badge-blue flex items-center justify-center shrink-0"><i class="${exp.icon} text-lg"></i></div>
+                    <div><h4 class="text-sm font-bold uppercase font-tech text-gray-900 dark:text-white mb-1">${exp.name}</h4><p class="text-[11px] text-gray-600 dark:text-gray-400 leading-relaxed">${exp.desc}</p></div>
+                </div>
             </div>
         `).join('');
     }
@@ -144,13 +147,15 @@ function render() {
 
     if (d.projects) {
         document.getElementById('projects-container').innerHTML = d.projects.map(p => `
-            <div class="reveal-block hover-levitate group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-darkBorder">
-                <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                <div class="project-gradient absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <div class="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 class="text-3xl font-black font-tech uppercase mb-3">${p.name}</h3>
-                        <div class="bg-black/50 backdrop-blur-md border border-white/10 rounded-xl p-4 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0"><p class="text-gray-200 text-xs leading-relaxed">${p.desc}</p></div>
-                        <div class="flex justify-between items-center"><span class="badge-blue !bg-white/10 !text-white !border-white/20 text-[10px] font-bold px-4 py-2 rounded-full font-tech uppercase shadow-lg">${p.tag}</span><span class="text-2xl font-black font-tech">${p.val}</span></div>
+            <div class="reveal-block h-full">
+                <div class="hover-levitate group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-darkBorder h-full">
+                    <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+                    <div class="project-gradient absolute inset-0 flex flex-col justify-end p-8 text-white">
+                        <div class="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-3xl font-black font-tech uppercase mb-3">${p.name}</h3>
+                            <div class="bg-black/50 backdrop-blur-md border border-white/10 rounded-xl p-4 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0"><p class="text-gray-200 text-xs leading-relaxed">${p.desc}</p></div>
+                            <div class="flex justify-between items-center"><span class="badge-blue !bg-white/10 !text-white !border-white/20 text-[10px] font-bold px-4 py-2 rounded-full font-tech uppercase shadow-lg">${p.tag}</span><span class="text-2xl font-black font-tech">${p.val}</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -159,16 +164,20 @@ function render() {
 
     if (d.experiences) {
         document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
-            <div class="reveal-block hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px]">
-                <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span></div><h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${exp.role}</h4><p class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p></div><p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>
+            <div class="reveal-block h-full">
+                <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px] h-full">
+                    <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span></div><h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${exp.role}</h4><p class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p></div><p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>
+                </div>
             </div>
         `).join('');
     }
 
     if (d.education) {
         document.getElementById('education-grid').innerHTML = d.education.map(edu => `
-            <div class="reveal-block hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[180px]">
-                <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 uppercase font-tech">${edu.date}</span></div><h4 class="text-base font-bold uppercase mb-1 text-gray-900 dark:text-white">${edu.degree}</h4><p class="text-gray-500 text-[11px] uppercase font-tech">${edu.school}</p></div>
+            <div class="reveal-block h-full">
+                <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[180px] h-full">
+                    <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 uppercase font-tech">${edu.date}</span></div><h4 class="text-base font-bold uppercase mb-1 text-gray-900 dark:text-white">${edu.degree}</h4><p class="text-gray-500 text-[11px] uppercase font-tech">${edu.school}</p></div>
+                </div>
             </div>
         `).join('');
     }
