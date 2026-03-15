@@ -81,6 +81,43 @@ async function init() {
 
 function render() {
     const d = content;
+    
+    // =========================================================================
+    // CALCUL AUTOMATIQUE DU TOTAL VOLUME ET DU BUDGET MAXIMAL
+    // =========================================================================
+    if (d.projects) {
+        let total = 0;
+        let maxVal = 0;
+        d.projects.forEach(p => {
+            // Nettoyage de la valeur (enlève €, $, espaces) et remplace la virgule par un point
+            let valStr = p.val.replace(/[^0-9.,kKmM]/g, '').replace(',', '.');
+            let num = parseFloat(valStr.replace(/[kKmM]/g, ''));
+            
+            if (!isNaN(num)) {
+                let multiplier = 1;
+                if (valStr.toLowerCase().includes('k')) multiplier = 1000;
+                else if (valStr.toLowerCase().includes('m')) multiplier = 1000000;
+                
+                let realVal = num * multiplier;
+                total += realVal;
+                if (realVal > maxVal) maxVal = realVal;
+            }
+        });
+        
+        if (total > 0) {
+            // Fonction pour formater les chiffres (ex: 3950000 -> 4M)
+            let formatNum = (v) => v >= 1000000 ? (v / 1000000).toFixed(1).replace('.0', '') + 'M' : Math.round(v / 1000) + 'k';
+            
+            let formattedTotal = formatNum(total);
+            let formattedMax = formatNum(maxVal);
+            
+            // Injection des valeurs calculées dynamiquement selon la langue
+            d.impact_val = currentLang === 'fr' ? `${formattedTotal}€+` : `€${formattedTotal}+`;
+            d.max_budget_val = currentLang === 'fr' ? `${formattedMax}€+` : `€${formattedMax}+`;
+        }
+    }
+    // =========================================================================
+
     const ids = ['nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 'path_sub', 'loc_nav', 'expertise_title', 'stack_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
     
     ids.forEach(id => {
