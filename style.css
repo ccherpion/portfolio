@@ -20,37 +20,40 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
 .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: status-glow 2s infinite; }
 @keyframes status-glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
 
-/* EFFET DE LÉVITATION UNIVERSEL (Widgets, My.path, Expertise) */
-.widget-card, .framer-card, .expertise-card {
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+/* ==========================================================
+   MOUVEMENT UNIFIÉ POUR TOUTES LES CARTES
+   (Widgets, Expériences, Expertise, Logos)
+========================================================== */
+.widget-card, .framer-card, .expertise-card, .tech-card {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     backdrop-filter: blur(10px);
 }
-.widget-card:hover, .framer-card:hover, .expertise-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+.widget-card:hover, .framer-card:hover, .expertise-card:hover, .tech-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
     border-color: rgba(59, 130, 246, 0.4);
 }
-.dark .widget-card:hover, .dark .framer-card:hover, .dark .expertise-card:hover {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    background: #1f1f22;
+.dark .widget-card:hover, .dark .framer-card:hover, .dark .expertise-card:hover, .dark .tech-card:hover {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.03); /* Léger éclaircissement au survol en dark mode */
     border-color: rgba(59, 130, 246, 0.5);
 }
 
-/* TECH CARDS OPTIMISÉES (Plus compactes, moins d'espace) */
+/* ==========================================================
+   STYLE SPÉCIFIQUE DES CARTES TECH (OPTIMISATION ESPACE)
+========================================================== */
 .tech-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 0.3rem;
-    padding: 0.75rem !important;
-    min-height: 85px;
+    gap: 0.4rem;
+    padding: 0.6rem !important; /* Design ultra-compact */
+    min-height: 80px;
     border-radius: 0.75rem;
 }
 .dark .tech-card { background: rgba(255,255,255,0.02); border-color: #2d2d30; }
-.tech-card:hover { transform: translateY(-6px) scale(1.05); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2); }
 
-/* LOGOS */
+/* LOGOS (Couleurs d'origine conservées) */
 .tech-logo { width: 30px; height: 30px; object-fit: contain; transition: all 0.4s ease; }
 .tech-card:hover .tech-logo { transform: scale(1.15); }
 

@@ -1,5 +1,5 @@
 {
-  "seo": { "title": "Cyril Cherpion | Architecte IA & Consultant AV", "description": "Expert en conception de systèmes audiovisuels assistés par IA." },
+  "seo": { "title": "Cyril Cherpion | Architecte IA & Consultant AV", "description": "Expert en conception de systèmes audiovisuels assistés par IA. 15 ans d'expertise." },
   "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
   "status": "Ouvert aux nouveaux projets", "name": "Cyril Cherpion", "role": "CONSULTANT SYSTÈMES AV & ARCHITECTE IA",
   "sidebar_bio": "Consultant Systèmes AV & Architecte IA. Je conçois des systèmes intelligents et transforme des contraintes complexes en réalités techniques fluides.",
@@ -41,13 +41,14 @@
     { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique d'études. Supervision d'équipe, programmation AMX/Crestron/QSC." },
     { "date": "2019 - 2020", "icon": "fas fa-drafting-compass", "role": "AV Designer", "company": "ABAQUES", "desc": "Études techniques détaillées : Acoustique RT60, isolation STC, éclairage DALI/DMX." },
     { "date": "2018 - 2019", "icon": "fas fa-tasks", "role": "Chef de Projet AV", "company": "VIDELIO IEC", "desc": "Gestion de projets corporate et éducation. Coordination des intervenants et mise en service." },
-    { "date": "2017 - 2018", "icon": "fas fa-user-tie", "role": "Consultant AV Freelance", "company": "OWENTIS", "desc": "Études de faisabilité pour intégrateurs et projets gouvernement/finance sensibles." },
+    { "date": "2017 - 2018", "icon": "fas fa-user-tie", "role": "Consultant AV Freelance / OWENTIS", "desc": "Études de faisabilité pour intégrateurs et projets gouvernement/finance sensibles." },
     { "date": "2012 - 2017", "icon": "fas fa-calendar-check", "role": "Régisseur Général AV", "company": "FACILITESS", "desc": "Logistique technique d'événements et encadrement d'équipes techniques." },
     { "date": "Avant 2012", "icon": "fas fa-sliders-h", "role": "Ingénieur du Son", "company": "RAVAYANA / QUAD NY", "desc": "Ingénierie sonore studio et live. Opérations à New York et en France." }
   ],
   "education": [
     { "date": "Continu", "icon": "fas fa-certificate", "degree": "Certifications Techniques", "school": "Standards Industrie", "desc": "AMX-MUSE, Crestron, Dante (Niveaux 1-3), Q-SYS, Poly, Shure." },
     { "date": "Autodidacte", "icon": "fas fa-laptop-code", "degree": "Dév. Web FullStack", "school": "Udemy", "desc": "Technologies web modernes : HTML5, CSS3, JavaScript, Node.js." },
-    { "date": "2010 - 2011", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA New York", "desc": "Opérations studio avancées et production audio haut de gamme." }
+    { "date": "2010 - 2011", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA New York", "desc": "Opérations studio avancées et production audio haut de gamme." },
+    { "date": "2007 - 2010", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA Nice", "desc": "Bases de l'acoustique, théorie du signal et audio professionnel." }
   ]
 }
