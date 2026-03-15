@@ -4,36 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyril Cherpion | AV Systems Consultant & AI Architect</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎛️</text></svg>">
-    
     <script>
-        window.tailwindConfig = {
-            darkMode: 'class',
-            theme: { 
-                extend: { 
-                    fontFamily: { sans: ['Manrope', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
-                    colors: { darkBg: '#111113', darkNav: '#1c1c1f', darkCard: '#1c1c1f', darkBorder: '#2d2d30' } 
-                } 
-            }
-        };
+        window.tailwindConfig = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Manrope', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }, colors: { darkBg: '#111113', darkNav: '#1c1c1f', darkCard: '#1c1c1f', darkBorder: '#2d2d30' } } } };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = window.tailwindConfig;</script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <script>
-        (function() {
-            const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            if (theme === 'dark') document.documentElement.classList.add('dark');
-            else document.documentElement.classList.remove('dark');
-        })();
-    </script>
+    <script>(function() { const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); if (theme === 'dark') document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })();</script>
 </head>
 <body class="transition-colors duration-500 bg-[#f7f7f8] dark:bg-darkBg text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row min-h-screen">
-
     <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-blue-600 z-[100] transition-all duration-150 ease-out" style="width: 0%;"></div>
 
     <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-darkNav/95 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50">
@@ -57,26 +38,19 @@
 
     <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-darkNav border-r border-gray-200 dark:border-darkBorder p-8 flex flex-col z-40 order-last lg:order-first transition-colors duration-500">
         <div class="flex flex-col items-center text-center">
-            <a href="#home" class="group block mb-6 transition-transform hover:scale-105 active:scale-95">
-                <img src="https://github.com/ccherpion.png" alt="Cyril" class="w-32 h-32 rounded-full border-2 border-gray-200 dark:border-darkBorder shadow-sm object-cover group-hover:border-blue-500 transition-colors">
-            </a>
+            <a href="#home" class="group block mb-6 transition-transform hover:scale-105 active:scale-95"><img src="https://github.com/ccherpion.png" alt="Cyril" class="w-32 h-32 rounded-full border-2 border-gray-200 dark:border-darkBorder shadow-sm object-cover group-hover:border-blue-500 transition-colors"></a>
             <h1 id="name" class="text-3xl font-black mb-2 text-gray-900 dark:text-white font-tech uppercase leading-none">...</h1>
             <h2 id="role" class="text-[10px] font-black text-blue-700 dark:text-blue-400 uppercase tracking-widest mb-4 font-tech">...</h2>
             <p id="sidebar_bio" class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-8">...</p>
             <div class="w-full space-y-3 mb-8">
-                <a href="mailto:ccherpion@outlook.com" class="w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-sm font-tech">
-                    <i class="fas fa-paper-plane text-xs"></i> <span id="btn_contact">...</span>
-                </a>
-                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#252529] border border-gray-200 dark:border-darkBorder text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-xs font-tech uppercase">
-                    <i class="fas fa-file-pdf text-red-500 text-xs"></i> <span id="btn_cv">...</span>
-                </a>
+                <a href="mailto:ccherpion@outlook.com" class="w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-sm font-tech"><i class="fas fa-paper-plane text-xs"></i> <span id="btn_contact">...</span></a>
+                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#252529] border border-gray-200 dark:border-darkBorder text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-xs font-tech uppercase"><i class="fas fa-file-pdf text-red-500 text-xs"></i> <span id="btn_cv">...</span></a>
             </div>
             <div class="w-full space-y-6 text-left">
                 <div><h3 id="sidebar_skills_title" class="text-[10px] font-bold text-gray-400 uppercase mb-3 font-tech">...</h3><div id="sidebar-skills" class="flex flex-wrap gap-2"></div></div>
                 <div><h3 id="sidebar_hobbies_title" class="text-[10px] font-bold text-gray-400 uppercase mb-3 font-tech">...</h3><div id="sidebar-hobbies" class="flex flex-wrap gap-2"></div></div>
             </div>
         </div>
-        <div class="mt-12 pt-10 text-center text-gray-400 text-[10px] font-tech uppercase">CYRIL CHERPION • 2026</div>
     </aside>
 
     <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-darkNav/90 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50 items-center justify-between px-6 transition-colors duration-500">
@@ -102,7 +76,14 @@
                     <h2 id="hero_title" class="scramble-target text-4xl lg:text-7xl font-black uppercase leading-tight mb-6">...</h2>
                     <p id="bio" class="scramble-target text-xl lg:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl">...</p>
                 </div>
-                <div id="stack-grid" class="space-y-16"></div>
+                <div class="space-y-6">
+                    <h3 id="expertise_title" class="reveal-block text-[11px] font-bold text-gray-400 uppercase tracking-widest font-tech">...</h3>
+                    <div id="expertise-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                </div>
+                <div class="space-y-6 pt-8">
+                    <h3 id="stack_title" class="reveal-block text-[11px] font-bold text-gray-400 uppercase tracking-widest font-tech">...</h3>
+                    <div id="stack-grid" class="space-y-8"></div>
+                </div>
             </div>
 
             <div id="page-projects" class="page-view space-y-12">
@@ -118,20 +99,14 @@
         </div>
 
         <aside class="w-full xl:w-80 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-28 xl:ml-auto">
-            <div class="widget-card bg-white/70 dark:bg-[#1c1c1f]/80 backdrop-blur-xl border border-gray-200 dark:border-darkBorder rounded-3xl p-6 transition-all duration-500">
+            <div class="widget-card bg-white/70 dark:bg-[#1c1c1f]/80 backdrop-blur-xl border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
                 <h3 id="widget_title_stats" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 font-tech text-center">...</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
-                    <div class="text-center p-5 rounded-2xl bg-gray-50/50 dark:bg-[#252529]/50 border border-gray-100 dark:border-darkBorder">
-                        <p id="impact_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p>
-                        <p id="impact_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p>
-                    </div>
-                    <div class="text-center p-5 rounded-2xl bg-gray-50/50 dark:bg-[#252529]/50 border border-gray-100 dark:border-darkBorder">
-                        <p id="max_budget_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p>
-                        <p id="max_budget_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p>
-                    </div>
+                    <div class="text-center p-5 rounded-2xl bg-gray-50/50 dark:bg-[#252529]/50 border border-gray-100 dark:border-darkBorder"><p id="impact_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p><p id="impact_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p></div>
+                    <div class="text-center p-5 rounded-2xl bg-gray-50/50 dark:bg-[#252529]/50 border border-gray-100 dark:border-darkBorder"><p id="max_budget_val" class="text-3xl font-black text-blue-700 dark:text-blue-400 font-tech">...</p><p id="max_budget_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p></div>
                 </div>
             </div>
-            <div class="widget-card bg-white/70 dark:bg-[#1c1c1f]/80 backdrop-blur-xl border border-gray-200 dark:border-darkBorder rounded-3xl p-6 transition-all duration-500">
+            <div class="widget-card bg-white/70 dark:bg-[#1c1c1f]/80 backdrop-blur-xl border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
                 <h3 id="widget_title_focus" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 font-tech">...</h3>
                 <div class="flex gap-3 items-start">
                     <div class="w-8 h-8 rounded-full badge-blue flex items-center justify-center shrink-0"><i class="fas fa-bolt text-xs"></i></div>

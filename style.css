@@ -1,23 +1,18 @@
 body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; letter-spacing: 0.01em; }
 .font-tech { font-family: 'JetBrains Mono', monospace; }
 
-/* ANTI-GLITCH */
+/* ANTI-GLITCH ET CORRECTION LETTRES ATTACHÉES */
 .scramble-target { visibility: hidden; opacity: 0; }
-
-/* CORRECTION LETTRES ATTACHÉES */
 .char { display: inline-block; opacity: 0; transform: translateY(10px); transition: all 0.3s ease; letter-spacing: normal; }
 .word { display: inline-block; white-space: nowrap; margin-right: 0.35em !important; }
 
-/* TRANSITION DE PAGE FLUIDE */
+/* TRANSITIONS ET ANIMATIONS */
 @keyframes pageReveal {
     from { opacity: 0; transform: translateY(20px); filter: blur(10px); }
     to { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
-
 .page-view { display: none; opacity: 0; }
 .page-view.active { display: block; animation: pageReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-
-/* ANIMATION BLOCS INTERNES */
 @keyframes blockUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .reveal-block { opacity: 0; }
 .active .reveal-block { animation: blockUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
@@ -25,40 +20,44 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
 .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: status-glow 2s infinite; }
 @keyframes status-glow { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.6; } }
 
-/* WIDGETS AVEC VRAI EFFET GLASSMORPHISM & SURVOL */
-.widget-card { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-.widget-card:hover {
+/* EFFET DE LÉVITATION UNIVERSEL (Widgets, My.path, Expertise) */
+.widget-card, .framer-card, .expertise-card {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(10px);
+}
+.widget-card:hover, .framer-card:hover, .expertise-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
     border-color: rgba(59, 130, 246, 0.4);
 }
-.dark .widget-card:hover { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border-color: rgba(59, 130, 246, 0.5); }
+.dark .widget-card:hover, .dark .framer-card:hover, .dark .expertise-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background: #1f1f22;
+    border-color: rgba(59, 130, 246, 0.5);
+}
 
-/* TECH CARDS COMPACTES */
+/* TECH CARDS OPTIMISÉES (Plus compactes, moins d'espace) */
 .tech-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    min-height: 100px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.3rem;
+    padding: 0.75rem !important;
+    min-height: 85px;
+    border-radius: 0.75rem;
 }
 .dark .tech-card { background: rgba(255,255,255,0.02); border-color: #2d2d30; }
-.tech-card:hover { transform: translateY(-4px); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
+.tech-card:hover { transform: translateY(-6px) scale(1.05); border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2); }
 
-/* LOGOS EN COULEUR (FINI LE NOIR ET BLANC) */
-.tech-logo { width: 34px; height: 34px; object-fit: contain; transition: all 0.4s ease; }
+/* LOGOS */
+.tech-logo { width: 30px; height: 30px; object-fit: contain; transition: all 0.4s ease; }
 .tech-card:hover .tech-logo { transform: scale(1.15); }
 
 .nav-link.active { font-weight: 800; border-bottom: 2px solid currentColor; color: #111827 !important; }
 .dark .nav-link.active { color: white !important; }
-
 .project-gradient { background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
 .badge-blue { background-color: rgba(239, 246, 255, 1); color: rgba(29, 78, 216, 1); border: 1px solid rgba(219, 234, 254, 1); }
 .dark .badge-blue { background-color: rgba(30, 58, 138, 0.2); color: rgba(147, 197, 253, 1); border: 1px solid rgba(30, 58, 138, 0.5); }
-
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
