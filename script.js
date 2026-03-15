@@ -59,7 +59,9 @@ function handleRouting() {
         setTimeout(() => {
             runScramble(titleMap[hash], 20); setTimeout(() => runScramble(subMap[hash], 5), 100);
         }, 50);
-        targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${400 + (i * 50)}ms`; });
+        
+        // CORRECTION : Augmentation de l'espacement entre l'apparition de chaque bloc (100ms au lieu de 50ms)
+        targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${300 + (i * 100)}ms`; });
     }
     document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
     window.scrollTo(0, 0);
@@ -83,8 +85,7 @@ function render() {
     const d = content;
     
     if (d.projects) {
-        let total = 0;
-        let maxVal = 0;
+        let total = 0; let maxVal = 0;
         d.projects.forEach(p => {
             let valStr = p.val.replace(/[^0-9.,kKmM]/g, '').replace(',', '.');
             let num = parseFloat(valStr.replace(/[kKmM]/g, ''));
@@ -99,10 +100,8 @@ function render() {
         });
         if (total > 0) {
             let formatNum = (v) => v >= 1000000 ? (v / 1000000).toFixed(1).replace('.0', '') + 'M' : Math.round(v / 1000) + 'k';
-            let formattedTotal = formatNum(total);
-            let formattedMax = formatNum(maxVal);
-            d.impact_val = currentLang === 'fr' ? `${formattedTotal}€+` : `€${formattedTotal}+`;
-            d.max_budget_val = currentLang === 'fr' ? `${formattedMax}€+` : `€${formattedMax}+`;
+            d.impact_val = currentLang === 'fr' ? `${formatNum(total)}€+` : `€${formatNum(total)}+`;
+            d.max_budget_val = currentLang === 'fr' ? `${formatNum(maxVal)}€+` : `€${formatNum(maxVal)}+`;
         }
     }
 
