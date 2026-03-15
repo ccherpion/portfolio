@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyril Cherpion | AV Systems Consultant & AI Architect</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎛️</text></svg>">
-    
-    <script>
-        window.tailwindConfig = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Manrope', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }, colors: { darkBg: '#111113', darkNav: '#1c1c1f', darkCard: '#1c1c1f', darkBorder: '#2d2d30' } } } };
-    </script>
+    <script>window.tailwindConfig = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Manrope', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }, colors: { darkBg: '#111113', darkNav: '#1c1c1f', darkCard: '#1c1c1f', darkBorder: '#2d2d30' } } } };</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = window.tailwindConfig;</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,13 +19,8 @@
     <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-darkNav/95 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50">
         <div class="p-3 flex flex-col gap-2">
             <div class="flex justify-between items-center px-1">
-                <div class="flex gap-4 items-center">
-                    <button onclick="toggleTheme()" class="text-gray-700 dark:text-gray-300"><i class="fas fa-circle-half-stroke text-lg"></i></button>
-                    <button onclick="toggleLang()" class="font-bold text-[11px] text-gray-500 font-tech">FR/EN</button>
-                </div>
-                <div class="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-2 py-1.5 rounded-full text-[8px] font-bold uppercase flex items-center gap-1.5 font-tech">
-                    <span class="status-dot"></span><span id="status_mobile">...</span>
-                </div>
+                <div class="flex gap-4 items-center"><button onclick="toggleTheme()" class="text-gray-700 dark:text-gray-300"><i class="fas fa-circle-half-stroke text-lg"></i></button><button onclick="toggleLang()" class="font-bold text-[11px] text-gray-500 font-tech">FR/EN</button></div>
+                <div class="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-2 py-1.5 rounded-full text-[8px] font-bold uppercase flex items-center gap-1.5 font-tech"><span class="status-dot"></span><span id="status_mobile">...</span></div>
             </div>
             <div class="flex justify-around items-center py-2 border-t border-gray-100 dark:border-darkBorder/30">
                 <a href="#home" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_home_mobile">info</a>
@@ -46,10 +38,10 @@
             <p id="sidebar_bio" class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-8">...</p>
             
             <div class="w-full space-y-3 mb-8">
-                <a href="mailto:ccherpion@outlook.com" class="w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-sm font-tech transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg">
+                <a href="mailto:ccherpion@outlook.com" class="transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-lg w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-sm font-tech">
                     <i class="fas fa-paper-plane text-xs"></i> <span id="btn_contact">...</span>
                 </a>
-                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#252529] border border-gray-200 dark:border-darkBorder text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-xs font-tech uppercase transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg">
+                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-lg w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#252529] border border-gray-200 dark:border-darkBorder text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-xs font-tech uppercase">
                     <i class="fas fa-file-pdf text-red-500 text-xs"></i> <span id="btn_cv">...</span>
                 </a>
             </div>
@@ -68,24 +60,19 @@
             <a href="#projects" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_work">...</a>
             <a href="#experience" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_exp">...</a>
         </div>
-        <div class="flex items-center gap-4 text-[10px] font-bold text-gray-500 font-tech uppercase">
-            <i class="fas fa-location-dot text-blue-600"></i> <span id="loc_nav">...</span>
-            <span id="live-time" class="text-blue-700 dark:text-blue-400">--:--:--</span>
-            <button onclick="toggleTheme()" class="hover:text-blue-600 transition p-2"><i class="fas fa-circle-half-stroke text-base"></i></button>
-            <button onclick="toggleLang()" id="lang-btn" class="hover:text-blue-600 transition text-sm">EN</button>
-        </div>
+        <div class="flex items-center gap-4 text-[10px] font-bold text-gray-500 font-tech uppercase"><i class="fas fa-location-dot text-blue-600"></i> <span id="loc_nav">...</span><span id="live-time" class="text-blue-700 dark:text-blue-400">--:--:--</span><button onclick="toggleTheme()" class="hover:text-blue-600 transition p-2"><i class="fas fa-circle-half-stroke text-base"></i></button><button onclick="toggleLang()" id="lang-btn" class="hover:text-blue-600 transition text-sm">EN</button></div>
     </nav>
 
     <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 max-w-full mx-auto flex flex-col xl:flex-row justify-between items-start gap-12 flex-grow">
         
         <div class="w-full xl:max-w-[calc(100%-360px)] min-h-[70vh]">
             <div id="page-home" class="page-view active space-y-12">
-                <div class="h-[280px] sm:h-[220px] lg:h-[190px] w-full">
+                <div class="min-h-[300px] sm:min-h-[220px] lg:min-h-[200px] w-full flex flex-col justify-start">
                     <h2 id="hero_title" class="scramble-target text-4xl lg:text-7xl font-black uppercase leading-tight mb-4">...</h2>
                     <p id="bio" class="scramble-target text-xl lg:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl">... </p>
                 </div>
                 
-                <div class="space-y-6">
+                <div class="space-y-6 pt-4">
                     <h3 id="expertise_title" class="reveal-block text-[11px] font-bold text-gray-400 uppercase tracking-widest font-tech">...</h3>
                     <div id="expertise-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
@@ -117,10 +104,7 @@
             </div>
             <div class="hover-levitate bg-white/70 dark:bg-[#1c1c1f]/80 backdrop-blur-xl border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
                 <h3 id="widget_title_focus" class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 font-tech">...</h3>
-                <div class="flex gap-3 items-start">
-                    <div class="w-8 h-8 rounded-full badge-blue flex items-center justify-center shrink-0"><i class="fas fa-bolt text-xs"></i></div>
-                    <p id="current_focus" class="text-[10px] font-bold leading-tight text-gray-600 dark:text-gray-400 uppercase tracking-tight font-tech">...</p>
-                </div>
+                <div class="flex gap-3 items-start"><div class="w-8 h-8 rounded-full badge-blue flex items-center justify-center shrink-0"><i class="fas fa-bolt text-xs"></i></div><p id="current_focus" class="text-[10px] font-bold leading-tight text-gray-600 dark:text-gray-400 uppercase tracking-tight font-tech">...</p></div>
             </div>
         </aside>
     </main>
