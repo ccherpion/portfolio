@@ -29,7 +29,10 @@ function runScramble(id, speed = 25) {
             let count = 0; const max = 3 + Math.floor(Math.random() * 4);
             setTimeout(() => {
                 const itv = setInterval(() => {
-                    s.innerText = scChars[Math.floor(Math.random() * scChars.length)]; s.style.opacity = '1';
+                    s.innerText = scChars[Math.floor(Math.random() * scChars.length)]; 
+                    s.style.opacity = '1';
+                    // S'assure que les lettres remontent correctement pendant l'animation
+                    s.style.transform = 'translateY(0)';
                     if (count >= max) { s.innerText = c; clearInterval(itv); }
                     count++;
                 }, 40);
@@ -45,6 +48,13 @@ function handleRouting() {
     const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
     const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title' };
     const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub' };
+    
+    // Définition des sous-titres par page à animer automatiquement
+    const pageSubtitles = {
+        '#home': ['expertise_title', 'stack_title'],
+        '#projects': ['projects_list_title'],
+        '#experience': ['exp_list_title', 'edu_title']
+    };
 
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
@@ -56,10 +66,20 @@ function handleRouting() {
             const e = document.getElementById(t);
             if(e) { e.style.visibility = 'hidden'; e.style.opacity = '0'; }
         });
+        
+        // Animation des titres principaux
         setTimeout(() => {
             runScramble(titleMap[hash], 30); setTimeout(() => runScramble(subMap[hash], 10), 100);
         }, 50);
         
+        // Animation automatique des sous-titres (// AREAS OF EXPERTISE, etc)
+        if(pageSubtitles[hash]) {
+            pageSubtitles[hash].forEach((id, i) => {
+                setTimeout(() => runScramble(id, 20), 400 + (i * 150));
+            });
+        }
+        
+        // Animation de glissement des blocs de contenu
         targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${350 + (i * 120)}ms`; });
     }
     document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
@@ -104,7 +124,7 @@ function render() {
         }
     }
 
-    const ids = ['nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 'path_sub', 'loc_nav', 'expertise_title', 'stack_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
+    const ids = ['nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 'path_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
     
     ids.forEach(id => {
         let key = id.replace('_mobile', ''); if (id === 'loc_nav') key = 'loc_val';
@@ -115,9 +135,6 @@ function render() {
     if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#333333] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
     if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
     
-    /* =====================================================================
-       SÉPARATION DE .reveal-block ET .hover-levitate POUR ÉVITER LE CONFLIT
-       ===================================================================== */
     if (d.expertise) {
         document.getElementById('expertise-grid').innerHTML = d.expertise.map(exp => `
             <div class="reveal-block h-full">
@@ -181,6 +198,12 @@ function render() {
             </div>
         `).join('');
     }
+    
+    // Animation automatique des sous-titres de la barre latérale/widgets une fois le rendu terminé
+    const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'widget_title_stats', 'widget_title_focus'];
+    globalSubtitles.forEach((id, i) => {
+        setTimeout(() => runScramble(id, 20), 600 + (i * 150));
+    });
 }
 async function toggleLang() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; localStorage.setItem('lang', currentLang); init(); }
 init();
