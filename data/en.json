@@ -1,28 +1,28 @@
 {
-  "seo": { "title": "Cyril Cherpion | AV Systems Consultant & AI Architect", "description": "Expert in AI-assisted audiovisual systems design. 15 years of expertise." },
+  "seo": { "title": "Cyril Cherpion | AV Pre-Sales Consultant & AI Architect", "description": "Expert in AV pre-sales and AI-assisted systems design. 15 years of expertise." },
   "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
-  "status": "Open to new work", "name": "Cyril Cherpion", "role": "AV SYSTEMS CONSULTANT & AI ARCHITECT",
-  "sidebar_bio": "AV Systems Consultant & AI Architect. I design AI-assisted systems and transform complex budgets into seamless technical realities.",
+  "status": "Open to new opportunities", "name": "Cyril Cherpion", "role": "AV PRE-SALES CONSULTANT & AI ARCHITECT",
+  "sidebar_bio": "AV Pre-Sales Consultant & AI Architect. I combine technical expertise with commercial vision to turn complex needs into profitable, innovative projects.",
   "btn_contact": "Let's work together", "btn_cv": "Download Resume",
-  "sidebar_skills_title": "SOFT SKILLS", "sidebar_skills": ["⚡ Autonomous", "🔥 Dynamic", "👥 Team Management", "🤝 Client Relations", "🧠 Self-educated"],
+  "sidebar_skills_title": "SOFT SKILLS", "sidebar_skills": ["📈 Sales Strategy", "🤝 B2B Negotiation", "⚡ Autonomous", "👥 Team Management", "💡 Solutions Architect"],
   "sidebar_hobbies_title": "INTERESTS", "sidebar_hobbies": ["🎛️ Music Production", "🏃‍♂️ Sports", "🚀 Emerging Tech", "🌱 Personal Dev."],
   "sidebar_lang_title": "LANGUAGES", "sidebar_lang": ["🇫🇷 French (Native)", "🇬🇧 English (Fluent)"],
   "hero_title": "AUDIOVISUAL & IT ENGINEERING",
   "work_title": "MY CREATIVE SHOWCASE", "path_title": "PROFESSIONAL TIMELINE",
-  "bio": "15 years of making technology behave. My gig? Turning \"that'll never work\" into \"how did we ever live without this?\". I speak fluent tech-to-human, juggle budgets like a pro, and keep clients smiling.",
-  "work_sub": "A curated collection of challenges solved. Mostly high-tech, occasionally magic, always budget-compliant.",
-  "path_sub": "The scenic route through 15 years of pixels and decibels. From NYC studios to critical infrastructures. No time machines used.",
-  "impact_label": "TOTAL VOLUME", "impact_val": "€1.8M+", "max_budget_label": "MAX SINGLE PROJECT", "max_budget_val": "€1.5M+",
+  "bio": "15 years of experience at the crossroads of technology and business. My gig? Turning \"that'll never work\" into profitable solutions. I speak fluent tech-to-human, drive high-value deals, and ensure optimal ROI for my clients.",
+  "work_sub": "A curated collection of deals closed and challenges solved. A mix of high-tech, strategic negotiation, and precision.",
+  "path_sub": "The scenic route through 15 years of technical and commercial evolution. From NYC studios to critical infrastructures and B2B deals.",
+  "impact_label": "BUSINESS VOLUME", "impact_val": "€1.8M+", "max_budget_label": "MAX SINGLE PROJECT", "max_budget_val": "€1.5M+",
   "loc_val": "Bordeaux, FR & Int.", 
   "expertise_title": "// AREAS OF EXPERTISE", "stack_title": "// TECHNOLOGICAL STACK", 
   "edu_title": "EDUCATION & CERTIFICATIONS", "widget_title_stats": "KEY FIGURES", "widget_title_focus": "CURRENT FOCUS",
-  "current_focus": "AI-DRIVEN AV CONTROL SYSTEMS & AUTOMATION",
+  "current_focus": "AV BUSINESS DEVELOPMENT & AI AUTOMATION",
   "lang_btn": "FR",
   "expertise": [
+    { "name": "Pre-Sales & Strategy", "desc": "RFP responses, precise budgeting (up to €1.5M), B2B negotiation, and tailored client consulting.", "icon": "fas fa-chart-line" },
     { "name": "AV Design & Engineering", "desc": "Acoustic studies, critical flow architecture (Dante, SDVoE), and technical lighting.", "icon": "fas fa-drafting-compass" },
     { "name": "Control & Automation", "desc": "Programming control systems (AMX MUSE, Crestron) and IoT management via Node-RED.", "icon": "fas fa-sliders-h" },
-    { "name": "AI Architecture", "desc": "Integration of language models (Claude, Gemini) for technical systems assistance.", "icon": "fas fa-brain" },
-    { "name": "IT Project Management", "desc": "Stakeholder coordination, budget management (€1.5M+), and commissioning.", "icon": "fas fa-project-diagram" }
+    { "name": "AI Architecture", "desc": "Integration of language models (Claude, Gemini) for technical systems assistance.", "icon": "fas fa-brain" }
   ],
   "stack": [
     { "category": "Hardware & Control", "items": [
@@ -64,7 +64,7 @@
         {"name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"},
         {"name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"}
     ]},
-    { "category": "IA & Collab", "items": [
+    { "category": "AI & Collab", "items": [
         {"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},
         {"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},
         {"name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png"},
@@ -81,8 +81,8 @@
     { "name": "SABOM", "desc": "LED Wall integration for the operations center.", "val": "€250k", "tag": "Sales", "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" }
   ],
   "experiences": [
-    { "date": "2024 - Present", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "AMX (MUSE, SVSI) specialist & certified trainer. Complex technical proposals, scripting (Node-RED, REST API)." },
-    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Head of AV Design", "company": "ABAQUES", "desc": "Led technical design for major critical projects. Supervised design team, programmed AMX/Crestron/QSC." },
+    { "date": "2024 - Present", "icon": "fas fa-handshake", "role": "Application Engineer & Pre-Sales", "company": "AROCOM", "desc": "Pre-sales, complex technical proposals, client demonstrations, and scripting (Node-RED, REST API)." },
+    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Head of AV Design & Sales Support", "company": "ABAQUES", "desc": "Technical direction and sales support. Complex budgeting, team supervision, and key account management." },
     { "date": "2019 - 2020", "icon": "fas fa-drafting-compass", "role": "AV Designer", "company": "ABAQUES", "desc": "Produced technical studies: Acoustics RT60, isolation STC, lighting DALI/DMX." },
     { "date": "2018 - 2019", "icon": "fas fa-tasks", "role": "AV Project Manager", "company": "VIDELIO IEC", "desc": "Managed corporate and education projects. Stakeholder coordination and site progress monitoring." },
     { "date": "2017 - 2018", "icon": "fas fa-user-tie", "role": "Freelance AV Consultant / OWENTIS", "desc": "Feasibility studies for integrators and sensitive government/finance projects." },

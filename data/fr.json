@@ -1,28 +1,28 @@
 {
-  "seo": { "title": "Cyril Cherpion | Architecte IA & Consultant AV", "description": "Expert en conception de systèmes audiovisuels assistés par IA. 15 ans d'expertise." },
+  "seo": { "title": "Cyril Cherpion | Consultant Pre-Sales AV & Architecte IA", "description": "Expert en avant-vente et conception de systèmes audiovisuels assistés par IA." },
   "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
-  "status": "Ouvert aux nouveaux projets", "name": "Cyril Cherpion", "role": "CONSULTANT SYSTÈMES AV & ARCHITECTE IA",
-  "sidebar_bio": "Consultant Systèmes AV & Architecte IA. Je conçois des systèmes intelligents et transforme des contraintes complexes en réalités techniques fluides.",
+  "status": "Ouvert aux nouveaux projets", "name": "Cyril Cherpion", "role": "CONSULTANT PRE-SALES AV & ARCHITECTE IA",
+  "sidebar_bio": "Consultant Pre-Sales AV & Architecte IA. J'allie expertise technique et vision commerciale pour transformer des besoins complexes en projets rentables et innovants.",
   "btn_contact": "Travaillons ensemble", "btn_cv": "Télécharger mon CV",
-  "sidebar_skills_title": "SAVOIR-ÊTRE", "sidebar_skills": ["⚡ Autonome", "🔥 Dynamique", "👥 Gestion d'équipe", "🤝 Relation Client", "🧠 Autodidacte"],
+  "sidebar_skills_title": "SAVOIR-ÊTRE", "sidebar_skills": ["📈 Stratégie Commerciale", "🤝 Négociation B2B", "⚡ Autonome", "👥 Gestion d'équipe", "💡 Solutions Architect"],
   "sidebar_hobbies_title": "INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
   "sidebar_lang_title": "LANGUES", "sidebar_lang": ["🇫🇷 Français (Natif)", "🇬🇧 Anglais (Courant)"],
   "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
   "work_title": "MON SHOWCASE CRÉATIF", "path_title": "PARCOURS PROFESSIONNEL",
-  "bio": "15 ans d'expérience à faire obéir la technologie. Mon rôle ? Transformer le \"ça ne marchera jamais\" en \"comment on faisait avant ?\". Je parle couramment le \"tech-to-human\", je jongle avec les budgets et je garde une longueur d'avance.",
-  "work_sub": "Un aperçu de mes défis relevés. Un mélange de haute technologie, de précision et de moments 'on va trouver comment faire'.",
-  "path_sub": "15 ans d'évolution technique sans machine à remonter le temps. Des studios de New York aux infrastructures critiques.",
-  "impact_label": "VOLUME TOTAL", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
+  "bio": "15 ans d'expérience à la croisée de la technologie et du business. Mon rôle ? Transformer le \"ça ne marchera jamais\" en solutions rentables. Je parle couramment le \"tech-to-human\", je pilote des affaires à forte valeur ajoutée et j'assure un ROI optimal à mes clients.",
+  "work_sub": "Un aperçu de mes affaires conclues et défis relevés. Un mélange de haute technologie, de négociation stratégique et de précision.",
+  "path_sub": "15 ans d'évolution technique et commerciale. Des studios de New York aux infrastructures critiques et négociations B2B.",
+  "impact_label": "VOLUME D'AFFAIRES", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
   "loc_val": "Bordeaux, FR & Int.", 
   "expertise_title": "// DOMAINES D'EXPERTISE", "stack_title": "// ÉCOSYSTÈME TECHNIQUE", 
   "edu_title": "FORMATION & CERTIFICATIONS", "widget_title_stats": "CHIFFRES CLÉS", "widget_title_focus": "FOCUS ACTUEL",
-  "current_focus": "SYSTÈMES DE PILOTAGE AV VIA IA & AUTOMATISATION",
+  "current_focus": "DÉVELOPPEMENT COMMERCIAL AV & PILOTAGE IA",
   "lang_btn": "EN",
   "expertise": [
+    { "name": "Pre-Sales & Stratégie", "desc": "Réponse aux appels d'offres, chiffrage précis (jusqu'à 1.5M€), négociation B2B et conseil client sur-mesure.", "icon": "fas fa-chart-line" },
     { "name": "Ingénierie & Design AV", "desc": "Études acoustiques, architecture de flux critiques (Dante, SDVoE) et éclairage technique.", "icon": "fas fa-drafting-compass" },
     { "name": "Contrôle & Automatisation", "desc": "Programmation de systèmes de pilotage (AMX MUSE, Crestron) et gestion IoT via Node-RED.", "icon": "fas fa-sliders-h" },
-    { "name": "Architecture IA", "desc": "Intégration de modèles de langage (Claude, Gemini) pour l'assistance aux systèmes techniques.", "icon": "fas fa-brain" },
-    { "name": "Gestion de Projet IT", "desc": "Coordination d'intervenants, gestion de budgets (1.5M€+) et mise en service.", "icon": "fas fa-project-diagram" }
+    { "name": "Architecture IA", "desc": "Intégration de modèles de langage (Claude, Gemini) pour l'assistance aux systèmes et la productivité.", "icon": "fas fa-brain" }
   ],
   "stack": [
     { "category": "Hardware & Contrôle", "items": [
@@ -81,8 +81,8 @@
     { "name": "SABOM", "desc": "Intégration Mur LED pour le centre des opérations.", "val": "250k€", "tag": "Sales", "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" }
   ],
   "experiences": [
-    { "date": "2024 - Présent", "icon": "fas fa-laptop-code", "role": "Application Engineer", "company": "AROCOM", "desc": "Spécialiste gamme AMX (MUSE, SVSI). Propositions techniques, scripting (Node-RED, REST API)." },
-    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE", "company": "ABAQUES", "desc": "Direction technique d'études. Supervision d'équipe, programmation AMX/Crestron/QSC." },
+    { "date": "2024 - Présent", "icon": "fas fa-handshake", "role": "Application Engineer & Pre-Sales", "company": "AROCOM", "desc": "Avant-vente, propositions techniques complexes, démonstrations clients et scripting (Node-RED, REST API)." },
+    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE & Appui Commercial", "company": "ABAQUES", "desc": "Direction technique d'études et accompagnement commercial. Chiffrages complexes et relation clients clés." },
     { "date": "2019 - 2020", "icon": "fas fa-drafting-compass", "role": "AV Designer", "company": "ABAQUES", "desc": "Études techniques détaillées : Acoustique RT60, isolation STC, éclairage DALI/DMX." },
     { "date": "2018 - 2019", "icon": "fas fa-tasks", "role": "Chef de Projet AV", "company": "VIDELIO IEC", "desc": "Gestion de projets corporate et éducation. Coordination des intervenants et mise en service." },
     { "date": "2017 - 2018", "icon": "fas fa-user-tie", "role": "Consultant AV Freelance / OWENTIS", "desc": "Études de faisabilité pour intégrateurs et projets gouvernement/finance sensibles." },
