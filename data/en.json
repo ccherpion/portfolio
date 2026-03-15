@@ -23,48 +23,48 @@
   "lang_btn": "FR",
   "stack": [
     { "category": "Hardware & Control", "icon": "fas fa-sliders-h", "items": [
-        {"name": "AMX", "logo": "https://cdn.simpleicons.org/harman"},
-        {"name": "Crestron", "logo": "https://logo.clearbit.com/crestron.com"},
-        {"name": "Extron", "logo": "https://logo.clearbit.com/extron.com"},
-        {"name": "Kramer", "logo": "https://logo.clearbit.com/kramerav.com"},
-        {"name": "QSC", "logo": "https://logo.clearbit.com/qsc.com"}
+        {"name": "AMX", "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128"},
+        {"name": "Crestron", "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"},
+        {"name": "Extron", "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"},
+        {"name": "Kramer", "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"},
+        {"name": "QSC", "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"}
     ]},
     { "category": "Audio, Video & Network", "icon": "fas fa-network-wired", "items": [
-        {"name": "Shure", "logo": "https://logo.clearbit.com/shure.com"},
-        {"name": "Dante", "logo": "https://logo.clearbit.com/audinate.com"},
-        {"name": "Poly", "logo": "https://logo.clearbit.com/poly.com"},
+        {"name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"},
+        {"name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"},
+        {"name": "Poly", "logo": "https://www.google.com/s2/favicons?domain=poly.com&sz=128"},
         {"name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung"},
-        {"name": "Leyard", "logo": "https://logo.clearbit.com/leyard.com"},
+        {"name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128"},
         {"name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic"},
-        {"name": "SDVoE", "logo": "https://logo.clearbit.com/sdvoe.org"},
-        {"name": "NDI", "logo": "https://logo.clearbit.com/ndi.video"}
+        {"name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"},
+        {"name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"}
     ]},
     { "category": "Design & 3D", "icon": "fas fa-cube", "items": [
         {"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},
         {"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},
         {"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"},
-        {"name": "Visio", "logo": "https://cdn.simpleicons.org/microsoftvisio"}
+        {"name": "Visio", "logo": "https://img.icons8.com/color/48/microsoft-visio.png"}
     ]},
     { "category": "Development", "icon": "fas fa-code", "items": [
         {"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},
         {"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},
         {"name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs"},
         {"name": "HTML5", "logo": "https://cdn.simpleicons.org/html5"},
-        {"name": "CSS3", "logo": "https://cdn.simpleicons.org/css3"},
-        {"name": "VBA", "logo": "https://cdn.simpleicons.org/microsoftexcel"}
+        {"name": "CSS3", "logo": "https://img.icons8.com/color/48/css3.png"},
+        {"name": "VBA", "logo": "https://img.icons8.com/color/48/ms-excel.png"}
     ]},
     { "category": "Media Creation", "icon": "fas fa-photo-video", "items": [
         {"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},
-        {"name": "Pro Tools", "logo": "https://logo.clearbit.com/avid.com"},
-        {"name": "Ableton", "logo": "https://cdn.simpleicons.org/abletonlive"},
-        {"name": "Premiere", "logo": "https://cdn.simpleicons.org/adobepremierepro"},
-        {"name": "Photoshop", "logo": "https://cdn.simpleicons.org/adobephotoshop"},
-        {"name": "Illustrator", "logo": "https://cdn.simpleicons.org/adobeillustrator"}
+        {"name": "Pro Tools", "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"},
+        {"name": "Ableton", "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"},
+        {"name": "Premiere", "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"},
+        {"name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"},
+        {"name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"}
     ]},
     { "category": "AI & Collab", "icon": "fas fa-brain", "items": [
         {"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},
         {"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},
-        {"name": "Teams", "logo": "https://cdn.simpleicons.org/microsoftteams"},
+        {"name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png"},
         {"name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom"}
     ]}
   ],
