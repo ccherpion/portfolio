@@ -57,11 +57,12 @@ function handleRouting() {
             if(e) { e.style.visibility = 'hidden'; e.style.opacity = '0'; }
         });
         setTimeout(() => {
-            runScramble(titleMap[hash], 20); setTimeout(() => runScramble(subMap[hash], 5), 100);
+            /* VITESSE DU SCRAMBLE RALENTIE (30 et 10 au lieu de 20 et 5) */
+            runScramble(titleMap[hash], 30); setTimeout(() => runScramble(subMap[hash], 10), 100);
         }, 50);
         
-        // CORRECTION : Augmentation de l'espacement entre l'apparition de chaque bloc (100ms au lieu de 50ms)
-        targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${300 + (i * 100)}ms`; });
+        /* INTERVALLE DU STAGGER AUGMENTÉ (120ms au lieu de 100ms) POUR UN EFFET CASCADE VISIBLE */
+        targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${350 + (i * 120)}ms`; });
     }
     document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
     window.scrollTo(0, 0);
