@@ -25,10 +25,51 @@
     { "name": "Gestion de Projet IT", "desc": "Coordination d'intervenants, gestion de budgets (1.5M€+) et mise en service.", "icon": "fas fa-project-diagram" }
   ],
   "stack": [
-    { "category": "Contrôle & Code", "items": [{"name": "AMX MUSE", "logo": "https://cdn.simpleicons.org/harman"},{"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},{"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},{"name": "Python", "logo": "https://cdn.simpleicons.org/python"}] },
-    { "category": "Réseau AV", "items": [{"name": "Dante", "logo": "https://img.icons8.com/color/48/ethernet-off.png"},{"name": "SDVOE", "logo": "https://cdn.simpleicons.org/newtek"},{"name": "Cisco", "logo": "https://cdn.simpleicons.org/cisco"},{"name": "API REST", "logo": "https://cdn.simpleicons.org/postman"}] },
-    { "category": "3D & Médias", "items": [{"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},{"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},{"name": "Unreal", "logo": "https://cdn.simpleicons.org/unrealengine"},{"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"}] },
-    { "category": "IA & Prod", "items": [{"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},{"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},{"name": "ChatGPT", "logo": "https://cdn.simpleicons.org/openai"},{"name": "Adobe", "logo": "https://cdn.simpleicons.org/adobe"}] }
+    { "category": "Hardware & Contrôle", "items": [
+        {"name": "AMX", "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128"},
+        {"name": "Crestron", "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"},
+        {"name": "Extron", "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"},
+        {"name": "Kramer", "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"},
+        {"name": "QSC", "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"}
+    ]},
+    { "category": "Audio, Vidéo & Réseau", "items": [
+        {"name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"},
+        {"name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"},
+        {"name": "Poly", "logo": "https://img.icons8.com/color/48/video-call--v1.png"},
+        {"name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung"},
+        {"name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128"},
+        {"name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic"},
+        {"name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"},
+        {"name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"}
+    ]},
+    { "category": "Conception & 3D", "items": [
+        {"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},
+        {"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},
+        {"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"},
+        {"name": "Visio", "logo": "https://img.icons8.com/color/48/microsoft-visio.png"}
+    ]},
+    { "category": "Développement", "items": [
+        {"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},
+        {"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},
+        {"name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs"},
+        {"name": "HTML5", "logo": "https://cdn.simpleicons.org/html5"},
+        {"name": "CSS3", "logo": "https://img.icons8.com/color/48/css3.png"},
+        {"name": "VBA", "logo": "https://img.icons8.com/color/48/ms-excel.png"}
+    ]},
+    { "category": "Création Média", "items": [
+        {"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},
+        {"name": "Pro Tools", "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"},
+        {"name": "Ableton", "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"},
+        {"name": "Premiere", "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"},
+        {"name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"},
+        {"name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"}
+    ]},
+    { "category": "IA & Collab", "items": [
+        {"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},
+        {"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},
+        {"name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png"},
+        {"name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom"}
+    ]}
   ],
   "projects": [
     { "name": "Palais des congrès de Versailles", "desc": "Pre-Sales et AV Design pour l'intégration globale du site.", "val": "1.2M€", "tag": "AV Design", "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" },
