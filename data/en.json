@@ -1,8 +1,5 @@
 {
-  "seo": {
-    "title": "Cyril Cherpion | AV Systems Consultant & AI Architect",
-    "description": "Expert in AI-assisted audiovisual systems design. 15 years of expertise."
-  },
+  "seo": { "title": "Cyril Cherpion | AV Systems Consultant & AI Architect", "description": "Expert in AI-assisted audiovisual systems design. 15 years of expertise." },
   "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path",
   "status": "Open to new work", "name": "Cyril Cherpion", "role": "AV SYSTEMS CONSULTANT & AI ARCHITECT",
   "sidebar_bio": "AV Systems Consultant & AI Architect. I design AI-assisted systems and transform complex budgets into seamless technical realities.",
@@ -11,25 +8,31 @@
   "sidebar_hobbies_title": "INTERESTS", "sidebar_hobbies": ["🎛️ Music Production", "🏃‍♂️ Sports", "🚀 Emerging Tech", "🌱 Personal Dev."],
   "sidebar_lang_title": "LANGUAGES", "sidebar_lang": ["🇫🇷 French (Native)", "🇬🇧 English (Fluent)"],
   "hero_title": "AUDIOVISUAL & IT ENGINEERING",
-  "work_title": "MY CREATIVE SHOWCASE",
-  "path_title": "PROFESSIONAL TIMELINE",
-  "bio": "15 years of making technology behave. My gig? Turning \"that'll never work\" into \"how did we ever live without this?\" I speak fluent tech-to-human, juggle budgets like a pro, and keep clients smiling.",
+  "work_title": "MY CREATIVE SHOWCASE", "path_title": "PROFESSIONAL TIMELINE",
+  "bio": "15 years of making technology behave. My gig? Turning \"that'll never work\" into \"how did we ever live without this?\". I speak fluent tech-to-human, juggle budgets like a pro, and keep clients smiling.",
   "work_sub": "A curated collection of challenges solved. Mostly high-tech, occasionally magic, always budget-compliant.",
   "path_sub": "The scenic route through 15 years of pixels and decibels. From NYC studios to critical infrastructures. No time machines used.",
   "impact_label": "TOTAL VOLUME", "impact_val": "€1.8M+", "max_budget_label": "MAX SINGLE PROJECT", "max_budget_val": "€1.5M+",
-  "loc_val": "Bordeaux, FR & Int.", "stack_title": "TECHNOLOGICAL STACK", "edu_title": "EDUCATION & CERTIFICATIONS",
-  "widget_title_stats": "KEY FIGURES", "widget_title_focus": "CURRENT FOCUS",
+  "loc_val": "Bordeaux, FR & Int.", 
+  "expertise_title": "// AREAS OF EXPERTISE", "stack_title": "// TECHNOLOGICAL STACK", 
+  "edu_title": "EDUCATION & CERTIFICATIONS", "widget_title_stats": "KEY FIGURES", "widget_title_focus": "CURRENT FOCUS",
   "current_focus": "AI-DRIVEN AV CONTROL SYSTEMS & AUTOMATION",
   "lang_btn": "FR",
+  "expertise": [
+    { "name": "AV Design & Engineering", "desc": "Acoustic studies, critical flow architecture (Dante, SDVoE), and technical lighting.", "icon": "fas fa-drafting-compass" },
+    { "name": "Control & Automation", "desc": "Programming control systems (AMX MUSE, Crestron) and IoT management via Node-RED.", "icon": "fas fa-sliders-h" },
+    { "name": "AI Architecture", "desc": "Integration of language models (Claude, Gemini) for technical systems assistance.", "icon": "fas fa-brain" },
+    { "name": "IT Project Management", "desc": "Stakeholder coordination, budget management (€1.5M+), and commissioning.", "icon": "fas fa-project-diagram" }
+  ],
   "stack": [
-    { "category": "Hardware & Control", "icon": "fas fa-sliders-h", "items": [
+    { "category": "Hardware & Control", "items": [
         {"name": "AMX", "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128"},
         {"name": "Crestron", "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"},
         {"name": "Extron", "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"},
         {"name": "Kramer", "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"},
         {"name": "QSC", "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"}
     ]},
-    { "category": "Audio, Video & Network", "icon": "fas fa-network-wired", "items": [
+    { "category": "Audio, Video & Network", "items": [
         {"name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"},
         {"name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"},
         {"name": "Poly", "logo": "https://img.icons8.com/color/48/video-call--v1.png"},
@@ -39,13 +42,13 @@
         {"name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"},
         {"name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"}
     ]},
-    { "category": "Design & 3D", "icon": "fas fa-cube", "items": [
+    { "category": "Design & 3D", "items": [
         {"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},
         {"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},
         {"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"},
         {"name": "Visio", "logo": "https://img.icons8.com/color/48/microsoft-visio.png"}
     ]},
-    { "category": "Development", "icon": "fas fa-code", "items": [
+    { "category": "Development", "items": [
         {"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},
         {"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},
         {"name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs"},
@@ -53,7 +56,7 @@
         {"name": "CSS3", "logo": "https://img.icons8.com/color/48/css3.png"},
         {"name": "VBA", "logo": "https://img.icons8.com/color/48/ms-excel.png"}
     ]},
-    { "category": "Media Creation", "icon": "fas fa-photo-video", "items": [
+    { "category": "Media Creation", "items": [
         {"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},
         {"name": "Pro Tools", "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"},
         {"name": "Ableton", "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"},
@@ -61,7 +64,7 @@
         {"name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"},
         {"name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"}
     ]},
-    { "category": "AI & Collab", "icon": "fas fa-brain", "items": [
+    { "category": "AI & Collab", "items": [
         {"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},
         {"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},
         {"name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png"},
