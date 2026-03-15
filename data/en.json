@@ -32,7 +32,7 @@
     { "category": "Audio, Video & Network", "icon": "fas fa-network-wired", "items": [
         {"name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"},
         {"name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"},
-        {"name": "Poly", "logo": "https://www.google.com/s2/favicons?domain=poly.com&sz=128"},
+        {"name": "Poly", "logo": "https://img.icons8.com/color/48/video-call--v1.png"},
         {"name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung"},
         {"name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128"},
         {"name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic"},
