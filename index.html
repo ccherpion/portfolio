@@ -1,131 +1,164 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyril Cherpion | Portfolio AV Control</title>
+    <title>Cyril Cherpion | AV Systems Consultant & AI Architect</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎛️</text></svg>">
+    <script>
+        window.tailwindConfig = { 
+            darkMode: 'class', 
+            theme: { extend: { 
+                fontFamily: { sans: ['Manrope', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }, 
+                colors: { 
+                    darkBg: '#1E1E1E', darkNav: '#272727', darkCard: '#272727', darkBorder: '#3f3f3f',
+                    blue: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' }
+                } 
+            } } 
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = window.tailwindConfig;</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg: #05070a;
-            --text: #ffffff;
-            --accent-corp: #38bdf8;
-            --accent-home: #f59e0b;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', system-ui, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        /* Conteneur de section */
-        section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            border-bottom: 2px solid rgba(255,255,255,0.05);
-        }
-
-        /* En-tête de produit */
-        .product-header {
-            padding: 20px 40px;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .product-info h2 { margin: 0; font-size: 1.5rem; }
-        .product-info p { margin: 5px 0 0; opacity: 0.6; font-size: 0.9rem; }
-
-        .btn-buy {
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-            transition: 0.3s;
-        }
-
-        /* Style spécifique Boardroom */
-        #boardroom .btn-buy { background: var(--accent-corp); }
-        #boardroom h2 { color: var(--accent-corp); }
-
-        /* Style spécifique Smart Home */
-        #smart-home .btn-buy { background: var(--accent-home); }
-        #smart-home h2 { color: var(--accent-home); }
-
-        /* L'iframe qui prend tout le reste de l'espace */
-        .iframe-container {
-            flex-grow: 1;
-            width: 100%;
-            background: #000;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Navigation flottante */
-        .nav-dots {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 100;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            text-decoration: none;
-        }
-        .dot:hover { background: white; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>(function() { const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); if (theme === 'dark') document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); })();</script>
 </head>
-<body>
+<body class="transition-colors duration-500 bg-[#f7f7f8] dark:bg-darkBg text-gray-900 dark:text-gray-100 flex flex-col lg:flex-row min-h-screen">
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-blue-500 z-[100] transition-all duration-150 ease-out" style="width: 0%;"></div>
 
-    <div class="nav-dots">
-        <a href="#boardroom" class="dot" title="Boardroom UI"></a>
-        <a href="#smart-home" class="dot" title="Smart Home UI"></a>
-    </div>
-
-    <section id="boardroom">
-        <div class="product-header">
-            <div class="product-info">
-                <h2>01. BOARDROOM PREMIUM UI</h2>
-                <p>Système collaboratif • Contrôle Matrice • Gestion PTZ</p>
+    <nav class="lg:hidden fixed top-0 left-0 right-0 bg-white/95 dark:bg-darkNav/95 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50">
+        <div class="p-3 flex flex-col gap-2">
+            <div class="flex justify-between items-center px-1">
+                <div class="flex gap-4 items-center"><button onclick="toggleTheme()" class="text-gray-700 dark:text-gray-300"><i class="fas fa-circle-half-stroke text-lg"></i></button><button onclick="toggleLang()" class="font-bold text-[11px] text-gray-500 font-tech">FR/EN</button></div>
+                <div class="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-2 py-1.5 rounded-full text-[8px] font-bold uppercase flex items-center gap-1.5 font-tech"><span class="status-dot"></span><span id="status_mobile">...</span></div>
             </div>
-            <a href="https://gumroad.com" target="_blank" class="btn-buy">Acheter (49€)</a>
-        </div>
-        <div class="iframe-container">
-            <iframe src="https://ui-dashboard-ai.vercel.app/products/boardroom/index.htmlproducts/boardroom/index.html"></iframe>
-        </div>
-    </section>
-
-    <section id="smart-home">
-        <div class="product-header">
-            <div class="product-info">
-                <h2>02. SMART HOME LUXURY</h2>
-                <p>Résidentiel Haut de Gamme • Éclairage • Médias</p>
+            
+            <div class="flex justify-between items-center px-2 pb-2">
+                <div class="flex items-center gap-2 text-[9px] font-bold text-gray-500 font-tech uppercase"><i class="fas fa-location-dot text-blue-500"></i> <span id="loc_nav_mobile">...</span></div>
+                <div class="text-[9px] font-bold text-blue-600 dark:text-blue-400 font-tech"><span id="live-time-mobile">--:--:--</span></div>
             </div>
-            <a href="https://gumroad.com" target="_blank" class="btn-buy">Acheter (49€)</a>
+<div class="flex justify-around items-center py-2 border-t border-gray-100 dark:border-darkBorder/30">
+                <a href="#home" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_home_mobile">info</a>
+                <a href="#projects" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_work_mobile">work</a>
+                <a href="#experience" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_exp_mobile">path</a>
+                <a href="#dashboards" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_dash_mobile">ui.dash</a>
+            </div>
         </div>
-        <div class="iframe-container">
-            <iframe src="https://ui-dashboard-ai.vercel.app/products/boardroom/index.htmlproducts/boardroom/index.html"></iframe>
-        </div>
-    </section>
+    </nav>
 
+    <aside class="w-full lg:w-80 lg:h-screen lg:fixed left-0 top-0 bg-white dark:bg-darkNav border-r border-gray-200 dark:border-darkBorder p-8 flex flex-col z-40 order-last lg:order-first transition-colors duration-500">
+        <div class="flex flex-col items-center text-center">
+            <a href="#home" class="group block mb-6 transition-transform hover:scale-105 active:scale-95"><img src="https://github.com/ccherpion.png" alt="Cyril" class="w-32 h-32 rounded-full border-2 border-gray-200 dark:border-darkBorder shadow-sm object-cover group-hover:border-blue-500 transition-colors"></a>
+            <h1 id="name" class="text-3xl font-black mb-2 text-gray-900 dark:text-white font-tech uppercase leading-none">...</h1>
+            <h2 id="role" class="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-4 font-tech">...</h2>
+            <p id="sidebar_bio" class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-8">...</p>
+            
+            <div class="w-full space-y-3 mb-8">
+                <a href="mailto:ccherpion@outlook.com" class="transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-lg w-full flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-3 rounded-xl font-bold text-sm font-tech"><i class="fas fa-paper-plane text-xs"></i> <span id="btn_contact">...</span></a>
+                <a href="CV_Cyril_v7.5.pdf" target="_blank" class="transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-lg w-full flex items-center justify-center gap-2 bg-gray-50 dark:bg-[#333333] border border-gray-200 dark:border-darkBorder text-gray-700 dark:text-gray-300 py-3 rounded-xl font-bold text-xs font-tech uppercase"><i class="fas fa-file-pdf text-red-500 text-xs"></i> <span id="btn_cv">...</span></a>
+            </div>
+            
+            <div class="w-full space-y-6 text-left">
+                <div><h3 id="sidebar_skills_title" class="text-[12px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] mb-3 font-tech">...</h3><div id="sidebar-skills" class="flex flex-wrap gap-2"></div></div>
+                <div><h3 id="sidebar_hobbies_title" class="text-[12px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] mb-3 font-tech">...</h3><div id="sidebar-hobbies" class="flex flex-wrap gap-2"></div></div>
+            </div>
+        </div>
+    </aside>
+
+    <nav class="hidden lg:flex fixed top-0 left-80 right-0 h-16 bg-white/90 dark:bg-darkNav/90 backdrop-blur-md border-b border-gray-200 dark:border-darkBorder z-50 items-center justify-between px-6 transition-colors duration-500">
+        <div class="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800/50 px-2.5 py-1.5 rounded-full text-[10px] font-bold flex items-center gap-2 font-tech "><span class="status-dot"></span><span id="status">...</span></div>
+        <div class="flex gap-8 absolute left-1/2 -translate-x-1/2 font-mono">
+            <a href="#home" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_home">...</a>
+            <a href="#projects" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_work">...</a>
+            <a href="#experience" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_exp">...</a>
+            <a href="#dashboards" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_dash">...</a>
+        </div>
+        <div class="flex items-center gap-4 text-[10px] font-bold text-gray-500 font-tech uppercase"><i class="fas fa-location-dot text-blue-500"></i> <span id="loc_nav">...</span><span id="live-time" class="text-blue-600 dark:text-blue-400">--:--:--</span><button onclick="toggleTheme()" class="hover:text-blue-500 transition p-2"><i class="fas fa-circle-half-stroke text-base"></i></button><button onclick="toggleLang()" id="lang-btn" class="hover:text-blue-500 transition text-sm">EN</button></div>
+    </nav>
+
+    <main class="w-full lg:ml-80 pt-32 lg:pt-28 p-6 lg:p-12 max-w-full mx-auto flex flex-col xl:flex-row justify-between items-start gap-12 flex-grow">
+        
+        <div class="w-full xl:max-w-[calc(100%-360px)] min-h-[70vh]">
+            <div id="page-home" class="page-view active space-y-12">
+                <div class="min-h-[360px] sm:min-h-[280px] lg:min-h-[250px] w-full flex flex-col justify-start">
+                    <h2 id="hero_title" class="text-4xl lg:text-7xl font-black uppercase leading-tight mb-4">...</h2>
+                    <p id="bio" class="scramble-target text-xl lg:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl min-h-[180px] sm:min-h-[120px] lg:min-h-[90px]">... </p>
+                </div>
+                
+                <div class="space-y-6 pt-4">
+                    <h3 id="expertise_title" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">...</h3>
+                    <div id="expertise-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                </div>
+                <div class="space-y-6 pt-8">
+                    <h3 id="stack_title" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">...</h3>
+                    <div id="stack-grid" class="space-y-8"></div>
+                </div>
+            </div>
+
+            <div id="page-projects" class="page-view space-y-12">
+                <div class="min-h-[250px] sm:min-h-[200px] w-full flex flex-col justify-start">
+                    <h2 id="work_title" class="text-4xl lg:text-7xl font-black uppercase mb-4">...</h2>
+                    <p id="work_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p>
+                </div>
+                <div class="space-y-6">
+                    <h3 id="projects_list_title" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">...</h3>
+                    <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                </div>
+            </div>
+
+            <div id="page-experience" class="page-view space-y-12">
+                <div class="min-h-[250px] sm:min-h-[200px] w-full flex flex-col justify-start">
+                    <h2 id="path_title" class="text-4xl lg:text-7xl font-black uppercase mb-4">...</h2>
+                    <p id="path_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p>
+                </div>
+                <div class="space-y-6">
+                    <h3 id="exp_list_title" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">...</h3>
+                    <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                </div>
+                <div class="space-y-6 pt-8">
+                    <h3 id="edu_title" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">...</h3>
+                    <div id="education-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                </div>
+            </div>
+
+            <div id="page-dashboards" class="page-view space-y-12">
+                <div class="min-h-[250px] sm:min-h-[200px] w-full flex flex-col justify-start">
+                    <h2 id="dash_title" class="text-4xl lg:text-7xl font-black uppercase mb-4">...</h2>
+                    <p id="dash_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p>
+                </div>
+
+                <div class="reveal-block w-full space-y-6">
+                    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 border-b border-gray-200 dark:border-darkBorder pb-6">
+                        <div>
+                            <h3 id="dash_subtitle_1" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">...</h3>
+                            <p id="dash_desc_1" class="text-sm text-gray-500 mt-2 max-w-2xl leading-relaxed">...</p>
+                        </div>
+                        <a id="btn_buy_dash_1" class="shrink-0 px-8 py-4 bg-blue-600 dark:bg-blue-500 hover:bg-blue-500 dark:hover:bg-blue-400 text-white font-black uppercase text-[11px] tracking-widest rounded-xl transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(37,99,235,0.4)] border border-blue-400/30 whitespace-nowrap" href="https://gum.co/VOTRE_ID_PRODUIT" target="_blank">...</a>
+                    </div>
+                    
+                    <div class="w-full h-[80vh] md:h-auto md:aspect-[16/10] xl:aspect-[16/9] rounded-3xl overflow-hidden border border-gray-200 dark:border-darkBorder shadow-2xl">
+                        <iframe src="https://ccherpion.github.io/ui-dashboard-ai/" class="w-full h-full border-none bg-[#0f172a]" title="Premium Boardroom UI"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="w-full xl:w-80 flex-shrink-0 flex flex-col gap-6 xl:sticky xl:top-28 xl:ml-auto">
+            <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-xl border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
+                <h3 id="widget_title_stats" class="text-[12px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] mb-6 font-tech text-center">...</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-4">
+                    <div class="text-center p-5 rounded-2xl bg-gray-50/50 dark:bg-[#333333]/50 border border-gray-100 dark:border-darkBorder"><p id="impact_val" class="text-3xl font-black text-blue-600 dark:text-blue-400 font-tech">...</p><p id="impact_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p></div>
+                    <div class="text-center p-5 rounded-2xl bg-gray-50/50 dark:bg-[#333333]/50 border border-gray-100 dark:border-darkBorder"><p id="max_budget_val" class="text-3xl font-black text-blue-600 dark:text-blue-400 font-tech">...</p><p id="max_budget_label" class="text-[9px] font-bold text-gray-400 uppercase mt-1 font-tech">...</p></div>
+                </div>
+            </div>
+            <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-xl border border-gray-200 dark:border-darkBorder rounded-3xl p-6">
+                <h3 id="widget_title_focus" class="text-[12px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] mb-4 font-tech text-center">...</h3>
+                <div class="flex gap-3 items-center"><div class="w-8 h-8 rounded-full badge-blue flex items-center justify-center shrink-0"><i class="fas fa-bolt text-xs"></i></div><p id="current_focus" class="text-[10px] font-bold leading-tight text-gray-600 dark:text-gray-400 uppercase tracking-tight font-tech">...</p></div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
