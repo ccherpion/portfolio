@@ -92,7 +92,7 @@ async function init() {
             const el = document.getElementById('live-time');
             if(el) el.innerText = new Date().toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' CET';
         }, 1000);
-    } catch (e) { console.error(e); }
+    } catch (e) { console.error("Error loading JSON:", e); }
 }
 
 function render() {
