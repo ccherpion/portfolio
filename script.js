@@ -18,6 +18,11 @@ function runScramble(id, speed = 25) {
     const el = document.getElementById(id);
     if (!el) return;
     const text = el.getAttribute('data-text') || el.innerText;
+    
+    // Protection anti-glitch
+    const currentHeight = el.offsetHeight;
+    if (currentHeight > 0) el.style.minHeight = currentHeight + 'px';
+    
     el.setAttribute('data-text', text);
     el.innerHTML = ''; el.style.visibility = 'visible'; el.style.opacity = '1';
     
@@ -45,13 +50,13 @@ function runScramble(id, speed = 25) {
 function handleRouting() {
     const hash = window.location.hash || '#home';
     const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience', '#dashboards': 'page-dashboards' };
-    const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title', '#dashboards': 'dash_title' };
     const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub', '#dashboards': 'dash_sub' };
     
     const pageSubtitles = {
         '#home': ['expertise_title', 'stack_title'],
         '#projects': ['projects_list_title'],
-        '#experience': ['exp_list_title', 'edu_title']
+        '#experience': ['exp_list_title', 'edu_title'],
+        '#dashboards': ['dash_subtitle_1']
     };
 
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
@@ -60,19 +65,19 @@ function handleRouting() {
     const targetView = document.getElementById(pageMap[hash]);
     if(targetView) {
         targetView.classList.add('active');
-        [titleMap[hash], subMap[hash]].forEach(t => { 
-            const e = document.getElementById(t);
-            if(e) { e.style.visibility = 'hidden'; e.style.opacity = '0'; }
-        });
+        
+        // On ne cache QUE le paragraphe (bio, sub) pour le Scramble, le gros titre apparait nativement
+        const subEl = document.getElementById(subMap[hash]);
+        if(subEl) { subEl.style.visibility = 'hidden'; subEl.style.opacity = '0'; }
         
         setTimeout(() => {
-            runScramble(titleMap[hash], 30); setTimeout(() => runScramble(subMap[hash], 10), 100);
-        }, 50);
+            runScramble(subMap[hash], 10);
+        }, 100);
         
         if(pageSubtitles[hash]) {
             pageSubtitles[hash].forEach((id, i) => {
-                const subEl = document.getElementById(id);
-                if(subEl) { subEl.style.visibility = 'hidden'; subEl.style.opacity = '0'; }
+                const el = document.getElementById(id);
+                if(el) { el.style.visibility = 'hidden'; el.style.opacity = '0'; }
                 setTimeout(() => runScramble(id, 20), 400 + (i * 150));
             });
         }
