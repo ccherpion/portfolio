@@ -18,8 +18,6 @@ function runScramble(id, speed = 25) {
     const el = document.getElementById(id);
     if (!el) return;
     const text = el.getAttribute('data-text') || el.innerText;
-    const currentHeight = el.offsetHeight;
-    if (currentHeight > 0) el.style.minHeight = currentHeight + 'px';
     el.setAttribute('data-text', text);
     el.innerHTML = ''; el.style.visibility = 'visible'; el.style.opacity = '1';
     
