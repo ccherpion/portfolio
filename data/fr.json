@@ -1,103 +1,378 @@
 {
-  "seo": { "title": "Cyril Cherpion | Consultant Pre-Sales AV & Architecte IA", "description": "Expert en avant-vente et conception de systèmes audiovisuels assistés par IA." },
-  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path", "nav_dash": "ui.dash",
-  "status": "On Air and Available", "name": "Cyril Cherpion", "role": "CONSULTANT PRE-SALES AV & ARCHITECTE IA",
+  "seo": {
+    "title": "Cyril Cherpion | Consultant Pre-Sales AV & Architecte IA",
+    "description": "Expert en avant-vente et conception de systèmes audiovisuels assistés par IA."
+  },
+  "nav_home": "cyril.info",
+  "nav_work": "work.done",
+  "nav_exp": "my.path",
+  "nav_dash": "ui.dash",
+  "status": "On Air and Available",
+  "name": "Cyril Cherpion",
+  "role": "CONSULTANT PRE-SALES AV & ARCHITECTE IA",
   "sidebar_bio": "Consultant Pre-Sales AV & Architecte IA. J'allie expertise technique et vision commerciale pour transformer des besoins complexes en projets rentables et innovants.",
-  "btn_contact": "Travaillons ensemble", "btn_cv": "Télécharger mon CV",
-  "sidebar_skills_title": "// SAVOIR-ÊTRE", "sidebar_skills": ["📈 Stratégie Commerciale", "🤝 Négociation B2B", "⚡ Autonome", "👥 Gestion d'équipe", "💡 Solutions Architect"],
-  "sidebar_hobbies_title": "// INTÉRÊTS", "sidebar_hobbies": ["🎛️ Production Musicale", "🏃‍♂️ Sport", "🚀 Nouvelles Technologies", "🌱 Dév. Personnel"],
-  "sidebar_lang_title": "LANGUAGES", "sidebar_lang": ["🇫🇷 Français (Natif)", "🇬🇧 Anglais (Courant)"],
+  "btn_contact": "Travaillons ensemble",
+  "btn_cv": "Télécharger mon CV",
+  "sidebar_skills_title": "// SAVOIR-ÊTRE",
+  "sidebar_skills": [
+    "📈 Stratégie Commerciale",
+    "🤝 Négociation B2B",
+    "⚡ Autonome",
+    "👥 Gestion d'équipe",
+    "💡 Solutions Architect"
+  ],
+  "sidebar_hobbies_title": "// INTÉRÊTS",
+  "sidebar_hobbies": [
+    "🎛️ Production Musicale",
+    "🏃‍♂️ Sport",
+    "🚀 Nouvelles Technologies",
+    "🌱 Dév. Personnel"
+  ],
+  "sidebar_lang_title": "LANGUAGES",
+  "sidebar_lang": [
+    "🇫🇷 Français (Natif)",
+    "🇬🇧 Anglais (Courant)"
+  ],
   "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
-  "work_title": "MON SHOWCASE CRÉATIF", "path_title": "PARCOURS PROFESSIONNEL", "dash_title": "TEMPLATES UI",
+  "work_title": "MON SHOWCASE CRÉATIF",
+  "path_title": "PARCOURS PROFESSIONNEL",
+  "dash_title": "TEMPLATES UI",
   "bio": "15 ans d'expérience à la croisée de la technologie et du business. Mon rôle ? Transformer le \"ça ne marchera jamais\" en solutions rentables. Je parle couramment le \"tech-to-human\", je pilote des affaires à forte valeur ajoutée et j'assure un ROI optimal à mes clients.",
   "work_sub": "Un aperçu de mes affaires conclues et défis relevés. Un mélange de haute technologie, de négociation stratégique et de précision.",
   "path_sub": "15 ans d'évolution technique et commerciale. Des studios de New York aux infrastructures critiques et négociations B2B.",
   "dash_sub": "Templates d'interfaces de contrôle haut de gamme pour salles de réunion et environnements résidentiels. Compatibles Crestron CH5 & Node-RED.",
-  "dash_subtitle_1": "// 01. BOARDROOM PREMIUM UI",
+  "dash_subtitle_1": "// BOARDROOM PREMIUM UI",
   "dash_desc_1": "Interface de contrôle unifiée pour salle de conseil. Matrice vidéo, DSP Audio, et gestion avancée de l'éclairage RGB. Code source HTML5/JS/CSS prêt à être déployé.",
   "btn_buy_dash_1": "Obtenir ce module - 49€",
-  "impact_label": "VOLUME D'AFFAIRES", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",
-  "loc_val": "Bordeaux, FR & Int.", 
-  "expertise_title": "// DOMAINES D'EXPERTISE", "stack_title": "// ÉCOSYSTÈME TECHNIQUE", 
-  "projects_list_title": "// SÉLECTION DE PROJETS", "exp_list_title": "// EXPÉRIENCES DÉTAILLÉES",
-  "edu_title": "// FORMATION & CERTIFICATIONS", "widget_title_stats": "// CHIFFRES CLÉS", "widget_title_focus": "// FOCUS ACTUEL",
-  "current_focus": "DÉVELOPPEMENT COMMERCIAL AV & PILOTAGE IA",
+  "impact_label": "VOLUME D'AFFAIRES",
+  "impact_val": "1.8M€+",
+  "max_budget_label": "BUDGET MAX PROJET",
+  "max_budget_val": "1.5M€+",
+  "loc_val": "Bordeaux, FR & Int.",
+  "expertise_title": "// DOMAINES D'EXPERTISE",
+  "stack_title": "// ÉCOSYSTÈME TECHNIQUE",
+  "projects_list_title": "// SÉLECTION DE PROJETS",
+  "exp_list_title": "// EXPÉRIENCES DÉTAILLÉES",
+  "edu_title": "// FORMATION & CERTIFICATIONS",
+  "widget_title_stats": "// CHIFFRES CLÉS",
+  "widget_title_focus": "// FOCUS ACTUEL",
+  "current_focus": "CONSULTING AV, DÉVELOPPEMENT COMMERCIAL & DESIGN UI",
   "lang_btn": "EN",
   "expertise": [
-    { "name": "Pre-Sales & Stratégie", "desc": "Réponse aux appels d'offres, chiffrage précis (jusqu'à 1.5M€), négociation B2B et conseil client sur-mesure.", "icon": "fas fa-chart-line" },
-    { "name": "Ingénierie & Design AV", "desc": "Études acoustiques, architecture de flux critiques (Dante, SDVoE) et éclairage technique.", "icon": "fas fa-drafting-compass" },
-    { "name": "Contrôle & Automatisation", "desc": "Programmation de systèmes de pilotage (AMX MUSE, Crestron) et gestion IoT via Node-RED.", "icon": "fas fa-sliders-h" },
-    { "name": "Architecture IA", "desc": "Intégration de modèles de langage (Claude, Gemini) pour l'assistance aux systèmes et la productivité.", "icon": "fas fa-brain" }
+    {
+      "name": "Pre-Sales & Stratégie",
+      "desc": "Réponse aux appels d'offres, chiffrage précis (jusqu'à 1.5M€), négociation B2B et conseil client sur-mesure.",
+      "icon": "fas fa-chart-line"
+    },
+    {
+      "name": "Ingénierie & Design AV",
+      "desc": "Études acoustiques, architecture de flux critiques (Dante, SDVoE) et éclairage technique.",
+      "icon": "fas fa-drafting-compass"
+    },
+    {
+      "name": "Contrôle & Automatisation",
+      "desc": "Programmation de systèmes de pilotage (AMX MUSE, Crestron) et gestion IoT via Node-RED.",
+      "icon": "fas fa-sliders-h"
+    },
+    {
+      "name": "Architecture IA",
+      "desc": "Intégration de modèles de langage (Claude, Gemini) pour l'assistance aux systèmes et la productivité.",
+      "icon": "fas fa-brain"
+    }
   ],
   "stack": [
-    { "category": "Hardware & Contrôle", "items": [
-        {"name": "AMX", "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128"},
-        {"name": "Crestron", "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"},
-        {"name": "Extron", "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"},
-        {"name": "Kramer", "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"},
-        {"name": "QSC", "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"}
-    ]},
-    { "category": "Audio, Vidéo & Réseau", "items": [
-        {"name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"},
-        {"name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"},
-        {"name": "Poly", "logo": "https://img.icons8.com/color/48/video-call--v1.png"},
-        {"name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung"},
-        {"name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128"},
-        {"name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic"},
-        {"name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"},
-        {"name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"}
-    ]},
-    { "category": "Conception & 3D", "items": [
-        {"name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk"},
-        {"name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup"},
-        {"name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames"},
-        {"name": "Visio", "logo": "https://img.icons8.com/color/48/microsoft-visio.png"}
-    ]},
-    { "category": "Développement", "items": [
-        {"name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered"},
-        {"name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript"},
-        {"name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs"},
-        {"name": "HTML5", "logo": "https://cdn.simpleicons.org/html5"},
-        {"name": "CSS3", "logo": "https://img.icons8.com/color/48/css3.png"},
-        {"name": "VBA", "logo": "https://img.icons8.com/color/48/ms-excel.png"}
-    ]},
-    { "category": "Création Média", "items": [
-        {"name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple"},
-        {"name": "Pro Tools", "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"},
-        {"name": "Ableton", "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"},
-        {"name": "Premiere", "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"},
-        {"name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"},
-        {"name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"}
-    ]},
-    { "category": "IA & Collab", "items": [
-        {"name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic"},
-        {"name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini"},
-        {"name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png"},
-        {"name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom"}
-    ]}
+    {
+      "category": "Hardware & Contrôle",
+      "items": [
+        {
+          "name": "AMX",
+          "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128"
+        },
+        {
+          "name": "Crestron",
+          "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"
+        },
+        {
+          "name": "Extron",
+          "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"
+        },
+        {
+          "name": "Kramer",
+          "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"
+        },
+        {
+          "name": "QSC",
+          "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"
+        }
+      ]
+    },
+    {
+      "category": "Audio, Vidéo & Réseau",
+      "items": [
+        {
+          "name": "Shure",
+          "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"
+        },
+        {
+          "name": "Dante",
+          "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"
+        },
+        {
+          "name": "Poly",
+          "logo": "https://img.icons8.com/color/48/video-call--v1.png"
+        },
+        {
+          "name": "Samsung",
+          "logo": "https://cdn.simpleicons.org/samsung"
+        },
+        {
+          "name": "Leyard",
+          "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128"
+        },
+        {
+          "name": "Panasonic",
+          "logo": "https://cdn.simpleicons.org/panasonic"
+        },
+        {
+          "name": "SDVoE",
+          "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"
+        },
+        {
+          "name": "NDI",
+          "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"
+        }
+      ]
+    },
+    {
+      "category": "Conception & 3D",
+      "items": [
+        {
+          "name": "AutoCAD",
+          "logo": "https://cdn.simpleicons.org/autodesk"
+        },
+        {
+          "name": "SketchUp",
+          "logo": "https://cdn.simpleicons.org/sketchup"
+        },
+        {
+          "name": "Twinmotion",
+          "logo": "https://cdn.simpleicons.org/epicgames"
+        },
+        {
+          "name": "Visio",
+          "logo": "https://img.icons8.com/color/48/microsoft-visio.png"
+        }
+      ]
+    },
+    {
+      "category": "Développement",
+      "items": [
+        {
+          "name": "Node-RED",
+          "logo": "https://cdn.simpleicons.org/nodered"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "https://cdn.simpleicons.org/javascript"
+        },
+        {
+          "name": "Node.js",
+          "logo": "https://cdn.simpleicons.org/nodedotjs"
+        },
+        {
+          "name": "HTML5",
+          "logo": "https://cdn.simpleicons.org/html5"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://img.icons8.com/color/48/css3.png"
+        },
+        {
+          "name": "VBA",
+          "logo": "https://img.icons8.com/color/48/ms-excel.png"
+        }
+      ]
+    },
+    {
+      "category": "Création Média",
+      "items": [
+        {
+          "name": "Logic Pro",
+          "logo": "https://cdn.simpleicons.org/apple"
+        },
+        {
+          "name": "Pro Tools",
+          "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"
+        },
+        {
+          "name": "Ableton",
+          "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"
+        },
+        {
+          "name": "Premiere",
+          "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"
+        },
+        {
+          "name": "Photoshop",
+          "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"
+        },
+        {
+          "name": "Illustrator",
+          "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"
+        }
+      ]
+    },
+    {
+      "category": "IA & Collab",
+      "items": [
+        {
+          "name": "Claude",
+          "logo": "https://cdn.simpleicons.org/anthropic"
+        },
+        {
+          "name": "Gemini",
+          "logo": "https://cdn.simpleicons.org/googlegemini"
+        },
+        {
+          "name": "Teams",
+          "logo": "https://img.icons8.com/color/48/microsoft-teams.png"
+        },
+        {
+          "name": "Zoom",
+          "logo": "https://cdn.simpleicons.org/zoom"
+        }
+      ]
+    }
   ],
   "projects": [
-    { "name": "Palais des congrès de Versailles", "desc": "Pre-Sales et AV Design pour l'intégration globale du site.", "val": "1.2M€", "tag": "AV Design", "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" },
-    { "name": "Airbus Safety Center", "desc": "Ingénierie AV haute sécurité et intégration pour infrastructures critiques.", "val": "550k€", "tag": "Intégration", "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" },
-    { "name": "CD 31", "desc": "Salle de conférence, intégration NDI, Mur LED et régie Live Streaming.", "val": "650k€", "tag": "Pre-Sales", "img": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80" },
-    { "name": "Casino Barrière", "desc": "Redesign complet du contrôle et architecture de signal en milieu de jeu.", "val": "450k€", "tag": "Contrôle", "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80" },
-    { "name": "Showroom ATR", "desc": "Design immersif 3D pour accueil VIP et démonstrations interactives.", "val": "300k€", "tag": "Immersif 3D", "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" },
-    { "name": "FRAC Limoges", "desc": "Design et ingénierie AV pour espace culturel avec contraintes acoustiques complexes.", "val": "550k€", "tag": "Design AV", "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" },
-    { "name": "SABOM", "desc": "Intégration Mur LED pour le centre des opérations.", "val": "250k€", "tag": "Sales", "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" }
+    {
+      "name": "Palais des congrès de Versailles",
+      "desc": "Pre-Sales et AV Design pour l'intégration globale du site.",
+      "val": "1.2M€",
+      "tag": "AV Design",
+      "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Airbus Safety Center",
+      "desc": "Ingénierie AV haute sécurité et intégration pour infrastructures critiques.",
+      "val": "550k€",
+      "tag": "Intégration",
+      "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "CD 31",
+      "desc": "Salle de conférence, intégration NDI, Mur LED et régie Live Streaming.",
+      "val": "650k€",
+      "tag": "Pre-Sales",
+      "img": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Casino Barrière",
+      "desc": "Redesign complet du contrôle et architecture de signal en milieu de jeu.",
+      "val": "450k€",
+      "tag": "Contrôle",
+      "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Showroom ATR",
+      "desc": "Design immersif 3D pour accueil VIP et démonstrations interactives.",
+      "val": "300k€",
+      "tag": "Immersif 3D",
+      "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "FRAC Limoges",
+      "desc": "Design et ingénierie AV pour espace culturel avec contraintes acoustiques complexes.",
+      "val": "550k€",
+      "tag": "Design AV",
+      "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "SABOM",
+      "desc": "Intégration Mur LED pour le centre des opérations.",
+      "val": "250k€",
+      "tag": "Sales",
+      "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+    }
   ],
   "experiences": [
-    { "date": "2024 - Présent", "icon": "fas fa-handshake", "role": "Application Engineer & Pre-Sales", "company": "AROCOM", "desc": "Avant-vente, propositions techniques complexes, démonstrations clients et scripting (Node-RED, REST API)." },
-    { "date": "2020 - 2023", "icon": "fas fa-project-diagram", "role": "Responsable BE & Appui Commercial", "company": "ABAQUES", "desc": "Direction technique d'études et accompagnement commercial. Chiffrages complexes et relation clients clés." },
-    { "date": "2019 - 2020", "icon": "fas fa-drafting-compass", "role": "AV Designer", "company": "ABAQUES", "desc": "Études techniques détaillées : Acoustique RT60, isolation STC, éclairage DALI/DMX." },
-    { "date": "2018 - 2019", "icon": "fas fa-tasks", "role": "Chef de Projet AV", "company": "VIDELIO IEC", "desc": "Gestion de projets corporate et éducation. Coordination des intervenants et mise en service." },
-    { "date": "2017 - 2018", "icon": "fas fa-user-tie", "role": "Consultant AV Freelance / OWENTIS", "desc": "Études de faisabilité pour intégrateurs et projets gouvernement/finance sensibles." },
-    { "date": "2012 - 2017", "icon": "fas fa-calendar-check", "role": "Régisseur Général AV", "company": "FACILITESS", "desc": "Logistique technique d'événements et encadrement d'équipes techniques." },
-    { "date": "Avant 2012", "icon": "fas fa-sliders-h", "role": "Ingénieur du Son", "company": "RAVAYANA / QUAD NY", "desc": "Ingénierie sonore studio et live. Opérations à New York et en France." }
+    {
+      "date": "2024 - Présent",
+      "icon": "fas fa-handshake",
+      "role": "Application Engineer & Pre-Sales",
+      "company": "AROCOM",
+      "desc": "Avant-vente, propositions techniques complexes, démonstrations clients et scripting (Node-RED, REST API)."
+    },
+    {
+      "date": "2020 - 2023",
+      "icon": "fas fa-project-diagram",
+      "role": "Responsable BE & Appui Commercial",
+      "company": "ABAQUES",
+      "desc": "Direction technique d'études et accompagnement commercial. Chiffrages complexes et relation clients clés."
+    },
+    {
+      "date": "2019 - 2020",
+      "icon": "fas fa-drafting-compass",
+      "role": "AV Designer",
+      "company": "ABAQUES",
+      "desc": "Études techniques détaillées : Acoustique RT60, isolation STC, éclairage DALI/DMX."
+    },
+    {
+      "date": "2018 - 2019",
+      "icon": "fas fa-tasks",
+      "role": "Chef de Projet AV",
+      "company": "VIDELIO IEC",
+      "desc": "Gestion de projets corporate et éducation. Coordination des intervenants et mise en service."
+    },
+    {
+      "date": "2017 - 2018",
+      "icon": "fas fa-user-tie",
+      "role": "Consultant AV Freelance / OWENTIS",
+      "desc": "Études de faisabilité pour intégrateurs et projets gouvernement/finance sensibles."
+    },
+    {
+      "date": "2012 - 2017",
+      "icon": "fas fa-calendar-check",
+      "role": "Régisseur Général AV",
+      "company": "FACILITESS",
+      "desc": "Logistique technique d'événements et encadrement d'équipes techniques."
+    },
+    {
+      "date": "Avant 2012",
+      "icon": "fas fa-sliders-h",
+      "role": "Ingénieur du Son",
+      "company": "RAVAYANA / QUAD NY",
+      "desc": "Ingénierie sonore studio et live. Opérations à New York et en France."
+    }
   ],
   "education": [
-    { "date": "Continu", "icon": "fas fa-certificate", "degree": "Certifications Techniques", "school": "Standards Industrie", "desc": "AMX-MUSE, Crestron, Dante (Niveaux 1-3), Q-SYS, Poly, Shure." },
-    { "date": "Autodidacte", "icon": "fas fa-laptop-code", "degree": "Dév. Web FullStack", "school": "Udemy", "desc": "Technologies web modernes : HTML5, CSS3, JavaScript, Node.js." },
-    { "date": "2010 - 2011", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA New York", "desc": "Opérations studio avancées et production audio haut de gamme." },
-    { "date": "2007 - 2010", "icon": "fas fa-graduation-cap", "degree": "Ingénierie du Son", "school": "ISTS ESRA Nice", "desc": "Bases de l'acoustique, théorie du signal et audio professionnel." }
+    {
+      "date": "Continu",
+      "icon": "fas fa-certificate",
+      "degree": "Certifications Techniques",
+      "school": "Standards Industrie",
+      "desc": "AMX-MUSE, Crestron, Dante (Niveaux 1-3), Q-SYS, Poly, Shure."
+    },
+    {
+      "date": "Autodidacte",
+      "icon": "fas fa-laptop-code",
+      "degree": "Dév. Web FullStack",
+      "school": "Udemy",
+      "desc": "Technologies web modernes : HTML5, CSS3, JavaScript, Node.js."
+    },
+    {
+      "date": "2010 - 2011",
+      "icon": "fas fa-graduation-cap",
+      "degree": "Ingénierie du Son",
+      "school": "ISTS ESRA New York",
+      "desc": "Opérations studio avancées et production audio haut de gamme."
+    },
+    {
+      "date": "2007 - 2010",
+      "icon": "fas fa-graduation-cap",
+      "degree": "Ingénierie du Son",
+      "school": "ISTS ESRA Nice",
+      "desc": "Bases de l'acoustique, théorie du signal et audio professionnel."
+    }
   ]
 }
