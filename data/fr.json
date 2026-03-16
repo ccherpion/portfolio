@@ -1,6 +1,6 @@
 {
   "seo": { "title": "Cyril Cherpion | Consultant Pre-Sales AV & Architecte IA", "description": "Expert en avant-vente et conception de systèmes audiovisuels assistés par IA." },
-  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path", "nav_dash": "dashboards",
+  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path", "nav_dash": "ui.dash",
   "status": "On Air and Available", "name": "Cyril Cherpion", "role": "CONSULTANT PRE-SALES AV & ARCHITECTE IA",
   "sidebar_bio": "Consultant Pre-Sales AV & Architecte IA. J'allie expertise technique et vision commerciale pour transformer des besoins complexes en projets rentables et innovants.",
   "btn_contact": "Travaillons ensemble", "btn_cv": "Télécharger mon CV",
@@ -13,7 +13,7 @@
   "work_sub": "Un aperçu de mes affaires conclues et défis relevés. Un mélange de haute technologie, de négociation stratégique et de précision.",
   "path_sub": "15 ans d'évolution technique et commerciale. Des studios de New York aux infrastructures critiques et négociations B2B.",
   "dash_sub": "Templates d'interfaces de contrôle haut de gamme pour salles de réunion et environnements résidentiels. Compatibles Crestron CH5 & Node-RED.",
-  "dash_subtitle_1": "01. BOARDROOM PREMIUM UI",
+  "dash_subtitle_1": "// 01. BOARDROOM PREMIUM UI",
   "dash_desc_1": "Interface de contrôle unifiée pour salle de conseil. Matrice vidéo, DSP Audio, et gestion avancée de l'éclairage RGB. Code source HTML5/JS/CSS prêt à être déployé.",
   "btn_buy_dash_1": "Obtenir ce module - 49€",
   "impact_label": "VOLUME D'AFFAIRES", "impact_val": "1.8M€+", "max_budget_label": "BUDGET MAX PROJET", "max_budget_val": "1.5M€+",

@@ -18,6 +18,8 @@ function runScramble(id, speed = 25) {
     const el = document.getElementById(id);
     if (!el) return;
     const text = el.getAttribute('data-text') || el.innerText;
+    const currentHeight = el.offsetHeight;
+    if (currentHeight > 0) el.style.minHeight = currentHeight + 'px';
     el.setAttribute('data-text', text);
     el.innerHTML = ''; el.style.visibility = 'visible'; el.style.opacity = '1';
     
@@ -71,6 +73,8 @@ function handleRouting() {
         
         if(pageSubtitles[hash]) {
             pageSubtitles[hash].forEach((id, i) => {
+                const subEl = document.getElementById(id);
+                if(subEl) { subEl.style.visibility = 'hidden'; subEl.style.opacity = '0'; }
                 setTimeout(() => runScramble(id, 20), 400 + (i * 150));
             });
         }
@@ -196,6 +200,8 @@ function render() {
     
     const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'widget_title_stats', 'widget_title_focus'];
     globalSubtitles.forEach((id, i) => {
+        const subEl = document.getElementById(id);
+        if(subEl) { subEl.style.visibility = 'hidden'; subEl.style.opacity = '0'; }
         setTimeout(() => runScramble(id, 20), 600 + (i * 150));
     });
 }

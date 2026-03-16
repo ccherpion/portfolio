@@ -1,6 +1,6 @@
 {
   "seo": { "title": "Cyril Cherpion | AV Pre-Sales Consultant & AI Architect", "description": "Expert in AV pre-sales and AI-assisted systems design. 15 years of expertise." },
-  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path", "nav_dash": "dashboards",
+  "nav_home": "cyril.info", "nav_work": "work.done", "nav_exp": "my.path", "nav_dash": "ui.dash",
   "status": "On Air and Available", "name": "Cyril Cherpion", "role": "AV PRE-SALES CONSULTANT & AI ARCHITECT",
   "sidebar_bio": "AV Pre-Sales Consultant & AI Architect. I combine technical expertise with commercial vision to turn complex needs into profitable, innovative projects.",
   "btn_contact": "Let's work together", "btn_cv": "Download Resume",
@@ -13,7 +13,7 @@
   "work_sub": "A curated collection of deals closed and challenges solved. A mix of high-tech, strategic negotiation, and precision.",
   "path_sub": "The scenic route through 15 years of technical and commercial evolution. From NYC studios to critical infrastructures and B2B deals.",
   "dash_sub": "Premium control interface templates for boardrooms and residential environments. Ready for Crestron CH5 & Node-RED.",
-  "dash_subtitle_1": "01. BOARDROOM PREMIUM UI",
+  "dash_subtitle_1": "// 01. BOARDROOM PREMIUM UI",
   "dash_desc_1": "Unified control interface for boardrooms. Video matrix, Audio DSP, and advanced RGB lighting management. HTML5/JS/CSS source code ready to deploy.",
   "btn_buy_dash_1": "Get this template - 49€",
   "impact_label": "BUSINESS VOLUME", "impact_val": "€1.8M+", "max_budget_label": "MAX SINGLE PROJECT", "max_budget_val": "€1.5M+",
