@@ -31,7 +31,6 @@ function runScramble(id, speed = 25) {
                 const itv = setInterval(() => {
                     s.innerText = scChars[Math.floor(Math.random() * scChars.length)]; 
                     s.style.opacity = '1';
-                    // S'assure que les lettres remontent correctement pendant l'animation
                     s.style.transform = 'translateY(0)';
                     if (count >= max) { s.innerText = c; clearInterval(itv); }
                     count++;
@@ -45,11 +44,10 @@ function runScramble(id, speed = 25) {
 
 function handleRouting() {
     const hash = window.location.hash || '#home';
-    const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience' };
-    const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title' };
-    const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub' };
+    const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience', '#dashboards': 'page-dashboards' };
+    const titleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title', '#dashboards': 'dash_title' };
+    const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub', '#dashboards': 'dash_sub' };
     
-    // Définition des sous-titres par page à animer automatiquement
     const pageSubtitles = {
         '#home': ['expertise_title', 'stack_title'],
         '#projects': ['projects_list_title'],
@@ -67,19 +65,16 @@ function handleRouting() {
             if(e) { e.style.visibility = 'hidden'; e.style.opacity = '0'; }
         });
         
-        // Animation des titres principaux
         setTimeout(() => {
             runScramble(titleMap[hash], 30); setTimeout(() => runScramble(subMap[hash], 10), 100);
         }, 50);
         
-        // Animation automatique des sous-titres (// AREAS OF EXPERTISE, etc)
         if(pageSubtitles[hash]) {
             pageSubtitles[hash].forEach((id, i) => {
                 setTimeout(() => runScramble(id, 20), 400 + (i * 150));
             });
         }
         
-        // Animation de glissement des blocs de contenu
         targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${350 + (i * 120)}ms`; });
     }
     document.querySelectorAll(`a[href="${hash}"]`).forEach(l => l.classList.add('active'));
@@ -124,7 +119,7 @@ function render() {
         }
     }
 
-    const ids = ['nav_home', 'nav_work', 'nav_exp', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'bio', 'work_sub', 'path_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
+    const ids = ['nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
     
     ids.forEach(id => {
         let key = id.replace('_mobile', ''); if (id === 'loc_nav') key = 'loc_val';
@@ -199,7 +194,6 @@ function render() {
         `).join('');
     }
     
-    // Animation automatique des sous-titres de la barre latérale/widgets une fois le rendu terminé
     const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'widget_title_stats', 'widget_title_focus'];
     globalSubtitles.forEach((id, i) => {
         setTimeout(() => runScramble(id, 20), 600 + (i * 150));

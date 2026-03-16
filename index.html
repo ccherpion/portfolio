@@ -37,6 +37,7 @@
                 <a href="#home" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_home_mobile">info</a>
                 <a href="#projects" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_work_mobile">work</a>
                 <a href="#experience" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_exp_mobile">path</a>
+                <a href="#dashboards" class="nav-link text-[11px] font-bold text-gray-400 uppercase font-tech" id="nav_dash_mobile">ui</a>
             </div>
         </div>
     </nav>
@@ -66,6 +67,7 @@
             <a href="#home" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_home">...</a>
             <a href="#projects" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_work">...</a>
             <a href="#experience" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_exp">...</a>
+            <a href="#dashboards" class="nav-link text-sm font-bold text-gray-500 hover:text-gray-900 dark:hover:text-white transition" id="nav_dash">...</a>
         </div>
         <div class="flex items-center gap-4 text-[10px] font-bold text-gray-500 font-tech uppercase"><i class="fas fa-location-dot text-blue-500"></i> <span id="loc_nav">...</span><span id="live-time" class="text-blue-600 dark:text-blue-400">--:--:--</span><button onclick="toggleTheme()" class="hover:text-blue-500 transition p-2"><i class="fas fa-circle-half-stroke text-base"></i></button><button onclick="toggleLang()" id="lang-btn" class="hover:text-blue-500 transition text-sm">EN</button></div>
     </nav>
@@ -112,6 +114,16 @@
                 <div class="space-y-6 pt-8">
                     <h3 id="edu_title" class="text-[11px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest font-tech">...</h3>
                     <div id="education-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                </div>
+            </div>
+
+            <div id="page-dashboards" class="page-view space-y-12">
+                <div class="min-h-[250px] sm:min-h-[200px] w-full flex flex-col justify-start">
+                    <h2 id="dash_title" class="scramble-target text-4xl lg:text-7xl font-black uppercase mb-4">...</h2>
+                    <p id="dash_sub" class="scramble-target text-2xl text-gray-600 dark:text-gray-400 max-w-2xl">...</p>
+                </div>
+                <div class="reveal-block w-full h-[600px] rounded-3xl overflow-hidden border border-gray-200 dark:border-darkBorder shadow-lg">
+                    <iframe src="https://ccherpion.github.io/ui-dashboard-ai/" class="w-full h-full border-none bg-black" title="AV/AI System Dashboard"></iframe>
                 </div>
             </div>
         </div>
