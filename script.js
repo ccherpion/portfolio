@@ -194,6 +194,12 @@ function render() {
         `).join('');
     }
 
+    // Mise à jour du SEO Google
+    if (d.seo) {
+        document.title = d.seo.title;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute("content", d.seo.description);
+    }
     if (d.education) {
         document.getElementById('education-grid').innerHTML = d.education.map(edu => `
             <div class="reveal-block h-full">
