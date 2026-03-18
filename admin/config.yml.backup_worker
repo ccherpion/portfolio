@@ -2,7 +2,6 @@ backend:
   name: github
   repo: ccherpion/portfolio
   branch: main
-  base_url: https://sveltia-cms-auth.ccherpion.workers.dev
 
 # Configuration des médias (images des projets)
 media_folder: "images/uploads"
