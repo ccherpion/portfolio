@@ -41,12 +41,22 @@
   "work_sub": "A curated collection of deals closed and challenges solved. A mix of high-tech, strategic negotiation, and precision.",
   "path_sub": "The scenic route through 15 years of technical and commercial evolution. From NYC studios to critical infrastructures and B2B deals.",
   "dash_sub": "Premium control interface templates for boardrooms and residential environments. Ready for Crestron CH5 & Node-RED.",
-  "dash_subtitle_1": "// BOARDROOM PREMIUM UI",
-  "dash_desc_1": "Unified control interface for boardrooms. Video matrix, Audio DSP, and advanced RGB lighting management. HTML5/JS/CSS source code ready to deploy.",
-  "btn_buy_dash_1": "Get this template - 49€",
-  "dash_subtitle_2": "// SMART HOME PREMIUM UI",
-  "dash_desc_2": "Complete control interface for residential spaces. HVAC, Lighting, Security, and multi-room audio. HTML5/JS/CSS source code ready to deploy.",
-  "btn_buy_dash_2": "Get this template - 39€",
+  "dashboards_list": [
+    {
+      "title": "// BOARDROOM PREMIUM UI",
+      "desc": "Unified control interface for boardrooms. Video matrix, Audio DSP, and advanced RGB lighting management. HTML5/JS/CSS source code ready to deploy.",
+      "iframe_url": "https://ui-dashboard-ai.vercel.app/",
+      "link": "https://gum.co/VOTRE_ID_PRODUIT",
+      "btn_text": "Get this template"
+    },
+    {
+      "title": "// SMART HOME PREMIUM UI",
+      "desc": "Complete control interface for residential spaces. HVAC, Lighting, Security, and multi-room audio. HTML5/JS/CSS source code ready to deploy.",
+      "iframe_url": "https://ui-smart-home-premium.vercel.app/",
+      "link": "https://gum.co/VOTRE_ID_PRODUIT_2",
+      "btn_text": "Get this template"
+    }
+  ],
   "impact_label": "BUSINESS VOLUME",
   "impact_val": "€1.8M+",
   "max_budget_label": "MAX SINGLE PROJECT",

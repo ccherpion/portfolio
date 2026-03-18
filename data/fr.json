@@ -41,12 +41,22 @@
   "work_sub": "Un aperçu de mes affaires conclues et défis relevés. Un mélange de haute technologie, de négociation stratégique et de précision.",
   "path_sub": "15 ans d'évolution technique et commerciale. Des studios de New York aux infrastructures critiques et négociations B2B.",
   "dash_sub": "Templates d'interfaces de contrôle haut de gamme pour salles de réunion et environnements résidentiels. Compatibles Crestron CH5 & Node-RED.",
-  "dash_subtitle_1": "// BOARDROOM PREMIUM UI",
-  "dash_desc_1": "Interface de contrôle unifiée pour salle de conseil. Matrice vidéo, DSP Audio, et gestion avancée de l'éclairage RGB. Code source HTML5/JS/CSS prêt à être déployé.",
-  "btn_buy_dash_1": "Obtenir ce module - 49€",
-  "dash_subtitle_2": "// SMART HOME PREMIUM UI",
-  "dash_desc_2": "Interface de contrôle complète pour espaces résidentiels. CVC, éclairage, sécurité et audio multi-zones. Code source HTML5/JS/CSS prêt à être déployé.",
-  "btn_buy_dash_2": "Obtenir ce module - 39€",
+  "dashboards_list": [
+    {
+      "title": "// BOARDROOM PREMIUM UI",
+      "desc": "Interface de contrôle unifiée pour salle de conseil. Matrice vidéo, DSP Audio, et gestion avancée de l'éclairage RGB. Code source HTML5/JS/CSS prêt à être déployé.",
+      "iframe_url": "https://ui-dashboard-ai.vercel.app/",
+      "link": "https://gum.co/VOTRE_ID_PRODUIT",
+      "btn_text": "Obtenir ce design"
+    },
+    {
+      "title": "// SMART HOME PREMIUM UI",
+      "desc": "Interface de contrôle complète pour espaces résidentiels. CVC, éclairage, sécurité et audio multi-zones. Code source HTML5/JS/CSS prêt à être déployé.",
+      "iframe_url": "https://ui-smart-home-premium.vercel.app/",
+      "link": "https://gum.co/VOTRE_ID_PRODUIT_2",
+      "btn_text": "Obtenir ce design"
+    }
+  ],
   "impact_label": "VOLUME D'AFFAIRES",
   "impact_val": "1.8M€+",
   "max_budget_label": "BUDGET MAX PROJET",
