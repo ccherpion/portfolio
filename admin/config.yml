@@ -1,9 +1,7 @@
 backend:
   name: git-gateway
-  # Le dépôt sera détecté automatiquement si Netlify est utilisé pour l'auth, 
-  # sinon il faudra spécifier le format "utilisateur/repo"
-  repo: ccherpion/portfolio-main
   branch: main
+  site_domain: cherpion-portfolio.netlify.app
 
 # Configuration des médias (images des projets)
 media_folder: "images/uploads"
