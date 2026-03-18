@@ -110,12 +110,15 @@ collections:
           # --- PAGE DASHBOARDS ---
           - {label: "Dashboards: Grand Titre", name: "dash_title", widget: "string"}
           - {label: "Dashboards: Sous-titre", name: "dash_sub", widget: "text"}
-          - {label: "Module 1: Titre", name: "dash_subtitle_1", widget: "string"}
-          - {label: "Module 1: Description", name: "dash_desc_1", widget: "text"}
-          - {label: "Module 1: Bouton Achat", name: "btn_buy_dash_1", widget: "string"}
-          - {label: "Module 2: Titre", name: "dash_subtitle_2", widget: "string"}
-          - {label: "Module 2: Description", name: "dash_desc_2", widget: "text"}
-          - {label: "Module 2: Bouton Achat", name: "btn_buy_dash_2", widget: "string"}
+          - label: "Liste des Dashboards"
+            name: "dashboards_list"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "URL Iframe", name: "iframe_url", widget: "string"}
+              - {label: "Lien Bouton", name: "link", widget: "string"}
+              - {label: "Texte Bouton", name: "btn_text", widget: "string"}
 
           # --- WIDGETS ---
           - {label: "Widget 1: Titre Chiffres", name: "widget_title_stats", widget: "string"}
@@ -225,12 +228,15 @@ collections:
           # --- PAGE DASHBOARDS ---
           - {label: "Dashboards: Main Title", name: "dash_title", widget: "string"}
           - {label: "Dashboards: Subtitle", name: "dash_sub", widget: "text"}
-          - {label: "Module 1: Title", name: "dash_subtitle_1", widget: "string"}
-          - {label: "Module 1: Description", name: "dash_desc_1", widget: "text"}
-          - {label: "Module 1: Buy Button", name: "btn_buy_dash_1", widget: "string"}
-          - {label: "Module 2: Title", name: "dash_subtitle_2", widget: "string"}
-          - {label: "Module 2: Description", name: "dash_desc_2", widget: "text"}
-          - {label: "Module 2: Buy Button", name: "btn_buy_dash_2", widget: "string"}
+          - label: "Liste des Dashboards"
+            name: "dashboards_list"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "URL Iframe", name: "iframe_url", widget: "string"}
+              - {label: "Lien Bouton", name: "link", widget: "string"}
+              - {label: "Texte Bouton", name: "btn_text", widget: "string"}
 
           # --- WIDGETS ---
           - {label: "Widget 1: Stats Title", name: "widget_title_stats", widget: "string"}

@@ -56,7 +56,7 @@ function handleRouting() {
         '#home': ['expertise_title', 'stack_title'],
         '#projects': ['projects_list_title'],
         '#experience': ['exp_list_title', 'edu_title'],
-        '#dashboards': ['dash_subtitle_1', 'dash_subtitle_2']
+        '#dashboards': [] // Les sous-titres dynamiques sont gérés différemment
     };
 
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
@@ -129,7 +129,8 @@ function render() {
         }
     }
 
-    const ids = ['loc_nav_mobile', 'dash_subtitle_1', 'dash_desc_1', 'btn_buy_dash_1', 'dash_subtitle_2', 'dash_desc_2', 'btn_buy_dash_2', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
+    // Retrait des IDs statiques de dashboard
+    const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
     
     ids.forEach(id => {
         let key = id.replace('_mobile', ''); if (key === 'loc_nav') key = 'loc_val';
@@ -194,12 +195,33 @@ function render() {
         `).join('');
     }
 
-    // Mise à jour du SEO Google
+    // Nouveau rendu dynamique des dashboards
+    if (d.dashboards_list) {
+        const dashGrid = document.getElementById('dashboards-grid');
+        if (dashGrid) {
+            dashGrid.innerHTML = d.dashboards_list.map(dash => `
+                <div class="reveal-block w-full space-y-6">
+                    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 border-b border-gray-200 dark:border-darkBorder pb-6">
+                        <div>
+                            <h3 class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">${dash.title}</h3>
+                            <p class="text-sm text-gray-500 mt-2 max-w-2xl leading-relaxed uppercase font-tech text-[11px]">${dash.desc}</p>
+                        </div>
+                        <a class="shrink-0 px-8 py-4 bg-blue-600 text-white font-black uppercase text-[11px] tracking-widest rounded-xl transition-all hover:scale-105 shadow-lg" href="${dash.link}" target="_blank">${dash.btn_text}</a>
+                    </div>
+                    <div class="w-full h-[80vh] md:h-auto md:aspect-[16/10] rounded-3xl overflow-hidden border border-gray-200 dark:border-darkBorder shadow-2xl">
+                        <iframe src="${dash.iframe_url}" class="w-full h-full border-none bg-[#0f172a]" title="${dash.title}"></iframe>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+
     if (d.seo) {
         document.title = d.seo.title;
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute("content", d.seo.description);
     }
+    
     if (d.education) {
         document.getElementById('education-grid').innerHTML = d.education.map(edu => `
             <div class="reveal-block h-full">
