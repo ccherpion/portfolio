@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   # Le dépôt sera détecté automatiquement si Netlify est utilisé pour l'auth, 
   # sinon il faudra spécifier le format "utilisateur/repo"
   repo: ccherpion/portfolio-main
