@@ -88,7 +88,7 @@ collections:
           - {label: "Parcours: Sous-titre", name: "path_sub", widget: "text"}
           - {label: "Parcours: Titre Expériences", name: "exp_list_title", widget: "string"}
           - label: "Parcours: Historique Professionnel"
-            name: "experiences"
+            name: "experience"
             widget: "list"
             fields:
               - {label: "Période", name: "date", widget: "string"}
@@ -203,7 +203,7 @@ collections:
           - {label: "Path: Subtitle", name: "path_sub", widget: "text"}
           - {label: "Path: Experience Title", name: "exp_list_title", widget: "string"}
           - label: "Path: Professional History"
-            name: "experiences"
+            name: "experience"
             widget: "list"
             fields:
               - {label: "Period", name: "date", widget: "string"}
