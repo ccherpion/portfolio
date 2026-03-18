@@ -1,7 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-  site_domain: cherpion-portfolio.netlify.app
+  identity_url: "https://cherpion-portfolio.netlify.app/.netlify/identity"
+  gateway_url: "https://cherpion-portfolio.netlify.app/.netlify/git/github"
 
 # Configuration des médias (images des projets)
 media_folder: "images/uploads"
