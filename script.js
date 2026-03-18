@@ -56,7 +56,7 @@ function handleRouting() {
         '#home': ['expertise_title', 'stack_title'],
         '#projects': ['projects_list_title'],
         '#experience': ['exp_list_title', 'edu_title'],
-        '#dashboards': [] // Géré dynamiquement dans render()
+        '#dashboards': [] 
     };
 
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
@@ -193,7 +193,7 @@ function render() {
         `).join('');
     }
 
-    // Rendu dynamique des dashboards avec animation Scramble restaurée
+    // Rendu dynamique des dashboards (CORRECTION: Suppression de 'uppercase' sur la description)
     if (d.dashboards_list) {
         const dashGrid = document.getElementById('dashboards-grid');
         if (dashGrid) {
@@ -202,7 +202,7 @@ function render() {
                     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 border-b border-gray-200 dark:border-darkBorder pb-6">
                         <div>
                             <h3 id="dash_title_dyn_${i}" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">${dash.title}</h3>
-                            <p class="text-sm text-gray-500 mt-2 max-w-2xl leading-relaxed uppercase font-tech text-[11px]">${dash.desc}</p>
+                            <p class="text-sm text-gray-500 mt-2 max-w-2xl leading-relaxed font-tech text-[11px]">${dash.desc}</p>
                         </div>
                         <a class="shrink-0 px-8 py-4 bg-blue-600 dark:bg-blue-500 hover:bg-blue-500 dark:hover:bg-blue-400 text-white font-black uppercase text-[11px] tracking-widest rounded-xl transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(37,99,235,0.4)] border border-blue-400/30 whitespace-nowrap" href="${dash.link}" target="_blank">${dash.btn_text}</a>
                     </div>
@@ -213,7 +213,6 @@ function render() {
                 </div>
             `).join('');
 
-            // Déclenchement de l'animation pour chaque titre injecté
             d.dashboards_list.forEach((_, i) => {
                 setTimeout(() => runScramble(`dash_title_dyn_${i}`, 20), 500 + (i * 150));
             });
