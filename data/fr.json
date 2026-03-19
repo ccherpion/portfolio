@@ -3,44 +3,144 @@
     "title": "Cyril Cherpion | Consultant Pre-Sales AV & Architecte IA",
     "description": "Expert en avant-vente et conception de systèmes audiovisuels assistés par IA."
   },
-  "nav_home": "cyril.info",
-  "nav_work": "work.done",
-  "nav_exp": "my.path",
-  "nav_dash": "ui.dash",
-  "status": "On Air and Available",
   "name": "Cyril Cherpion",
   "role": "CONSULTANT PRE-SALES AV & ARCHITECTE IA",
+  "status": "On Air and Available",
   "sidebar_bio": "Consultant Pre-Sales AV & Architecte IA. J'allie expertise technique et vision commerciale pour transformer des besoins complexes en projets rentables et innovants.",
-  "btn_contact": "Travaillons ensemble",
-  "btn_cv": "Télécharger mon CV",
-  "sidebar_skills_title": "// SAVOIR-ÊTRE",
-  "sidebar_skills": [
-    "📈 Stratégie Commerciale",
-    "🤝 Négociation B2B",
-    "⚡ Autonome",
-    "👥 Gestion d'équipe",
-    "💡 Solutions Architect"
-  ],
-  "sidebar_hobbies_title": "// INTÉRÊTS",
-  "sidebar_hobbies": [
-    "🎛️ Production Musicale",
-    "🏃‍♂️ Sport",
-    "🚀 Nouvelles Technologies",
-    "🌱 Dév. Personnel"
-  ],
-  "sidebar_lang_title": "LANGUAGES",
-  "sidebar_lang": [
-    "🇫🇷 Français (Natif)",
-    "🇬🇧 Anglais (Courant)"
-  ],
   "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
-  "work_title": "MON SHOWCASE CRÉATIF",
-  "path_title": "PARCOURS PROFESSIONNEL",
-  "dash_title": "TEMPLATES UI",
   "bio": "15 ans d'expérience à la croisée de la technologie et du business. Mon rôle ? Transformer le \"ça ne marchera jamais\" en solutions rentables. Je parle couramment le \"tech-to-human\", je pilote des affaires à forte valeur ajoutée et j'assure un ROI optimal à mes clients.",
-  "work_sub": "Un aperçu de mes affaires conclues et défis relevés. Un mélange de haute technologie, de négociation stratégique et de précision.",
-  "path_sub": "15 ans d'évolution technique et commerciale. Des studios de New York aux infrastructures critiques et négociations B2B.",
-  "dash_sub": "Templates d'interfaces de contrôle haut de gamme pour salles de réunion et environnements résidentiels. Compatibles Crestron CH5 & Node-RED.",
+  "experiences": [
+    {
+      "date": "2024 - Présent",
+      "role": "Application Engineer & Pre-Sales",
+      "company": "AROCOM",
+      "desc": "Avant-vente, propositions techniques complexes, démonstrations clients et scripting (Node-RED, REST API).",
+      "icon": "fas fa-handshake"
+    },
+    {
+      "date": "2020 - 2023",
+      "role": "Responsable BE & Appui Commercial",
+      "company": "ABAQUES",
+      "desc": "Direction technique d'études et accompagnement commercial. Chiffrages complexes et relation clients clés.",
+      "icon": "fas fa-project-diagram"
+    },
+    {
+      "date": "2019 - 2020",
+      "role": "AV Designer",
+      "company": "ABAQUES",
+      "desc": "Études techniques détaillées : Acoustique RT60, isolation STC, éclairage DALI/DMX.",
+      "icon": "fas fa-drafting-compass"
+    },
+    {
+      "date": "2018 - 2019",
+      "role": "Chef de Projet AV",
+      "company": "VIDELIO IEC",
+      "desc": "Gestion de projets corporate et éducation. Coordination des intervenants et mise en service.",
+      "icon": "fas fa-tasks"
+    },
+    {
+      "date": "2017 - 2018",
+      "role": "Ingénieur AV",
+      "company": "OWENTIS",
+      "desc": "Direction technique d'études et accompagnement commercial. Gestion de projets corporate et éducation. Coordination des intervenants et mise en service.",
+      "icon": "fas fa-user-tie"
+    },
+    {
+      "date": "2012 - 2017",
+      "role": "Régisseur Général AV",
+      "company": "FACILITESS",
+      "desc": "Logistique technique d'événements et encadrement d'équipes techniques.",
+      "icon": "fas fa-calendar-check"
+    },
+    {
+      "date": "Avant 2012",
+      "role": "Ingénieur du Son",
+      "company": "RAVAYANA / QUAD NY",
+      "desc": "Ingénierie sonore studio et live. Opérations à New York et en France.",
+      "icon": "fas fa-sliders-h"
+    }
+  ],
+  "education": [
+    {
+      "date": "Continu",
+      "degree": "Certifications Techniques",
+      "school": "Standards Industrie",
+      "desc": "AMX-MUSE, Crestron, Dante (Niveaux 1-3), Q-SYS, Poly, Shure.",
+      "icon": "fas fa-certificate"
+    },
+    {
+      "date": "Autodidacte",
+      "degree": "Dév. Web FullStack",
+      "school": "Udemy",
+      "desc": "Technologies web modernes : HTML5, CSS3, JavaScript, Node.js.",
+      "icon": "fas fa-laptop-code"
+    },
+    {
+      "date": "2010 - 2011",
+      "degree": "Ingénierie du Son",
+      "school": "ISTS ESRA New York",
+      "desc": "Opérations studio avancées et production audio haut de gamme.",
+      "icon": "fas fa-graduation-cap"
+    },
+    {
+      "date": "2007 - 2010",
+      "degree": "Ingénierie du Son",
+      "school": "ISTS ESRA Nice",
+      "desc": "Bases de l'acoustique, théorie du signal et audio professionnel.",
+      "icon": "fas fa-graduation-cap"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Palais des congrès de Versailles",
+      "desc": "Pre-Sales et AV Design pour l'intégration globale du site.",
+      "val": "1.2M€",
+      "tag": "AV Design",
+      "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Airbus Safety Center",
+      "desc": "Ingénierie AV haute sécurité et intégration pour infrastructures critiques.",
+      "val": "550k€",
+      "tag": "Intégration",
+      "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "CD 31",
+      "desc": "Salle de conférence, intégration NDI, Mur LED et régie Live Streaming.",
+      "val": "650k€",
+      "tag": "Pre-Sales",
+      "img": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Casino Barrière",
+      "desc": "Redesign complet du contrôle et architecture de signal en milieu de jeu.",
+      "val": "450k€",
+      "tag": "Contrôle",
+      "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Showroom ATR",
+      "desc": "Design immersif 3D pour accueil VIP et démonstrations interactives.",
+      "val": "300k€",
+      "tag": "Immersif 3D",
+      "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "FRAC Limoges",
+      "desc": "Design et ingénierie AV pour espace culturel avec contraintes acoustiques complexes.",
+      "val": "550k€",
+      "tag": "Design AV",
+      "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "SABOM",
+      "desc": "Intégration Mur LED pour le centre des opérations.",
+      "val": "250k€",
+      "tag": "Sales",
+      "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
   "dashboards_list": [
     {
       "title": "// BOARDROOM PREMIUM UI",
@@ -57,20 +157,6 @@
       "btn_text": "Obtenir ce design"
     }
   ],
-  "impact_label": "VOLUME D'AFFAIRES",
-  "impact_val": "1.8M€+",
-  "max_budget_label": "BUDGET MAX PROJET",
-  "max_budget_val": "1.5M€+",
-  "loc_val": "Bordeaux, FR & Int.",
-  "expertise_title": "// DOMAINES D'EXPERTISE",
-  "stack_title": "// ÉCOSYSTÈME TECHNIQUE",
-  "projects_list_title": "// SÉLECTION DE PROJETS",
-  "exp_list_title": "// EXPÉRIENCES DÉTAILLÉES",
-  "edu_title": "// FORMATION & CERTIFICATIONS",
-  "widget_title_stats": "// CHIFFRES CLÉS",
-  "widget_title_focus": "// FOCUS ACTUEL",
-  "current_focus": "CONSULTING AV, DÉVELOPPEMENT COMMERCIAL & DESIGN UI",
-  "lang_btn": "EN",
   "expertise": [
     {
       "name": "Pre-Sales & Stratégie",
@@ -257,135 +343,50 @@
       ]
     }
   ],
-  "projects": [
-    {
-      "name": "Palais des congrès de Versailles",
-      "desc": "Pre-Sales et AV Design pour l'intégration globale du site.",
-      "val": "1.2M€",
-      "tag": "AV Design",
-      "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "name": "Airbus Safety Center",
-      "desc": "Ingénierie AV haute sécurité et intégration pour infrastructures critiques.",
-      "val": "550k€",
-      "tag": "Intégration",
-      "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "name": "CD 31",
-      "desc": "Salle de conférence, intégration NDI, Mur LED et régie Live Streaming.",
-      "val": "650k€",
-      "tag": "Pre-Sales",
-      "img": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "name": "Casino Barrière",
-      "desc": "Redesign complet du contrôle et architecture de signal en milieu de jeu.",
-      "val": "450k€",
-      "tag": "Contrôle",
-      "img": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "name": "Showroom ATR",
-      "desc": "Design immersif 3D pour accueil VIP et démonstrations interactives.",
-      "val": "300k€",
-      "tag": "Immersif 3D",
-      "img": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "name": "FRAC Limoges",
-      "desc": "Design et ingénierie AV pour espace culturel avec contraintes acoustiques complexes.",
-      "val": "550k€",
-      "tag": "Design AV",
-      "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      "name": "SABOM",
-      "desc": "Intégration Mur LED pour le centre des opérations.",
-      "val": "250k€",
-      "tag": "Sales",
-      "img": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-    }
+  "current_focus": "CONSULTING AV, DÉVELOPPEMENT COMMERCIAL & DESIGN UI",
+  "exp_list_title": "// EXPÉRIENCES DÉTAILLÉES",
+  "projects_list_title": "// SÉLECTION DE PROJETS",
+  "stack_title": "// ÉCOSYSTÈME TECHNIQUE",
+  "expertise_title": "// DOMAINES D'EXPERTISE",
+  "loc_val": "Bordeaux, FR & Int.",
+  "impact_val": "1.8M€+",
+  "impact_label": "VOLUME D'AFFAIRES",
+  "btn_cv": "Télécharger mon CV",
+  "btn_contact": "Travaillons ensemble",
+  "nav_home": "cyril.info",
+  "nav_work": "work.done",
+  "nav_exp": "my.path",
+  "nav_dash": "ui.dash",
+  "sidebar_skills_title": "// SAVOIR-ÊTRE",
+  "sidebar_skills": [
+    "📈 Stratégie Commerciale",
+    "🤝 Négociation B2B",
+    "⚡ Autonome",
+    "👥 Gestion d'équipe",
+    "💡 Solutions Architect"
   ],
-  "experiences": [
-    {
-      "date": "2024 - Présent",
-      "icon": "fas fa-handshake",
-      "role": "Application Engineer & Pre-Sales",
-      "company": "AROCOM",
-      "desc": "Avant-vente, propositions techniques complexes, démonstrations clients et scripting (Node-RED, REST API)."
-    },
-    {
-      "date": "2020 - 2023",
-      "icon": "fas fa-project-diagram",
-      "role": "Responsable BE & Appui Commercial",
-      "company": "ABAQUES",
-      "desc": "Direction technique d'études et accompagnement commercial. Chiffrages complexes et relation clients clés."
-    },
-    {
-      "date": "2019 - 2020",
-      "icon": "fas fa-drafting-compass",
-      "role": "AV Designer",
-      "company": "ABAQUES",
-      "desc": "Études techniques détaillées : Acoustique RT60, isolation STC, éclairage DALI/DMX."
-    },
-    {
-      "date": "2018 - 2019",
-      "icon": "fas fa-tasks",
-      "role": "Chef de Projet AV",
-      "company": "VIDELIO IEC",
-      "desc": "Gestion de projets corporate et éducation. Coordination des intervenants et mise en service."
-    },
-    {
-      "date": "2017 - 2018",
-      "icon": "fas fa-user-tie",
-      "role": "Consultant AV Freelance / OWENTIS",
-      "desc": "Études de faisabilité pour intégrateurs et projets gouvernement/finance sensibles."
-    },
-    {
-      "date": "2012 - 2017",
-      "icon": "fas fa-calendar-check",
-      "role": "Régisseur Général AV",
-      "company": "FACILITESS",
-      "desc": "Logistique technique d'événements et encadrement d'équipes techniques."
-    },
-    {
-      "date": "Avant 2012",
-      "icon": "fas fa-sliders-h",
-      "role": "Ingénieur du Son",
-      "company": "RAVAYANA / QUAD NY",
-      "desc": "Ingénierie sonore studio et live. Opérations à New York et en France."
-    }
+  "sidebar_hobbies_title": "// INTÉRÊTS",
+  "sidebar_hobbies": [
+    "🎛️ Production Musicale",
+    "🏃‍♂️ Sport",
+    "🚀 Nouvelles Technologies",
+    "🌱 Dév. Personnel"
   ],
-  "education": [
-    {
-      "date": "Continu",
-      "icon": "fas fa-certificate",
-      "degree": "Certifications Techniques",
-      "school": "Standards Industrie",
-      "desc": "AMX-MUSE, Crestron, Dante (Niveaux 1-3), Q-SYS, Poly, Shure."
-    },
-    {
-      "date": "Autodidacte",
-      "icon": "fas fa-laptop-code",
-      "degree": "Dév. Web FullStack",
-      "school": "Udemy",
-      "desc": "Technologies web modernes : HTML5, CSS3, JavaScript, Node.js."
-    },
-    {
-      "date": "2010 - 2011",
-      "icon": "fas fa-graduation-cap",
-      "degree": "Ingénierie du Son",
-      "school": "ISTS ESRA New York",
-      "desc": "Opérations studio avancées et production audio haut de gamme."
-    },
-    {
-      "date": "2007 - 2010",
-      "icon": "fas fa-graduation-cap",
-      "degree": "Ingénierie du Son",
-      "school": "ISTS ESRA Nice",
-      "desc": "Bases de l'acoustique, théorie du signal et audio professionnel."
-    }
-  ]
+  "sidebar_lang_title": "LANGUAGES",
+  "sidebar_lang": [
+    "🇫🇷 Français (Natif)",
+    "🇬🇧 Anglais (Courant)"
+  ],
+  "work_title": "MON SHOWCASE CRÉATIF",
+  "path_title": "PARCOURS PROFESSIONNEL",
+  "dash_title": "TEMPLATES UI",
+  "work_sub": "Un aperçu de mes affaires conclues et défis relevés. Un mélange de haute technologie, de négociation stratégique et de précision.",
+  "path_sub": "15 ans d'évolution technique et commerciale. Des studios de New York aux infrastructures critiques et négociations B2B.",
+  "dash_sub": "Templates d'interfaces de contrôle haut de gamme pour salles de réunion et environnements résidentiels. Compatibles Crestron CH5 & Node-RED.",
+  "max_budget_label": "BUDGET MAX PROJET",
+  "max_budget_val": "1.5M€+",
+  "edu_title": "// FORMATION & CERTIFICATIONS",
+  "widget_title_stats": "// CHIFFRES CLÉS",
+  "widget_title_focus": "// FOCUS ACTUEL",
+  "lang_btn": "EN"
 }
