@@ -127,7 +127,7 @@ function render() {
         }
     }
 
-    const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'cert_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
+    const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'badges_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'cert_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
     
     ids.forEach(id => {
         let key = id.replace('_mobile', ''); if (key === 'loc_nav') key = 'loc_val';
@@ -143,6 +143,18 @@ function render() {
     const hobbiesEl = document.getElementById('sidebar-hobbies');
     if(hobbiesEl && d.sidebar_hobbies) hobbiesEl.innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
     
+    const badgesEl = document.getElementById('sidebar-badges');
+    if (badgesEl && d.sidebar_badges) {
+        badgesEl.innerHTML = d.sidebar_badges.map(b => `
+            <div class="group relative flex justify-center items-center">
+                <img src="${b.img}" alt="${b.name}" class="h-16 w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-md cursor-help">
+                <div class="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-[9px] font-bold px-2 py-1 rounded whitespace-nowrap font-tech pointer-events-none z-50 shadow-lg">
+                    ${b.name}
+                </div>
+            </div>
+        `).join('');
+    }
+
     if (d.expertise) {
         const el = document.getElementById('expertise-grid');
         if (el) el.innerHTML = d.expertise.map(exp => `
@@ -229,7 +241,6 @@ function render() {
         `).join('');
     }
 
-    // RENDU DES CERTIFICATIONS REGROUPÉES PAR MARQUE (Design Dynamique)
     if (d.certifications && d.certifications.length > 0) {
         const grouped = d.certifications.reduce((acc, cert) => {
             if (!acc[cert.issuer]) acc[cert.issuer] = [];
@@ -263,9 +274,13 @@ function render() {
                     
                     <div class="grid ${innerGrid} gap-2.5 flex-grow">
                         ${grouped[issuer].map(cert => {
+                            const iconOrBadge = cert.badge 
+                                ? `<img src="${cert.badge}" alt="Badge" class="w-6 h-6 object-contain shrink-0 rounded-sm shadow-sm border border-gray-100 dark:border-darkBorder bg-white">`
+                                : `<i class="fas fa-file-alt text-gray-400 group-hover:text-blue-500 transition-colors text-[11px] shrink-0"></i>`;
+                                
                             const inner = `
                                 <div class="flex items-center gap-2.5 overflow-hidden">
-                                    <i class="fas fa-file-alt text-gray-400 group-hover:text-blue-500 transition-colors text-[11px] shrink-0"></i>
+                                    ${iconOrBadge}
                                     <div class="flex flex-col min-w-0">
                                         <span class="text-[9.5px] font-bold text-gray-700 dark:text-gray-300 uppercase font-tech leading-tight truncate">${cert.name}</span>
                                         <span class="text-[8.5px] text-gray-500 uppercase font-tech leading-none mt-0.5">${cert.date}</span>
@@ -317,7 +332,7 @@ function render() {
         if (metaDesc) metaDesc.setAttribute("content", d.seo.description);
     }
     
-    const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'widget_title_stats', 'widget_title_focus'];
+    const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'badges_title', 'widget_title_stats', 'widget_title_focus'];
     globalSubtitles.forEach((id, i) => {
         const subEl = document.getElementById(id);
         if(subEl) { subEl.style.visibility = 'hidden'; subEl.style.opacity = '0'; }
