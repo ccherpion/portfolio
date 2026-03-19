@@ -386,6 +386,147 @@
   "max_budget_label": "MAX SINGLE PROJECT",
   "max_budget_val": "€1.5M+",
   "edu_title": "// EDUCATION & CERTIFICATIONS",
+  "cert_title": "// MANUFACTURER CERTIFICATIONS",
+  "certifications": [
+    {
+      "name": "AMX MUSE JumpStart",
+      "issuer": "AMX",
+      "date": "2024",
+      "pdf": "documents/certificats/AMX_Certificate_MUSE_JumpStart.pdf"
+    },
+    {
+      "name": "AMX Sales Specialist",
+      "issuer": "AMX",
+      "date": "2024",
+      "pdf": "documents/certificats/AMX_Sales_Specialist_Certificate.pdf"
+    },
+    {
+      "name": "Certified AMX Trainer",
+      "issuer": "AMX",
+      "date": "2024",
+      "pdf": "documents/certificats/Certified_Amx_trainer_2024.pdf"
+    },
+    {
+      "name": "Dante Level 1",
+      "issuer": "Audinate",
+      "date": "2017",
+      "pdf": "documents/certificats/certification-Dante-Level-1--Course-&-Exam.pdf"
+    },
+    {
+      "name": "Dante Level 2",
+      "issuer": "Audinate",
+      "date": "2019",
+      "pdf": "documents/certificats/certification-Dante-Level-2-Part-B_-Skills-Test.pdf"
+    },
+    {
+      "name": "Barco Certified Specialist - Unisee",
+      "issuer": "Barco",
+      "date": "2019",
+      "pdf": "documents/certificats/Barco_certified_specialist_-_Unisee_installation.pdf"
+    },
+    {
+      "name": "CTI-FUSION-P Fusion Programmer",
+      "issuer": "Crestron",
+      "date": "2018",
+      "pdf": "documents/certificats/Crestron_Certificate-CTI-FUSION-P.pdf"
+    },
+    {
+      "name": "CTI-P101 Foundations of Programming",
+      "issuer": "Crestron",
+      "date": "2017",
+      "pdf": "documents/certificats/Crestron_Certificate-CTI-P101.pdf"
+    },
+    {
+      "name": "CTI-P201 Core System Programming",
+      "issuer": "Crestron",
+      "date": "2017",
+      "pdf": "documents/certificats/Crestron_Certificate-CTI-P201.pdf"
+    },
+    {
+      "name": "CTI-P301 Advanced Programming Skills",
+      "issuer": "Crestron",
+      "date": "2018",
+      "pdf": "documents/certificats/Crestron_Certificate-CTI-P301.pdf"
+    },
+    {
+      "name": "Advanced System Programming (CTI-P301)",
+      "issuer": "Crestron",
+      "date": "2024",
+      "pdf": "documents/certificats/Cyril_Cherpion_Advanced System Programming (CTI-P301).pdf"
+    },
+    {
+      "name": "Crestron Fusion Certified Programmer",
+      "issuer": "Crestron",
+      "date": "2024",
+      "pdf": "documents/certificats/Cyril_Cherpion_Crestron Fusion® Certified Programmer.pdf"
+    },
+    {
+      "name": "CTI-P201 Entrance Exam Part 2",
+      "issuer": "Crestron",
+      "date": "2024",
+      "pdf": "documents/certificats/Cyril_Cherpion_CTI-P201 Entrance Exam Part 2.pdf"
+    },
+    {
+      "name": "DM NVX Design and Application",
+      "issuer": "Crestron",
+      "date": "2024",
+      "pdf": "documents/certificats/Cyril_Cherpion_DM NVX Design and Application (DM-NVX).pdf"
+    },
+    {
+      "name": "Foundations of Crestron Programming",
+      "issuer": "Crestron",
+      "date": "2024",
+      "pdf": "documents/certificats/Cyril_Cherpion_Foundations of Crestron Programming (CTI-P101).pdf"
+    },
+    {
+      "name": "Intermediate System Programming",
+      "issuer": "Crestron",
+      "date": "2024",
+      "pdf": "documents/certificats/Cyril_Cherpion_Intermediate System Programming (CTI-P201).pdf"
+    },
+    {
+      "name": "Mersive Training Completion",
+      "issuer": "Mersive",
+      "date": "2020",
+      "pdf": "documents/certificats/Mersive-Certificate-of-Completion-Training-Template-CCherpion.pdf"
+    },
+    {
+      "name": "Samsung STEP Certification",
+      "issuer": "Samsung",
+      "date": "2020",
+      "pdf": "documents/certificats/Samsung-Cyril-CHERPION-ABAQUES-STEP.pdf"
+    },
+    {
+      "name": "Audio Basics for IT Professionals",
+      "issuer": "Shure",
+      "date": "2019",
+      "pdf": "documents/certificats/certification-Audio-Basics-for-IT-Professionals-ccherpion.pdf"
+    },
+    {
+      "name": "IntelliMix P300 Technical Enablement",
+      "issuer": "Shure",
+      "date": "2019",
+      "pdf": "documents/certificats/certification-IntelliMix-P300---Technical-Enablement-Training-ccherpion.pdf"
+    },
+    {
+      "name": "Networking Basics for Audio",
+      "issuer": "Shure",
+      "date": "2019",
+      "pdf": "documents/certificats/certification-Networking-Basics-for-Audio-Professionals-ccherpion.pdf"
+    },
+    {
+      "name": "Networking for DSP & Interfaces",
+      "issuer": "Shure",
+      "date": "2021",
+      "pdf": "documents/certificats/certification-Networking-for-Shure-DSP-and-Audio-Interfaces-ccherpion.pdf"
+    },
+    {
+      "name": "Microflex Advance Training",
+      "issuer": "Shure",
+      "date": "2018",
+      "pdf": "documents/certificats/certification-Shure-Microflex-Advance-Training-ccherpion.pdf"
+    }
+  ],
   "widget_title_stats": "// KEY FIGURES",
   "widget_title_focus": "// CURRENT FOCUS",
   "lang_btn": "FR"

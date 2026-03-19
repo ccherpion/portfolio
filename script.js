@@ -19,7 +19,6 @@ function runScramble(id, speed = 25) {
     if (!el) return;
     const text = el.getAttribute('data-text') || el.innerText;
     
-    // Protection anti-glitch
     const currentHeight = el.offsetHeight;
     if (currentHeight > 0) el.style.minHeight = currentHeight + 'px';
     
@@ -55,7 +54,7 @@ function handleRouting() {
     const pageSubtitles = {
         '#home': ['expertise_title', 'stack_title'],
         '#projects': ['projects_list_title'],
-        '#experience': ['exp_list_title', 'edu_title'],
+        '#experience': ['exp_list_title', 'edu_title', 'cert_title'],
         '#dashboards': [] 
     };
 
@@ -128,19 +127,25 @@ function render() {
         }
     }
 
-    const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
+    const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'cert_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv'];
     
     ids.forEach(id => {
         let key = id.replace('_mobile', ''); if (key === 'loc_nav') key = 'loc_val';
         const el = document.getElementById(id); if(el && d[key]) { el.innerText = d[key]; el.setAttribute('data-text', d[key]); }
     });
 
-    document.getElementById('lang-btn').innerText = d.lang_btn;
-    if(d.sidebar_skills) document.getElementById('sidebar-skills').innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#333333] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
-    if(d.sidebar_hobbies) document.getElementById('sidebar-hobbies').innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
+    const langBtn = document.getElementById('lang-btn');
+    if(langBtn) langBtn.innerText = d.lang_btn;
+
+    const skillsEl = document.getElementById('sidebar-skills');
+    if(skillsEl && d.sidebar_skills) skillsEl.innerHTML = d.sidebar_skills.map(s => `<span class="bg-gray-50 dark:bg-[#333333] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${s}</span>`).join('');
+    
+    const hobbiesEl = document.getElementById('sidebar-hobbies');
+    if(hobbiesEl && d.sidebar_hobbies) hobbiesEl.innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
     
     if (d.expertise) {
-        document.getElementById('expertise-grid').innerHTML = d.expertise.map(exp => `
+        const el = document.getElementById('expertise-grid');
+        if (el) el.innerHTML = d.expertise.map(exp => `
             <div class="reveal-block h-full">
                 <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex items-start gap-4 h-full">
                     <div class="w-10 h-10 rounded-lg badge-blue flex items-center justify-center shrink-0"><i class="${exp.icon} text-lg"></i></div>
@@ -151,7 +156,8 @@ function render() {
     }
 
     if (d.stack) {
-        document.getElementById('stack-grid').innerHTML = d.stack.map(category => `
+        const el = document.getElementById('stack-grid');
+        if (el) el.innerHTML = d.stack.map(category => `
             <div class="reveal-block space-y-3">
                 <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 font-tech px-2">// ${category.category}</h4>
                 <div class="flex flex-wrap gap-2">
@@ -167,7 +173,8 @@ function render() {
     }
 
     if (d.projects) {
-        document.getElementById('projects-container').innerHTML = d.projects.map(p => `
+        const el = document.getElementById('projects-container');
+        if (el) el.innerHTML = d.projects.map(p => `
             <div class="reveal-block h-full">
                 <div class="hover-levitate group relative rounded-3xl overflow-hidden aspect-[4/3] border border-gray-200 dark:border-darkBorder h-full">
                     <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
@@ -185,7 +192,8 @@ function render() {
 
     const expData = d.experiences || d.experience;
     if (expData) {
-        document.getElementById('experience-grid').innerHTML = expData.map(exp => `
+        const el = document.getElementById('experience-grid');
+        if (el) el.innerHTML = expData.map(exp => `
             <div class="reveal-block h-full">
                 <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px] h-full shadow-sm">
                     <div>
@@ -202,9 +210,9 @@ function render() {
         `).join('');
     }
 
-    // ALIGNEMENT DU DESIGN EDUCATION SUR EXPERIENCE
     if (d.education) {
-        document.getElementById('education-grid').innerHTML = d.education.map(edu => `
+        const el = document.getElementById('education-grid');
+        if (el) el.innerHTML = d.education.map(edu => `
             <div class="reveal-block h-full">
                 <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px] h-full shadow-sm">
                     <div>
@@ -219,6 +227,63 @@ function render() {
                 </div>
             </div>
         `).join('');
+    }
+
+    // RENDU DES CERTIFICATIONS REGROUPÉES PAR MARQUE (Design Dynamique)
+    if (d.certifications && d.certifications.length > 0) {
+        const grouped = d.certifications.reduce((acc, cert) => {
+            if (!acc[cert.issuer]) acc[cert.issuer] = [];
+            acc[cert.issuer].push(cert);
+            return acc;
+        }, {});
+        const el = document.getElementById('certifications-grid');
+        if (el) el.innerHTML = Object.keys(grouped).map(issuer => {
+            const count = grouped[issuer].length;
+            let cardWidth = 'w-full';
+            let innerGrid = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4';
+
+            if (count === 1) {
+                cardWidth = 'w-full md:w-[calc(50%-0.75rem)] xl:w-[calc(25%-1.125rem)]';
+                innerGrid = 'grid-cols-1';
+            } else if (count === 2) {
+                cardWidth = 'w-full md:w-full xl:w-[calc(50%-0.75rem)]';
+                innerGrid = 'grid-cols-1 sm:grid-cols-2';
+            } else if (count === 3) {
+                cardWidth = 'w-full md:w-full xl:w-[calc(75%-0.375rem)]';
+                innerGrid = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3';
+            }
+
+            return `
+            <div class="reveal-block ${cardWidth}">
+                <div class="bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-5 shadow-sm flex flex-col h-full">
+                    <h4 class="text-[13px] font-black uppercase text-gray-900 dark:text-white mb-4 flex items-center justify-between border-b border-gray-100 dark:border-darkBorder pb-2">
+                        <span class="flex items-center gap-2"><i class="fas fa-award text-blue-500 text-lg"></i> ${issuer}</span>
+                        <span class="text-[9px] font-bold bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded-full border border-blue-100 dark:border-blue-800/50">${count}</span>
+                    </h4>
+                    
+                    <div class="grid ${innerGrid} gap-2.5 flex-grow">
+                        ${grouped[issuer].map(cert => {
+                            const inner = `
+                                <div class="flex items-center gap-2.5 overflow-hidden">
+                                    <i class="fas fa-file-alt text-gray-400 group-hover:text-blue-500 transition-colors text-[11px] shrink-0"></i>
+                                    <div class="flex flex-col min-w-0">
+                                        <span class="text-[9.5px] font-bold text-gray-700 dark:text-gray-300 uppercase font-tech leading-tight truncate">${cert.name}</span>
+                                        <span class="text-[8.5px] text-gray-500 uppercase font-tech leading-none mt-0.5">${cert.date}</span>
+                                    </div>
+                                </div>
+                                ${cert.pdf ? `<i class="fas fa-external-link-alt text-[9px] text-gray-400 group-hover:text-blue-500 shrink-0 ml-2"></i>` : ''}
+                            `;
+                            if (cert.pdf) {
+                                return `<a href="${cert.pdf}" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-2.5 rounded-lg bg-gray-50/70 dark:bg-[#333333]/70 hover:bg-white dark:hover:bg-[#404040] border border-transparent hover:border-gray-200 dark:hover:border-darkBorder shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer h-full">${inner}</a>`;
+                            } else {
+                                return `<div class="group flex items-center justify-between p-2.5 rounded-lg bg-gray-50/70 dark:bg-[#333333]/70 border border-transparent h-full">${inner}</div>`;
+                            }
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+            `;
+        }).join('');
     }
 
     if (d.dashboards_list) {
