@@ -150,7 +150,6 @@ function render() {
         `).join('');
     }
 
-    // NOUVEAU DESIGN COMPACT POUR LA STACK (Badges horizontaux)
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(category => `
             <div class="reveal-block space-y-3">
@@ -184,8 +183,10 @@ function render() {
         `).join('');
     }
 
-    if (d.experiences) {
-        document.getElementById('experience-grid').innerHTML = d.experiences.map(exp => `
+    // Capture "experiences" ou "experience" pour éviter toute erreur future
+    const expData = d.experiences || d.experience;
+    if (expData) {
+        document.getElementById('experience-grid').innerHTML = expData.map(exp => `
             <div class="reveal-block h-full">
                 <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px] h-full">
                     <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span></div><h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${exp.role}</h4><p class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p></div><p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>

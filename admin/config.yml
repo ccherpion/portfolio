@@ -12,186 +12,103 @@ collections:
     label: "Contenus et Traductions"
     files:
       - file: "data/fr.json"
-        label: "Version Française"
+        label: "Français"
         name: "fr"
         fields:
-          # --- GLOBALS & SEO ---
-          - label: "SEO Settings"
-            name: "seo"
-            widget: "object"
-            fields:
-              - {label: "Titre de la page", name: "title", widget: "string"}
-              - {label: "Description Google", name: "description", widget: "text"}
+          - {label: "SEO", name: "seo", widget: "object", fields: [{label: "Titre Google", name: "title", widget: "string"}, {label: "Description Google", name: "description", widget: "text"}]}
           - {label: "Nom", name: "name", widget: "string"}
           - {label: "Rôle", name: "role", widget: "string"}
-          - {label: "Statut Actuel", name: "status", widget: "string"}
-          - {label: "Localisation", name: "loc_val", widget: "string"}
-          - {label: "Bouton Langue", name: "lang_btn", widget: "string"}
-          
-          # --- NAVIGATION ---
-          - {label: "Nav: Info", name: "nav_home", widget: "string"}
-          - {label: "Nav: Work", name: "nav_work", widget: "string"}
-          - {label: "Nav: Path", name: "nav_exp", widget: "string"}
-          - {label: "Nav: Dashboards", name: "nav_dash", widget: "string"}
-
-          # --- SIDEBAR (Profil de gauche) ---
-          - {label: "Sidebar: Biographie", name: "sidebar_bio", widget: "text"}
-          - {label: "Sidebar: Texte Bouton Contact", name: "btn_contact", widget: "string"}
-          - {label: "Sidebar: Texte Bouton CV", name: "btn_cv", widget: "string"}
-          - {label: "Sidebar: Titre Savoir-Être", name: "sidebar_skills_title", widget: "string"}
-          - {label: "Sidebar: Liste Savoir-Être", name: "sidebar_skills", widget: "list"}
-          - {label: "Sidebar: Titre Intérêts", name: "sidebar_hobbies_title", widget: "string"}
-          - {label: "Sidebar: Liste Intérêts", name: "sidebar_hobbies", widget: "list"}
-          - {label: "Sidebar: Titre Langues", name: "sidebar_lang_title", widget: "string"}
-          - {label: "Sidebar: Liste Langues", name: "sidebar_lang", widget: "list"}
-
-          # --- PAGE D'ACCUEIL ---
-          - {label: "Home: Titre Principal (Hero)", name: "hero_title", widget: "string"}
-          - {label: "Home: Texte de présentation", name: "bio", widget: "text"}
-          - {label: "Home: Titre Expertises", name: "expertise_title", widget: "string"}
-          - label: "Home: Cartes d'Expertise"
-            name: "expertise"
-            widget: "list"
-            fields:
-              - {label: "Nom", name: "name", widget: "string"}
-              - {label: "Description", name: "desc", widget: "text"}
-              - {label: "Icône (FontAwesome)", name: "icon", widget: "string"}
-          - {label: "Home: Titre Stack Technique", name: "stack_title", widget: "string"}
-          - label: "Home: Écosystème Technique"
-            name: "stack"
-            widget: "list"
-            fields:
-              - {label: "Catégorie", name: "category", widget: "string"}
-              - label: "Outils"
-                name: "items"
-                widget: "list"
-                fields:
-                  - {label: "Nom de l'outil", name: "name", widget: "string"}
-                  - {label: "URL du Logo", name: "logo", widget: "string"}
-
-          # --- PAGE PROJETS ---
-          - {label: "Projets: Grand Titre", name: "work_title", widget: "string"}
-          - {label: "Projets: Sous-titre explicatif", name: "work_sub", widget: "text"}
-          - {label: "Projets: Titre de la liste", name: "projects_list_title", widget: "string"}
-          - label: "Projets: Liste des affaires"
-            name: "projects"
-            widget: "list"
-            fields:
-              - {label: "Nom du projet", name: "name", widget: "string"}
-              - {label: "Description", name: "desc", widget: "text"}
-              - {label: "Valeur (€)", name: "val", widget: "string"}
-              - {label: "Tag", name: "tag", widget: "string"}
-              - {label: "URL de l'Image", name: "img", widget: "string"}
-
-          # --- PAGE PARCOURS (Expérience & Éducation) ---
-          - {label: "Parcours: Grand Titre", name: "path_title", widget: "string"}
-          - {label: "Parcours: Sous-titre", name: "path_sub", widget: "text"}
-          - {label: "Parcours: Titre Expériences", name: "exp_list_title", widget: "string"}
-          - label: "Parcours: Historique Professionnel"
-            name: "experience"
+          - {label: "Statut", name: "status", widget: "string"}
+          - {label: "Biographie Sidebar", name: "sidebar_bio", widget: "text"}
+          - {label: "Titre Accueil", name: "hero_title", widget: "string"}
+          - {label: "Introduction", name: "bio", widget: "text"}
+          - label: "Expériences Détaillées (MY.PATH)"
+            name: "experiences"
             widget: "list"
             fields:
               - {label: "Période", name: "date", widget: "string"}
-              - {label: "Icône", name: "icon", widget: "string"}
               - {label: "Poste", name: "role", widget: "string"}
-              - {label: "Entreprise", name: "company", widget: "string", required: false}
+              - {label: "Entreprise", name: "company", widget: "string"}
               - {label: "Description", name: "desc", widget: "text"}
-          - {label: "Parcours: Titre Formations", name: "edu_title", widget: "string"}
-          - label: "Parcours: Formations & Certifs"
+              - {label: "Icône FontAwesome", name: "icon", widget: "string"}
+          - label: "Éducation & Formations"
             name: "education"
             widget: "list"
             fields:
               - {label: "Période", name: "date", widget: "string"}
-              - {label: "Icône", name: "icon", widget: "string"}
-              - {label: "Diplôme / Titre", name: "degree", widget: "string"}
-              - {label: "École / Centre", name: "school", widget: "string"}
+              - {label: "Diplôme", name: "degree", widget: "string"}
+              - {label: "École", name: "school", widget: "string"}
               - {label: "Description", name: "desc", widget: "text"}
-
-          # --- PAGE DASHBOARDS ---
-          - {label: "Dashboards: Grand Titre", name: "dash_title", widget: "string"}
-          - {label: "Dashboards: Sous-titre", name: "dash_sub", widget: "text"}
-          - label: "Liste des Dashboards"
+              - {label: "Icône FontAwesome", name: "icon", widget: "string"}
+          - label: "Projets (WORK.DONE)"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Nom du Projet", name: "name", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "Valeur / Budget", name: "val", widget: "string"}
+              - {label: "Tag", name: "tag", widget: "string"}
+              - {label: "Image URL", name: "img", widget: "string"}
+          - label: "Dashboards Dynamiques (UI.DASH)"
             name: "dashboards_list"
             widget: "list"
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Description", name: "desc", widget: "text"}
               - {label: "URL Iframe", name: "iframe_url", widget: "string"}
-              - {label: "Lien Bouton", name: "link", widget: "string"}
-              - {label: "Texte Bouton", name: "btn_text", widget: "string"}
-
-          # --- WIDGETS ---
-          - {label: "Widget 1: Titre Chiffres", name: "widget_title_stats", widget: "string"}
-          - {label: "Widget 1: Label Impact", name: "impact_label", widget: "string"}
-          - {label: "Widget 1: Valeur Impact", name: "impact_val", widget: "string"}
-          - {label: "Widget 1: Label Budget", name: "max_budget_label", widget: "string"}
-          - {label: "Widget 1: Valeur Budget", name: "max_budget_val", widget: "string"}
-          - {label: "Widget 2: Titre Focus", name: "widget_title_focus", widget: "string"}
-          - {label: "Widget 2: Focus Actuel", name: "current_focus", widget: "string"}
-
-      - file: "data/en.json"
-        label: "Version Anglaise"
-        name: "en"
-        fields:
-          # --- GLOBALS & SEO ---
-          - label: "SEO Settings"
-            name: "seo"
-            widget: "object"
-            fields:
-              - {label: "Page Title", name: "title", widget: "string"}
-              - {label: "Google Description", name: "description", widget: "text"}
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Role", name: "role", widget: "string"}
-          - {label: "Current Status", name: "status", widget: "string"}
-          - {label: "Location", name: "loc_val", widget: "string"}
-          - {label: "Language Button", name: "lang_btn", widget: "string"}
-          
-          # --- NAVIGATION ---
-          - {label: "Nav: Info", name: "nav_home", widget: "string"}
-          - {label: "Nav: Work", name: "nav_work", widget: "string"}
-          - {label: "Nav: Path", name: "nav_exp", widget: "string"}
-          - {label: "Nav: Dashboards", name: "nav_dash", widget: "string"}
-
-          # --- SIDEBAR ---
-          - {label: "Sidebar: Biography", name: "sidebar_bio", widget: "text"}
-          - {label: "Sidebar: Contact Button", name: "btn_contact", widget: "string"}
-          - {label: "Sidebar: CV Button", name: "btn_cv", widget: "string"}
-          - {label: "Sidebar: Soft Skills Title", name: "sidebar_skills_title", widget: "string"}
-          - {label: "Sidebar: Soft Skills List", name: "sidebar_skills", widget: "list"}
-          - {label: "Sidebar: Interests Title", name: "sidebar_hobbies_title", widget: "string"}
-          - {label: "Sidebar: Interests List", name: "sidebar_hobbies", widget: "list"}
-          - {label: "Sidebar: Languages Title", name: "sidebar_lang_title", widget: "string"}
-          - {label: "Sidebar: Languages List", name: "sidebar_lang", widget: "list"}
-
-          # --- PAGE D'ACCUEIL ---
-          - {label: "Home: Main Title (Hero)", name: "hero_title", widget: "string"}
-          - {label: "Home: Intro Text", name: "bio", widget: "text"}
-          - {label: "Home: Expertise Title", name: "expertise_title", widget: "string"}
-          - label: "Home: Expertise Cards"
+              - {label: "Lien du Bouton", name: "link", widget: "string"}
+              - {label: "Texte du Bouton", name: "btn_text", widget: "string"}
+          - label: "Expertises (Grille Accueil)"
             name: "expertise"
             widget: "list"
+            required: false
             fields:
-              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Nom", name: "name", widget: "string"}
               - {label: "Description", name: "desc", widget: "text"}
-              - {label: "Icon (FontAwesome)", name: "icon", widget: "string"}
-          - {label: "Home: Tech Stack Title", name: "stack_title", widget: "string"}
-          - label: "Home: Tech Ecosystem"
+              - {label: "Icône", name: "icon", widget: "string"}
+          - label: "Technologies (Stack)"
             name: "stack"
             widget: "list"
+            required: false
             fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - label: "Tools"
+              - {label: "Catégorie", name: "category", widget: "string"}
+              - label: "Outils"
                 name: "items"
                 widget: "list"
                 fields:
-                  - {label: "Tool Name", name: "name", widget: "string"}
+                  - {label: "Nom", name: "name", widget: "string"}
                   - {label: "Logo URL", name: "logo", widget: "string"}
 
-          # --- PAGE PROJETS ---
-          - {label: "Projects: Main Title", name: "work_title", widget: "string"}
-          - {label: "Projects: Subtitle", name: "work_sub", widget: "text"}
-          - {label: "Projects: List Title", name: "projects_list_title", widget: "string"}
-          - label: "Projects: Portfolio List"
+      - file: "data/en.json"
+        label: "English"
+        name: "en"
+        fields:
+          - {label: "SEO", name: "seo", widget: "object", fields: [{label: "Google Title", name: "title", widget: "string"}, {label: "Google Description", name: "description", widget: "text"}]}
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Role", name: "role", widget: "string"}
+          - {label: "Status", name: "status", widget: "string"}
+          - {label: "Sidebar Bio", name: "sidebar_bio", widget: "text"}
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Introduction", name: "bio", widget: "text"}
+          - label: "Detailed Experiences (MY.PATH)"
+            name: "experiences"
+            widget: "list"
+            fields:
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Company", name: "company", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "FontAwesome Icon", name: "icon", widget: "string"}
+          - label: "Education & Certifications"
+            name: "education"
+            widget: "list"
+            fields:
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Degree", name: "degree", widget: "string"}
+              - {label: "School", name: "school", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "FontAwesome Icon", name: "icon", widget: "string"}
+          - label: "Projects (WORK.DONE)"
             name: "projects"
             widget: "list"
             fields:
@@ -200,49 +117,32 @@ collections:
               - {label: "Value", name: "val", widget: "string"}
               - {label: "Tag", name: "tag", widget: "string"}
               - {label: "Image URL", name: "img", widget: "string"}
-
-          # --- PAGE PARCOURS ---
-          - {label: "Path: Main Title", name: "path_title", widget: "string"}
-          - {label: "Path: Subtitle", name: "path_sub", widget: "text"}
-          - {label: "Path: Experience Title", name: "exp_list_title", widget: "string"}
-          - label: "Path: Professional History"
-            name: "experience"
-            widget: "list"
-            fields:
-              - {label: "Period", name: "date", widget: "string"}
-              - {label: "Icon", name: "icon", widget: "string"}
-              - {label: "Role", name: "role", widget: "string"}
-              - {label: "Company", name: "company", widget: "string", required: false}
-              - {label: "Description", name: "desc", widget: "text"}
-          - {label: "Path: Education Title", name: "edu_title", widget: "string"}
-          - label: "Path: Education & Certs"
-            name: "education"
-            widget: "list"
-            fields:
-              - {label: "Period", name: "date", widget: "string"}
-              - {label: "Icon", name: "icon", widget: "string"}
-              - {label: "Degree", name: "degree", widget: "string"}
-              - {label: "School", name: "school", widget: "string"}
-              - {label: "Description", name: "desc", widget: "text"}
-
-          # --- PAGE DASHBOARDS ---
-          - {label: "Dashboards: Main Title", name: "dash_title", widget: "string"}
-          - {label: "Dashboards: Subtitle", name: "dash_sub", widget: "text"}
-          - label: "Liste des Dashboards"
+          - label: "Dynamic Dashboards (UI.DASH)"
             name: "dashboards_list"
             widget: "list"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "desc", widget: "text"}
-              - {label: "URL Iframe", name: "iframe_url", widget: "string"}
-              - {label: "Lien Bouton", name: "link", widget: "string"}
-              - {label: "Texte Bouton", name: "btn_text", widget: "string"}
-
-          # --- WIDGETS ---
-          - {label: "Widget 1: Stats Title", name: "widget_title_stats", widget: "string"}
-          - {label: "Widget 1: Volume Label", name: "impact_label", widget: "string"}
-          - {label: "Widget 1: Volume Value", name: "impact_val", widget: "string"}
-          - {label: "Widget 1: Budget Label", name: "max_budget_label", widget: "string"}
-          - {label: "Widget 1: Budget Value", name: "max_budget_val", widget: "string"}
-          - {label: "Widget 2: Focus Title", name: "widget_title_focus", widget: "string"}
-          - {label: "Widget 2: Current Focus", name: "current_focus", widget: "string"}
+              - {label: "Iframe URL", name: "iframe_url", widget: "string"}
+              - {label: "Button Link", name: "link", widget: "string"}
+              - {label: "Button Text", name: "btn_text", widget: "string"}
+          - label: "Expertise (Home Grid)"
+            name: "expertise"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "Icon", name: "icon", widget: "string"}
+          - label: "Technologies (Stack)"
+            name: "stack"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Category", name: "category", widget: "string"}
+              - label: "Tools"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Logo URL", name: "logo", widget: "string"}
