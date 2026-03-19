@@ -150,15 +150,16 @@ function render() {
         `).join('');
     }
 
+    // NOUVEAU DESIGN COMPACT POUR LA STACK (Badges horizontaux)
     if (d.stack) {
         document.getElementById('stack-grid').innerHTML = d.stack.map(category => `
             <div class="reveal-block space-y-3">
                 <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 font-tech px-2">// ${category.category}</h4>
-                <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2">
+                <div class="flex flex-wrap gap-2">
                     ${category.items.map(item => `
-                        <div class="tech-card hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder">
-                            <span class="text-[9px] font-black text-gray-600 dark:text-gray-400 uppercase font-tech text-center leading-none">${item.name}</span>
-                            <img src="${item.logo}" class="tech-logo" alt="${item.name}">
+                        <div class="hover-levitate flex items-center gap-2 px-3 py-2 bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-lg transition-all duration-300">
+                            <img src="${item.logo}" class="w-4 h-4 object-contain" alt="${item.name}">
+                            <span class="text-[10px] font-bold text-gray-700 dark:text-gray-300 uppercase font-tech leading-none">${item.name}</span>
                         </div>
                     `).join('')}
                 </div>
@@ -193,7 +194,6 @@ function render() {
         `).join('');
     }
 
-    // Rendu dynamique des dashboards (CORRECTION: Suppression de 'uppercase' sur la description)
     if (d.dashboards_list) {
         const dashGrid = document.getElementById('dashboards-grid');
         if (dashGrid) {
