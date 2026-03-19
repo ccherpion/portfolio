@@ -183,13 +183,39 @@ function render() {
         `).join('');
     }
 
-    // Capture "experiences" ou "experience" pour éviter toute erreur future
     const expData = d.experiences || d.experience;
     if (expData) {
         document.getElementById('experience-grid').innerHTML = expData.map(exp => `
             <div class="reveal-block h-full">
-                <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px] h-full">
-                    <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span></div><h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${exp.role}</h4><p class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p></div><p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc}</p>
+                <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px] h-full shadow-sm">
+                    <div>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${exp.icon} text-xl"></i></div>
+                            <span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${exp.date}</span>
+                        </div>
+                        <h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${exp.role}</h4>
+                        <p class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${exp.company || ''}</p>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${exp.desc || ''}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // ALIGNEMENT DU DESIGN EDUCATION SUR EXPERIENCE
+    if (d.education) {
+        document.getElementById('education-grid').innerHTML = d.education.map(edu => `
+            <div class="reveal-block h-full">
+                <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[250px] h-full shadow-sm">
+                    <div>
+                        <div class="flex justify-between items-start mb-5">
+                            <div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div>
+                            <span class="text-[10px] font-bold text-gray-400 font-tech uppercase">${edu.date}</span>
+                        </div>
+                        <h4 class="text-lg font-bold uppercase leading-tight mb-2 text-gray-900 dark:text-white">${edu.degree}</h4>
+                        <p class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-widest mb-4 opacity-80">${edu.school || ''}</p>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-[13px] font-medium leading-relaxed">${edu.desc || ''}</p>
                 </div>
             </div>
         `).join('');
@@ -224,16 +250,6 @@ function render() {
         document.title = d.seo.title;
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute("content", d.seo.description);
-    }
-    
-    if (d.education) {
-        document.getElementById('education-grid').innerHTML = d.education.map(edu => `
-            <div class="reveal-block h-full">
-                <div class="hover-levitate bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-6 flex flex-col justify-between min-h-[180px] h-full">
-                    <div><div class="flex justify-between items-start mb-5"><div class="w-12 h-12 rounded-lg badge-blue flex items-center justify-center shadow-sm"><i class="${edu.icon} text-xl"></i></div><span class="text-[10px] font-bold text-gray-400 uppercase font-tech">${edu.date}</span></div><h4 class="text-base font-bold uppercase mb-1 text-gray-900 dark:text-white">${edu.degree}</h4><p class="text-gray-500 text-[11px] uppercase font-tech">${edu.school}</p></div>
-                </div>
-            </div>
-        `).join('');
     }
     
     const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'widget_title_stats', 'widget_title_focus'];
