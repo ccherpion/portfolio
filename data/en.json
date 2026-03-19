@@ -4,7 +4,7 @@
     "description": "Expert in AV pre-sales and AI-assisted systems design. 15 years of expertise."
   },
   "name": "Cyril Cherpion",
-  "role": "AV PRE-SALES CONSULTANT & AI ARCHITECT",
+  "role": "Pre-Sales AV Consultant & AI Solutions Architect",
   "status": "On Air and Available",
   "sidebar_bio": "AV Pre-Sales Consultant & AI Architect. I combine technical expertise with commercial vision to turn complex needs into profitable, innovative projects.",
   "hero_title": "AUDIOVISUAL & IT ENGINEERING",
@@ -352,7 +352,7 @@
   "impact_val": "€1.8M+",
   "impact_label": "BUSINESS VOLUME",
   "btn_cv": "Download Resume",
-  "btn_contact": "Let's work together",
+  "btn_contact": "Project Scoping",
   "nav_home": "cyril.info",
   "nav_work": "work.done",
   "nav_exp": "my.path",
@@ -532,6 +532,12 @@
       "issuer": "Shure",
       "date": "2018",
       "pdf": "documents/certificats/SHURE_Shure_Microflex_Advance_Training_ccherpion.pdf"
+    },
+    {
+      "name": "Crestron Home (User Experience)",
+      "issuer": "Crestron",
+      "date": "2019",
+      "pdf": "documents/certificats/CRESTRON_Home.pdf"
     }
   ],
   "widget_title_stats": "// KEY FIGURES",
@@ -543,5 +549,6 @@
       "name": "Crestron Core Certified (CTI-CCT)",
       "img": "documents/certificats/CRESTRON_CTI-CCT.png"
     }
-  ]
+  ],
+  "btn_meeting": "Let's work together"
 }
