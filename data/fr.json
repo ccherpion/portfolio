@@ -1,4 +1,19 @@
 {
+  "contact": {
+    "linkedin": "https://linkedin.com/in/cyrilcherpion",
+    "github": "https://github.com/ccherpion",
+    "email": "mailto:ccherpion@outlook.com",
+    "cv_path": "documents/CV_Cyril_v7.5.pdf",
+    "profile_img": "https://github.com/ccherpion.png",
+    "calendly": "https://calendly.com/cyrilcherpion/30min"
+  },
+  "nav_home": "cyril.info",
+  "nav_work": "work.done",
+  "nav_exp": "my.path",
+  "nav_dash": "ui.dash",
+  "btn_meeting": "Travaillons ensemble",
+  "btn_contact": "Cadrage de projet",
+  "btn_cv": "Télécharger mon CV",
   "seo": {
     "title": "Cyril Cherpion | Consultant Pre-Sales AV & Architecte IA",
     "description": "Expert en avant-vente et conception de systèmes audiovisuels assistés par IA."
@@ -351,12 +366,6 @@
   "loc_val": "Bordeaux, FR & Int.",
   "impact_val": "1.8M€+",
   "impact_label": "VOLUME D'AFFAIRES",
-  "btn_cv": "Télécharger mon CV",
-  "btn_contact": "Cadrage de projet",
-  "nav_home": "cyril.info",
-  "nav_work": "work.done",
-  "nav_exp": "my.path",
-  "nav_dash": "ui.dash",
   "sidebar_skills_title": "// SAVOIR-ÊTRE",
   "sidebar_skills": [
     "📈 Stratégie Commerciale",
@@ -549,6 +558,5 @@
       "name": "Crestron Core Certified (CTI-CCT)",
       "img": "documents/certificats/CRESTRON_CTI-CCT.png"
     }
-  ],
-  "btn_meeting": "Travaillons ensemble"
+  ]
 }

@@ -60,3 +60,22 @@ body { font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; 
 .dark .badge-blue { background-color: rgba(12, 74, 110, 0.3); color: rgba(56, 189, 248, 1); border: 1px solid rgba(7, 89, 133, 0.5); }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+
+/* Assure que la navbar mobile reste au-dessus du contenu scrollé */
+nav.lg\:hidden {
+    z-index: 100;
+}
+
+/* Espacement pour les titres de section sur mobile */
+@media (max-width: 1024px) {
+    .page-view h2 {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-view h2 {
+        margin-top: 0.5rem;
+        padding-top: 1rem;
+    }
+}

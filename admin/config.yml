@@ -11,6 +11,16 @@ collections:
   - name: "traductions"
     label: "Contenus et Traductions"
     files:
+      - label: "Coordonnées & Liens"
+        name: "contact"
+        widget: "object"
+        fields:
+          - {label: "URL LinkedIn", name: "linkedin", widget: "string"}
+          - {label: "URL GitHub", name: "github", widget: "string"}
+          - {label: "Email (mailto:)", name: "email", widget: "string"}
+          - {label: "Chemin du CV (PDF)", name: "cv_path", widget: "string"}
+          - {label: "URL Photo Profil", name: "profile_img", widget: "string"}
+          
       - file: "data/fr.json"
         label: "Français"
         name: "fr"
@@ -146,3 +156,4 @@ collections:
                 fields:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Logo URL", name: "logo", widget: "string"}
+
