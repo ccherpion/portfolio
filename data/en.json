@@ -221,7 +221,7 @@
       "category": "Video & Display",
       "items": [
         { "name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung" },
-        { "name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128" },
+        { "name": "LG", "logo": "https://www.google.com/s2/favicons?domain=lg.com&sz=128" },
         { "name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic" },
         { "name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128" },
         { "name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128" }
@@ -232,7 +232,7 @@
       "items": [
         { "name": "Cisco", "logo": "https://cdn.simpleicons.org/cisco" },
         { "name": "Poly (HP)", "logo": "https://cdn.simpleicons.org/hp" },
-        { "name": "Logitech", "logo": "https://cdn.simpleicons.org/logitech" },
+        { "name": "Logitech", "logo": "https://www.google.com/s2/favicons?domain=logitech.com&sz=128" },
         { "name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png" },
         { "name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom" }
       ]
