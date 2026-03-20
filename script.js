@@ -86,10 +86,31 @@ function handleRouting(isInitial = false) {
     const targetView = document.getElementById(pageMap[hash]);
     if(targetView) {
         targetView.classList.add('active');
-        const subEl = document.getElementById(subMap[hash]);
-        if(subEl) { subEl.style.visibility = 'hidden'; subEl.style.opacity = '0'; }
-        setTimeout(() => runScramble(subMap[hash], 10), 100);
         
+        // --- NOUVEAU : Apparition fluide des descriptions (sans effet Scramble) ---
+        const subEl = document.getElementById(subMap[hash]);
+        if(subEl) { 
+            // On s'assure d'injecter le texte brut et propre
+            const text = subEl.getAttribute('data-text') || subEl.innerText;
+            subEl.innerText = text;
+            
+            // Préparation de l'état initial (invisible, descendu, légèrement flou)
+            subEl.style.visibility = 'visible'; 
+            subEl.style.opacity = '0';
+            subEl.style.transform = 'translateY(20px)';
+            subEl.style.filter = 'blur(5px)';
+            subEl.style.transition = 'all 1s cubic-bezier(0.16, 1, 0.3, 1)';
+            
+            // Déclenchement de l'animation fluide
+            setTimeout(() => {
+                subEl.style.opacity = '1';
+                subEl.style.transform = 'translateY(0)';
+                subEl.style.filter = 'blur(0)';
+            }, 150);
+        }
+        // --------------------------------------------------------------------------
+        
+        // Les petits sous-titres gardent l'effet Scramble
         if(pageSubtitles[hash]) {
             pageSubtitles[hash].forEach((id, i) => {
                 const el = document.getElementById(id);
@@ -97,9 +118,13 @@ function handleRouting(isInitial = false) {
                 setTimeout(() => runScramble(id, 20), 400 + (i * 150));
             });
         }
-        targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${350 + (i * 120)}ms`; });
+        
+        // Apparition en cascade des cartes (Projets, Expériences, etc.)
+        targetView.querySelectorAll('.reveal-block').forEach((b, i) => { 
+            b.style.animationDelay = `${350 + (i * 120)}ms`; 
+        });
 
-        // NOUVEAU : Animation des titres dynamiques de la page Dashboards
+        // Animation des titres dynamiques de la page Dashboards
         if (hash === '#dashboards' && content.dashboards_list) {
             content.dashboards_list.forEach((_, i) => setTimeout(() => runScramble(`dash_title_dyn_${i}`, 20), 500 + (i * 150)));
         }
