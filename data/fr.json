@@ -16,14 +16,14 @@
   "btn_cv": "Télécharger mon CV",
   "seo": {
     "title": "Cyril Cherpion | Consultant Pre-Sales AV & Architecte IA",
-    "description": "Expert en avant-vente et conception de systèmes audiovisuels assistés par IA."
+    "description": "Expert en avant-vente, ingénierie acoustique et conception de systèmes assistés par IA."
   },
   "name": "Cyril Cherpion",
-  "role": "Consultant Pre-Sales AV & Architecte de Solutions IA",
+  "role": "Consultant Pre-Sales AV, Architecte IA & Expert Acoustique",
   "status": "On Air and Available",
-  "sidebar_bio": "Consultant Pre-Sales AV & Architecte IA. J'allie expertise technique et vision commerciale pour transformer des besoins complexes en projets rentables et innovants.",
+  "sidebar_bio": "Consultant Pre-Sales AV, Architecte IA & Expert Acoustique. J'allie ingénierie sonore, expertise technique IT et vision commerciale pour transformer des besoins complexes en projets rentables.",
   "hero_title": "INGÉNIERIE AUDIOVISUELLE & IT",
-  "bio": "15 ans d'expérience à la croisée de la technologie et du business. Mon rôle ? Transformer le \"ça ne marchera jamais\" en solutions rentables. Je parle couramment le \"tech-to-human\", je pilote des affaires à forte valeur ajoutée et j'assure un ROI optimal à mes clients.",
+  "bio": "15 ans d'expérience à la convergence de l'audio haute fidélité, de l'intégration IT et du business. Mon rôle ? Transformer des concepts complexes en solutions rentables. Je parle couramment le \"tech-to-human\", je pilote des affaires d'envergure (jusqu'à 1.5M€) et j'intègre l'IA pour optimiser les écosystèmes audiovisuels de demain.",
   "experiences": [
     {
       "date": "2024 - Présent",
@@ -108,9 +108,9 @@
   "projects": [
     {
       "name": "Palais des congrès de Versailles",
-      "desc": "Pre-Sales et AV Design pour l'intégration globale du site.",
+      "desc": "Conception et avant-vente globale d'un projet de 1.2M€. Architecture de signal complexe incluant une solution de diffusion de précision L-Acoustics.",
       "val": "1.2M€",
-      "tag": "AV Design",
+      "tag": "Sound Design & Pre-Sales",
       "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -179,9 +179,9 @@
       "icon": "fas fa-chart-line"
     },
     {
-      "name": "Ingénierie & Design AV",
-      "desc": "Études acoustiques, architecture de flux critiques (Dante, SDVoE) et éclairage technique.",
-      "icon": "fas fa-drafting-compass"
+      "name": "Ingénierie Acoustique & Audio",
+      "desc": "Design de systèmes de diffusion (L-Acoustics), modélisation Soundvision et déploiement de réseaux audio déterministes (Dante, Milan/AVB).",
+      "icon": "fas fa-wave-square"
     },
     {
       "name": "Contrôle & Automatisation",
@@ -198,167 +198,79 @@
     {
       "category": "Hardware & Contrôle",
       "items": [
-        {
-          "name": "AMX",
-          "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128"
-        },
-        {
-          "name": "Crestron",
-          "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"
-        },
-        {
-          "name": "Extron",
-          "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"
-        },
-        {
-          "name": "Kramer",
-          "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"
-        },
-        {
-          "name": "QSC",
-          "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"
-        }
+        { "name": "AMX", "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128" },
+        { "name": "Crestron", "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128" },
+        { "name": "Extron", "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128" },
+        { "name": "Kramer", "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128" }
       ]
     },
     {
-      "category": "Audio, Vidéo & Réseau",
+      "category": "Audio & Acoustique",
       "items": [
-        {
-          "name": "Shure",
-          "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"
-        },
-        {
-          "name": "Dante",
-          "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"
-        },
-        {
-          "name": "Poly",
-          "logo": "https://img.icons8.com/color/48/video-call--v1.png"
-        },
-        {
-          "name": "Samsung",
-          "logo": "https://cdn.simpleicons.org/samsung"
-        },
-        {
-          "name": "Leyard",
-          "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128"
-        },
-        {
-          "name": "Panasonic",
-          "logo": "https://cdn.simpleicons.org/panasonic"
-        },
-        {
-          "name": "SDVoE",
-          "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"
-        },
-        {
-          "name": "NDI",
-          "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"
-        }
+        { "name": "L-Acoustics", "logo": "https://www.google.com/s2/favicons?domain=l-acoustics.com&sz=128" },
+        { "name": "Meyer Sound", "logo": "https://www.google.com/s2/favicons?domain=meyersound.com&sz=128" },
+        { "name": "Yamaha", "logo": "https://www.google.com/s2/favicons?domain=yamaha.com&sz=128" },
+        { "name": "QSC", "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128" },
+        { "name": "Focal", "logo": "https://www.google.com/s2/favicons?domain=focal.com&sz=128" },
+        { "name": "Audac", "logo": "https://www.google.com/s2/favicons?domain=audac.eu&sz=128" },
+        { "name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128" },
+        { "name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128" }
+      ]
+    },
+    {
+      "category": "Vidéo & Affichage",
+      "items": [
+        { "name": "Poly", "logo": "https://img.icons8.com/color/48/video-call--v1.png" },
+        { "name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung" },
+        { "name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128" },
+        { "name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic" },
+        { "name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128" },
+        { "name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128" }
       ]
     },
     {
       "category": "Conception & 3D",
       "items": [
-        {
-          "name": "AutoCAD",
-          "logo": "https://cdn.simpleicons.org/autodesk"
-        },
-        {
-          "name": "SketchUp",
-          "logo": "https://cdn.simpleicons.org/sketchup"
-        },
-        {
-          "name": "Twinmotion",
-          "logo": "https://cdn.simpleicons.org/epicgames"
-        },
-        {
-          "name": "Visio",
-          "logo": "https://img.icons8.com/color/48/microsoft-visio.png"
-        }
+        { "name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk" },
+        { "name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup" },
+        { "name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames" },
+        { "name": "Visio", "logo": "https://img.icons8.com/color/48/microsoft-visio.png" }
       ]
     },
     {
       "category": "Développement",
       "items": [
-        {
-          "name": "Node-RED",
-          "logo": "https://cdn.simpleicons.org/nodered"
-        },
-        {
-          "name": "JavaScript",
-          "logo": "https://cdn.simpleicons.org/javascript"
-        },
-        {
-          "name": "Node.js",
-          "logo": "https://cdn.simpleicons.org/nodedotjs"
-        },
-        {
-          "name": "HTML5",
-          "logo": "https://cdn.simpleicons.org/html5"
-        },
-        {
-          "name": "CSS3",
-          "logo": "https://img.icons8.com/color/48/css3.png"
-        },
-        {
-          "name": "VBA",
-          "logo": "https://img.icons8.com/color/48/ms-excel.png"
-        }
+        { "name": "VS Code", "logo": "https://cdn.simpleicons.org/visualstudiocode" },
+        { "name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered" },
+        { "name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript" },
+        { "name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs" },
+        { "name": "HTML5", "logo": "https://cdn.simpleicons.org/html5" },
+        { "name": "CSS3", "logo": "https://img.icons8.com/color/48/css3.png" },
+        { "name": "VBA", "logo": "https://img.icons8.com/color/48/ms-excel.png" }
       ]
     },
     {
       "category": "Création Média",
       "items": [
-        {
-          "name": "Logic Pro",
-          "logo": "https://cdn.simpleicons.org/apple"
-        },
-        {
-          "name": "Pro Tools",
-          "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"
-        },
-        {
-          "name": "Ableton",
-          "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"
-        },
-        {
-          "name": "Premiere",
-          "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"
-        },
-        {
-          "name": "Photoshop",
-          "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"
-        },
-        {
-          "name": "Illustrator",
-          "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"
-        }
+        { "name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple" },
+        { "name": "Pro Tools", "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128" },
+        { "name": "Ableton", "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128" },
+        { "name": "Premiere", "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png" },
+        { "name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png" },
+        { "name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png" }
       ]
     },
     {
       "category": "IA & Collab",
       "items": [
-        {
-          "name": "Claude",
-          "logo": "https://cdn.simpleicons.org/anthropic"
-        },
-        {
-          "name": "Gemini",
-          "logo": "https://cdn.simpleicons.org/googlegemini"
-        },
-        {
-          "name": "Teams",
-          "logo": "https://img.icons8.com/color/48/microsoft-teams.png"
-        },
-        {
-          "name": "Zoom",
-          "logo": "https://cdn.simpleicons.org/zoom"
-        }
+        { "name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic" },
+        { "name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini" },
+        { "name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png" },
+        { "name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom" }
       ]
     }
   ],
-  "current_focus": "CONSULTING AV, DÉVELOPPEMENT COMMERCIAL & DESIGN UI",
+  "current_focus": "STRATÉGIE AV, ÉCOSYSTÈMES IA & INGÉNIERIE SONORE",
   "exp_list_title": "// EXPÉRIENCES DÉTAILLÉES",
   "projects_list_title": "// SÉLECTION DE PROJETS",
   "stack_title": "// ÉCOSYSTÈME TECHNIQUE",
