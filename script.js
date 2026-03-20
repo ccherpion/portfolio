@@ -380,44 +380,70 @@ function render() {
         `).join('');
     }
 
-    // Rendu des certifications (groupées par issuer)
-    if (d.certifications && d.certifications.length > 0) {
-        const grouped = d.certifications.reduce((acc, cert) => {
-            if (!acc[cert.issuer]) acc[cert.issuer] = [];
-            acc[cert.issuer].push(cert);
-            return acc;
-        }, {});
-        const el = document.getElementById('certifications-grid');
-        if (el) el.innerHTML = Object.keys(grouped).map(issuer => {
-            const count = grouped[issuer].length;
-            let cardWidth = 'w-full';
-            let innerGrid = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4';
-            if (count === 1) { cardWidth = 'w-full md:w-[calc(50%-0.75rem)] xl:w-[calc(25%-1.125rem)]'; innerGrid = 'grid-cols-1'; }
-            else if (count === 2) { cardWidth = 'w-full md:w-full xl:w-[calc(50%-0.75rem)]'; innerGrid = 'grid-cols-1 sm:grid-cols-2'; }
-            else if (count === 3) { cardWidth = 'w-full md:w-full xl:w-[calc(75%-0.375rem)]'; innerGrid = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3'; }
+    // Rendu des certifications (groupées par issuer avec blocs cliquables)
+if (d.certifications && d.certifications.length > 0) {
+    const grouped = d.certifications.reduce((acc, cert) => {
+        if (!acc[cert.issuer]) acc[cert.issuer] = [];
+        acc[cert.issuer].push(cert);
+        return acc;
+    }, {});
 
-            let certsHtml = '';
-            grouped[issuer].forEach(cert => {
-                let iconOrBadge = cert.badge ? '<img src="'+cert.badge+'" class="w-6 h-6 object-contain shrink-0">' : '<i class="fas fa-award text-gray-400"></i>';
-                certsHtml += `<div class="p-2.5 rounded-lg bg-gray-50/70 dark:bg-[#333333]/70 flex items-center justify-between">
+    const el = document.getElementById('certifications-grid');
+    if (el) el.innerHTML = Object.keys(grouped).map(issuer => {
+        const count = grouped[issuer].length;
+        let cardWidth = 'w-full';
+        let innerGrid = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4';
+
+        if (count === 1) { 
+            cardWidth = 'w-full md:w-[calc(50%-0.75rem)] xl:w-[calc(25%-1.125rem)]'; 
+            innerGrid = 'grid-cols-1'; 
+        }
+        else if (count === 2) { 
+            cardWidth = 'w-full md:w-full xl:w-[calc(50%-0.75rem)]'; 
+            innerGrid = 'grid-cols-1 sm:grid-cols-2'; 
+        }
+        else if (count === 3) { 
+            cardWidth = 'w-full md:w-full xl:w-[calc(75%-0.375rem)]'; 
+            innerGrid = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3'; 
+        }
+
+        let certsHtml = '';
+        grouped[issuer].forEach(cert => {
+            const iconOrBadge = cert.badge 
+                ? `<img src="${cert.badge}" class="w-6 h-6 object-contain shrink-0">` 
+                : `<i class="fas fa-award text-blue-500/50"></i>`;
+
+            // Chaque certification devient un lien <a> avec l'effet hover-levitate
+            certsHtml += `
+                <a href="${cert.pdf || '#'}" target="_blank" 
+                   class="hover-levitate p-2.5 rounded-lg bg-gray-50/70 dark:bg-[#333333]/70 flex items-center justify-between transition-all duration-300 group border border-transparent hover:border-blue-500/30">
                     <div class="flex items-center gap-2.5 min-w-0">
-                        ${iconOrBadge}
+                        <div class="group-hover:scale-110 transition-transform duration-300">
+                            ${iconOrBadge}
+                        </div>
                         <div class="flex flex-col min-w-0">
                             <span class="text-[9.5px] font-bold text-gray-700 dark:text-gray-300 uppercase font-tech truncate">${cert.name}</span>
                             <span class="text-[8.5px] text-gray-500 uppercase font-tech mt-0.5">${cert.date}</span>
                         </div>
                     </div>
-                    ${cert.pdf ? `<a href="${cert.pdf}" target="_blank"><i class="fas fa-external-link-alt text-[9px] text-blue-500"></i></a>` : ''}
-                </div>`;
-            });
+                    <i class="fas fa-arrow-up-right-from-square text-[8px] text-gray-300 group-hover:text-blue-500 transition-colors"></i>
+                </a>`;
+        });
 
-            return `<div class="reveal-block ${cardWidth}"><div class="bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-5 h-full">
-                <h4 class="text-[13px] font-black uppercase text-gray-900 dark:text-white mb-4 flex items-center justify-between border-b pb-2">
-                    <span>${issuer}</span><span class="text-[9px] bg-blue-100 dark:bg-blue-900/30 text-blue-600 px-2 py-0.5 rounded-full">${count}</span>
-                </h4>
-                <div class="grid ${innerGrid} gap-2.5">${certsHtml}</div></div></div>`;
-        }).join('');
-    }
+        return `
+            <div class="reveal-block ${cardWidth}">
+                <div class="bg-white/70 dark:bg-[#272727]/80 backdrop-blur-md border border-gray-200 dark:border-darkBorder rounded-2xl p-5 h-full flex flex-col">
+                    <h4 class="text-[11px] font-black uppercase text-gray-900 dark:text-white mb-4 flex items-center justify-between border-b border-gray-100 dark:border-darkBorder/50 pb-2 font-tech">
+                        <span>${issuer}</span>
+                        <span class="text-[8px] bg-blue-100 dark:bg-blue-900/30 text-blue-600 px-2 py-0.5 rounded-full">${count}</span>
+                    </h4>
+                    <div class="grid ${innerGrid} gap-2.5">
+                        ${certsHtml}
+                    </div>
+                </div>
+            </div>`;
+    }).join('');
+}
 
     // Rendu des dashboards
     if (d.dashboards_list) {
