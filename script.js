@@ -82,7 +82,7 @@ function handleRouting(isInitial = false) {
         l.classList.add('active');
     });
 
-    // 3. Gestion de l'affichage
+    // 3. Gestion de l'affichage des sections
     const targetView = document.getElementById(pageMap[hash]);
     if(targetView) {
         targetView.classList.add('active');
@@ -98,6 +98,11 @@ function handleRouting(isInitial = false) {
             });
         }
         targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${350 + (i * 120)}ms`; });
+
+        // NOUVEAU : Animation des titres dynamiques de la page Dashboards
+        if (hash === '#dashboards' && content.dashboards_list) {
+            content.dashboards_list.forEach((_, i) => setTimeout(() => runScramble(`dash_title_dyn_${i}`, 20), 500 + (i * 150)));
+        }
     }
 
     // 4. Gestion du Scroll
@@ -182,19 +187,61 @@ function render() {
     }
 
     // --- Centralisation : Textes statiques (Titres, navigation, statut, etc.)
-        const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'hero_title', 'bio', 'btn_contact', 'btn_cv', 'btn_meeting', 'footer_copyright', 'footer_disclaimer'];
-    
-    ids.forEach(id => {
-        let key = id.replace('_mobile', ''); if (key === 'loc_nav') key = 'loc_val';
-        const el = document.getElementById(id); if(el && d[key]) { el.innerText = d[key]; el.setAttribute('data-text', d[key]); }
+    // 1. Liste des identifiants directs (l'ID HTML est identique à la clé JSON)
+    const directIds = [
+        'nav_home', 'nav_work', 'nav_exp', 'nav_dash',
+        'name', 'role', 'status', 'sidebar_bio', 'hero_title', 'bio',
+        'work_title', 'path_title', 'dash_title', 
+        'work_sub', 'path_sub', 'dash_sub',
+        'current_focus', 'impact_val', 'impact_label', 
+        'max_budget_val', 'max_budget_label', 'loc_val',
+        'sidebar_skills_title', 'sidebar_hobbies_title', 'sidebar_lang_title', 'badges_title',
+        'widget_title_stats', 'widget_title_focus',
+        'exp_list_title', 'projects_list_title', 'stack_title', 'expertise_title', 
+        'edu_title', 'cert_title',
+        'btn_contact', 'btn_cv', 'btn_meeting',
+        'footer_copyright', 'footer_disclaimer'
+    ];
+
+    // Remplissage pour les identifiants directs
+    directIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && d[id]) {
+            el.innerText = d[id];
+            el.setAttribute('data-text', d[id]);
+        }
     });
 
-    // CHANGEMENT DE LANGUE (Bouton):
+    // 2. Liste des exceptions (pour la version mobile)
+    // À gauche : l'ID dans le HTML. À droite : la clé dans le JSON
+    const customMappings = {
+        'nav_home_mobile': 'nav_home',
+        'nav_work_mobile': 'nav_work',
+        'nav_exp_mobile': 'nav_exp',
+        'nav_dash_mobile': 'nav_dash',
+        'status_mobile': 'status',
+        'loc_nav_mobile': 'loc_val',
+        'loc_nav': 'loc_val'
+    };
+
+    // Remplissage pour les exceptions
+    Object.keys(customMappings).forEach(id => {
+        const el = document.getElementById(id);
+        const jsonKey = customMappings[id];
+        if (el && d[jsonKey]) {
+            el.innerText = d[jsonKey];
+            el.setAttribute('data-text', d[jsonKey]);
+        }
+    });
+
+    // Ajout des drapeaux FR/EN (Affichage de la langue ACTUELLE)
+    const flag = currentLang === 'en' ? '🇬🇧' : '🇫🇷';
+    const langText = currentLang === 'en' ? 'EN' : 'FR';
+    
     const langBtn = document.getElementById('lang-btn');
     const langBtnMobile = document.getElementById('lang-btn-mobile');
-
-    if(langBtn) langBtn.innerText = d.lang_btn;
-    if(langBtnMobile) langBtnMobile.innerText = d.lang_btn;
+    if(langBtn) langBtn.innerHTML = `<span class="mr-1">${flag}</span> ${langText}`;
+    if(langBtnMobile) langBtnMobile.innerHTML = `<span class="mr-1">${flag}</span> ${langText}`;
 
     // Rendu des listes dynamiques (Skills, Hobbies, Badges, Expertise, Stack, Projects, Exp, Edu, Certs, Dashboards)
     const skillsEl = document.getElementById('sidebar-skills');
@@ -202,6 +249,10 @@ function render() {
     
     const hobbiesEl = document.getElementById('sidebar-hobbies');
     if(hobbiesEl && d.sidebar_hobbies) hobbiesEl.innerHTML = d.sidebar_hobbies.map(h => `<span class="badge-blue text-[10px] font-bold px-3 py-1.5 rounded-full font-tech uppercase">${h}</span>`).join('');
+    
+    // Langues parlées
+    const langEl = document.getElementById('sidebar-lang');
+    if(langEl && d.sidebar_lang) langEl.innerHTML = d.sidebar_lang.map(l => `<span class="bg-gray-50 dark:bg-[#333333] text-gray-700 dark:text-gray-300 text-[10px] font-bold px-3 py-1.5 rounded-full border border-gray-100 dark:border-darkBorder font-tech uppercase">${l}</span>`).join('');
     
     const badgesEl = document.getElementById('sidebar-badges');
     if (badgesEl && d.sidebar_badges) {
@@ -372,7 +423,7 @@ function render() {
         if (metaDesc) metaDesc.setAttribute("content", d.seo.description);
     }
     
-    const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'badges_title', 'widget_title_stats', 'widget_title_focus'];
+    const globalSubtitles = ['sidebar_skills_title', 'sidebar_hobbies_title', 'badges_title', 'widget_title_stats', 'widget_title_focus', 'sidebar_lang_title'];
     globalSubtitles.forEach((id, i) => {
         const subEl = document.getElementById(id);
         if(subEl) { subEl.style.visibility = 'hidden'; subEl.style.opacity = '0'; }
