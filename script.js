@@ -182,7 +182,7 @@ function render() {
     }
 
     // --- Centralisation : Textes statiques (Titres, navigation, statut, etc.)
-    const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'badges_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'cert_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv', 'btn_meeting'];
+        const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'hero_title', 'bio', 'btn_contact', 'btn_cv', 'btn_meeting', 'footer_copyright', 'footer_disclaimer'];
     
     ids.forEach(id => {
         let key = id.replace('_mobile', ''); if (key === 'loc_nav') key = 'loc_val';

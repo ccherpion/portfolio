@@ -490,5 +490,7 @@
       "name": "Crestron Core Certified (CTI-CCT)",
       "img": "documents/certificats/CRESTRON_CTI-CCT.png"
     }
-  ]
+  ],
+  "footer_copyright": "© 2026 Cyril Cherpion. All rights reserved.",
+  "footer_disclaimer": "All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply affiliation or endorsement."
 }
