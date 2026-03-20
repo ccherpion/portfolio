@@ -10,6 +10,7 @@ function checkAutoTheme() {
     }
 }
 
+// --- Logique de la barre de progression de scroll ---
 window.addEventListener('scroll', () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -17,11 +18,13 @@ window.addEventListener('scroll', () => {
     if(bar) bar.style.width = (winScroll / height) * 100 + '%';
 });
 
+//  -- Logique de changement de thème (Bouton) ---
 function toggleTheme() {
     const isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
+// --- Effet de scramble text pour les titres et sous-titres ---
 function runScramble(id, speed = 25) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -52,23 +55,34 @@ function runScramble(id, speed = 25) {
     });
 }
 
-// --- handleRouting avec gestion de l'ancrage mobile ---
+// --- Logique de routage et d'affichage des sections ---
 function handleRouting(isInitial = false) {
-    const hash = window.location.hash || '#home';
-    const pageMap = { '#home': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience', '#dashboards': 'page-dashboards' };
-    const subMap = { '#home': 'bio', '#projects': 'work_sub', '#experience': 'path_sub', '#dashboards': 'dash_sub' };
-    const sectionTitleMap = { '#home': 'hero_title', '#projects': 'work_title', '#experience': 'path_title', '#dashboards': 'dash_title' };
+    // Par défaut on charge le profil
+    const hash = window.location.hash || '#profile';
+    
+    // On mappe les deux ancres sur la même page
+    const pageMap = { '#home': 'page-home', '#profile': 'page-home', '#projects': 'page-projects', '#experience': 'page-experience', '#dashboards': 'page-dashboards' };
+    const subMap = { '#home': 'bio', '#profile': 'bio', '#projects': 'work_sub', '#experience': 'path_sub', '#dashboards': 'dash_sub' };
+    const sectionTitleMap = { '#home': 'hero_title', '#profile': 'hero_title', '#projects': 'work_title', '#experience': 'path_title', '#dashboards': 'dash_title' };
     
     const pageSubtitles = {
         '#home': ['expertise_title', 'stack_title'],
+        '#profile': ['expertise_title', 'stack_title'],
         '#projects': ['projects_list_title'],
         '#experience': ['exp_list_title', 'edu_title', 'cert_title'],
         '#dashboards': [] 
     };
 
+    // 1. Nettoyage des états actifs
     document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     
+    // 2. Activation du lien cliqué (Maison OU Texte)
+    document.querySelectorAll(`a[href="${hash}"]`).forEach(l => {
+        l.classList.add('active');
+    });
+
+    // 3. Gestion de l'affichage
     const targetView = document.getElementById(pageMap[hash]);
     if(targetView) {
         targetView.classList.add('active');
@@ -85,17 +99,17 @@ function handleRouting(isInitial = false) {
         }
         targetView.querySelectorAll('.reveal-block').forEach((b, i) => { b.style.animationDelay = `${350 + (i * 120)}ms`; });
     }
-    document.querySelectorAll(`a[href="${hash}"]`).forEach(l => {
-        l.classList.add('active');
-    });
 
+    // 4. Gestion du Scroll
     if (window.innerWidth < 1024) {
-        if (isInitial) {
-            window.scrollTo(0, 0);
+        // Clic sur la MAISON (#profile) ou 1er chargement -> Tout en haut
+        if (isInitial || hash === '#profile') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
+            // Clic sur TEXTE (cyril.info, work, etc.) -> Défilement jusqu'au titre
             const titleElement = document.getElementById(sectionTitleMap[hash]);
             if (titleElement) {
-                const navHeight = 140; 
+                const navHeight = 140; // Hauteur approximative de la barre de navigation mobile
                 setTimeout(() => {
                     const elementPosition = titleElement.getBoundingClientRect().top + window.pageYOffset;
                     window.scrollTo({ top: elementPosition - navHeight, behavior: 'smooth' });
@@ -107,8 +121,10 @@ function handleRouting(isInitial = false) {
     }
 }
 
+// Écouteur de changement de hash pour gérer le routage
 window.addEventListener('hashchange', () => handleRouting(false));
 
+// --- Initialisation : Chargement du contenu et rendu ---
 async function init() {
     checkAutoTheme();
     try {
@@ -127,6 +143,7 @@ async function init() {
     } catch (e) { console.error("Error loading JSON:", e); }
 }
 
+// --- Rendu dynamique du contenu ---
 function render() {
     const d = content;
     
@@ -154,21 +171,17 @@ function render() {
 
     // --- CENTRALISATION : Liens & Images ---
     if (d.contact) {
-        // Injection des liens dans les attributs href
-        const cal = document.getElementById('calendly_link'); if(cal) cal.href = d.contact.calendly;
+        const lnk = document.getElementById('linkedin_link'); if(lnk) lnk.href = d.contact.linkedin;
+        const gh = document.getElementById('github_link'); if(gh) gh.href = d.contact.github;
         const mail = document.getElementById('email_link'); if(mail) mail.href = d.contact.email;
         const cv = document.getElementById('cv_link'); if(cv) cv.href = d.contact.cv_path;
         
-        // Liens réseaux sociaux (si présents)
-        const lnk = document.getElementById('linkedin_link'); if(lnk) lnk.href = d.contact.linkedin;
-        const gh = document.getElementById('github_link'); if(gh) gh.href = d.contact.github;
-
-        // Mise à jour des images de profil
         document.querySelectorAll('.profile-img-dynamic').forEach(img => {
             img.src = d.contact.profile_img;
         });
     }
 
+    // --- Centralisation : Textes statiques (Titres, navigation, statut, etc.)
     const ids = ['loc_nav_mobile', 'nav_home', 'nav_work', 'nav_exp', 'nav_dash', 'nav_home_mobile', 'nav_work_mobile', 'nav_exp_mobile', 'nav_dash_mobile', 'status', 'status_mobile', 'name', 'role', 'sidebar_bio', 'sidebar_skills_title', 'sidebar_hobbies_title', 'badges_title', 'hero_title', 'work_title', 'path_title', 'dash_title', 'cert_title', 'bio', 'work_sub', 'path_sub', 'dash_sub', 'loc_nav', 'expertise_title', 'stack_title', 'projects_list_title', 'exp_list_title', 'edu_title', 'widget_title_stats', 'impact_val', 'impact_label', 'max_budget_val', 'max_budget_label', 'widget_title_focus', 'current_focus', 'btn_contact', 'btn_cv', 'btn_meeting'];
     
     ids.forEach(id => {
@@ -176,8 +189,12 @@ function render() {
         const el = document.getElementById(id); if(el && d[key]) { el.innerText = d[key]; el.setAttribute('data-text', d[key]); }
     });
 
+    // CHANGEMENT DE LANGUE (Bouton):
     const langBtn = document.getElementById('lang-btn');
+    const langBtnMobile = document.getElementById('lang-btn-mobile');
+
     if(langBtn) langBtn.innerText = d.lang_btn;
+    if(langBtnMobile) langBtnMobile.innerText = d.lang_btn;
 
     // Rendu des listes dynamiques (Skills, Hobbies, Badges, Expertise, Stack, Projects, Exp, Edu, Certs, Dashboards)
     const skillsEl = document.getElementById('sidebar-skills');
@@ -198,6 +215,7 @@ function render() {
         `).join('');
     }
 
+    // Rendu de l'expertise
     if (d.expertise) {
         const el = document.getElementById('expertise-grid');
         if (el) el.innerHTML = d.expertise.map(exp => `
@@ -210,6 +228,7 @@ function render() {
         `).join('');
     }
 
+    // Rendu de la stack
     if (d.stack) {
         const el = document.getElementById('stack-grid');
         if (el) el.innerHTML = d.stack.map(category => `
@@ -227,6 +246,7 @@ function render() {
         `).join('');
     }
 
+    // Rendu des projets
     if (d.projects) {
         const el = document.getElementById('projects-container');
         if (el) el.innerHTML = d.projects.map(p => `
@@ -244,7 +264,7 @@ function render() {
             </div>
         `).join('');
     }
-
+    // Rendu des expériences, éducation et certifications
     const expData = d.experiences || d.experience;
     if (expData) {
         const el = document.getElementById('experience-grid');
@@ -264,7 +284,7 @@ function render() {
             </div>
         `).join('');
     }
-
+    // Rendu de l'éducation
     if (d.education) {
         const el = document.getElementById('education-grid');
         if (el) el.innerHTML = d.education.map(edu => `
@@ -284,6 +304,7 @@ function render() {
         `).join('');
     }
 
+    // Rendu des certifications (groupées par issuer)
     if (d.certifications && d.certifications.length > 0) {
         const grouped = d.certifications.reduce((acc, cert) => {
             if (!acc[cert.issuer]) acc[cert.issuer] = [];
@@ -322,6 +343,7 @@ function render() {
         }).join('');
     }
 
+    // Rendu des dashboards
     if (d.dashboards_list) {
         const dashGrid = document.getElementById('dashboards-grid');
         if (dashGrid) {
@@ -343,6 +365,7 @@ function render() {
         }
     }
 
+    // Mise à jour du titre de la page et de la meta description
     if (d.seo) {
         document.title = d.seo.title;
         const metaDesc = document.querySelector('meta[name="description"]');

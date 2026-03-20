@@ -220,12 +220,41 @@
     {
       "category": "Video & Display",
       "items": [
-        { "name": "Poly", "logo": "https://img.icons8.com/color/48/video-call--v1.png" },
         { "name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung" },
         { "name": "Leyard", "logo": "https://www.google.com/s2/favicons?domain=leyard.com&sz=128" },
         { "name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic" },
         { "name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128" },
         { "name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128" }
+      ]
+    },
+    {
+      "category": "Collab & UC",
+      "items": [
+        { "name": "Cisco", "logo": "https://cdn.simpleicons.org/cisco" },
+        { "name": "Poly (HP)", "logo": "https://cdn.simpleicons.org/hp" },
+        { "name": "Logitech", "logo": "https://cdn.simpleicons.org/logitech" },
+        { "name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png" },
+        { "name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom" }
+      ]
+    },
+    {
+      "category": "Artificial Intelligence",
+      "items": [
+        { "name": "ChatGPT", "logo": "https://cdn.simpleicons.org/openai" },
+        { "name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic" },
+        { "name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini" },
+        { "name": "Mistral", "logo": "https://www.google.com/s2/favicons?domain=mistral.ai&sz=128" },
+        { "name": "Notion", "logo": "https://cdn.simpleicons.org/notion" }
+      ]
+    },
+    {
+      "category": "OS & Productivity",
+      "items": [
+        { "name": "macOS", "logo": "https://cdn.simpleicons.org/apple" },
+        { "name": "Linux", "logo": "https://cdn.simpleicons.org/linux" },
+        { "name": "Windows", "logo": "https://img.icons8.com/color/48/windows-10.png" },
+        { "name": "MS Office", "logo": "https://cdn.simpleicons.org/microsoftoffice" },
+        { "name": "Google Workspace", "logo": "https://cdn.simpleicons.org/google" }
       ]
     },
     {
@@ -240,7 +269,7 @@
     {
       "category": "Development",
       "items": [
-        { "name": "VS Code", "logo": "https://cdn.simpleicons.org/visualstudiocode" },
+        { "name": "VS Code", "logo": "https://www.google.com/s2/favicons?domain=code.visualstudio.com&sz=128" },
         { "name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered" },
         { "name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript" },
         { "name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs" },
@@ -258,15 +287,6 @@
         { "name": "Premiere", "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png" },
         { "name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png" },
         { "name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png" }
-      ]
-    },
-    {
-      "category": "AI & Collab",
-      "items": [
-        { "name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic" },
-        { "name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini" },
-        { "name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png" },
-        { "name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom" }
       ]
     }
   ],
