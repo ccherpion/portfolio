@@ -445,7 +445,7 @@ if (d.certifications && d.certifications.length > 0) {
     }).join('');
 }
 
-    // Rendu des dashboards
+    // Rendu des dashboards (Structure Header + Iframe)
     if (d.dashboards_list) {
         const dashGrid = document.getElementById('dashboards-grid');
         if (dashGrid) {
@@ -454,16 +454,37 @@ if (d.certifications && d.certifications.length > 0) {
                     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 border-b border-gray-200 dark:border-darkBorder pb-6">
                         <div>
                             <h3 id="dash_title_dyn_${i}" class="text-[13px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.15em] font-tech">${dash.title}</h3>
-                            <p class="text-sm text-gray-500 mt-2 max-w-2xl leading-relaxed font-tech text-[11px]">${dash.desc}</p>
+                            <p id="dash_desc_dyn_${i}" class="text-sm text-gray-500 mt-2 max-w-2xl leading-relaxed font-tech text-[11px] opacity-0">${dash.desc}</p>
                         </div>
-                        <a class="shrink-0 px-8 py-4 bg-blue-600 text-white font-black uppercase text-[11px] tracking-widest rounded-xl transition-all" href="${dash.link}" target="_blank">${dash.btn_text}</a>
+                        <a class="hover-levitate shrink-0 px-8 py-4 bg-blue-600 dark:bg-blue-500 text-white font-black uppercase text-[11px] tracking-widest rounded-xl transition-all shadow-lg shadow-blue-500/20" 
+                           href="${dash.link}" 
+                           target="_blank">${dash.btn_text}</a>
                     </div>
-                    <div class="w-full h-[80vh] md:h-auto md:aspect-[16/10] xl:aspect-[16/9] rounded-3xl overflow-hidden border border-gray-200 dark:border-darkBorder shadow-2xl">
-                        <iframe src="${dash.iframe_url}" class="w-full h-full border-none bg-[#0f172a]" title="${dash.title}"></iframe>
+
+                    <div class="w-full h-[80vh] md:h-auto md:aspect-[16/10] xl:aspect-[16/9] rounded-3xl overflow-hidden border border-gray-200 dark:border-darkBorder shadow-2xl bg-gray-100 dark:bg-darkBg">
+                        <iframe src="${dash.iframe_url}" class="w-full h-full border-none bg-[#0f172a]" title="${dash.title}" loading="lazy"></iframe>
                     </div>
                 </div>
             `).join('');
-            d.dashboards_list.forEach((_, i) => setTimeout(() => runScramble(`dash_title_dyn_${i}`, 20), 500 + (i * 150)));
+
+            // Déclenchement des animations après injection
+            d.dashboards_list.forEach((_, i) => {
+                // 1. Animation Scramble pour le Titre court
+                setTimeout(() => runScramble(`dash_title_dyn_${i}`, 20), 500 + (i * 150));
+                
+                // 2. Animation Apparition Fluide pour la Description (UX optimisée)
+                const descEl = document.getElementById(`dash_desc_dyn_${i}`);
+                if (descEl) {
+                    descEl.style.transform = 'translateY(15px)';
+                    descEl.style.filter = 'blur(4px)';
+                    descEl.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+                    setTimeout(() => {
+                        descEl.style.opacity = '1';
+                        descEl.style.transform = 'translateY(0)';
+                        descEl.style.filter = 'blur(0)';
+                    }, 600 + (i * 150));
+                }
+            });
         }
     }
 
