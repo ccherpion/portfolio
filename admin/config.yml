@@ -11,20 +11,20 @@ collections:
   - name: "traductions"
     label: "Contenus et Traductions"
     files:
-      - label: "Coordonnées & Liens"
-        name: "contact"
-        widget: "object"
-        fields:
-          - {label: "URL LinkedIn", name: "linkedin", widget: "string"}
-          - {label: "URL GitHub", name: "github", widget: "string"}
-          - {label: "Email (mailto:)", name: "email", widget: "string"}
-          - {label: "Chemin du CV (PDF)", name: "cv_path", widget: "string"}
-          - {label: "URL Photo Profil", name: "profile_img", widget: "string"}
-          
       - file: "data/fr.json"
         label: "Français"
         name: "fr"
         fields:
+          - label: "Coordonnées & Liens"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "URL LinkedIn", name: "linkedin", widget: "string"}
+              - {label: "URL GitHub", name: "github", widget: "string"}
+              - {label: "Email (mailto:)", name: "email", widget: "string"}
+              - {label: "Lien Calendly", name: "calendly", widget: "string"}
+              - {label: "Chemin du CV (PDF)", name: "cv_path", widget: "string"}
+              - {label: "URL Photo Profil", name: "profile_img", widget: "string"}
           - {label: "SEO", name: "seo", widget: "object", fields: [{label: "Titre Google", name: "title", widget: "string"}, {label: "Description Google", name: "description", widget: "text"}]}
           - {label: "Nom", name: "name", widget: "string"}
           - {label: "Rôle", name: "role", widget: "string"}
@@ -93,6 +93,16 @@ collections:
         label: "English"
         name: "en"
         fields:
+          - label: "Contact & Links"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+              - {label: "GitHub URL", name: "github", widget: "string"}
+              - {label: "Email (mailto:)", name: "email", widget: "string"}
+              - {label: "Calendly Link", name: "calendly", widget: "string"}
+              - {label: "Resume Path (PDF)", name: "cv_path", widget: "string"}
+              - {label: "Profile Pic URL", name: "profile_img", widget: "string"}
           - {label: "SEO", name: "seo", widget: "object", fields: [{label: "Google Title", name: "title", widget: "string"}, {label: "Google Description", name: "description", widget: "text"}]}
           - {label: "Name", name: "name", widget: "string"}
           - {label: "Role", name: "role", widget: "string"}
@@ -156,4 +166,3 @@ collections:
                 fields:
                   - {label: "Name", name: "name", widget: "string"}
                   - {label: "Logo URL", name: "logo", widget: "string"}
-
