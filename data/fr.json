@@ -253,7 +253,7 @@
         { "name": "macOS", "logo": "https://cdn.simpleicons.org/apple" },
         { "name": "Linux", "logo": "https://cdn.simpleicons.org/linux" },
         { "name": "Windows", "logo": "https://img.icons8.com/color/48/windows-10.png" },
-        { "name": "MS Office", "logo": "https://cdn.simpleicons.org/microsoftoffice" },
+        { "name": "MS Office", "logo": "https://www.google.com/s2/favicons?domain=office.com&sz=128" },
         { "name": "Google Workspace", "logo": "https://cdn.simpleicons.org/google" }
       ]
     },
