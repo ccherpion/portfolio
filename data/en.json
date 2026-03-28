@@ -3,17 +3,10 @@
     "linkedin": "https://linkedin.com/in/cyrilcherpion",
     "github": "https://github.com/ccherpion",
     "email": "mailto:ccherpion@outlook.com",
+    "calendly": "https://calendly.com/cyrilcherpion/30min",
     "cv_path": "documents/CV_Cyril.pdf",
-    "profile_img": "https://github.com/ccherpion.png",
-    "calendly": "https://calendly.com/cyrilcherpion/30min"
+    "profile_img": "https://github.com/ccherpion.png"
   },
-  "nav_home": "my.info",
-  "nav_work": "work.done",
-  "nav_exp": "my.path",
-  "nav_dash": "ui.dash",
-  "btn_meeting": "Let's work together",
-  "btn_contact": "Project Scoping",
-  "btn_cv": "Download Resume",
   "seo": {
     "title": "Cyril Cherpion | AV Pre-Sales Consultant & AI Architect",
     "description": "Expert in AV pre-sales, acoustic engineering and AI-assisted systems design."
@@ -198,106 +191,433 @@
     {
       "category": "Hardware & Control",
       "items": [
-        { "name": "AMX", "logo": "https://www.google.com/s2/favicons?domain=amx.com&sz=128" },
-        { "name": "Crestron", "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128" },
-        { "name": "Extron", "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128" },
-        { "name": "Kramer", "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128" }
+        {
+          "name": "AMX",
+          "logo": "https://www.googlet.com/s2/favicons?domain=amx.com&sz=128"
+        },
+        {
+          "name": "Crestron",
+          "logo": "https://www.google.com/s2/favicons?domain=crestron.com&sz=128"
+        },
+        {
+          "name": "Extron",
+          "logo": "https://www.google.com/s2/favicons?domain=extron.com&sz=128"
+        },
+        {
+          "name": "Kramer",
+          "logo": "https://www.google.com/s2/favicons?domain=kramerav.com&sz=128"
+        }
       ]
     },
     {
       "category": "Audio & Acoustics",
       "items": [
-        { "name": "L-Acoustics", "logo": "https://www.google.com/s2/favicons?domain=l-acoustics.com&sz=128" },
-        { "name": "Meyer Sound", "logo": "https://www.google.com/s2/favicons?domain=meyersound.com&sz=128" },
-        { "name": "Yamaha", "logo": "https://www.google.com/s2/favicons?domain=yamaha.com&sz=128" },
-        { "name": "QSC", "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128" },
-        { "name": "Focal", "logo": "https://www.google.com/s2/favicons?domain=focal.com&sz=128" },
-        { "name": "Audac", "logo": "https://www.google.com/s2/favicons?domain=audac.eu&sz=128" },
-        { "name": "Shure", "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128" },
-        { "name": "Dante", "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128" }
+        {
+          "name": "L-Acoustics",
+          "logo": "https://www.google.com/s2/favicons?domain=l-acoustics.com&sz=128"
+        },
+        {
+          "name": "Meyer Sound",
+          "logo": "https://www.google.com/s2/favicons?domain=meyersound.com&sz=128"
+        },
+        {
+          "name": "Yamaha",
+          "logo": "https://www.google.com/s2/favicons?domain=yamaha.com&sz=128"
+        },
+        {
+          "name": "QSC",
+          "logo": "https://www.google.com/s2/favicons?domain=qsc.com&sz=128"
+        },
+        {
+          "name": "Focal",
+          "logo": "https://www.google.com/s2/favicons?domain=focal.com&sz=128"
+        },
+        {
+          "name": "Audac",
+          "logo": "https://www.google.com/s2/favicons?domain=audac.eu&sz=128"
+        },
+        {
+          "name": "Shure",
+          "logo": "https://www.google.com/s2/favicons?domain=shure.com&sz=128"
+        },
+        {
+          "name": "Dante",
+          "logo": "https://www.google.com/s2/favicons?domain=audinate.com&sz=128"
+        }
       ]
     },
     {
       "category": "Video & Display",
       "items": [
-        { "name": "Samsung", "logo": "https://cdn.simpleicons.org/samsung" },
-        { "name": "LG", "logo": "https://www.google.com/s2/favicons?domain=lg.com&sz=128" },
-        { "name": "Panasonic", "logo": "https://cdn.simpleicons.org/panasonic" },
-        { "name": "SDVoE", "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128" },
-        { "name": "NDI", "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128" }
+        {
+          "name": "Samsung",
+          "logo": "https://cdn.simpleicons.org/samsung"
+        },
+        {
+          "name": "LG",
+          "logo": "https://www.google.com/s2/favicons?domain=lg.com&sz=128"
+        },
+        {
+          "name": "Panasonic",
+          "logo": "https://cdn.simpleicons.org/panasonic"
+        },
+        {
+          "name": "SDVoE",
+          "logo": "https://www.google.com/s2/favicons?domain=sdvoe.org&sz=128"
+        },
+        {
+          "name": "NDI",
+          "logo": "https://www.google.com/s2/favicons?domain=ndi.video&sz=128"
+        }
+      ]
+    },
+    {
+      "category": "Lightning & Show Control",
+      "items": [
+        {
+          "name": "Madrix",
+          "logo": "https://www.googlet.com/s2/favicons?domain=madrix.com&sz=128"
+        },
+        {
+          "name": "Visual Production",
+          "logo": "https://www.googlet.com/s2/favicons?domain=visualproduction.nl&sz=128"
+        },
+        {
+          "name": "SMX/Art-Net",
+          "logo": "https://www.googlet.com/s2/favicons?domain=art-net.org.uk&sz=128"
+        }
       ]
     },
     {
       "category": "Collab & UC",
       "items": [
-        { "name": "Cisco", "logo": "https://cdn.simpleicons.org/cisco" },
-        { "name": "Poly (HP)", "logo": "https://cdn.simpleicons.org/hp" },
-        { "name": "Logitech", "logo": "https://www.google.com/s2/favicons?domain=logitech.com&sz=128" },
-        { "name": "Teams", "logo": "https://img.icons8.com/color/48/microsoft-teams.png" },
-        { "name": "Zoom", "logo": "https://cdn.simpleicons.org/zoom" }
+        {
+          "name": "Cisco",
+          "logo": "https://cdn.simpleicons.org/cisco"
+        },
+        {
+          "name": "Poly (HP)",
+          "logo": "https://cdn.simpleicons.org/hp"
+        },
+        {
+          "name": "Logitech",
+          "logo": "https://www.google.com/s2/favicons?domain=logitech.com&sz=128"
+        },
+        {
+          "name": "Teams",
+          "logo": "https://img.icons8.com/color/48/microsoft-teams.png"
+        },
+        {
+          "name": "Zoom",
+          "logo": "https://cdn.simpleicons.org/zoom"
+        }
       ]
     },
     {
       "category": "Artificial Intelligence",
       "items": [
-        { "name": "ChatGPT", "logo": "https://cdn.simpleicons.org/openai" },
-        { "name": "Claude", "logo": "https://cdn.simpleicons.org/anthropic" },
-        { "name": "Gemini", "logo": "https://cdn.simpleicons.org/googlegemini" },
-        { "name": "Mistral", "logo": "https://www.google.com/s2/favicons?domain=mistral.ai&sz=128" },
-        { "name": "Notion", "logo": "https://cdn.simpleicons.org/notion" }
+        {
+          "name": "ChatGPT",
+          "logo": "https://cdn.simpleicons.org/openai"
+        },
+        {
+          "name": "Claude",
+          "logo": "https://cdn.simpleicons.org/anthropic"
+        },
+        {
+          "name": "Gemini",
+          "logo": "https://cdn.simpleicons.org/googlegemini"
+        },
+        {
+          "name": "Mistral",
+          "logo": "https://www.google.com/s2/favicons?domain=mistral.ai&sz=128"
+        },
+        {
+          "name": "Notion",
+          "logo": "https://cdn.simpleicons.org/notion"
+        }
       ]
     },
     {
       "category": "OS & Productivity",
       "items": [
-        { "name": "macOS", "logo": "https://cdn.simpleicons.org/apple" },
-        { "name": "Linux", "logo": "https://cdn.simpleicons.org/linux" },
-        { "name": "Windows", "logo": "https://img.icons8.com/color/48/windows-10.png" },
-        { "name": "MS Office", "logo": "https://www.google.com/s2/favicons?domain=office.com&sz=128" },
-        { "name": "Google Workspace", "logo": "https://cdn.simpleicons.org/google" }
+        {
+          "name": "macOS",
+          "logo": "https://cdn.simpleicons.org/apple"
+        },
+        {
+          "name": "Linux",
+          "logo": "https://cdn.simpleicons.org/linux"
+        },
+        {
+          "name": "Windows",
+          "logo": "https://img.icons8.com/color/48/windows-10.png"
+        },
+        {
+          "name": "MS Office",
+          "logo": "https://www.google.com/s2/favicons?domain=office.com&sz=128"
+        },
+        {
+          "name": "Google Workspace",
+          "logo": "https://cdn.simpleicons.org/google"
+        }
       ]
     },
     {
       "category": "Design & 3D",
       "items": [
-        { "name": "AutoCAD", "logo": "https://cdn.simpleicons.org/autodesk" },
-        { "name": "SketchUp", "logo": "https://cdn.simpleicons.org/sketchup" },
-        { "name": "Twinmotion", "logo": "https://cdn.simpleicons.org/epicgames" },
-        { "name": "Visio", "logo": "https://img.icons8.com/color/48/microsoft-visio.png" }
+        {
+          "name": "AutoCAD",
+          "logo": "https://cdn.simpleicons.org/autodesk"
+        },
+        {
+          "name": "SketchUp",
+          "logo": "https://cdn.simpleicons.org/sketchup"
+        },
+        {
+          "name": "Twinmotion",
+          "logo": "https://cdn.simpleicons.org/epicgames"
+        },
+        {
+          "name": "Visio",
+          "logo": "https://img.icons8.com/color/48/microsoft-visio.png"
+        }
       ]
     },
     {
       "category": "Development",
       "items": [
-        { "name": "VS Code", "logo": "https://www.google.com/s2/favicons?domain=code.visualstudio.com&sz=128" },
-        { "name": "Node-RED", "logo": "https://cdn.simpleicons.org/nodered" },
-        { "name": "JavaScript", "logo": "https://cdn.simpleicons.org/javascript" },
-        { "name": "Node.js", "logo": "https://cdn.simpleicons.org/nodedotjs" },
-        { "name": "HTML5", "logo": "https://cdn.simpleicons.org/html5" },
-        { "name": "CSS3", "logo": "https://img.icons8.com/color/48/css3.png" },
-        { "name": "VBA", "logo": "https://img.icons8.com/color/48/ms-excel.png" }
+        {
+          "name": "VS Code",
+          "logo": "https://www.google.com/s2/favicons?domain=code.visualstudio.com&sz=128"
+        },
+        {
+          "name": "Node-RED",
+          "logo": "https://cdn.simpleicons.org/nodered"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "https://cdn.simpleicons.org/javascript"
+        },
+        {
+          "name": "Node.js",
+          "logo": "https://cdn.simpleicons.org/nodedotjs"
+        },
+        {
+          "name": "HTML5",
+          "logo": "https://cdn.simpleicons.org/html5"
+        },
+        {
+          "name": "CSS3",
+          "logo": "https://img.icons8.com/color/48/css3.png"
+        },
+        {
+          "name": "VBA",
+          "logo": "https://img.icons8.com/color/48/ms-excel.png"
+        }
       ]
     },
     {
       "category": "Media Creation",
       "items": [
-        { "name": "Logic Pro", "logo": "https://cdn.simpleicons.org/apple" },
-        { "name": "Pro Tools", "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128" },
-        { "name": "Ableton", "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128" },
-        { "name": "Premiere", "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png" },
-        { "name": "Photoshop", "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png" },
-        { "name": "Illustrator", "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png" }
+        {
+          "name": "Logic Pro",
+          "logo": "https://cdn.simpleicons.org/apple"
+        },
+        {
+          "name": "Pro Tools",
+          "logo": "https://www.google.com/s2/favicons?domain=avid.com&sz=128"
+        },
+        {
+          "name": "Ableton",
+          "logo": "https://www.google.com/s2/favicons?domain=ableton.com&sz=128"
+        },
+        {
+          "name": "Premiere",
+          "logo": "https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"
+        },
+        {
+          "name": "Photoshop",
+          "logo": "https://img.icons8.com/color/48/adobe-photoshop--v1.png"
+        },
+        {
+          "name": "Illustrator",
+          "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"
+        }
       ]
     }
   ],
-  "current_focus": "AV STRATEGY, AI ECOSYSTEMS & SOUND ENGINEERING",
-  "exp_list_title": "// DETAILED EXPERIENCES",
-  "projects_list_title": "// SELECTED PROJECTS",
-  "stack_title": "// TECHNOLOGICAL STACK",
-  "expertise_title": "// AREAS OF EXPERTISE",
-  "loc_val": "Bordeaux, FR & Int.",
-  "impact_val": "€1.8M+",
+  "footer_disclaimer": "All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply affiliation or endorsement.",
+  "footer_copyright": "© 2026 Cyril Cherpion. All rights reserved.",
+  "certifications": [
+    {
+      "pdf": "documents/certificats/AMX_Certificate_MUSE_JumpStart.pdf",
+      "date": "2024",
+      "issuer": "AMX",
+      "name": "AMX MUSE JumpStart"
+    },
+    {
+      "pdf": "documents/certificats/AMX_Sales_Specialist_Certificate.pdf",
+      "date": "2024",
+      "issuer": "AMX",
+      "name": "AMX Sales Specialist"
+    },
+    {
+      "pdf": "documents/certificats/AMX_Certified_Trainer_2024.pdf",
+      "date": "2024",
+      "issuer": "AMX",
+      "name": "Certified AMX Trainer"
+    },
+    {
+      "pdf": "documents/certificats/AUDINATE_Dante_Level_1_Course_&_Exam.pdf",
+      "date": "2017",
+      "issuer": "Audinate",
+      "name": "Dante Level 1"
+    },
+    {
+      "pdf": "documents/certificats/AUDINATE_Dante_Level_2_Part_B_Skills_Test.pdf",
+      "date": "2019",
+      "issuer": "Audinate",
+      "name": "Dante Level 2"
+    },
+    {
+      "pdf": "documents/certificats/Barco_certified_specialist__Unisee_installation.pdf",
+      "date": "2019",
+      "issuer": "Barco",
+      "name": "Barco Certified Specialist - Unisee"
+    },
+    {
+      "badge": "documents/certificats/CRESTRON_CTI-CCT.png",
+      "pdf": "documents/certificats/CRESTRON_Crestron_Core_Certification_CCT-003-200829-9634.pdf",
+      "date": "2020",
+      "issuer": "Crestron",
+      "name": "Crestron Core Certification (CTI-CCT)"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Certificate_CTI_P301.pdf",
+      "date": "2018",
+      "issuer": "Crestron",
+      "name": "Advanced System Programming (CTI-P301)"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_HTML5_recommend_3rd_party_applications.pdf",
+      "date": "2021",
+      "issuer": "Crestron",
+      "name": "Crestron HTML5 UI Design (CTI-UI301)"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_HTML5_Design_for_CRESTRON_HTML5_project_Using_a_VT_Pro_e_Project.pdf",
+      "date": "2021",
+      "issuer": "Crestron",
+      "name": "Crestron HTML5 Design (CTI-UI101)"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Virtual_Control_Steps_in_using_SIMPL_Windows_Programs.pdf",
+      "date": "2022",
+      "issuer": "Crestron",
+      "name": "Crestron Virtual Control"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Flex_for_Microsoft_Teams_Rooms_Solutions_CTI_FT.pdf",
+      "date": "2020",
+      "issuer": "Crestron",
+      "name": "Crestron Flex for Microsoft Teams Rooms"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_DM_NVX_Design_and_Application.pdf",
+      "date": "2017",
+      "issuer": "Crestron",
+      "name": "DM NVX Design and Application"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_DM_NVX_Tool.pdf",
+      "date": "2022",
+      "issuer": "Crestron",
+      "name": "DM NVX® Tool"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_AV_Framework_Simple_to_configure.pdf",
+      "date": "2022",
+      "issuer": "Crestron",
+      "name": ".AV Framework: Simple to Configure"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Fusion_Programmer.pdf",
+      "date": "2020",
+      "issuer": "Crestron",
+      "name": "Crestron Fusion Programmer"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Home.pdf",
+      "date": "2019",
+      "issuer": "Crestron",
+      "name": "Crestron Home"
+    },
+    {
+      "pdf": "documents/certificats/MERSIVE_Certificate_of_Completion_Training_Template_CCherpion.pdf",
+      "date": "2020",
+      "issuer": "Mersive",
+      "name": "Mersive Training Completion"
+    },
+    {
+      "pdf": "documents/certificats/SAMSUNG_Smart_Signage_Display_Technical_Expert_Certificate.pdf",
+      "date": "2020",
+      "issuer": "Samsung",
+      "name": "Smart Signage Display Technical Expert"
+    },
+    {
+      "pdf": "documents/certificats/SHURE_Audio_Basics_for_IT_Professionals_ccherpion.pdf",
+      "date": "2019",
+      "issuer": "Shure",
+      "name": "Audio Basics for IT Professionals"
+    },
+    {
+      "pdf": "documents/certificats/SHURE_IntelliMix_P300_Technical_Enablement_ccherpion.pdf",
+      "date": "2019",
+      "issuer": "Shure",
+      "name": "IntelliMix P300 Technical Enablement"
+    },
+    {
+      "pdf": "documents/certificats/SHURE_Networking_Basics_for_Audio_Professionals_ccherpion.pdf",
+      "date": "2019",
+      "issuer": "Shure",
+      "name": "Networking Basics for Audio"
+    },
+    {
+      "pdf": "documents/certificats/SHURE_Networking_for_Shure_DSP_and_Audio_Interfaces_ccherpion.pdf",
+      "date": "2021",
+      "issuer": "Shure",
+      "name": "Networking for DSP & Interfaces"
+    },
+    {
+      "pdf": "documents/certificats/SHURE_Shure_Microflex_Advance_Training_ccherpion.pdf",
+      "date": "2018",
+      "issuer": "Shure",
+      "name": "Microflex Advance Training"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Home.pdf",
+      "date": "2019",
+      "issuer": "Crestron",
+      "name": "Crestron Home (User Experience)"
+    }
+  ],
+  "cert_title": "// MANUFACTURER CERTIFICATIONS",
   "impact_label": "BUSINESS VOLUME",
+  "impact_val": "€1.8M+",
+  "loc_val": "Bordeaux, FR & Int.",
+  "expertise_title": "// AREAS OF EXPERTISE",
+  "stack_title": "// TECHNOLOGICAL STACK",
+  "projects_list_title": "// SELECTED PROJECTS",
+  "exp_list_title": "// DETAILED EXPERIENCES",
+  "current_focus": "AV STRATEGY, AI ECOSYSTEMS & SOUND ENGINEERING",
+  "btn_cv": "Download Resume",
+  "btn_contact": "Project Scoping",
+  "btn_meeting": "Let's work together",
+  "nav_home": "my.info",
+  "nav_work": "work.done",
+  "nav_exp": "my.path",
+  "nav_dash": "ui.dash",
   "sidebar_skills_title": "// SOFT SKILLS",
   "sidebar_skills": [
     "📈 Sales Strategy",
@@ -327,160 +647,6 @@
   "max_budget_label": "MAX SINGLE PROJECT",
   "max_budget_val": "€1.5M+",
   "edu_title": "// EDUCATION & CERTIFICATIONS",
-  "cert_title": "// MANUFACTURER CERTIFICATIONS",
-  "certifications": [
-    {
-      "name": "AMX MUSE JumpStart",
-      "issuer": "AMX",
-      "date": "2024",
-      "pdf": "documents/certificats/AMX_Certificate_MUSE_JumpStart.pdf"
-    },
-    {
-      "name": "AMX Sales Specialist",
-      "issuer": "AMX",
-      "date": "2024",
-      "pdf": "documents/certificats/AMX_Sales_Specialist_Certificate.pdf"
-    },
-    {
-      "name": "Certified AMX Trainer",
-      "issuer": "AMX",
-      "date": "2024",
-      "pdf": "documents/certificats/AMX_Certified_Trainer_2024.pdf"
-    },
-    {
-      "name": "Dante Level 1",
-      "issuer": "Audinate",
-      "date": "2017",
-      "pdf": "documents/certificats/AUDINATE_Dante_Level_1_Course_&_Exam.pdf"
-    },
-    {
-      "name": "Dante Level 2",
-      "issuer": "Audinate",
-      "date": "2019",
-      "pdf": "documents/certificats/AUDINATE_Dante_Level_2_Part_B_Skills_Test.pdf"
-    },
-    {
-      "name": "Barco Certified Specialist - Unisee",
-      "issuer": "Barco",
-      "date": "2019",
-      "pdf": "documents/certificats/Barco_certified_specialist__Unisee_installation.pdf"
-    },
-    {
-      "name": "Crestron Core Certification (CTI-CCT)",
-      "issuer": "Crestron",
-      "date": "2020",
-      "pdf": "documents/certificats/CRESTRON_Crestron_Core_Certification_CCT-003-200829-9634.pdf",
-      "badge": "documents/certificats/CRESTRON_CTI-CCT.png"
-    },
-    {
-      "name": "Advanced System Programming (CTI-P301)",
-      "issuer": "Crestron",
-      "date": "2018",
-      "pdf": "documents/certificats/CRESTRON_Certificate_CTI_P301.pdf"
-    },
-    {
-      "name": "Crestron HTML5 UI Design (CTI-UI301)",
-      "issuer": "Crestron",
-      "date": "2021",
-      "pdf": "documents/certificats/CRESTRON_HTML5_recommend_3rd_party_applications.pdf"
-    },
-    {
-      "name": "Crestron HTML5 Design (CTI-UI101)",
-      "issuer": "Crestron",
-      "date": "2021",
-      "pdf": "documents/certificats/CRESTRON_HTML5_Design_for_CRESTRON_HTML5_project_Using_a_VT_Pro_e_Project.pdf"
-    },
-    {
-      "name": "Crestron Virtual Control",
-      "issuer": "Crestron",
-      "date": "2022",
-      "pdf": "documents/certificats/CRESTRON_Virtual_Control_Steps_in_using_SIMPL_Windows_Programs.pdf"
-    },
-    {
-      "name": "Crestron Flex for Microsoft Teams Rooms",
-      "issuer": "Crestron",
-      "date": "2020",
-      "pdf": "documents/certificats/CRESTRON_Flex_for_Microsoft_Teams_Rooms_Solutions_CTI_FT.pdf"
-    },
-    {
-      "name": "DM NVX Design and Application",
-      "issuer": "Crestron",
-      "date": "2017",
-      "pdf": "documents/certificats/CRESTRON_DM_NVX_Design_and_Application.pdf"
-    },
-    {
-      "name": "DM NVX® Tool",
-      "issuer": "Crestron",
-      "date": "2022",
-      "pdf": "documents/certificats/CRESTRON_DM_NVX_Tool.pdf"
-    },
-    {
-      "name": ".AV Framework: Simple to Configure",
-      "issuer": "Crestron",
-      "date": "2022",
-      "pdf": "documents/certificats/CRESTRON_AV_Framework_Simple_to_configure.pdf"
-    },
-    {
-      "name": "Crestron Fusion Programmer",
-      "issuer": "Crestron",
-      "date": "2020",
-      "pdf": "documents/certificats/CRESTRON_Fusion_Programmer.pdf"
-    },
-    {
-      "name": "Crestron Home",
-      "issuer": "Crestron",
-      "date": "2019",
-      "pdf": "documents/certificats/CRESTRON_Home.pdf"
-    },
-    {
-      "name": "Mersive Training Completion",
-      "issuer": "Mersive",
-      "date": "2020",
-      "pdf": "documents/certificats/MERSIVE_Certificate_of_Completion_Training_Template_CCherpion.pdf"
-    },
-    {
-      "name": "Smart Signage Display Technical Expert",
-      "issuer": "Samsung",
-      "date": "2020",
-      "pdf": "documents/certificats/SAMSUNG_Smart_Signage_Display_Technical_Expert_Certificate.pdf"
-    },
-    {
-      "name": "Audio Basics for IT Professionals",
-      "issuer": "Shure",
-      "date": "2019",
-      "pdf": "documents/certificats/SHURE_Audio_Basics_for_IT_Professionals_ccherpion.pdf"
-    },
-    {
-      "name": "IntelliMix P300 Technical Enablement",
-      "issuer": "Shure",
-      "date": "2019",
-      "pdf": "documents/certificats/SHURE_IntelliMix_P300_Technical_Enablement_ccherpion.pdf"
-    },
-    {
-      "name": "Networking Basics for Audio",
-      "issuer": "Shure",
-      "date": "2019",
-      "pdf": "documents/certificats/SHURE_Networking_Basics_for_Audio_Professionals_ccherpion.pdf"
-    },
-    {
-      "name": "Networking for DSP & Interfaces",
-      "issuer": "Shure",
-      "date": "2021",
-      "pdf": "documents/certificats/SHURE_Networking_for_Shure_DSP_and_Audio_Interfaces_ccherpion.pdf"
-    },
-    {
-      "name": "Microflex Advance Training",
-      "issuer": "Shure",
-      "date": "2018",
-      "pdf": "documents/certificats/SHURE_Shure_Microflex_Advance_Training_ccherpion.pdf"
-    },
-    {
-      "name": "Crestron Home (User Experience)",
-      "issuer": "Crestron",
-      "date": "2019",
-      "pdf": "documents/certificats/CRESTRON_Home.pdf"
-    }
-  ],
   "widget_title_stats": "// KEY FIGURES",
   "widget_title_focus": "// CURRENT FOCUS",
   "lang_btn": "FR",
@@ -490,7 +656,5 @@
       "name": "Crestron Core Certified (CTI-CCT)",
       "img": "documents/certificats/CRESTRON_CTI-CCT.png"
     }
-  ],
-  "footer_copyright": "© 2026 Cyril Cherpion. All rights reserved.",
-  "footer_disclaimer": "All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply affiliation or endorsement."
+  ]
 }
