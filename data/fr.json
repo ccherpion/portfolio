@@ -272,6 +272,23 @@
       ]
     },
     {
+      "category": "Design Lumière & Show Control",
+      "items": [
+        {
+          "name": "Madrix",
+          "logo": "https://www.google.com/s2/favicons?domain=madrix.com&sz=128"
+        },
+        {
+          "name": "Visual Production",
+          "logo": "https://www.google.com/s2/favicons?domain=visualproductions.nl&sz=128"
+        },
+        {
+          "name": "DMX/Art-Net",
+          "logo": "https://www.google.com/s2/favicons?domain=art-net.org.uk&sz=128"
+        }
+      ]
+    },
+    {
       "category": "Collab & UC",
       "items": [
         {
@@ -426,23 +443,6 @@
         {
           "name": "Illustrator",
           "logo": "https://img.icons8.com/color/48/adobe-illustrator--v1.png"
-        }
-      ]
-    },
-    {
-      "category": "// DESIGN LUMIÈRE & SHOW CONTROL",
-      "items": [
-        {
-          "name": "Madrix",
-          "logo": "https://www.google.com/s2/favicons?domain=madrix.com&sz=128"
-        },
-        {
-          "name": "Visual Production",
-          "logo": "https://www.google.com/s2/favicons?domain=visualproductions.nl&sz=128"
-        },
-        {
-          "name": "DMX/Art-Net",
-          "logo": "https://www.google.com/s2/favicons?domain=art-net.org.uk&sz=128"
         }
       ]
     }
