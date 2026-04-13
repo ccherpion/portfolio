@@ -3,7 +3,7 @@
     "linkedin": "https://linkedin.com/in/cyrilcherpion",
     "github": "https://github.com/ccherpion",
     "email": "mailto:ccherpion@outlook.com",
-    "calendly": "https://calendly.com/cyrilcherpion/30min",
+    "calendly": "https://cal.com/cyril-d5wg3r/30min",
     "cv_path": "documents/CV_Cyril.pdf",
     "profile_img": "https://github.com/ccherpion.png"
   },
@@ -447,173 +447,173 @@
       ]
     }
   ],
-  "btn_meeting": "Let's work together",
-  "btn_contact": "Project Scoping",
-  "btn_cv": "Download Resume",
-  "current_focus": "AV STRATEGY, AI ECOSYSTEMS & SOUND ENGINEERING",
-  "exp_list_title": "// DETAILED EXPERIENCES",
-  "projects_list_title": "// SELECTED PROJECTS",
-  "stack_title": "// TECHNOLOGICAL STACK",
-  "expertise_title": "// AREAS OF EXPERTISE",
-  "loc_val": "Bordeaux, FR & Int.",
-  "impact_val": "€1.8M+",
-  "impact_label": "BUSINESS VOLUME",
-  "cert_title": "// MANUFACTURER CERTIFICATIONS",
+  "footer_disclaimer": "All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply affiliation or endorsement.",
+  "footer_copyright": "© 2026 Cyril Cherpion. All rights reserved.",
   "certifications": [
     {
-      "name": "AMX MUSE JumpStart",
-      "issuer": "AMX",
+      "pdf": "documents/certificats/AMX_Certificate_MUSE_JumpStart.pdf",
       "date": "2024",
-      "pdf": "documents/certificats/AMX_Certificate_MUSE_JumpStart.pdf"
+      "issuer": "AMX",
+      "name": "AMX MUSE JumpStart"
     },
     {
-      "name": "AMX Sales Specialist",
-      "issuer": "AMX",
+      "pdf": "documents/certificats/AMX_Sales_Specialist_Certificate.pdf",
       "date": "2024",
-      "pdf": "documents/certificats/AMX_Sales_Specialist_Certificate.pdf"
+      "issuer": "AMX",
+      "name": "AMX Sales Specialist"
     },
     {
-      "name": "Certified AMX Trainer",
-      "issuer": "AMX",
+      "pdf": "documents/certificats/AMX_Certified_Trainer_2024.pdf",
       "date": "2024",
-      "pdf": "documents/certificats/AMX_Certified_Trainer_2024.pdf"
+      "issuer": "AMX",
+      "name": "Certified AMX Trainer"
     },
     {
-      "name": "Dante Level 1",
-      "issuer": "Audinate",
+      "pdf": "documents/certificats/AUDINATE_Dante_Level_1_Course_&_Exam.pdf",
       "date": "2017",
-      "pdf": "documents/certificats/AUDINATE_Dante_Level_1_Course_&_Exam.pdf"
-    },
-    {
-      "name": "Dante Level 2",
       "issuer": "Audinate",
-      "date": "2019",
-      "pdf": "documents/certificats/AUDINATE_Dante_Level_2_Part_B_Skills_Test.pdf"
+      "name": "Dante Level 1"
     },
     {
-      "name": "Barco Certified Specialist - Unisee",
+      "pdf": "documents/certificats/AUDINATE_Dante_Level_2_Part_B_Skills_Test.pdf",
+      "date": "2019",
+      "issuer": "Audinate",
+      "name": "Dante Level 2"
+    },
+    {
+      "pdf": "documents/certificats/Barco_certified_specialist__Unisee_installation.pdf",
+      "date": "2019",
       "issuer": "Barco",
-      "date": "2019",
-      "pdf": "documents/certificats/Barco_certified_specialist__Unisee_installation.pdf"
+      "name": "Barco Certified Specialist - Unisee"
     },
     {
-      "name": "Crestron Core Certification (CTI-CCT)",
-      "issuer": "Crestron",
-      "date": "2020",
+      "badge": "documents/certificats/CRESTRON_CTI-CCT.png",
       "pdf": "documents/certificats/CRESTRON_Crestron_Core_Certification_CCT-003-200829-9634.pdf",
-      "badge": "documents/certificats/CRESTRON_CTI-CCT.png"
-    },
-    {
-      "name": "Advanced System Programming (CTI-P301)",
-      "issuer": "Crestron",
-      "date": "2018",
-      "pdf": "documents/certificats/CRESTRON_Certificate_CTI_P301.pdf"
-    },
-    {
-      "name": "Crestron HTML5 UI Design (CTI-UI301)",
-      "issuer": "Crestron",
-      "date": "2021",
-      "pdf": "documents/certificats/CRESTRON_HTML5_recommend_3rd_party_applications.pdf"
-    },
-    {
-      "name": "Crestron HTML5 Design (CTI-UI101)",
-      "issuer": "Crestron",
-      "date": "2021",
-      "pdf": "documents/certificats/CRESTRON_HTML5_Design_for_CRESTRON_HTML5_project_Using_a_VT_Pro_e_Project.pdf"
-    },
-    {
-      "name": "Crestron Virtual Control",
-      "issuer": "Crestron",
-      "date": "2022",
-      "pdf": "documents/certificats/CRESTRON_Virtual_Control_Steps_in_using_SIMPL_Windows_Programs.pdf"
-    },
-    {
-      "name": "Crestron Flex for Microsoft Teams Rooms",
-      "issuer": "Crestron",
       "date": "2020",
-      "pdf": "documents/certificats/CRESTRON_Flex_for_Microsoft_Teams_Rooms_Solutions_CTI_FT.pdf"
+      "issuer": "Crestron",
+      "name": "Crestron Core Certification (CTI-CCT)"
     },
     {
-      "name": "DM NVX Design and Application",
+      "pdf": "documents/certificats/CRESTRON_Certificate_CTI_P301.pdf",
+      "date": "2018",
       "issuer": "Crestron",
+      "name": "Advanced System Programming (CTI-P301)"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_HTML5_recommend_3rd_party_applications.pdf",
+      "date": "2021",
+      "issuer": "Crestron",
+      "name": "Crestron HTML5 UI Design (CTI-UI301)"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_HTML5_Design_for_CRESTRON_HTML5_project_Using_a_VT_Pro_e_Project.pdf",
+      "date": "2021",
+      "issuer": "Crestron",
+      "name": "Crestron HTML5 Design (CTI-UI101)"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Virtual_Control_Steps_in_using_SIMPL_Windows_Programs.pdf",
+      "date": "2022",
+      "issuer": "Crestron",
+      "name": "Crestron Virtual Control"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Flex_for_Microsoft_Teams_Rooms_Solutions_CTI_FT.pdf",
+      "date": "2020",
+      "issuer": "Crestron",
+      "name": "Crestron Flex for Microsoft Teams Rooms"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_DM_NVX_Design_and_Application.pdf",
       "date": "2017",
-      "pdf": "documents/certificats/CRESTRON_DM_NVX_Design_and_Application.pdf"
+      "issuer": "Crestron",
+      "name": "DM NVX Design and Application"
     },
     {
-      "name": "DM NVX® Tool",
-      "issuer": "Crestron",
+      "pdf": "documents/certificats/CRESTRON_DM_NVX_Tool.pdf",
       "date": "2022",
-      "pdf": "documents/certificats/CRESTRON_DM_NVX_Tool.pdf"
+      "issuer": "Crestron",
+      "name": "DM NVX® Tool"
     },
     {
-      "name": ".AV Framework: Simple to Configure",
-      "issuer": "Crestron",
+      "pdf": "documents/certificats/CRESTRON_AV_Framework_Simple_to_configure.pdf",
       "date": "2022",
-      "pdf": "documents/certificats/CRESTRON_AV_Framework_Simple_to_configure.pdf"
+      "issuer": "Crestron",
+      "name": ".AV Framework: Simple to Configure"
     },
     {
-      "name": "Crestron Fusion Programmer",
-      "issuer": "Crestron",
+      "pdf": "documents/certificats/CRESTRON_Fusion_Programmer.pdf",
       "date": "2020",
-      "pdf": "documents/certificats/CRESTRON_Fusion_Programmer.pdf"
-    },
-    {
-      "name": "Crestron Home",
       "issuer": "Crestron",
-      "date": "2019",
-      "pdf": "documents/certificats/CRESTRON_Home.pdf"
+      "name": "Crestron Fusion Programmer"
     },
     {
-      "name": "Mersive Training Completion",
+      "pdf": "documents/certificats/CRESTRON_Home.pdf",
+      "date": "2019",
+      "issuer": "Crestron",
+      "name": "Crestron Home"
+    },
+    {
+      "pdf": "documents/certificats/MERSIVE_Certificate_of_Completion_Training_Template_CCherpion.pdf",
+      "date": "2020",
       "issuer": "Mersive",
-      "date": "2020",
-      "pdf": "documents/certificats/MERSIVE_Certificate_of_Completion_Training_Template_CCherpion.pdf"
+      "name": "Mersive Training Completion"
     },
     {
-      "name": "Smart Signage Display Technical Expert",
+      "pdf": "documents/certificats/SAMSUNG_Smart_Signage_Display_Technical_Expert_Certificate.pdf",
+      "date": "2020",
       "issuer": "Samsung",
-      "date": "2020",
-      "pdf": "documents/certificats/SAMSUNG_Smart_Signage_Display_Technical_Expert_Certificate.pdf"
+      "name": "Smart Signage Display Technical Expert"
     },
     {
-      "name": "Audio Basics for IT Professionals",
-      "issuer": "Shure",
+      "pdf": "documents/certificats/SHURE_Audio_Basics_for_IT_Professionals_ccherpion.pdf",
       "date": "2019",
-      "pdf": "documents/certificats/SHURE_Audio_Basics_for_IT_Professionals_ccherpion.pdf"
+      "issuer": "Shure",
+      "name": "Audio Basics for IT Professionals"
     },
     {
-      "name": "IntelliMix P300 Technical Enablement",
-      "issuer": "Shure",
+      "pdf": "documents/certificats/SHURE_IntelliMix_P300_Technical_Enablement_ccherpion.pdf",
       "date": "2019",
-      "pdf": "documents/certificats/SHURE_IntelliMix_P300_Technical_Enablement_ccherpion.pdf"
+      "issuer": "Shure",
+      "name": "IntelliMix P300 Technical Enablement"
     },
     {
-      "name": "Networking Basics for Audio",
-      "issuer": "Shure",
+      "pdf": "documents/certificats/SHURE_Networking_Basics_for_Audio_Professionals_ccherpion.pdf",
       "date": "2019",
-      "pdf": "documents/certificats/SHURE_Networking_Basics_for_Audio_Professionals_ccherpion.pdf"
+      "issuer": "Shure",
+      "name": "Networking Basics for Audio"
     },
     {
-      "name": "Networking for DSP & Interfaces",
-      "issuer": "Shure",
+      "pdf": "documents/certificats/SHURE_Networking_for_Shure_DSP_and_Audio_Interfaces_ccherpion.pdf",
       "date": "2021",
-      "pdf": "documents/certificats/SHURE_Networking_for_Shure_DSP_and_Audio_Interfaces_ccherpion.pdf"
-    },
-    {
-      "name": "Microflex Advance Training",
       "issuer": "Shure",
-      "date": "2018",
-      "pdf": "documents/certificats/SHURE_Shure_Microflex_Advance_Training_ccherpion.pdf"
+      "name": "Networking for DSP & Interfaces"
     },
     {
-      "name": "Crestron Home (User Experience)",
-      "issuer": "Crestron",
+      "pdf": "documents/certificats/SHURE_Shure_Microflex_Advance_Training_ccherpion.pdf",
+      "date": "2018",
+      "issuer": "Shure",
+      "name": "Microflex Advance Training"
+    },
+    {
+      "pdf": "documents/certificats/CRESTRON_Home.pdf",
       "date": "2019",
-      "pdf": "documents/certificats/CRESTRON_Home.pdf"
+      "issuer": "Crestron",
+      "name": "Crestron Home (User Experience)"
     }
   ],
-  "footer_copyright": "© 2026 Cyril Cherpion. All rights reserved.",
-  "footer_disclaimer": "All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply affiliation or endorsement.",
+  "cert_title": "// MANUFACTURER CERTIFICATIONS",
+  "impact_label": "BUSINESS VOLUME",
+  "impact_val": "€1.8M+",
+  "loc_val": "Bordeaux, FR & Int.",
+  "expertise_title": "// AREAS OF EXPERTISE",
+  "stack_title": "// TECHNOLOGICAL STACK",
+  "projects_list_title": "// SELECTED PROJECTS",
+  "exp_list_title": "// DETAILED EXPERIENCES",
+  "current_focus": "AV STRATEGY, AI ECOSYSTEMS & SOUND ENGINEERING",
+  "btn_cv": "Download Resume",
+  "btn_contact": "Project Scoping",
+  "btn_meeting": "Let's work together",
   "nav_home": "my.info",
   "nav_work": "work.done",
   "nav_exp": "my.path",
