@@ -213,9 +213,14 @@ function render() {
 
     // --- CENTRALISATION : Liens & Images ---
     // On vérifie d'abord 'links' (nouvelle norme) puis 'contact' (ancienne)
-    const info = d.links || d.contact; 
+    const info = d.links; 
     
     if (info) {
+        // Lien dynamique pour le cadrage de projet (Project Scoping)
+        const scope = document.getElementById('scoping_link'); 
+        if(scope) scope.href = info.scoping_url || "#";
+
+        // Lien de réservation (Cal.com)[cite: 18]
         const book = document.getElementById('booking_link'); 
         if(book) book.href = info.booking_url || "#";
 
@@ -228,9 +233,11 @@ function render() {
         const mail = document.getElementById('email_link'); 
         if(mail) mail.href = info.email || "#";
 
+        // Support des deux noms de clés pour le CV par sécurité[cite: 18]
         const cv = document.getElementById('cv_link'); 
         if(cv) cv.href = info.cv_pdf || info.cv_path || "#";
         
+        // Mise à jour de toutes les photos de profil dynamiques (GitHub)[cite: 18]
         document.querySelectorAll('.profile-img-dynamic').forEach(img => {
             img.src = info.profile_img || "assets/img/cyril.jpg";
         });

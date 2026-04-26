@@ -200,29 +200,31 @@ function render() {
     }
 
     // --- CENTRALISATION : Liens & Images ---
-    // On utilise l'objet 'contact' ou 'links' provenant de common.json
-    const info = d.contact || d.links; 
+    const info = d.links; 
     
     if (info) {
-        // Lien de rendez-vous (Cal.com, Calendly, etc.)
+        // Injection dynamique des liens
         const book = document.getElementById('booking_link'); 
-        if(book) book.href = info.booking_url;
+        if(book) book.href = info.booking_url || "#";
 
-        const lnk = document.getElementById('linkedin_link'); 
-        if(lnk) lnk.href = info.linkedin;
-
-        const gh = document.getElementById('github_link'); 
-        if(gh) gh.href = info.github;
-
-        const mail = document.getElementById('email_link'); 
-        if(mail) mail.href = info.email;
+        const scope = document.getElementById('scoping_link');
+        if(scope) scope.href = info.scoping_url || "#";
 
         const cv = document.getElementById('cv_link'); 
-        if(cv) cv.href = info.cv_path || info.cv_pdf;
+        if(cv) cv.href = info.cv_pdf || "#";
+
+        const lnk = document.getElementById('linkedin_link'); 
+        if(lnk) lnk.href = info.linkedin || "#";
+
+        const gh = document.getElementById('github_link'); 
+        if(gh) gh.href = info.github || "#";
+
+        const mail = document.getElementById('email_link'); 
+        if(mail) mail.href = info.email || "#";
         
-        // Mise à jour de l'image de profil sur tout le site
+        // Mise à jour de la photo de profil (GitHub)
         document.querySelectorAll('.profile-img-dynamic').forEach(img => {
-            img.src = info.profile_img || d.assets.profile_img;
+            img.src = info.profile_img;
         });
     }
 
