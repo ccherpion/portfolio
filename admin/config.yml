@@ -22,6 +22,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Lien de Réservation (Générique)", name: "booking_url", widget: "string"}
+              - {label: "Lien Project Scoping", name: "scoping_url", widget: "string"}
               - {label: "URL LinkedIn", name: "linkedin", widget: "string"}
               - {label: "URL GitHub", name: "github", widget: "string"}
               - {label: "Email (mailto:)", name: "email", widget: "string"}
