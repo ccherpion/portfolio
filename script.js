@@ -158,11 +158,22 @@ window.addEventListener('hashchange', () => handleRouting(false));
 async function init() {
     checkAutoTheme();
     try {
-        const res = await fetch(`data/${currentLang}.json?v=${new Date().getTime()}`);
-        content = await res.json();
+        // CHARGEMENT SIMULTANÉ DES DEUX FICHIERS (Commun + Langue)
+        const [commonRes, langRes] = await Promise.all([
+            fetch(`data/common.json?v=${new Date().getTime()}`),
+            fetch(`data/${currentLang}.json?v=${new Date().getTime()}`)
+        ]);
+
+        const common = await commonRes.json();
+        const langData = await langRes.json();
+
+        // FUSION DES DONNÉES DANS L'OBJET GLOBAL
+        content = { ...common, ...langData };
+        
         render(); 
         handleRouting(true); 
         
+        // Mise à jour de l'heure
         setInterval(() => {
             const timeStr = new Date().toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' CET';
             const el = document.getElementById('live-time');
@@ -170,9 +181,10 @@ async function init() {
             if(el) el.innerText = timeStr;
             if(elMob) elMob.innerText = timeStr;
         }, 1000);
-    } catch (e) { console.error("Error loading JSON:", e); }
+    } catch (e) { 
+        console.error("Erreur critique lors du chargement des fichiers JSON:", e); 
+    }
 }
-
 // --- Rendu dynamique du contenu ---
 function render() {
     const d = content;
