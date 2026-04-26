@@ -200,14 +200,27 @@ function render() {
     }
 
     // --- CENTRALISATION : Liens & Images ---
-    if (d.contact) {
-        const lnk = document.getElementById('linkedin_link'); if(lnk) lnk.href = d.contact.linkedin;
-        const gh = document.getElementById('github_link'); if(gh) gh.href = d.contact.github;
-        const mail = document.getElementById('email_link'); if(mail) mail.href = d.contact.email;
-        const cv = document.getElementById('cv_link'); if(cv) cv.href = d.contact.cv_path;
+    // On vérifie d'abord 'links' (nouvelle norme) puis 'contact' (ancienne)
+    const info = d.links || d.contact; 
+    
+    if (info) {
+        const book = document.getElementById('booking_link'); 
+        if(book) book.href = info.booking_url || "#";
+
+        const lnk = document.getElementById('linkedin_link'); 
+        if(lnk) lnk.href = info.linkedin || "#";
+
+        const gh = document.getElementById('github_link'); 
+        if(gh) gh.href = info.github || "#";
+
+        const mail = document.getElementById('email_link'); 
+        if(mail) mail.href = info.email || "#";
+
+        const cv = document.getElementById('cv_link'); 
+        if(cv) cv.href = info.cv_pdf || info.cv_path || "#";
         
         document.querySelectorAll('.profile-img-dynamic').forEach(img => {
-            img.src = d.contact.profile_img;
+            img.src = info.profile_img || "assets/img/cyril.jpg";
         });
     }
 

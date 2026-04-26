@@ -18,14 +18,14 @@ collections:
         name: "common"
         fields:
           - label: "Coordonnées & Liens"
-            name: "contact"
+            name: "links"
             widget: "object"
             fields:
               - {label: "Lien de Réservation (Générique)", name: "booking_url", widget: "string"}
               - {label: "URL LinkedIn", name: "linkedin", widget: "string"}
               - {label: "URL GitHub", name: "github", widget: "string"}
               - {label: "Email (mailto:)", name: "email", widget: "string"}
-              - {label: "Fichier CV (PDF)", name: "cv_path", widget: "file"}
+              - {label: "Fichier CV (PDF)", name: "cv_pdf", widget: "file"}
               - {label: "Photo de Profil", name: "profile_img", widget: "image"}
 
   # 2. CONTENUS TRADUITS (FR & EN séparés)
